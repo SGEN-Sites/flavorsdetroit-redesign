@@ -1,9 +1,9 @@
 {
   "schema": "site-reforge/seo-report@1",
-  "generated": "2026-11-09T00:31:20.125Z",
+  "generated": "2026-11-09T05:11:46.329Z",
   "origin": "https://www.flavorsdetroit.com",
   "buildDir": "dist",
-  "siteUrl": "https://www.flavorsdetroit.com",
+  "siteUrl": null,
   "mode": "standing (clone served elsewhere)",
   "limits": {
     "titleMax": 60,

@@ -92,15 +92,30 @@ for (const [w, h] of VPS) {
   page.on('response', (r) => { if (r.url().startsWith(ORIGIN) && r.status() >= 400 && !r.url().includes('/nonexistent')) failed.push(r.url().replace(ORIGIN, '') + ' ' + r.status()); });
   for (const p of PAGES) {
     errors = []; failed = [];
-    await page.goto(ORIGIN + p, { waitUntil: 'networkidle' });
+    // one navigation timeout used to throw and kill the whole run with no report (2026-11-09: two
+    // different post pages, each idle in ~600ms when loaded alone, nothing external). Now: retry once,
+    // then fall back to the load event (images and fonts are awaited below anyway); a page that will
+    // not load at all is a recorded failure, never a crash.
+    let navNote = '';
+    try { await page.goto(ORIGIN + p, { waitUntil: 'networkidle' }); }
+    catch (e1) {
+      try { await page.goto(ORIGIN + p, { waitUntil: 'networkidle' }); navNote = 'network idle timed out once; retry ok'; }
+      catch (e2) {
+        try { await page.goto(ORIGIN + p, { waitUntil: 'load' }); navNote = 'network idle timed out twice; checked after the load event'; }
+        catch (e3) { fail(`${p} @${w}x${h}`, 'page did not load: ' + String(e3.message || e3).split('\n')[0]); continue; }
+      }
+    }
+    if (navNote) console.log(`  note ${p} @${w}x${h}: ${navNote}`);
     await page.evaluate(async () => {
       document.querySelectorAll('img[loading="lazy"]').forEach((i) => { i.loading = 'eager'; });
       for (let y = 0; y < document.documentElement.scrollHeight; y += innerHeight * 0.9) { scrollTo(0, y); await new Promise((r) => setTimeout(r, 30)); }
       scrollTo(0, 0);
-      await Promise.all([...document.images].map((i) => (i.complete ? 0 : new Promise((r) => { i.onload = i.onerror = r; setTimeout(r, 4000); }))));
+      // a broken image fails at once (onerror); the wait only bounds a slow one. 10s, not 4s: under
+      // machine load a healthy 92KB image was once still decoding at 4s and counted as broken (2026-11-09)
+      await Promise.all([...document.images].map((i) => (i.complete ? 0 : new Promise((r) => { i.onload = i.onerror = r; setTimeout(r, 10000); }))));
       await document.fonts.ready;
     });
-    const r = await page.evaluate(() => {
+    const r = await page.evaluate(async () => {
       const vw = innerWidth, out = { overflow: null, wide: [], images: [], taps: [], small: [], h1: 0, unnamed: [], noalt: [] };
       const de = document.documentElement;
       if (de.scrollWidth > vw + 1) {
@@ -116,7 +131,23 @@ for (const [w, h] of VPS) {
         }
       }
       const visible = (el) => { const s = getComputedStyle(el); if (s.visibility === 'hidden' || s.display === 'none' || +s.opacity === 0) return false; const b = el.getBoundingClientRect(); if (!b.width || !b.height) return false; if (el.closest('[aria-hidden="true"], .visually-hidden, [hidden], .drawer:not([data-open="true"]), .age-gate')) return false; return true; };
-      for (const img of document.images) { if (!img.complete || !img.naturalWidth) out.images.push(img.getAttribute('src')); if (!img.hasAttribute('alt')) out.noalt.push(img.getAttribute('src')); }
+      // broken images: a shown image that has not loaded is broken. An image with no box (the answered
+      // age gate's backdrop sits in a [hidden] subtree) cannot show, and forcing its load raced the gate
+      // script (2026-11-09: the same healthy file flagged on two different posts), so its URL is loaded
+      // on its own instead; only a file that fails that way is reported. Missing files are also caught
+      // by the link check above and by the failed-request listener.
+      const hiddenImgs = [];
+      for (const img of document.images) {
+        if (!img.hasAttribute('alt')) out.noalt.push(img.getAttribute('src'));
+        if (img.complete && img.naturalWidth) continue;
+        if (img.getClientRects().length && !img.closest('[hidden]')) out.images.push(img.getAttribute('src'));
+        else hiddenImgs.push(img);
+      }
+      for (const img of hiddenImgs) {
+        const src = img.currentSrc || img.src;
+        const loads = await new Promise((res) => { const t = new Image(); t.onload = () => res(t.naturalWidth > 0); t.onerror = () => res(false); setTimeout(() => res(false), 10000); t.src = src; });
+        if (!loads) out.images.push(img.getAttribute('src') + ' (hidden; its file did not load)');
+      }
       for (const el of document.querySelectorAll('a[href], button, input, textarea, select, summary, [role="tab"]')) {
         if (!visible(el)) continue;
         if (el.classList.contains('skip-link')) continue;
@@ -188,7 +219,7 @@ for (const [w, h] of VPS) {
     if (r.h1 !== 1) fail(where, 'h1 count ' + r.h1);
     if (r.lowContrast.length) fail(where, `text under WCAG AA contrast (${r.lowContrast.length}): ` + r.lowContrast.slice(0, 4).join('; '));
     if (r.unnamed.length) fail(where, 'unnamed controls: ' + r.unnamed.slice(0, 2).join(' | '));
-    report.render.push({ page: p, vp: `${w}x${h}`, ...r, errors, failed });
+    report.render.push({ page: p, vp: `${w}x${h}`, ...r, errors, failed, ...(navNote ? { nav: navNote } : {}) });
   }
   await ctx.close();
 }

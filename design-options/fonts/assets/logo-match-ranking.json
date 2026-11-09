@@ -1,0 +1,799 @@
+{
+ "measured": "2026-11-09T02:03:24.526Z",
+ "method": "per-glyph IoU at equal cap height, horizontally centred; widthRatio = font glyph width / logo glyph width (geometric mean)",
+ "ranking": [
+  {
+   "fam": "Jockey One",
+   "w": 400,
+   "iou": 0.8344,
+   "widthRatio": 1.009,
+   "worst": [
+    "S 0.49",
+    "R 0.74",
+    "R 0.74"
+   ]
+  },
+  {
+   "fam": "Teko",
+   "w": 600,
+   "iou": 0.8279,
+   "widthRatio": 1.042,
+   "worst": [
+    "R 0.74",
+    "R 0.74",
+    "A 0.81"
+   ]
+  },
+  {
+   "fam": "Staatliches",
+   "w": 400,
+   "iou": 0.8184,
+   "widthRatio": 0.917,
+   "worst": [
+    "S 0.66",
+    "O 0.72",
+    "O 0.72"
+   ]
+  },
+  {
+   "fam": "Khand",
+   "w": 700,
+   "iou": 0.8158,
+   "widthRatio": 0.992,
+   "worst": [
+    "S 0.68",
+    "R 0.72",
+    "R 0.73"
+   ]
+  },
+  {
+   "fam": "Sofia Sans Extra Condensed",
+   "w": 900,
+   "iou": 0.8115,
+   "widthRatio": 1.009,
+   "worst": [
+    "S 0.67",
+    "R 0.72",
+    "R 0.72"
+   ]
+  },
+  {
+   "fam": "Rajdhani",
+   "w": 700,
+   "iou": 0.81,
+   "widthRatio": 1.118,
+   "worst": [
+    "A 0.68",
+    "V 0.75",
+    "R 0.76"
+   ]
+  },
+  {
+   "fam": "Agdasima",
+   "w": 700,
+   "iou": 0.8088,
+   "widthRatio": 0.933,
+   "worst": [
+    "R 0.71",
+    "R 0.71",
+    "A 0.75"
+   ]
+  },
+  {
+   "fam": "Roboto Condensed",
+   "w": 900,
+   "iou": 0.8015,
+   "widthRatio": 1.162,
+   "worst": [
+    "R 0.75",
+    "R 0.76",
+    "V 0.78"
+   ]
+  },
+  {
+   "fam": "Saira Condensed",
+   "w": 800,
+   "iou": 0.7971,
+   "widthRatio": 1.008,
+   "worst": [
+    "S 0.70",
+    "L 0.74",
+    "R 0.76"
+   ]
+  },
+  {
+   "fam": "Barlow Condensed",
+   "w": 800,
+   "iou": 0.7954,
+   "widthRatio": 1.035,
+   "worst": [
+    "S 0.70",
+    "R 0.74",
+    "R 0.75"
+   ]
+  },
+  {
+   "fam": "Squada One",
+   "w": 400,
+   "iou": 0.7865,
+   "widthRatio": 0.932,
+   "worst": [
+    "A 0.53",
+    "L 0.73",
+    "R 0.76"
+   ]
+  },
+  {
+   "fam": "Sofia Sans Condensed",
+   "w": 900,
+   "iou": 0.7841,
+   "widthRatio": 1.146,
+   "worst": [
+    "R 0.73",
+    "V 0.73",
+    "R 0.74"
+   ]
+  },
+  {
+   "fam": "Oswald",
+   "w": 700,
+   "iou": 0.7681,
+   "widthRatio": 0.934,
+   "worst": [
+    "S 0.61",
+    "L 0.70",
+    "F 0.70"
+   ]
+  },
+  {
+   "fam": "Smooch Sans",
+   "w": 900,
+   "iou": 0.7646,
+   "widthRatio": 0.991,
+   "worst": [
+    "R 0.68",
+    "O 0.68",
+    "R 0.69"
+   ]
+  },
+  {
+   "fam": "Saira Condensed",
+   "w": 900,
+   "iou": 0.7563,
+   "widthRatio": 1.043,
+   "worst": [
+    "S 0.70",
+    "L 0.71",
+    "V 0.71"
+   ]
+  },
+  {
+   "fam": "IBM Plex Sans Condensed",
+   "w": 700,
+   "iou": 0.7518,
+   "widthRatio": 1.238,
+   "worst": [
+    "A 0.65",
+    "I 0.67",
+    "V 0.69"
+   ]
+  },
+  {
+   "fam": "Asap Condensed",
+   "w": 900,
+   "iou": 0.7512,
+   "widthRatio": 1.094,
+   "worst": [
+    "S 0.68",
+    "L 0.69",
+    "V 0.71"
+   ]
+  },
+  {
+   "fam": "Barlow Condensed",
+   "w": 900,
+   "iou": 0.7472,
+   "widthRatio": 1.082,
+   "worst": [
+    "I 0.71",
+    "T 0.72",
+    "T 0.72"
+   ]
+  },
+  {
+   "fam": "Big Shoulders Display",
+   "w": 900,
+   "iou": 0.7445,
+   "widthRatio": 0.864,
+   "worst": [
+    "R 0.58",
+    "R 0.59",
+    "O 0.65"
+   ]
+  },
+  {
+   "fam": "Gemunu Libre",
+   "w": 800,
+   "iou": 0.7334,
+   "widthRatio": 1.195,
+   "worst": [
+    "V 0.52",
+    "A 0.54",
+    "O 0.71"
+   ]
+  },
+  {
+   "fam": "Do Hyeon",
+   "w": 400,
+   "iou": 0.733,
+   "widthRatio": 1.173,
+   "worst": [
+    "L 0.39",
+    "F 0.49",
+    "E 0.58"
+   ]
+  },
+  {
+   "fam": "Teko",
+   "w": 700,
+   "iou": 0.7328,
+   "widthRatio": 1.175,
+   "worst": [
+    "I 0.69",
+    "R 0.70",
+    "R 0.70"
+   ]
+  },
+  {
+   "fam": "Archivo Narrow",
+   "w": 700,
+   "iou": 0.7326,
+   "widthRatio": 1.189,
+   "worst": [
+    "O 0.59",
+    "O 0.60",
+    "A 0.65"
+   ]
+  },
+  {
+   "fam": "Alumni Sans",
+   "w": 900,
+   "iou": 0.7311,
+   "widthRatio": 1.009,
+   "worst": [
+    "L 0.62",
+    "V 0.69",
+    "R 0.70"
+   ]
+  },
+  {
+   "fam": "Barlow Semi Condensed",
+   "w": 900,
+   "iou": 0.7296,
+   "widthRatio": 1.211,
+   "worst": [
+    "T 0.69",
+    "T 0.69",
+    "L 0.69"
+   ]
+  },
+  {
+   "fam": "Fira Sans Extra Condensed",
+   "w": 900,
+   "iou": 0.7209,
+   "widthRatio": 1.187,
+   "worst": [
+    "I 0.65",
+    "V 0.67",
+    "R 0.68"
+   ]
+  },
+  {
+   "fam": "Quantico",
+   "w": 700,
+   "iou": 0.7088,
+   "widthRatio": 1.224,
+   "worst": [
+    "V 0.53",
+    "O 0.56",
+    "O 0.57"
+   ]
+  },
+  {
+   "fam": "Fira Sans Condensed",
+   "w": 900,
+   "iou": 0.698,
+   "widthRatio": 1.267,
+   "worst": [
+    "I 0.64",
+    "V 0.65",
+    "A 0.66"
+   ]
+  },
+  {
+   "fam": "Mohave",
+   "w": 700,
+   "iou": 0.6957,
+   "widthRatio": 0.809,
+   "worst": [
+    "O 0.55",
+    "O 0.55",
+    "S 0.58"
+   ]
+  },
+  {
+   "fam": "Saira Extra Condensed",
+   "w": 900,
+   "iou": 0.6798,
+   "widthRatio": 0.856,
+   "worst": [
+    "L 0.54",
+    "S 0.58",
+    "F 0.61"
+   ]
+  },
+  {
+   "fam": "Anton",
+   "w": 400,
+   "iou": 0.6773,
+   "widthRatio": 0.799,
+   "worst": [
+    "S 0.55",
+    "R 0.56",
+    "R 0.56"
+   ]
+  },
+  {
+   "fam": "Saira Semi Condensed",
+   "w": 900,
+   "iou": 0.6733,
+   "widthRatio": 1.226,
+   "worst": [
+    "A 0.62",
+    "V 0.62",
+    "I 0.63"
+   ]
+  },
+  {
+   "fam": "Kdam Thmor Pro",
+   "w": 400,
+   "iou": 0.671,
+   "widthRatio": 1.082,
+   "worst": [
+    "V 0.49",
+    "A 0.50",
+    "O 0.59"
+   ]
+  },
+  {
+   "fam": "Encode Sans Condensed",
+   "w": 900,
+   "iou": 0.6698,
+   "widthRatio": 1.301,
+   "worst": [
+    "A 0.57",
+    "V 0.57",
+    "T 0.66"
+   ]
+  },
+  {
+   "fam": "Bebas Neue",
+   "w": 400,
+   "iou": 0.6587,
+   "widthRatio": 0.793,
+   "worst": [
+    "S 0.49",
+    "O 0.55",
+    "O 0.55"
+   ]
+  },
+  {
+   "fam": "Big Shoulders Display",
+   "w": 800,
+   "iou": 0.647,
+   "widthRatio": 0.783,
+   "worst": [
+    "R 0.50",
+    "R 0.50",
+    "O 0.56"
+   ]
+  },
+  {
+   "fam": "Exo 2",
+   "w": 800,
+   "iou": 0.6407,
+   "widthRatio": 1.384,
+   "worst": [
+    "A 0.49",
+    "V 0.52",
+    "O 0.64"
+   ]
+  },
+  {
+   "fam": "Oxanium",
+   "w": 800,
+   "iou": 0.6375,
+   "widthRatio": 1.335,
+   "worst": [
+    "V 0.50",
+    "A 0.54",
+    "O 0.57"
+   ]
+  },
+  {
+   "fam": "Iceberg",
+   "w": 400,
+   "iou": 0.6221,
+   "widthRatio": 0.998,
+   "worst": [
+    "A 0.32",
+    "V 0.41",
+    "L 0.46"
+   ]
+  },
+  {
+   "fam": "Encode Sans Semi Condensed",
+   "w": 900,
+   "iou": 0.6182,
+   "widthRatio": 1.394,
+   "worst": [
+    "V 0.51",
+    "A 0.51",
+    "O 0.59"
+   ]
+  },
+  {
+   "fam": "Fjalla One",
+   "w": 400,
+   "iou": 0.6064,
+   "widthRatio": 0.782,
+   "worst": [
+    "R 0.50",
+    "S 0.50",
+    "R 0.50"
+   ]
+  },
+  {
+   "fam": "Exo 2",
+   "w": 900,
+   "iou": 0.6059,
+   "widthRatio": 1.446,
+   "worst": [
+    "A 0.50",
+    "V 0.52",
+    "T 0.58"
+   ]
+  },
+  {
+   "fam": "Chakra Petch",
+   "w": 700,
+   "iou": 0.6053,
+   "widthRatio": 1.318,
+   "worst": [
+    "O 0.44",
+    "O 0.45",
+    "L 0.47"
+   ]
+  },
+  {
+   "fam": "Graduate",
+   "w": 400,
+   "iou": 0.6049,
+   "widthRatio": 1.214,
+   "worst": [
+    "T 0.56",
+    "T 0.56",
+    "D 0.57"
+   ]
+  },
+  {
+   "fam": "Black Han Sans",
+   "w": 400,
+   "iou": 0.6013,
+   "widthRatio": 1.411,
+   "worst": [
+    "A 0.53",
+    "V 0.55",
+    "D 0.59"
+   ]
+  },
+  {
+   "fam": "Changa One",
+   "w": 400,
+   "iou": 0.6007,
+   "widthRatio": 1.407,
+   "worst": [
+    "A 0.54",
+    "V 0.55",
+    "T 0.58"
+   ]
+  },
+  {
+   "fam": "Saira",
+   "w": 900,
+   "iou": 0.5842,
+   "widthRatio": 1.418,
+   "worst": [
+    "A 0.53",
+    "T 0.55",
+    "T 0.55"
+   ]
+  },
+  {
+   "fam": "Bakbak One",
+   "w": 400,
+   "iou": 0.579,
+   "widthRatio": 1.432,
+   "worst": [
+    "O 0.46",
+    "O 0.47",
+    "F 0.52"
+   ]
+  },
+  {
+   "fam": "Bai Jamjuree",
+   "w": 700,
+   "iou": 0.574,
+   "widthRatio": 1.385,
+   "worst": [
+    "L 0.40",
+    "O 0.43",
+    "O 0.43"
+   ]
+  },
+  {
+   "fam": "Nova Square",
+   "w": 400,
+   "iou": 0.574,
+   "widthRatio": 1.045,
+   "worst": [
+    "A 0.26",
+    "L 0.52",
+    "E 0.53"
+   ]
+  },
+  {
+   "fam": "Titillium Web",
+   "w": 900,
+   "iou": 0.5721,
+   "widthRatio": 1.411,
+   "worst": [
+    "A 0.52",
+    "V 0.53",
+    "I 0.54"
+   ]
+  },
+  {
+   "fam": "Chakra Petch",
+   "w": 600,
+   "iou": 0.5576,
+   "widthRatio": 1.259,
+   "worst": [
+    "O 0.39",
+    "O 0.39",
+    "L 0.42"
+   ]
+  },
+  {
+   "fam": "Antonio",
+   "w": 700,
+   "iou": 0.5574,
+   "widthRatio": 0.698,
+   "worst": [
+    "S 0.42",
+    "O 0.46",
+    "O 0.47"
+   ]
+  },
+  {
+   "fam": "Bungee",
+   "w": 400,
+   "iou": 0.556,
+   "widthRatio": 1.486,
+   "worst": [
+    "I 0.37",
+    "L 0.42",
+    "V 0.45"
+   ]
+  },
+  {
+   "fam": "Kanit",
+   "w": 800,
+   "iou": 0.556,
+   "widthRatio": 1.543,
+   "worst": [
+    "V 0.51",
+    "A 0.52",
+    "O 0.52"
+   ]
+  },
+  {
+   "fam": "Russo One",
+   "w": 400,
+   "iou": 0.5366,
+   "widthRatio": 1.552,
+   "worst": [
+    "L 0.46",
+    "O 0.47",
+    "O 0.47"
+   ]
+  },
+  {
+   "fam": "Archivo Black",
+   "w": 400,
+   "iou": 0.5259,
+   "widthRatio": 1.626,
+   "worst": [
+    "L 0.47",
+    "O 0.48",
+    "E 0.48"
+   ]
+  },
+  {
+   "fam": "Kanit",
+   "w": 900,
+   "iou": 0.5238,
+   "widthRatio": 1.598,
+   "worst": [
+    "T 0.50",
+    "T 0.50",
+    "V 0.50"
+   ]
+  },
+  {
+   "fam": "Archivo",
+   "w": 900,
+   "iou": 0.5233,
+   "widthRatio": 1.63,
+   "worst": [
+    "L 0.47",
+    "O 0.48",
+    "E 0.48"
+   ]
+  },
+  {
+   "fam": "Turret Road",
+   "w": 800,
+   "iou": 0.5163,
+   "widthRatio": 1.227,
+   "worst": [
+    "V 0.26",
+    "O 0.29",
+    "O 0.30"
+   ]
+  },
+  {
+   "fam": "League Gothic",
+   "w": 400,
+   "iou": 0.5144,
+   "widthRatio": 0.676,
+   "worst": [
+    "R 0.37",
+    "R 0.37",
+    "O 0.38"
+   ]
+  },
+  {
+   "fam": "Tomorrow",
+   "w": 800,
+   "iou": 0.4906,
+   "widthRatio": 1.673,
+   "worst": [
+    "I 0.37",
+    "A 0.42",
+    "V 0.44"
+   ]
+  },
+  {
+   "fam": "Pathway Gothic One",
+   "w": 400,
+   "iou": 0.489,
+   "widthRatio": 0.685,
+   "worst": [
+    "R 0.36",
+    "R 0.37",
+    "S 0.39"
+   ]
+  },
+  {
+   "fam": "Black Ops One",
+   "w": 400,
+   "iou": 0.4848,
+   "widthRatio": 1.667,
+   "worst": [
+    "F 0.42",
+    "L 0.43",
+    "E 0.45"
+   ]
+  },
+  {
+   "fam": "Sarpanch",
+   "w": 800,
+   "iou": 0.4791,
+   "widthRatio": 1.57,
+   "worst": [
+    "A 0.39",
+    "V 0.41",
+    "O 0.44"
+   ]
+  },
+  {
+   "fam": "Sarpanch",
+   "w": 700,
+   "iou": 0.4677,
+   "widthRatio": 1.489,
+   "worst": [
+    "A 0.38",
+    "V 0.38",
+    "O 0.39"
+   ]
+  },
+  {
+   "fam": "Sarpanch",
+   "w": 900,
+   "iou": 0.462,
+   "widthRatio": 1.709,
+   "worst": [
+    "A 0.40",
+    "I 0.44",
+    "O 0.45"
+   ]
+  },
+  {
+   "fam": "Aldrich",
+   "w": 400,
+   "iou": 0.4581,
+   "widthRatio": 1.301,
+   "worst": [
+    "O 0.23",
+    "O 0.24",
+    "D 0.31"
+   ]
+  },
+  {
+   "fam": "Tomorrow",
+   "w": 900,
+   "iou": 0.4106,
+   "widthRatio": 1.802,
+   "worst": [
+    "I 0.34",
+    "A 0.34",
+    "V 0.36"
+   ]
+  },
+  {
+   "fam": "Orbitron",
+   "w": 900,
+   "iou": 0.4001,
+   "widthRatio": 1.652,
+   "worst": [
+    "A 0.18",
+    "L 0.19",
+    "V 0.25"
+   ]
+  },
+  {
+   "fam": "Goldman",
+   "w": 700,
+   "iou": 0.3632,
+   "widthRatio": 1.993,
+   "worst": [
+    "L 0.28",
+    "O 0.28",
+    "O 0.29"
+   ]
+  },
+  {
+   "fam": "Stalinist One",
+   "w": 400,
+   "iou": 0.2414,
+   "widthRatio": 2.738,
+   "worst": [
+    "O 0.16",
+    "O 0.16",
+    "A 0.16"
+   ]
+  }
+ ],
+ "missing": []
+}

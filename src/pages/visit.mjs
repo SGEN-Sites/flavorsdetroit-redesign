@@ -3,7 +3,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, pageHero, storeCard, placeholder, faq, sign } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, pageHero, storeCard, faq, storePhoto } from '../lib/parts.mjs';
 import { breadcrumbJsonLd, storeJsonLd } from '../lib/seo.mjs';
 
 export const PATH = '/visit/';
@@ -16,6 +16,7 @@ function hero() {
     titleHtml: '5700 E <span class="accent">8 Mile</span> Rd, Detroit',
     lede: "Open every day, 10AM to 10PM. You'll feel right at home in our beautiful 10,000 sq ft location.",
     crumbs: [{ label: 'Visit' }],
+    scene: 'rainbow-reflections', pos: '50% 72%',
     aside: storeCard(PATH, { heading: false }),
   });
 }
@@ -52,9 +53,9 @@ function hoursMap() {
 
 function wayfinding() {
   const items = [
-    { title: 'Look for the sign', text: 'A black, cloud-shaped sign outlined in marquee bulbs, with a glowing neon 5700, on a royal-blue tower.', media: `<div class="ph ph--sign" role="img" aria-label="Illustration of the Flavors Detroit sign; photo coming soon" style="--ar: 4 / 3; display:grid; place-items:center; padding: 6% 0 0">${sign(PATH, { plate: true, flicker: false, eager: false })}<span class="ph__label">${icon.camera}<span>Sign photo coming soon</span></span></div>` },
-    { title: 'Then the awnings', text: 'A dark building with rainbow-striped awnings and a green cross.', media: placeholder('storefront', 'Storefront photo coming soon', '4 / 3') },
-    { title: 'Step inside', text: 'A bright, glossy showroom with deli-style displays: glass jars of flower on navy counters glowing with blue LED underglow.', media: placeholder('counter', 'Showroom photo coming soon', '4 / 3') },
+    { title: 'Look for the sign', text: 'A black, cloud-shaped sign outlined in marquee bulbs, with a glowing neon 5700, on a blue tower.', media: storePhoto(PATH, 'sign', { sizes: '(max-width: 760px) 92vw, 400px' }) },
+    { title: 'Then the green cross', text: 'A dark building with a green cross.', media: storePhoto(PATH, 'front', { sizes: '(max-width: 760px) 92vw, 400px' }) },
+    { title: 'Step inside', text: 'A bright, glossy showroom with deli-style displays: glass jars of flower on navy counters glowing with blue LED underglow.', media: storePhoto(PATH, 'merch', { sizes: '(max-width: 760px) 92vw, 400px' }) },
   ];
   return `<section class="band band--white" aria-labelledby="find-title">
   <div class="container">

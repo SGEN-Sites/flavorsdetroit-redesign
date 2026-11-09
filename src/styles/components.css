@@ -50,16 +50,9 @@
 .section-head--center { justify-content: center; text-align: center; }
 .section-head--center .section-head__text { justify-items: center; }
 
-/* ---- the awning: the storefront's rainbow stripes, scalloped like a valance ------------- */
-.awning {
-  position: relative; z-index: 3; height: clamp(26px, 2.6vw, 38px);
-  background: var(--awning); background-size: clamp(180px, 20vw, 280px) 100%;
-  -webkit-mask: radial-gradient(circle at 50% 0, black 68%, transparent 70%) 0 100% / clamp(30px, 3.333vw, 46.6px) 14px repeat-x, linear-gradient(black, black) 0 0 / 100% calc(100% - 13px) no-repeat;
-  mask: radial-gradient(circle at 50% 0, black 68%, transparent 70%) 0 100% / clamp(30px, 3.333vw, 46.6px) 14px repeat-x, linear-gradient(black, black) 0 0 / 100% calc(100% - 13px) no-repeat;
-  filter: drop-shadow(0 8px 6px color-mix(in srgb, var(--night) 35%, transparent));
-}
-.awning::after { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: color-mix(in srgb, var(--night) 28%, transparent); }
-.awning--flip { transform: scaleY(-1); }
+/* ---- the spectrum divider: the thin six-colour line ("variety in flavors"). The scalloped
+   rainbow awning that stood here was retired 2026-11-09: the storefront's stripes were ~6 years old */
+.spectrum { height: 3px; background: var(--rainbow-line); position: relative; z-index: 3; }
 
 /* ---- ticker: the marquee letter board ------------------------------------------------------ */
 .ticker {
@@ -86,21 +79,24 @@
 .ticker__list[aria-hidden="true"] { display: none; }
 .js .ticker__list[aria-hidden="true"] { display: flex; }
 
-/* ---- the sign: logo on the royal-blue corrugated tower, bulbs lit, neon 5700 -------------- */
-.sign { position: relative; width: 100%; max-width: 560px; margin-inline: auto; aspect-ratio: 560 / 640; isolation: isolate; }
+/* ---- the sign: logo on a wide, short blue corrugated tower, bulbs lit ---------------------
+   Owner's direction 2026-11-09: no number plate, and the tower wider and shorter. The width is
+   the real sign's (its tower is ~0.7 of the cloud's width in the storefront photo, the cloud is
+   0.89 of the logo box, so 62% here); it shows about a third of the logo's height below the
+   cloud and fades into the night instead of running down to the ticker. */
+.sign { position: relative; width: 100%; max-width: 560px; margin-inline: auto; aspect-ratio: 560 / 600; isolation: isolate; }
 .sign__glow {
   position: absolute; inset: -8% -5% 10%; z-index: -2; pointer-events: none;
   background: radial-gradient(closest-side, color-mix(in srgb, var(--royal) 46%, transparent), color-mix(in srgb, var(--led) 10%, transparent) 55%, transparent 76%);
   filter: blur(6px);
 }
 .sign__tower {
-  position: absolute; left: 50%; width: 30%; top: 46%; bottom: -12%; transform: translateX(-50%); z-index: -1;
+  position: absolute; left: 50%; width: 62%; top: 37%; bottom: 0; transform: translateX(-50%); z-index: -1;
   background:
-    linear-gradient(90deg, color-mix(in srgb, var(--night) 45%, transparent), transparent 18% 82%, color-mix(in srgb, var(--night) 55%, transparent)),
+    linear-gradient(90deg, color-mix(in srgb, var(--night) 45%, transparent), transparent 14% 86%, color-mix(in srgb, var(--night) 55%, transparent)),
     repeating-linear-gradient(90deg, var(--royal-deep) 0 3px, var(--royal) 3px 12px, var(--royal-bright) 12px 14px, var(--royal) 14px 20px),
     var(--royal);
-  border-radius: 6px 6px 0 0;
-  box-shadow: 0 0 60px -10px color-mix(in srgb, var(--royal) 70%, transparent);
+  -webkit-mask-image: linear-gradient(180deg, var(--night) 80%, transparent); mask-image: linear-gradient(180deg, var(--night) 80%, transparent);
 }
 .sign__board { position: relative; width: 100%; }
 .sign__logo { width: 100%; height: auto; filter: drop-shadow(0 22px 28px color-mix(in srgb, var(--night) 70%, transparent)); }
@@ -110,22 +106,11 @@
 .js .sign__bulbs .halo { animation: bulb-chase 3.4s linear infinite; animation-delay: calc(var(--i) * -64ms); }
 .sign.is-paused .sign__bulbs .halo { animation-play-state: paused; }
 @keyframes bulb-chase { 0%, 100% { opacity: .38; } 6% { opacity: 1; } 18% { opacity: .5; } }
-.sign__plate {
-  position: absolute; left: 50%; top: 79%; transform: translateX(-50%);
-  min-width: 46%; padding: 6px 18px 4px; text-align: center;
-  background: linear-gradient(180deg, var(--night-2), var(--night)); border: 2px solid color-mix(in srgb, var(--royal-deep) 80%, var(--night));
-  border-radius: 10px; box-shadow: 0 16px 30px -14px color-mix(in srgb, var(--night) 90%, transparent), inset 0 0 22px color-mix(in srgb, var(--led) 14%, transparent);
-}
 
-/* neon numerals: a white-hot core with a blue LED halo */
+/* neon numerals (the news date boards): a white-hot core with a blue LED halo */
 .neon {
   font-family: var(--font-neon); font-weight: 400; letter-spacing: .04em; line-height: 1; color: var(--white);
   text-shadow: 0 0 2px var(--white), 0 0 8px var(--led-soft), 0 0 18px var(--led), 0 0 40px var(--led), 0 0 70px var(--led-glow);
-}
-.sign__plate .neon { font-size: clamp(2.6rem, 1.4rem + 4vw, 4.4rem); }
-.js .neon[data-flicker] { animation: neon-on 1.8s steps(1, end) .35s both; }
-@keyframes neon-on {
-  0% { opacity: .08; } 8% { opacity: 1; } 11% { opacity: .1; } 16% { opacity: 1; } 18% { opacity: .25; } 30% { opacity: 1; } 31% { opacity: .5; } 34%, 100% { opacity: 1; }
 }
 
 /* ---- jars: product categories as glass cases on a navy counter with LED underglow ------- */
@@ -304,48 +289,15 @@
 .stat__l { margin-top: 6px; font-size: var(--fs-sm); color: var(--ink-2); line-height: 1.35; }
 @media (max-width: 560px) { .stats { grid-template-columns: 1fr; } .stat { display: flex; align-items: baseline; gap: 14px; } .stat__l { margin: 0; } }
 
-/* ---- placeholders: labelled, on-brand frames until real store photos arrive ---------------- */
-.ph { position: relative; overflow: hidden; border-radius: var(--r-xl); isolation: isolate; aspect-ratio: var(--ar, 4 / 3); background: var(--navy); color: var(--cream); }
-.ph__label {
-  position: absolute; left: 14px; bottom: 14px; z-index: 3; display: inline-flex; align-items: center; gap: 8px;
-  padding: 7px 12px; border-radius: var(--r-pill); font-size: var(--fs-xs); font-weight: 650;
-  background: color-mix(in srgb, var(--night) 72%, transparent); border: 1px solid var(--line-night-strong); color: var(--cream);
-}
-.ph__label svg { width: 15px; height: 15px; }
-.ph__art { position: absolute; inset: 0; }
-.ph__art svg { width: 100%; height: 100%; }
-/* the showroom: glossy white wall, glass jars on a navy counter, LED underglow */
-.ph--counter { background: linear-gradient(180deg, var(--white), var(--showroom-2)); }
-.ph--counter .wall-line { stroke: var(--line-day); stroke-width: 2; }
-.ph--counter .counter { fill: var(--navy); }
-.ph--counter .counter-top { fill: var(--navy-2); }
-.ph--counter .counter-glass { fill: color-mix(in srgb, var(--white) 55%, transparent); }
-.ph--counter .led { stroke: var(--led); stroke-width: 3; filter: drop-shadow(0 0 6px var(--led)); }
-.ph--counter .glow { fill: var(--led-haze); }
-.ph--counter .jar-body { fill: color-mix(in srgb, var(--white) 70%, transparent); stroke: color-mix(in srgb, var(--ink) 22%, transparent); stroke-width: 1.5; }
-.ph--counter .jar-fill { fill: color-mix(in srgb, var(--rb-green) 55%, var(--white)); }
-.ph--counter .jar-lid { fill: var(--ink); }
-.ph--counter .jar-shine { fill: color-mix(in srgb, var(--white) 85%, transparent); }
-.ph--counter .jar-tag { fill: var(--white); stroke: color-mix(in srgb, var(--ink) 25%, transparent); }
-/* the storefront at night: dark wall, rainbow awning, a bright window, the green cross */
-.ph--storefront { background: linear-gradient(180deg, var(--night-2), var(--sign-black)); }
-.ph--storefront .wall { fill: var(--sign-black); }
-.ph--storefront .window { fill: color-mix(in srgb, var(--white) 92%, var(--led)); }
-.ph--storefront .window-glow { fill: var(--led-haze); }
-.ph--storefront .mullion { stroke: var(--sign-black); stroke-width: 4; }
-.ph--storefront .counter-in { fill: var(--navy); }
-.ph--storefront .led { stroke: var(--led); stroke-width: 2.5; }
-.ph--storefront .cross { fill: var(--cross); filter: drop-shadow(0 0 8px var(--cross)); }
-.ph--storefront .ground { fill: color-mix(in srgb, var(--cream) 8%, transparent); }
-.ph--storefront .s1 { fill: var(--rb-red); } .ph--storefront .s2 { fill: var(--rb-orange); } .ph--storefront .s3 { fill: var(--rb-yellow); }
-.ph--storefront .s4 { fill: var(--rb-pink); } .ph--storefront .s5 { fill: var(--rb-blue); } .ph--storefront .s6 { fill: var(--rb-green); }
-.ph--storefront .awn-shade { fill: color-mix(in srgb, var(--night) 30%, transparent); }
-/* the sign at night: royal tower ribs and a bulb rail */
-.ph--sign { background: radial-gradient(70% 60% at 50% 30%, var(--royal-haze), transparent 70%), var(--night); }
-.ph--sign .ph__art::before { content: ""; position: absolute; left: 41%; width: 18%; top: 34%; bottom: 0;
-  background: repeating-linear-gradient(90deg, var(--royal-deep) 0 3px, var(--royal) 3px 12px, var(--royal-bright) 12px 14px, var(--royal) 14px 20px); }
-.ph--sign .ph__art::after { content: ""; position: absolute; left: 22%; right: 22%; top: 12%; height: 30%; border-radius: 40% 46% 38% 44%;
-  background: var(--sign-black); box-shadow: 0 0 0 2px var(--bulb), 0 0 22px 2px var(--bulb-glow); }
+/* ---- store photos: the owner's own photos of the store, in rounded frames (2026-11-09) ------- */
+.photo { position: relative; overflow: hidden; border-radius: var(--r-xl); isolation: isolate; aspect-ratio: var(--ar, 4 / 3); background: var(--navy); }
+.photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.photo::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: inherit; pointer-events: none;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--ink) 12%, transparent); }
+/* a second photo pinned over the first one's corner, like a print laid on top */
+.photo--inset { position: absolute; right: clamp(-28px, -2vw, -12px); bottom: 0; width: 34%; border-radius: var(--r-lg);
+  box-shadow: 0 0 0 5px var(--white), 0 26px 46px -18px color-mix(in srgb, var(--ink) 60%, transparent); }
+@media (max-width: 900px) { .photo--inset { right: 12px; width: 32%; } }
 
 /* ---- 8 Mile street sign ----------------------------------------------------------------------- */
 .street-sign { display: inline-grid; gap: 4px; justify-items: start; }
@@ -447,7 +399,7 @@
 .page-hero__text { display: grid; gap: var(--s-4); }
 .page-hero__aside { justify-self: end; }
 @media (max-width: 860px) { .page-hero__in { grid-template-columns: 1fr; } .page-hero__aside { justify-self: start; } }
-.crumbs { font-size: var(--fs-xs); color: var(--mist); display: flex; gap: 8px; flex-wrap: wrap; }
+.crumbs { font-size: var(--fs-xs); color: var(--mist); display: flex; gap: 0 8px; flex-wrap: wrap; align-items: center; }
 .crumbs a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; color: var(--cream-2); }
 .crumbs span[aria-hidden] { opacity: .6; }
 .bulb-rail { height: 10px; background: radial-gradient(circle, var(--bulb) 0 2.5px, color-mix(in srgb, var(--bulb-glow) 45%, transparent) 3px, transparent 4.5px) 0 0 / 24px 10px repeat-x; opacity: .85; }
@@ -470,7 +422,7 @@
   background: radial-gradient(60% 60% at 50% 40%, var(--royal-haze), transparent 70%), repeating-linear-gradient(0deg, transparent 0 46px, var(--line-night) 46px 47px), repeating-linear-gradient(90deg, transparent 0 46px, var(--line-night) 46px 47px), var(--night-2); }
 .map-frame__road { position: absolute; left: 0; right: 0; top: 46%; height: 26px; background: color-mix(in srgb, var(--cream) 14%, transparent); transform: rotate(-3deg); border-block: 2px dashed color-mix(in srgb, var(--cream) 24%, transparent); z-index: 0; }
 .map-frame__load > *:not(.map-frame__road) { position: relative; z-index: 1; }
-.map-pin { width: 44px; height: 44px; color: var(--rb-pink); filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--night) 70%, transparent)); }
+.map-pin { width: 44px; height: 44px; color: var(--led); filter: drop-shadow(0 8px 10px color-mix(in srgb, var(--night) 70%, transparent)); }
 
 /* ---- swipe rows: long rows become a horizontal, snapping row on phones ---------------------- */
 .swipe { scrollbar-width: none; }

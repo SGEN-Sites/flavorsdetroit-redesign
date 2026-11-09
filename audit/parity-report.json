@@ -1,6 +1,6 @@
 {
   "schema": "site-reforge/parity-report@1",
-  "generated": "2026-11-09T00:31:19.074Z",
+  "generated": "2026-11-09T05:11:45.230Z",
   "sourcePages": 142,
   "rebuiltFiles": 137,
   "mappedPages": 142,
@@ -15,10 +15,10 @@
   ],
   "recallFloor": 0.95,
   "contentRunFloor": 12,
-  "meanRecall": 0.9496,
+  "meanRecall": 0.9495,
   "counts": {
-    "minor": 272,
-    "major": 16,
+    "minor": 412,
+    "major": 17,
     "blocker": 146
   },
   "verdict": "DRIFT",
@@ -28,11 +28,11 @@
       "file": "index.html",
       "pageType": "home",
       "status": "DIFFERS",
-      "recall": 0.9521,
-      "missingWords": 14,
+      "recall": 0.9486,
+      "missingWords": 15,
       "longestMissingRun": 4,
       "sourceWords": 290,
-      "rebuiltWords": 1272,
+      "rebuiltWords": 1339,
       "sourceH1": [
         "(313) 733-4464",
         "OUR FLAVORS",
@@ -43,7 +43,7 @@
         "A traditional dispensary with a modern twist ."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 66,
+      "rebuiltLinks": 67,
       "findings": [
         {
           "severity": "minor",
@@ -56,6 +56,12 @@
           "code": "h1-changed",
           "title": "H1 changed",
           "detail": "\"(313) 733-4464\" -> \"A traditional dispensary with a modern twist .\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 94.9% (floor 95%)",
+          "detail": "missing words: hero banner 6 success received photo current building goes here old picture go"
         },
         {
           "severity": "major",
@@ -72,7 +78,7 @@
         {
           "severity": "minor",
           "code": "alt-missing",
-          "title": "1 image(s) without alt",
+          "title": "9 image(s) without alt",
           "detail": "index.html"
         }
       ]
@@ -94,7 +100,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -119,6 +125,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -139,7 +151,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -164,6 +176,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -184,7 +202,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -202,6 +220,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -223,7 +247,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -241,6 +265,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -263,7 +293,7 @@
         "12 Days of Flavors: Shatterday Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -281,6 +311,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/12-days-of-flavors-shatterday-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/12-days-of-flavors-shatterday-edition/index.html"
         }
       ]
@@ -303,7 +339,7 @@
         "2020 Flavors Detroit New Arrivals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -315,6 +351,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/2020-flavors-detroit-new-arrivals/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/2020-flavors-detroit-new-arrivals/index.html"
         }
       ]
@@ -337,7 +379,7 @@
         "3 Day Birthday Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -355,6 +397,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/3-day-birthday-blowout/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/3-day-birthday-blowout/index.html"
         }
       ]
@@ -377,7 +425,7 @@
         "4/19: Out of State Patients Qualify for 4/20 Specials a day early!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -395,6 +443,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early/index.html"
         }
       ]
@@ -417,7 +471,7 @@
         "4/20 is here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -435,6 +489,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/4-20-is-here/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/4-20-is-here/index.html"
         }
       ]
@@ -457,7 +517,7 @@
         "4/20 sneak peek"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -475,6 +535,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/4-20-sneak-peek/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/4-20-sneak-peek/index.html"
         }
       ]
@@ -497,7 +563,7 @@
         "420 Events in Detroit 2026 | Flavors Detroit 420 Weekend (April 17–20)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -509,6 +575,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/420-detroit-2026-flavors-detroit-event/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/420-detroit-2026-flavors-detroit-event/index.html"
         }
       ]
@@ -531,7 +603,7 @@
         "7/10 is almost here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -549,6 +621,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/7-10-is-here/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/7-10-is-here/index.html"
         }
       ]
@@ -571,7 +649,7 @@
         "All Day Happy Hour Monday!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -589,6 +667,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/all-day-happy-hour-monday/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/all-day-happy-hour-monday/index.html"
         }
       ]
@@ -611,7 +695,7 @@
         "Angels Night Specials (New Strains and Extracts)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -629,6 +713,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/angels-night-specials-new-strains-and-extracts/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/angels-night-specials-new-strains-and-extracts/index.html"
         }
       ]
@@ -651,7 +741,7 @@
         "April 1st: Opening Day Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -669,6 +759,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/april-1st-opening-day-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/april-1st-opening-day-specials/index.html"
         }
       ]
@@ -691,7 +787,7 @@
         "April 1st Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -709,6 +805,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/april-1st-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/april-1st-specials/index.html"
         }
       ]
@@ -731,7 +833,7 @@
         "Are you ready for the weekend?"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -749,6 +851,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/are-you-ready-for-the-weekend/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/are-you-ready-for-the-weekend/index.html"
         }
       ]
@@ -771,7 +879,7 @@
         "Back to school!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -789,6 +897,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/back-to-school/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/back-to-school/index.html"
         }
       ]
@@ -811,7 +925,7 @@
         "Black Friday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -829,6 +943,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/black-friday-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/black-friday-specials/index.html"
         }
       ]
@@ -851,7 +971,7 @@
         "Top Shelf Black Friday Specials at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -863,6 +983,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/black-friday-specials-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/black-friday-specials-at-flavors-detroit/index.html"
         }
       ]
@@ -885,7 +1011,7 @@
         "Black Saturday Flame Sale @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -903,6 +1029,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/black-saturday-flame-sale/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/black-saturday-flame-sale/index.html"
         }
       ]
@@ -925,7 +1057,7 @@
         "Flavors Fit For A FatheR"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -950,6 +1082,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "post/bogo-diamond-donuts-live-resin-eclairs/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "post/bogo-diamond-donuts-live-resin-eclairs/index.html"
         }
       ]
     },
@@ -971,7 +1109,7 @@
         "Crumble, Budder, HCFSE and more!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -989,6 +1127,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/crumble-budder-hcfse-and-more/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/crumble-budder-hcfse-and-more/index.html"
         }
       ]
@@ -1011,7 +1155,7 @@
         "Cyber Monday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1029,6 +1173,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/cyber-monday-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/cyber-monday-specials/index.html"
         }
       ]
@@ -1051,7 +1201,7 @@
         "Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1069,6 +1219,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/detroit-labor-day-cannabis-dealsdetroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/detroit-labor-day-cannabis-dealsdetroit/index.html"
         }
       ]
@@ -1091,7 +1247,7 @@
         "Easter Candy for the Grown Ups!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -1109,6 +1265,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/easter-candy-for-the-grown-ups/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/easter-candy-for-the-grown-ups/index.html"
         }
       ]
@@ -1131,7 +1293,7 @@
         "Easter Candy for the grown-ups"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1149,6 +1311,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/easter-candy-for-the-grown-ups-1/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/easter-candy-for-the-grown-ups-1/index.html"
         }
       ]
@@ -1171,7 +1339,7 @@
         "Extended Weekend Epic Deal !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1189,6 +1357,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/extended-weekend-epic-deal/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/extended-weekend-epic-deal/index.html"
         }
       ]
@@ -1211,7 +1385,7 @@
         "Fall To Frost Specials @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 62,
+      "rebuiltLinks": 63,
       "findings": [
         {
           "severity": "minor",
@@ -1229,6 +1403,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fall-to-frost-specials-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fall-to-frost-specials-flavors-detroit/index.html"
         }
       ]
@@ -1251,7 +1431,7 @@
         "Featured Flower: Purple Alien"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1269,6 +1449,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/featured-flower-purple-alien/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/featured-flower-purple-alien/index.html"
         }
       ]
@@ -1291,7 +1477,7 @@
         "February 2020 Extra Special Specials!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1309,6 +1495,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/february-2020-extra-special-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/february-2020-extra-special-specials/index.html"
         }
       ]
@@ -1331,7 +1523,7 @@
         "Flavors Mid Week Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1349,6 +1541,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/flavors-mid-week-flower-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/flavors-mid-week-flower-drop/index.html"
         }
       ]
@@ -1371,7 +1569,7 @@
         "Fresh Drop Alert: Autumn Edition!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1389,6 +1587,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-autumn-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-alert-autumn-edition/index.html"
         }
       ]
@@ -1411,7 +1615,7 @@
         "Fresh Drop Alert: Saturday in December"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1429,6 +1633,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-saturday-in-december/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-alert-saturday-in-december/index.html"
         }
       ]
@@ -1451,7 +1661,7 @@
         "Fresh Drop Alert! Sunday Morning Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1469,6 +1679,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-sunday-morning-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-alert-sunday-morning-edition/index.html"
         }
       ]
@@ -1491,7 +1707,7 @@
         "Fresh Drop Alert: Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1509,6 +1725,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-weekend-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-alert-weekend-edition/index.html"
         }
       ]
@@ -1531,7 +1753,7 @@
         "Fresh Drop: Bubble Gum"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -1549,6 +1771,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-bubble-gum/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-bubble-gum/index.html"
         }
       ]
@@ -1571,7 +1799,7 @@
         "Fresh drop Friday"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1589,6 +1817,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-friday/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-friday/index.html"
         }
       ]
@@ -1611,7 +1845,7 @@
         "Fresh Drop: New Strains!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1629,6 +1863,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-new-strains/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-new-strains/index.html"
         }
       ]
@@ -1651,7 +1891,7 @@
         "Fresh Drop Tuesday"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1669,6 +1909,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-tuesday/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-tuesday/index.html"
         }
       ]
@@ -1691,7 +1937,7 @@
         "Fresh Drop Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1709,6 +1955,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/fresh-drop-weekend-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/fresh-drop-weekend-edition/index.html"
         }
       ]
@@ -1731,7 +1983,7 @@
         "Friday fire 🔥"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -1749,6 +2001,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire/index.html"
         }
       ]
@@ -1771,7 +2029,7 @@
         "Friday fire!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -1789,6 +2047,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-1/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-1/index.html"
         }
       ]
@@ -1811,7 +2075,7 @@
         "Friday fire !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -1829,6 +2093,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-2/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-2/index.html"
         }
       ]
@@ -1851,7 +2121,7 @@
         "Friday Fire 2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1869,6 +2139,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-2021/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-2021/index.html"
         }
       ]
@@ -1891,7 +2167,7 @@
         "Friday Fire at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -1909,6 +2185,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-at-flavors-detroit/index.html"
         }
       ]
@@ -1931,7 +2213,7 @@
         "Friday Fire: Major Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1949,6 +2231,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-major-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-major-drop/index.html"
         }
       ]
@@ -1971,7 +2259,7 @@
         "Friday Fire Shakeathon"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -1989,6 +2277,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-shakeathon/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-shakeathon/index.html"
         }
       ]
@@ -2011,7 +2305,7 @@
         "Friday Fire: Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2029,6 +2323,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-fire-weekend-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-fire-weekend-edition/index.html"
         }
       ]
@@ -2051,7 +2351,7 @@
         "Friday Happy Hour Special 4pm - 9pm"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2069,6 +2369,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-happy-hour-special-4pm-9pm/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-happy-hour-special-4pm-9pm/index.html"
         }
       ]
@@ -2091,7 +2397,7 @@
         "Friday the 13th at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2103,6 +2409,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-the-13th-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-the-13th-at-flavors-detroit/index.html"
         }
       ]
@@ -2125,7 +2437,7 @@
         "Friday the 13th in December sale"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2143,6 +2455,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-the-13th-in-december-sale/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-the-13th-in-december-sale/index.html"
         }
       ]
@@ -2165,7 +2483,7 @@
         "Friday the 13th in November!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2183,6 +2501,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/friday-the-13th-in-november/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/friday-the-13th-in-november/index.html"
         }
       ]
@@ -2208,7 +2532,7 @@
         "Halloween at Flavors Detroit: New Flower, $10 Eighths, $5 Concentrates & $85 Ounces"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2220,6 +2544,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces/index.html"
         }
       ]
@@ -2242,7 +2572,7 @@
         "Halloween Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2260,6 +2590,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/halloween-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/halloween-specials/index.html"
         }
       ]
@@ -2282,7 +2618,7 @@
         "Happy 4th of July"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2300,6 +2636,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-4th-of-july/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-4th-of-july/index.html"
         }
       ]
@@ -2322,7 +2664,7 @@
         "Happy Cinco De Mayo"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2340,6 +2682,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-cinco-de-mayo/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-cinco-de-mayo/index.html"
         }
       ]
@@ -2362,7 +2710,7 @@
         "Happy Cinco De Mayo 5/5/2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2380,6 +2728,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-cinco-de-mayo-5-5-2021/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-cinco-de-mayo-5-5-2021/index.html"
         }
       ]
@@ -2402,7 +2756,7 @@
         "Happy Father's Day from Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2420,6 +2774,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-fathers-day-from-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-fathers-day-from-flavors-detroit/index.html"
         }
       ]
@@ -2442,7 +2802,7 @@
         "Happy Halloween from Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2454,6 +2814,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-halloween-from-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-halloween-from-flavors-detroit/index.html"
         }
       ]
@@ -2476,7 +2842,7 @@
         "Happy Halloween, From your Friends @ Flavors Detroit"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2494,6 +2860,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-halloween-from-your-friends-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-halloween-from-your-friends-flavors-detroit/index.html"
         }
       ]
@@ -2516,7 +2888,7 @@
         "Happy Holidays to all from your friends @ Flavors Detroit !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2534,6 +2906,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-holidays-to-all-from-your-friends-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-holidays-to-all-from-your-friends-flavors-detroit/index.html"
         }
       ]
@@ -2556,7 +2934,7 @@
         "Happy Hour at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2568,6 +2946,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-hour-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-hour-at-flavors-detroit/index.html"
         }
       ]
@@ -2590,7 +2974,7 @@
         "Happy Memorial Day (Updated Hours!)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2608,6 +2992,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-memorial-day-updated-hours/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-memorial-day-updated-hours/index.html"
         }
       ]
@@ -2630,7 +3020,7 @@
         "Happy MLK Day: Monday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2648,6 +3038,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-mlk-day-monday-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-mlk-day-monday-specials/index.html"
         }
       ]
@@ -2670,7 +3066,7 @@
         "Happy Mother's Day @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2688,6 +3084,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-mother-s-day-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-mother-s-day-flavors-detroit/index.html"
         }
       ]
@@ -2710,7 +3112,7 @@
         "Happy Mother's Day-2025!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2728,6 +3130,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-mothers-day-2025/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-mothers-day-2025/index.html"
         }
       ]
@@ -2750,7 +3158,7 @@
         "Happy Thanksgiving! Yes, we're open."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2768,6 +3176,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-thanksgiving-yes-we-re-open/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-thanksgiving-yes-we-re-open/index.html"
         }
       ]
@@ -2790,7 +3204,7 @@
         "Happy Valentine's Day!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2808,6 +3222,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/happy-valentine-s-day/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/happy-valentine-s-day/index.html"
         }
       ]
@@ -2830,7 +3250,7 @@
         "Hello Summer !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2848,6 +3268,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/hello-summer/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/hello-summer/index.html"
         }
       ]
@@ -2870,7 +3296,7 @@
         "Hello Summer !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -2888,6 +3314,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/hello-summer-1/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/hello-summer-1/index.html"
         }
       ]
@@ -2910,7 +3342,7 @@
         "Holiday Hours and Last Minute Gift Ideas"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -2928,6 +3360,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/holiday-hours-and-last-minute-gift-ideas/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/holiday-hours-and-last-minute-gift-ideas/index.html"
         }
       ]
@@ -2950,7 +3388,7 @@
         "Holiday Private Reserve Slabs!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2968,6 +3406,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/holiday-private-reserve-slabs/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/holiday-private-reserve-slabs/index.html"
         }
       ]
@@ -2990,7 +3434,7 @@
         "Important Information: Updated 5/11"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -3008,6 +3452,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/important-information-updated-5-8/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/important-information-updated-5-8/index.html"
         }
       ]
@@ -3030,7 +3480,7 @@
         "In Store deals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3048,6 +3498,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/in-store-deals/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/in-store-deals/index.html"
         }
       ]
@@ -3070,7 +3526,7 @@
         "Independence Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 70,
+      "rebuiltLinks": 71,
       "findings": [
         {
           "severity": "minor",
@@ -3088,6 +3544,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/independence-day-2025/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/independence-day-2025/index.html"
         }
       ]
@@ -3110,7 +3572,7 @@
         "It's Shatterday at Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3122,6 +3584,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/it-s-shatterday-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/it-s-shatterday-at-flavors-detroit/index.html"
         }
       ]
@@ -3144,7 +3612,7 @@
         "It's Tarantula Time!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3162,6 +3630,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/it-s-tarantula-time/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/it-s-tarantula-time/index.html"
         }
       ]
@@ -3184,7 +3658,7 @@
         "It's the 1st of the Month"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3202,6 +3676,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/it-s-the-1st-of-the-month/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/it-s-the-1st-of-the-month/index.html"
         }
       ]
@@ -3224,7 +3704,7 @@
         "Keeping Safe and Healthy"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3242,6 +3722,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/keeping-safe-and-healthy/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/keeping-safe-and-healthy/index.html"
         }
       ]
@@ -3264,7 +3750,7 @@
         "Labor Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -3282,6 +3768,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/labor-day-2025/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/labor-day-2025/index.html"
         }
       ]
@@ -3304,7 +3796,7 @@
         "Labor Day Weekend Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3322,6 +3814,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/labor-day-weekend-flower-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/labor-day-weekend-flower-drop/index.html"
         }
       ]
@@ -3344,7 +3842,7 @@
         "Lazy Sunday at Flavors Detroit: New Products available!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3356,6 +3854,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/lazy-sunday-at-flavors-detroit-new-products-available/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/lazy-sunday-at-flavors-detroit-new-products-available/index.html"
         }
       ]
@@ -3378,7 +3882,7 @@
         "MAC is back!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3396,6 +3900,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/mac-is-back/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/mac-is-back/index.html"
         }
       ]
@@ -3418,7 +3928,7 @@
         "New Product: Terp Management Crumbles"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 54,
+      "rebuiltLinks": 55,
       "findings": [
         {
           "severity": "minor",
@@ -3436,6 +3946,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/manage-your-blog-from-your-live-site/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/manage-your-blog-from-your-live-site/index.html"
         }
       ]
@@ -3458,7 +3974,7 @@
         "March 2020 Extract Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3476,6 +3992,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/march-2020-extract-blowout/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/march-2020-extract-blowout/index.html"
         }
       ]
@@ -3498,7 +4020,7 @@
         "Massive Shake-a-thon Sale and more!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3516,6 +4038,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/massive-shake-a-thon-sale-and-more/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/massive-shake-a-thon-sale-and-more/index.html"
         }
       ]
@@ -3538,7 +4066,7 @@
         "Memorial Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3556,6 +4084,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/memorial-day-2025/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/memorial-day-2025/index.html"
         }
       ]
@@ -3578,7 +4112,7 @@
         "Memorial Day Weekend Moonrock Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3596,6 +4130,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/memorial-day-weekend-moonrock-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/memorial-day-weekend-moonrock-drop/index.html"
         }
       ]
@@ -3618,7 +4158,7 @@
         "Monday Morning Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3636,6 +4176,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/monday-morning-flower-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/monday-morning-flower-drop/index.html"
         }
       ]
@@ -3658,7 +4204,7 @@
         "Moonrock Madness"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -3676,6 +4222,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/moonrock-madness/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/moonrock-madness/index.html"
         }
       ]
@@ -3698,7 +4250,7 @@
         "Need some Entertainment? The Royal Rumble is Tonight"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3716,6 +4268,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/need-some-entertainment-the-royal-rumble-is-tonight/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/need-some-entertainment-the-royal-rumble-is-tonight/index.html"
         }
       ]
@@ -3738,7 +4296,7 @@
         "New Product Alert: Flavors Extracts Thriller #4 Crumble"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -3756,6 +4314,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/new-product-alert-flavors-extracts-thriller-4-crumble/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/new-product-alert-flavors-extracts-thriller-4-crumble/index.html"
         }
       ]
@@ -3778,7 +4342,7 @@
         "New Products from Lit Labs now available at Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3790,6 +4354,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/new-products-from-lit-labs-now-available-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/new-products-from-lit-labs-now-available-at-flavors-detroit/index.html"
         }
       ]
@@ -3812,7 +4382,7 @@
         "New Strain Alert: Christmas Edition!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3830,6 +4400,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/new-strain-alert-christmas-edition/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/new-strain-alert-christmas-edition/index.html"
         }
       ]
@@ -3852,7 +4428,7 @@
         "New Strain Alert! New Concentrates! New Edibles!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3870,6 +4446,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/new-strain-alert-new-concentrates-new-edibles/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/new-strain-alert-new-concentrates-new-edibles/index.html"
         }
       ]
@@ -3892,7 +4474,7 @@
         "October is here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3910,6 +4492,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/october-is-here/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/october-is-here/index.html"
         }
       ]
@@ -3932,7 +4520,7 @@
         "October Specials + Strain of the Month & Honorable Mentions!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3950,6 +4538,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/october-specials-strain-of-the-month-honorable-mentions/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/october-specials-strain-of-the-month-honorable-mentions/index.html"
         }
       ]
@@ -3972,7 +4566,7 @@
         "October Weekend Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3990,6 +4584,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/october-weekend-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/october-weekend-specials/index.html"
         }
       ]
@@ -4012,7 +4612,7 @@
         "Pick 8 ($20) 1G Shatter's only $100 Out the Door"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -4030,6 +4630,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/pick-8-20-1g-shatter-s-only-100-out-the-door/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/pick-8-20-1g-shatter-s-only-100-out-the-door/index.html"
         }
       ]
@@ -4052,7 +4658,7 @@
         "Prices Slashed on Over 30 Strains ! & New Fire !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -4070,6 +4676,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/prices-slashed-on-over-30-strains-new-fire/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/prices-slashed-on-over-30-strains-new-fire/index.html"
         }
       ]
@@ -4092,7 +4704,7 @@
         "Ready for the Weekend?"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4110,6 +4722,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/ready-for-the-weekend/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/ready-for-the-weekend/index.html"
         }
       ]
@@ -4132,7 +4750,7 @@
         "Saturday Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4150,6 +4768,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/saturday-blowout/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/saturday-blowout/index.html"
         }
       ]
@@ -4172,7 +4796,7 @@
         "Snow day specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4190,6 +4814,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/snow-day-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/snow-day-specials/index.html"
         }
       ]
@@ -4212,7 +4842,7 @@
         "Starling 1000MG CBD Darts"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -4230,6 +4860,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/starling-1000mg-cbd-darts/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/starling-1000mg-cbd-darts/index.html"
         }
       ]
@@ -4252,7 +4888,7 @@
         "Still Christmas Shopping? We can help!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4270,6 +4906,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/still-christmas-shopping-we-can-help/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/still-christmas-shopping-we-can-help/index.html"
         }
       ]
@@ -4292,7 +4934,7 @@
         "Stocking Stuffers (Treats for the grown-ups)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4310,6 +4952,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/stocking-stuffers-treats-for-the-grown-ups-1/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/stocking-stuffers-treats-for-the-grown-ups-1/index.html"
         }
       ]
@@ -4342,7 +4990,7 @@
         "The Ultimate Summer Savings Event at Flavors Detroit - Front & Center in Detroit Cannabis Deals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 63,
+      "rebuiltLinks": 64,
       "findings": [
         {
           "severity": "minor",
@@ -4354,6 +5002,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/summer-cannabis-deals-detroit-2026/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/summer-cannabis-deals-detroit-2026/index.html"
         }
       ]
@@ -4376,7 +5030,7 @@
         "Summer Time Moonrocks and More...."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4394,6 +5048,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/summer-time-moonrocks-and-more/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/summer-time-moonrocks-and-more/index.html"
         }
       ]
@@ -4416,7 +5076,7 @@
         "Super Bowl Sunday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4434,6 +5094,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/super-bowl-sunday-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/super-bowl-sunday-specials/index.html"
         }
       ]
@@ -4456,7 +5122,7 @@
         "T.G.I.F."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4474,6 +5140,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/t-g-i-f/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/t-g-i-f/index.html"
         }
       ]
@@ -4496,7 +5168,7 @@
         "T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 56,
       "findings": [
         {
           "severity": "minor",
@@ -4514,6 +5186,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews/index.html"
         }
       ]
@@ -4536,7 +5214,7 @@
         "T.G.I.F. Specials!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4554,6 +5232,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/t-g-i-f-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/t-g-i-f-specials/index.html"
         }
       ]
@@ -4576,7 +5260,7 @@
         "TGIF at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4588,6 +5272,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-at-flavors-detroit/index.html"
         }
       ]
@@ -4610,7 +5300,7 @@
         "TGIF at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4622,6 +5312,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit-2/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-at-flavors-detroit-2/index.html"
         }
       ]
@@ -4644,7 +5340,7 @@
         "TGIF at Flavors Detroit: Massive New Flower Drop!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4656,6 +5352,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit-massive-new-flower-drop/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-at-flavors-detroit-massive-new-flower-drop/index.html"
         }
       ]
@@ -4678,7 +5380,7 @@
         "TGIF: End of the Month Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4696,6 +5398,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-end-of-the-month-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-end-of-the-month-specials/index.html"
         }
       ]
@@ -4718,7 +5426,7 @@
         "TGIF: February Snow"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4736,6 +5444,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-february-snow/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-february-snow/index.html"
         }
       ]
@@ -4758,7 +5472,7 @@
         "TGIF: Gelato Weekend!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4776,6 +5490,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-gelato-weekend/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-gelato-weekend/index.html"
         }
       ]
@@ -4798,7 +5518,7 @@
         "TGIF: Stock up and Save!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4816,6 +5536,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-stock-up-and-save/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-stock-up-and-save/index.html"
         }
       ]
@@ -4838,7 +5564,7 @@
         "TGIF: Valentine Weekend"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4856,6 +5582,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/tgif-valentine-weekend/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/tgif-valentine-weekend/index.html"
         }
       ]
@@ -4878,7 +5610,7 @@
         "Thanksgiving a day early!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4896,6 +5628,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/thanksgiving-a-day-early/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/thanksgiving-a-day-early/index.html"
         }
       ]
@@ -4918,7 +5656,7 @@
         "The 3rd Annual 4/20 Spectacular is Here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4936,6 +5674,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/the-3rd-annual-4-20-spectacular-is-here/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/the-3rd-annual-4-20-spectacular-is-here/index.html"
         }
       ]
@@ -4958,7 +5702,7 @@
         "The First of June!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -4976,6 +5720,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/the-first-of-june/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/the-first-of-june/index.html"
         }
       ]
@@ -4998,7 +5748,7 @@
         "The last day of March 2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -5016,6 +5766,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/the-last-day-of-march-2021/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/the-last-day-of-march-2021/index.html"
         }
       ]
@@ -5038,7 +5794,7 @@
         "The New and Improved Connoisseur Carts have arrived!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -5056,6 +5812,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/the-new-and-improved-connoisseur-carts-have-arrived/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/the-new-and-improved-connoisseur-carts-have-arrived/index.html"
         }
       ]
@@ -5078,7 +5840,7 @@
         "Turn up the Weekend!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -5096,6 +5858,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/turn-up-the-weekend/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/turn-up-the-weekend/index.html"
         }
       ]
@@ -5118,7 +5886,7 @@
         "Valentine's Day Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -5136,6 +5904,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/valentine-s-day-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/valentine-s-day-specials/index.html"
         }
       ]
@@ -5158,7 +5932,7 @@
         "We're Back!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -5176,6 +5950,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/we-re-back/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/we-re-back/index.html"
         }
       ]
@@ -5198,7 +5978,7 @@
         "Wrestlemania 2 Day Special"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -5216,6 +5996,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/wrestlemania-2-day-special/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/wrestlemania-2-day-special/index.html"
         }
       ]
@@ -5238,7 +6024,7 @@
         "Wrestlemania Weekend Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5256,6 +6042,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "post/wrestlemania-weekend-specials/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "post/wrestlemania-weekend-specials/index.html"
         }
       ]
@@ -5278,7 +6070,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5308,6 +6100,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -5330,7 +6128,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5361,6 +6159,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -5382,7 +6186,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5412,6 +6216,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -5434,7 +6244,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5465,6 +6275,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -5486,7 +6302,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5516,6 +6332,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -5538,7 +6360,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5569,6 +6391,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -5590,7 +6418,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5621,6 +6449,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "blog/index.html"
         }
       ]
     },
@@ -5642,7 +6476,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 173,
+      "rebuiltLinks": 174,
       "findings": [
         {
           "severity": "minor",
@@ -5672,6 +6506,12 @@
           "severity": "blocker",
           "code": "form-no-action",
           "title": "Form has no action",
+          "detail": "blog/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
           "detail": "blog/index.html"
         }
       ]
@@ -5723,7 +6563,7 @@
         "Daily deals & more"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 51,
+      "rebuiltLinks": 52,
       "findings": [
         {
           "severity": "minor",
@@ -5748,6 +6588,12 @@
           "code": "form-no-action",
           "title": "Form has no action",
           "detail": "daily-deals/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "3 image(s) without alt",
+          "detail": "daily-deals/index.html"
         }
       ]
     },
@@ -5768,7 +6614,7 @@
         "Terms of service"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 43,
+      "rebuiltLinks": 44,
       "findings": [
         {
           "severity": "minor",

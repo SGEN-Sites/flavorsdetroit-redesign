@@ -23,6 +23,18 @@
   .ticker__item:nth-child(n+4) { display: none; }
   .ticker__item::after { margin-left: 14px; }
   .js .sign__bulbs .halo { animation: none !important; opacity: .8; }
-  .js .neon[data-flicker] { animation: none !important; opacity: 1; }
   .js .box__rail { animation: none !important; }
+  /* cinema.css: the scene holds still, every word and ticket is in place; the royal tape is a
+     marquee, and frozen it would be a sentence cut off at the screen edge, so it steps aside
+     (it is decorative: the letter board beside it carries the words) */
+  .tape { display: none; }
+  /* the alive layer: the kinetic band is pure movement, so it steps aside too; light effects off */
+  .kinetic, .curtain, .beam, .orbit, .spot, .to-top, .splash { display: none !important; }
+  .js .pool, .js .sparks i, .js .kinetic__bud, .js .scene--cutout img { animation: none !important; }
+  .sparks { display: none; }
+  .hero__light { display: none; }
+  .js .hero__frame, .js .hero__sun, .js.igniting .hero__sun { animation: none !important; }
+  .js .tape__track, .js .hang .tag, .js .box__bulbs i, .js .footer__word, .js .hero::after { animation: none !important; }
+  .js .is-split .sw__i { translate: none; }
+  [data-tilt] { transform: none !important; }
 }

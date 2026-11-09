@@ -4,7 +4,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, OWNERS_BOX, menu, postsData, ASOF } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, tag, tabs, asof, pageHero, mailForm } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, tag, hangRow, tabs, asof, pageHero, mailForm } from '../lib/parts.mjs';
 import { breadcrumbJsonLd } from '../lib/seo.mjs';
 import { niceName, presentable } from '../content/case.mjs';
 
@@ -60,7 +60,7 @@ const EDIBLES = [
   C('2/$10 Chill Medicated - Syrup To-Go 100mg', 'Chill Medicated syrup to-go 100mg', '$10', 'for 2', '2 for $10.'),
 ];
 
-const tags = (list, lead = []) => `<div class="tags swipe">${[...lead, ...list.map((d, i) => tag({ kick: d.kick, price: d.price, per: d.per, name: d.name, detail: esc(d.detail), i: (i + lead.length) % 4 }))].join('')}</div>`;
+const tags = (list, lead = []) => hangRow([...lead, ...list.map((d, i) => tag({ kick: d.kick, price: d.price, per: d.per, name: d.name, detail: esc(d.detail), i: (i + lead.length) % 4 }))]);
 
 function hero() {
   return pageHero(PATH, {
@@ -68,6 +68,7 @@ function hero() {
     titleHtml: 'Daily deals <span class="accent">&amp; more</span>',
     lede: `Detroit prices on flower, ounces, pre-rolls, vapes, concentrates and edibles, taken from the live menu on ${esc(menu.asOfLabel)}. Prices move with every drop; the live menu always has today's.`,
     crumbs: [{ label: 'Daily deals' }],
+    scene: 'neon-abstract', pos: '62% 50%',
     aside: `<div class="cluster">${orderBtn()}</div>`,
   });
 }
@@ -107,9 +108,7 @@ function categories() {
   ];
   const oz = (menu.ounceTiers || []);
   const ladder = `<div class="ladder" role="list">${oz.map((t, i) => `<div class="ladder__step" role="listitem" style="--n:${i}"><span class="ladder__price">${esc(t.price)}</span><span class="ladder__meta">${esc(t.kind)} · 28G<br>${t.count} on the menu</span></div>`).join('')}</div>
-  <div class="tags swipe" style="margin-top:28px">
-    ${oz.filter((t) => ['$19', '$25', '$85'].includes(t.price)).map((t, i) => tag({ kick: t.kind + ' · 28G', price: t.price, per: 'ounce', name: t.price === '$85' ? 'The premium tier' : t.price === '$19' ? 'Top shelf shake' : 'Prepacked ounces', detail: esc(presentable(t.strains.map(niceName)).slice(0, 4).join(', ')) + (t.strains.length > 4 ? ' and more.' : '.'), feature: t.price === '$85', i })).join('')}
-  </div>`;
+  ${hangRow(oz.filter((t) => ['$19', '$25', '$85'].includes(t.price)).map((t, i) => tag({ kick: t.kind + ' · 28G', price: t.price, per: 'ounce', name: t.price === '$85' ? 'The premium tier' : t.price === '$19' ? 'Top shelf shake' : 'Prepacked ounces', detail: esc(presentable(t.strains.map(niceName)).slice(0, 4).join(', ')) + (t.strains.length > 4 ? ' and more.' : '.'), feature: t.price === '$85', i })), 'margin-top:28px')}`;
   const rollLead = [tag({ kick: 'Hello Farms 1G singles', price: '$1', per: 'pre-roll', name: 'Dollar pre-rolls', detail: esc(presentable(menu.prerolls.dollar.strains.map(niceName)).join(', ')) + '.', feature: true, i: 0 })];
   const box5 = (postsData.posts || []).find((p) => p.slug === 'halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces');
   const concLead = [
@@ -136,7 +135,7 @@ function boxCallout() {
   return `<section class="band band--black band--tight" aria-labelledby="box-callout">
   <div class="container">
     <div class="box">
-      <span class="box__rail box__rail--top" aria-hidden="true"></span>
+      <span class="box__bulbs" aria-hidden="true"><i class="t"></i><i class="r"></i><i class="b"></i><i class="l"></i></span>
       <div class="split">
         <div class="stack" style="--stack:14px">
           ${kicker(OWNERS_BOX.intro)}
@@ -148,7 +147,6 @@ function boxCallout() {
           <div class="cluster">${linkBtn(PATH, '/owners-box/', "Open the Owner's Box", 'btn btn--cream')}</div>
         </div>
       </div>
-      <span class="box__rail box__rail--bottom" aria-hidden="true"></span>
     </div>
   </div>
 </section>`;

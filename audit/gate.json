@@ -1,6 +1,6 @@
 {
   "schema": "site-reforge/gate@1",
-  "generated": "2026-11-09T00:31:20.728Z",
+  "generated": "2026-11-09T05:38:22.335Z",
   "project": "flavorsdetroit-com",
   "target": "https://www.flavorsdetroit.com/",
   "verdict": "NOT-READY",
@@ -100,7 +100,7 @@
       "label": "Brand token layer emitted and actually referenced",
       "stage": "brand",
       "status": "PASS",
-      "evidence": "98 tokens declared, 88 referenced across 5 authored sheet(s), 0 off-token colour literal(s)"
+      "evidence": "96 tokens declared, 81 referenced across 6 authored sheet(s), 0 off-token colour literal(s)"
     },
     {
       "id": "C14",
@@ -128,7 +128,7 @@
       "label": "Content survived the rebuild",
       "stage": "parity",
       "status": "FAIL",
-      "evidence": "21 content-loss finding(s)"
+      "evidence": "22 content-loss finding(s)"
     },
     {
       "id": "C18",

@@ -88,6 +88,12 @@
   .masthead__actions { margin-inline-start: auto; }
   .utility__hours { display: none; }
 }
+/* the narrowest phones: the number becomes a 44px call icon (still its accessible name), so the
+   status, the call link and the Pause motion button fit on one line (sideways scroll at 360px) */
+@media (max-width: 400px) {
+  .utility__phone { min-width: 44px; justify-content: center; }
+  .utility__phone span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
 @media (max-width: 760px) {
   .utility__ig, .utility__addr { display: none; }
   .brand__tower { width: 84px; height: calc(var(--header-h) + 12px); padding: 6px 7px 8px; }
@@ -144,7 +150,7 @@
 
 /* ---- footer ------------------------------------------------------------------------------ */
 .site-footer { position: relative; background: var(--sign-black); color: var(--cream-2); overflow: hidden; isolation: isolate; }
-.site-footer::before { content: ""; display: block; height: 6px; background: var(--awning); }
+.site-footer::before { content: ""; display: block; height: 3px; background: var(--rainbow-line); }   /* the spectrum divider */
 .footer__main { display: grid; grid-template-columns: 1.25fr repeat(2, minmax(0, .8fr)) 1.3fr; gap: clamp(28px, 4vw, 56px); padding-block: clamp(48px, 6vw, 80px) clamp(32px, 4vw, 48px); }
 .footer__brand > a { display: inline-grid; place-items: center; width: 168px; padding: 14px 14px 18px; border-radius: 16px;
   background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--white) 10%, transparent) 0 2px, transparent 2px 9px, color-mix(in srgb, var(--royal-deep) 70%, transparent) 9px 11px, transparent 11px 14px), linear-gradient(180deg, var(--royal-bright), var(--royal) 40%, var(--royal-deep));

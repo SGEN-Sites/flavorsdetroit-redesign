@@ -63,22 +63,30 @@ save(fav.resize((192, 192), Image.LANCZOS), 'favicon-192.png', fmt='PNG', source
 save(fav.resize((32, 32), Image.LANCZOS), 'favicon-32.png', fmt='PNG', source=fav_src)
 save(fav.resize((48, 48), Image.LANCZOS), 'favicon.ico', fmt='ICO', source=fav_src)
 
-# ---- social card 1200x630: the client's rainbow-stripe + logo composition, re-laid to size ---
+# ---- social card 1200x630: the logo on sign black, a store-navy glow, the spectrum divider -----
+# (owner 2026-11-09: black first, then blue, then whites; the stripes only as a thin divider)
 stripes = [(0xaf, 0x03, 0x03), (0xfa, 0x89, 0x00), (0xf6, 0xfc, 0x1e), (0xed, 0x39, 0x7a), (0x00, 0xa3, 0xdc), (0x33, 0x89, 0x00)]
-og = Image.new('RGB', (1200, 630))
-sw = 1200 / len(stripes)
-for i, c in enumerate(stripes):
-    for x in range(int(i * sw), int((i + 1) * sw)):
-        # the folded-awning shade the client's own image carries at each stripe edge
-        t = (x - i * sw) / sw
-        shade = 0.82 + 0.18 * min(1, t * 4) if i in (0, 1) else (1 - 0.18 * max(0, (t - 0.75) * 4) if i == 5 else 1)
-        col = tuple(int(v * shade) for v in c)
-        for y in range(630):
-            og.putpixel((x, y), col)
+SIGN_BLACK, NAVY = (0x0b, 0x0b, 0x0a), (0x19, 0x20, 0x36)   # measured: logo body; store counter navy
+og = Image.new('RGB', (1200, 630), SIGN_BLACK)
+glow = Image.new('L', (1200, 630), 0)
+gp = glow.load()
+for y in range(630):              # an elliptical navy glow behind the sign, fading to black
+    for x in range(1200):
+        d = ((x - 600) / 560) ** 2 + ((y - 300) / 330) ** 2
+        gp[x, y] = int(255 * max(0.0, 1 - d) ** 1.6)
+og = Image.composite(Image.new('RGB', (1200, 630), NAVY), og, glow)
 lg = logo.copy()
-lg.thumbnail((760, 560), Image.LANCZOS)
-og.paste(lg, ((1200 - lg.size[0]) // 2, (630 - lg.size[1]) // 2), lg)
-save(og, 'og-flavors-detroit.jpg', fmt='JPEG', q=86, source=logo_src + ' + measured rainbow (facts/client-facts.json)', alt='Flavors Detroit')
+lg.thumbnail((720, 520), Image.LANCZOS)
+og.paste(lg, ((1200 - lg.size[0]) // 2, (612 - lg.size[1]) // 2), lg)
+sw = 1200 / len(stripes)
+for i, c in enumerate(stripes):  # the spectrum divider along the bottom edge, blended like the site's line
+    for x in range(int(i * sw), int((i + 1) * sw)):
+        t = (x - i * sw) / sw
+        n = stripes[min(i + 1, len(stripes) - 1)]
+        col = tuple(int(c[k] + (n[k] - c[k]) * t) for k in range(3))
+        for y in range(622, 630):
+            og.putpixel((x, y), col)
+save(og, 'og-flavors-detroit.jpg', fmt='JPEG', q=86, source=logo_src + ' on measured sign black + store navy, spectrum divider (facts/client-facts.json)', alt='Flavors Detroit')
 
 # ---- product photography (client media) ----------------------------------------------------------
 def photo(src, name, w, crop=None, alt='', q=78, alpha=False, q2=None):

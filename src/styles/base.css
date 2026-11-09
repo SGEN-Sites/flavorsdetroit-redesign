@@ -1,10 +1,15 @@
 /* base.css — fonts, reset, type, layout primitives. Values come from tokens.css. */
 
-@font-face { font-family: "Big Shoulders Display"; src: url("../fonts/big-shoulders-display.woff2") format("woff2"); font-weight: 600 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Big Shoulders Inline Display"; src: url("../fonts/big-shoulders-inline-display.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
+/* Headlines: Jockey One (one weight; declared across 400–900 so heavier heading weights use the real
+   glyphs instead of a synthesised bold). Text: Barlow 400/500/600/700 + italic. Neon numerals: Tilt Neon.
+   Owner's choice 2026-11-09 (design-options/fonts, pairing A); all SIL OFL, self-hosted. */
+@font-face { font-family: "Jockey One"; src: url("../fonts/jockey-one.woff2") format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
 @font-face { font-family: "Tilt Neon"; src: url("../fonts/tilt-neon.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans.woff2") format("woff2"); font-weight: 400 700; font-stretch: 75% 100%; font-style: normal; font-display: swap; }
-@font-face { font-family: "Instrument Sans"; src: url("../fonts/instrument-sans-italic.woff2") format("woff2"); font-weight: 400 700; font-stretch: 75% 100%; font-style: italic; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../fonts/barlow-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../fonts/barlow-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../fonts/barlow-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../fonts/barlow-700.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Barlow"; src: url("../fonts/barlow-400-italic.woff2") format("woff2"); font-weight: 400 700; font-style: italic; font-display: swap; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
@@ -95,8 +100,9 @@ strong { font-weight: 650; }
 .small { font-size: var(--fs-sm); }
 .fine { font-size: var(--fs-xs); line-height: 1.5; }
 
-/* one accent per heading: an inline-lettered word lit like a sign */
-.accent { font-family: var(--font-inline); font-weight: 800; color: var(--led-soft); text-shadow: 0 0 18px var(--led-glow); }
+/* one accent per heading: the word in the store's LED blue (the inline face was retired
+   2026-11-09 at the owner's request; the display face is pending the owner's pairing choice) */
+.accent { color: var(--led); text-shadow: 0 0 18px color-mix(in srgb, var(--led) 40%, transparent); }
 .band--day .accent, .band--white .accent { color: var(--royal); text-shadow: none; }
 
 .prose { max-width: 68ch; }

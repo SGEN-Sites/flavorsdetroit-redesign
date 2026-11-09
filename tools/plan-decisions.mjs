@@ -18,11 +18,11 @@ const HOME = {
   's2': ['IMPROVE', 'The concentrates list kept, in sentence case, as the Concentrates jar label.', 'benefits-solution', 'Home + Shop: Our flavors, Concentrates tile; Learn: Concentrates shelf'],
   's3': ['IMPROVE', 'Client copy kept word for word as the Edibles jar label.', 'benefits-solution', 'Home + Shop: Our flavors, Edibles tile'],
   's4': ['IMPROVE', 'Client copy kept as the Much more jar label ("tinctures- a" punctuated as "tinctures: a").', 'benefits-solution', 'Home + Shop: Our flavors, Much more tile'],
-  's5': ['IMPROVE', 'Who are we copy kept word for word in sentence case, with the store facts as stat cards and a labelled showroom photo placeholder.', 'trust-positioning', 'Home: You\'ll feel right at home'],
+  's5': ['IMPROVE', 'Who are we copy kept word for word in sentence case, with the store facts as stat cards and the owner\'s own photos of the main counter (customers and staff removed for privacy) and the green letter wall.', 'trust-positioning', 'Home: You\'ll feel right at home'],
   's6': ['IMPROVE', 'Mailing list kept with the client\'s words; repeated on Deals, Contact, News and every post. Preview build: the form validates and does not post.', 'strategic-cta', 'Home: Join our mailing list today! (+ Deals, Contact, News, posts)'],
   's7': ['IMPROVE', 'Get social copy kept word for word with a follow button to @flavorsdetroit_.', 'strategic-cta', 'Home: Instagram panel; Contact'],
   's8': ['IMPROVE', 'Contact & location kept: the heading and "Tell us what you think" line on the home visit band, the full form on /contact/.', 'strategic-cta', 'Home: Contact & location band; /contact/'],
-  's9': ['REMOVE', 'Placeholder text published on the live page ("[PHOTO OF CURRENT BUILDING GOES HERE, GOOGLE HAS OLD PICTURE]"), removed per the owner\'s brief; a labelled storefront photo placeholder holds the slot.', '', 'Home: storefront photo placeholder'],
+  's9': ['REMOVE', 'Placeholder text published on the live page ("[PHOTO OF CURRENT BUILDING GOES HERE, GOOGLE HAS OLD PICTURE]"), removed per the owner\'s brief; the slot now holds the owner\'s own storefront photo (the car dashboard it was shot through removed).', '', 'Home: storefront photo'],
   's10': ['IMPROVE', 'Address, hours and phone strip rebuilt as the shared footer and the visit band (address corrected to 5700).', 'footer', 'Footer (every page) + home visit band'],
 };
 
@@ -46,7 +46,7 @@ for (const r of ledger.rows) {
 
 // ---- sections and pages that are new in the redesign --------------------------------------
 const ADD = [
-  ['new:/#hero', 'Home hero: the roadside sign (the logo with its real bulbs lit) on the royal-blue tower with the neon 5700; H1 "A traditional dispensary with a modern twist" (client words); Order now.', 'value-proposition', 'Home hero'],
+  ['new:/#hero', 'Home hero: the store itself at golden hour (the owner\'s storefront photo relit with AI, labelled as edited; the drawn, lit sign plays in the splash); H1 "A traditional dispensary with a modern twist" (client words); Order now.', 'value-proposition', 'Home hero'],
   ['new:/#marquee', 'Marquee letter board of the client\'s own deal phrases and hours, then the rainbow awning.', 'value-proposition', 'Home ticker + awning'],
   ['new:/#deals', 'Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/.', 'benefits-solution', 'Home deals band'],
   ['new:/#owners-box', 'The Owner\'s Box teaser: the live menu\'s Owners Box collection with the client\'s own tasting notes.', 'trust-positioning', 'Home Owner\'s Box band'],

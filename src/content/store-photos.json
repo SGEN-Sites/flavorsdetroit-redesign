@@ -1,0 +1,795 @@
+{
+ "note": "The owner's store photos (2026-11-09). Colour and tone graded; upscaled 2x with Topaz High Fidelity V2. Three are retouched with AI (see edit), one of them (the hero) relit to golden hour. The originals stay private: one shows customers.",
+ "items": {
+  "storefront": {
+   "alt": "The Flavors Detroit store in daylight: a black cloud-shaped sign reading Flavors Detroit 5700 on a blue corrugated tower above a dark grey building, its black awning reading Flavors Detroit and Recreational Cannabis, a lit Open sign and a Cannabis feather flag with a green cross, with traffic lights hanging over the street.",
+   "source": "owner's photo (storefront-19.png)",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "edit": "The car dashboard, phone mount and a wiper streak in the original phone photo were removed and the street below filled in with AI (fal FLUX.1 [pro] Fill inside a mask; a curb spot and the streak over a small far-left sign re-filled with fal Bria Eraser); every other pixel is the photo. Upscaled 2x (Topaz High Fidelity V2) and colour graded.",
+   "crop": [
+    0,
+    0,
+    1,
+    0.9167
+   ],
+   "master": [
+    2720,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be46-0164-7ddc-bd85-9fdae38e1837",
+     "purpose": "remove dashboard, phone mount and wiper streak (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-fffe-7d17-beba-6cb2b92c49ed",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7d81-7f10-96c4-7750c929534a",
+     "seed": 2114019295,
+     "purpose": "fill the masked dashboard, phone mount and wiper streak",
+     "verdict": "used; review found two fill flaws: lettering it invented on a small sign far left (that box restored from the photo) and a yellow blob on the curb (see the eraser pass below)",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be50-c91b-72e0-8558-9a87e07b961b",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "superseded: the classical curb fix under it left a rectangular smudge",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be57-a9aa-7063-9b82-0021d87bbdba",
+     "purpose": "erase the curb blob and the smudge from the first fix (x 872-976, y 824-866)",
+     "verdict": "used: the curb now runs on",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be5a-5f1c-7ef2-81a0-4502daca9491",
+     "purpose": "upscale the corrected photo, 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5697-7a02-a3e2-8e5962d7d16a",
+     "purpose": "independent review: erase the streak remnant over the small far-left sign (on the 2x upscale)",
+     "verdict": "REJECTED: it extended the blue price board upward into an invented block",
+     "costUSD": 0.04
+    },
+    {
+     "model": "classical (tools/store-photos.py deveil_far_left)",
+     "requestId": "",
+     "purpose": "the streak over the far-left signs removed by subtracting its measured light (ridge ~3 px, +52/55/58 RGB, measured on the plain grey wall), no painting",
+     "verdict": "used (a faint trace stays over the small gas-station sign)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be7d-6394-7dd1-8b55-95d77cc2c5a1",
+     "purpose": "upscale the de-veiled far-left patch (260x180) so its texture matches the rest",
+     "verdict": "used",
+     "costUSD": 0.002
+    }
+   ],
+   "files": [
+    {
+     "file": "store/storefront-800.webp",
+     "w": 800,
+     "h": 550,
+     "variant": "landscape",
+     "bytes": 76104
+    },
+    {
+     "file": "store/storefront-1200.webp",
+     "w": 1200,
+     "h": 825,
+     "variant": "landscape",
+     "bytes": 141534
+    },
+    {
+     "file": "store/storefront-1600.webp",
+     "w": 1600,
+     "h": 1100,
+     "variant": "landscape",
+     "bytes": 220640
+    }
+   ]
+  },
+  "sign": {
+   "alt": "The Flavors Detroit sign against a clear sky: a black cloud outlined in bulbs, reading Flavors Detroit with 5700 below, on a tall blue corrugated tower, behind a utility pole and wires.",
+   "source": "owner's photo (storefront-19.png)",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "edit": "The owner's photo, upscaled 2x (Topaz High Fidelity V2) and colour graded (the AI retouching elsewhere in this photo is outside this crop).",
+   "crop": [
+    0.2794,
+    0.0,
+    0.7059,
+    0.4265
+   ],
+   "master": [
+    2720,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be46-0164-7ddc-bd85-9fdae38e1837",
+     "purpose": "remove dashboard, phone mount and wiper streak (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-fffe-7d17-beba-6cb2b92c49ed",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7d81-7f10-96c4-7750c929534a",
+     "seed": 2114019295,
+     "purpose": "fill the masked dashboard, phone mount and wiper streak",
+     "verdict": "used; review found two fill flaws: lettering it invented on a small sign far left (that box restored from the photo) and a yellow blob on the curb (see the eraser pass below)",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be50-c91b-72e0-8558-9a87e07b961b",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "superseded: the classical curb fix under it left a rectangular smudge",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be57-a9aa-7063-9b82-0021d87bbdba",
+     "purpose": "erase the curb blob and the smudge from the first fix (x 872-976, y 824-866)",
+     "verdict": "used: the curb now runs on",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be5a-5f1c-7ef2-81a0-4502daca9491",
+     "purpose": "upscale the corrected photo, 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5697-7a02-a3e2-8e5962d7d16a",
+     "purpose": "independent review: erase the streak remnant over the small far-left sign (on the 2x upscale)",
+     "verdict": "REJECTED: it extended the blue price board upward into an invented block",
+     "costUSD": 0.04
+    },
+    {
+     "model": "classical (tools/store-photos.py deveil_far_left)",
+     "requestId": "",
+     "purpose": "the streak over the far-left signs removed by subtracting its measured light (ridge ~3 px, +52/55/58 RGB, measured on the plain grey wall), no painting",
+     "verdict": "used (a faint trace stays over the small gas-station sign)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be7d-6394-7dd1-8b55-95d77cc2c5a1",
+     "purpose": "upscale the de-veiled far-left patch (260x180) so its texture matches the rest",
+     "verdict": "used",
+     "costUSD": 0.002
+    }
+   ],
+   "files": [
+    {
+     "file": "store/sign-600.webp",
+     "w": 600,
+     "h": 450,
+     "variant": "landscape",
+     "bytes": 41216
+    },
+    {
+     "file": "store/sign-900.webp",
+     "w": 900,
+     "h": 675,
+     "variant": "landscape",
+     "bytes": 77564
+    },
+    {
+     "file": "store/sign-1160.webp",
+     "w": 1160,
+     "h": 870,
+     "variant": "landscape",
+     "bytes": 130618
+    }
+   ]
+  },
+  "front": {
+   "alt": "The front of Flavors Detroit: a dark grey building under the blue tower, a black awning reading Flavors Detroit and Recreational Cannabis, a lit Open sign in the window, a parked silver car and a black Cannabis feather flag with a green cross.",
+   "source": "owner's photo (storefront-19.png)",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "edit": "The car dashboard, phone mount and a wiper streak in the original phone photo were removed and the street below filled in with AI (fal FLUX.1 [pro] Fill inside a mask; a curb spot and the streak over a small far-left sign re-filled with fal Bria Eraser); every other pixel is the photo. Upscaled 2x (Topaz High Fidelity V2) and colour graded.",
+   "crop": [
+    0.2426,
+    0.3235,
+    0.8235,
+    0.9049
+   ],
+   "master": [
+    2720,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be46-0164-7ddc-bd85-9fdae38e1837",
+     "purpose": "remove dashboard, phone mount and wiper streak (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-fffe-7d17-beba-6cb2b92c49ed",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7d81-7f10-96c4-7750c929534a",
+     "seed": 2114019295,
+     "purpose": "fill the masked dashboard, phone mount and wiper streak",
+     "verdict": "used; review found two fill flaws: lettering it invented on a small sign far left (that box restored from the photo) and a yellow blob on the curb (see the eraser pass below)",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be50-c91b-72e0-8558-9a87e07b961b",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "superseded: the classical curb fix under it left a rectangular smudge",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be57-a9aa-7063-9b82-0021d87bbdba",
+     "purpose": "erase the curb blob and the smudge from the first fix (x 872-976, y 824-866)",
+     "verdict": "used: the curb now runs on",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be5a-5f1c-7ef2-81a0-4502daca9491",
+     "purpose": "upscale the corrected photo, 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5697-7a02-a3e2-8e5962d7d16a",
+     "purpose": "independent review: erase the streak remnant over the small far-left sign (on the 2x upscale)",
+     "verdict": "REJECTED: it extended the blue price board upward into an invented block",
+     "costUSD": 0.04
+    },
+    {
+     "model": "classical (tools/store-photos.py deveil_far_left)",
+     "requestId": "",
+     "purpose": "the streak over the far-left signs removed by subtracting its measured light (ridge ~3 px, +52/55/58 RGB, measured on the plain grey wall), no painting",
+     "verdict": "used (a faint trace stays over the small gas-station sign)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be7d-6394-7dd1-8b55-95d77cc2c5a1",
+     "purpose": "upscale the de-veiled far-left patch (260x180) so its texture matches the rest",
+     "verdict": "used",
+     "costUSD": 0.002
+    }
+   ],
+   "files": [
+    {
+     "file": "store/front-600.webp",
+     "w": 600,
+     "h": 450,
+     "variant": "landscape",
+     "bytes": 57190
+    },
+    {
+     "file": "store/front-900.webp",
+     "w": 900,
+     "h": 676,
+     "variant": "landscape",
+     "bytes": 108818
+    },
+    {
+     "file": "store/front-1200.webp",
+     "w": 1200,
+     "h": 901,
+     "variant": "landscape",
+     "bytes": 178818
+    },
+    {
+     "file": "store/front-1580.webp",
+     "w": 1580,
+     "h": 1186,
+     "variant": "landscape",
+     "bytes": 324618
+    }
+   ]
+  },
+  "counter": {
+   "alt": "Inside Flavors Detroit: the main sales counter under bright ceiling lights, with white glass display cases, blue Flavors Detroit letters on the back wall, screens above and walls of packaged products on both sides, over blue floor mats.",
+   "source": "owner's photo (counter-16.png)",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "edit": "The six customers and staff in the original photo were erased with AI (fal Bria Eraser) for their privacy and the counter behind them filled in, with three follow-up eraser passes (a far-left spot, a forearm remnant, two wall prints that had been hidden behind people); every other pixel is the photo. Upscaled 2x (Topaz High Fidelity V2) and colour graded.",
+   "crop": [
+    0.03125,
+    0,
+    0.96875,
+    1
+   ],
+   "master": [
+    2720,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-ff2b-7251-b494-ae252303f3d2",
+     "purpose": "remove the six people (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-ff0d-742f-b8e0-d8b46f6513cd",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7f0b-7653-9ff0-eb6d62046a86",
+     "seed": 226848567,
+     "purpose": "fill the six masked people",
+     "verdict": "REJECTED: it painted new, invented people into the masks",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be4e-d4e5-7a03-8474-bbc45fdf3846",
+     "purpose": "erase the six masked people (object removal, adds nothing)",
+     "verdict": "used",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be50-ab5b-7fa0-9c02-44d3b8447356",
+     "purpose": "second pass on one spot far left (x 0-130, y 500-580) where the register screen and the erased staff member merged into an odd shape",
+     "verdict": "used",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be53-9734-7862-8a98-f49a7caf6476",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-53d6-7d51-8a94-5613e5f3422e",
+     "purpose": "independent review fixes on the 2x upscale: a forearm remnant below the first mask, a dark post the second pass invented, leftovers of two wall prints hidden behind people",
+     "verdict": "used: no person remnant left (prints now neutral blurred fills)",
+     "costUSD": 0.04
+    }
+   ],
+   "files": [
+    {
+     "file": "store/counter-800.webp",
+     "w": 800,
+     "h": 640,
+     "variant": "landscape",
+     "bytes": 109022
+    },
+    {
+     "file": "store/counter-1200.webp",
+     "w": 1200,
+     "h": 960,
+     "variant": "landscape",
+     "bytes": 221680
+    },
+    {
+     "file": "store/counter-1600.webp",
+     "w": 1600,
+     "h": 1280,
+     "variant": "landscape",
+     "bytes": 359396
+    },
+    {
+     "file": "store/counter-2400.webp",
+     "w": 2400,
+     "h": 1920,
+     "variant": "landscape",
+     "bytes": 703810
+    }
+   ]
+  },
+  "merch": {
+   "alt": "The merch corner at Flavors Detroit: a long dark counter edged with blue LED light, piled with folded T-shirts and hoodies, caps on mannequin heads and glass pieces on shelves, under hanging cage pendant lights and a blue wall with menu screens.",
+   "source": "owner's photo (merch-17.png)",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "edit": "The owner's photo, upscaled 2x (Topaz High Fidelity V2) and colour graded.",
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "master": [
+    2720,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be4c-bfad-79a0-9849-4c9422caf28d",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5534-7862-a6f3-f0e2a96c51b3",
+     "purpose": "independent review: a dark upright shape seen through the far door (possibly legs, not identifiable)",
+     "verdict": "REJECTED: it left a pale blob with a dark spot; a classical inpaint left a grey ghost too, so the photo is kept as taken",
+     "costUSD": 0.04
+    }
+   ],
+   "files": [
+    {
+     "file": "store/merch-600.webp",
+     "w": 600,
+     "h": 450,
+     "variant": "landscape",
+     "bytes": 40452
+    },
+    {
+     "file": "store/merch-900.webp",
+     "w": 900,
+     "h": 675,
+     "variant": "landscape",
+     "bytes": 85486
+    },
+    {
+     "file": "store/merch-1200.webp",
+     "w": 1200,
+     "h": 900,
+     "variant": "landscape",
+     "bytes": 142982
+    },
+    {
+     "file": "store/merch-1600.webp",
+     "w": 1600,
+     "h": 1200,
+     "variant": "landscape",
+     "bytes": 231306
+    }
+   ]
+  },
+  "hero-wide": {
+   "alt": "The Flavors Detroit store at golden hour at the right of a wide street view (the street to the left is an AI extension): the black cloud-shaped sign reading Flavors Detroit 5700 on its blue tower, the dark building with its black awning, a lit Open sign and a Cannabis feather flag.",
+   "source": "owner's photo (storefront-19.png)",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "edit": "The golden-hour storefront (relit with AI, as for the hero) with the street to its left extended by AI (fal FLUX.1 [pro] Fill outpainting) so the photo can run behind the headline; the real frame is kept pixel for pixel on the right.",
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "master": [
+    8512,
+    3584
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be46-0164-7ddc-bd85-9fdae38e1837",
+     "purpose": "remove dashboard, phone mount and wiper streak (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-fffe-7d17-beba-6cb2b92c49ed",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7d81-7f10-96c4-7750c929534a",
+     "seed": 2114019295,
+     "purpose": "fill the masked dashboard, phone mount and wiper streak",
+     "verdict": "used; review found two fill flaws: lettering it invented on a small sign far left (that box restored from the photo) and a yellow blob on the curb (see the eraser pass below)",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be50-c91b-72e0-8558-9a87e07b961b",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "superseded: the classical curb fix under it left a rectangular smudge",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be57-a9aa-7063-9b82-0021d87bbdba",
+     "purpose": "erase the curb blob and the smudge from the first fix (x 872-976, y 824-866)",
+     "verdict": "used: the curb now runs on",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be5a-5f1c-7ef2-81a0-4502daca9491",
+     "purpose": "upscale the corrected photo, 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5697-7a02-a3e2-8e5962d7d16a",
+     "purpose": "independent review: erase the streak remnant over the small far-left sign (on the 2x upscale)",
+     "verdict": "REJECTED: it extended the blue price board upward into an invented block",
+     "costUSD": 0.04
+    },
+    {
+     "model": "classical (tools/store-photos.py deveil_far_left)",
+     "requestId": "",
+     "purpose": "the streak over the far-left signs removed by subtracting its measured light (ridge ~3 px, +52/55/58 RGB, measured on the plain grey wall), no painting",
+     "verdict": "used (a faint trace stays over the small gas-station sign)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be7d-6394-7dd1-8b55-95d77cc2c5a1",
+     "purpose": "upscale the de-veiled far-left patch (260x180) so its texture matches the rest",
+     "verdict": "used",
+     "costUSD": 0.002
+    },
+    {
+     "model": "fal-ai/nano-banana-pro/edit (4K, 2 renders)",
+     "requestId": "01a1be70-0caf-70c3-8345-d7d6acccad71",
+     "purpose": "relight the storefront to golden hour (variants a, b)",
+     "verdict": "REJECTED: a turned the blue tower grey and changed 580 to 500; b repainted the black left wing tan and wrote mirrored lettering on the grey panel",
+     "costUSD": 0.3
+    },
+    {
+     "model": "fal-ai/nano-banana-pro/edit (4K, 2 renders)",
+     "requestId": "01a1be82-66ad-7e73-b72e-29287bc9ecdb",
+     "purpose": "relight again with every surface's real colour named in the prompt (variants c, d)",
+     "verdict": "c USED (wing dark, tower blue, panel plain); d rejected (tower turned pink-tan). In c the hours poster was garbled (put back from the photo), faint lettering on the grey panel was smoothed out, the far-left street signs (garbled) are cropped out",
+     "costUSD": 0.3
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill (outpainting)",
+     "requestId": "01a1bea4-b372-78e2-a4bf-144f485a264f",
+     "seed": 1085469645,
+     "purpose": "owner: extend the hero image to the left: the street continued west of the golden-hour frame (canvas 2432x1024 with the frame at its right; the model returned one 1440x576 image, a pure rescale of the canvas, registered at 687 inliers)",
+     "verdict": "used; four signs it invented with pseudo-lettering had their faces smoothed blank (tools/store-photos.py WIDE_CLEAN)",
+     "costUSD": 0.041
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 4x, face enhancement off)",
+     "requestId": "01a1bea6-9b25-7b02-b4d0-2aa86aadfb99",
+     "purpose": "upscale the outpainted strip (749x576 to 2996x2304) to sit beside the 3584-high frame",
+     "verdict": "used",
+     "costUSD": 0.069
+    }
+   ],
+   "files": [
+    {
+     "file": "store/hero-wide-1400.webp",
+     "w": 1400,
+     "h": 589,
+     "variant": "landscape",
+     "bytes": 59808
+    },
+    {
+     "file": "store/hero-wide-2000.webp",
+     "w": 2000,
+     "h": 842,
+     "variant": "landscape",
+     "bytes": 97758
+    },
+    {
+     "file": "store/hero-wide-2800.webp",
+     "w": 2800,
+     "h": 1179,
+     "variant": "landscape",
+     "bytes": 156170
+    },
+    {
+     "file": "store/hero-wide-3600.webp",
+     "w": 3600,
+     "h": 1516,
+     "variant": "landscape",
+     "bytes": 215348
+    }
+   ]
+  },
+  "hero": {
+   "alt": "The Flavors Detroit store at golden hour: the black cloud-shaped sign reading Flavors Detroit 5700 on its blue corrugated tower, the dark building with its black awning reading Flavors Detroit and Recreational Cannabis, a lit Open sign and a Cannabis feather flag, under a warm evening sky.",
+   "source": "owner's photo (storefront-19.png)",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "edit": "The storefront photo (car dashboard removed as above) relit to golden hour with AI (fal Nano Banana Pro). The hours poster in the second door was put back from the photo, faint lettering the relight left on a plain grey panel was smoothed out, and the far-left street signs it garbled are cropped out.",
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "master": [
+    4224,
+    3584
+   ],
+   "requests": [
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be46-0164-7ddc-bd85-9fdae38e1837",
+     "purpose": "remove dashboard, phone mount and wiper streak (variant a)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "higgsfield marketing-studio/image/flare",
+     "requestId": "01a1be45-fffe-7d17-beba-6cb2b92c49ed",
+     "purpose": "same (variant b)",
+     "verdict": "refused by Higgsfield: credit balance too low (not charged)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/flux-pro/v1/fill",
+     "requestId": "01a1be4c-7d81-7f10-96c4-7750c929534a",
+     "seed": 2114019295,
+     "purpose": "fill the masked dashboard, phone mount and wiper streak",
+     "verdict": "used; review found two fill flaws: lettering it invented on a small sign far left (that box restored from the photo) and a yellow blob on the curb (see the eraser pass below)",
+     "costUSD": 0.069
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be50-c91b-72e0-8558-9a87e07b961b",
+     "purpose": "upscale 1360x1020 to 2720x2040",
+     "verdict": "superseded: the classical curb fix under it left a rectangular smudge",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be57-a9aa-7063-9b82-0021d87bbdba",
+     "purpose": "erase the curb blob and the smudge from the first fix (x 872-976, y 824-866)",
+     "verdict": "used: the curb now runs on",
+     "costUSD": 0.04
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be5a-5f1c-7ef2-81a0-4502daca9491",
+     "purpose": "upscale the corrected photo, 1360x1020 to 2720x2040",
+     "verdict": "used",
+     "costUSD": 0.055
+    },
+    {
+     "model": "fal-ai/bria/eraser",
+     "requestId": "01a1be74-5697-7a02-a3e2-8e5962d7d16a",
+     "purpose": "independent review: erase the streak remnant over the small far-left sign (on the 2x upscale)",
+     "verdict": "REJECTED: it extended the blue price board upward into an invented block",
+     "costUSD": 0.04
+    },
+    {
+     "model": "classical (tools/store-photos.py deveil_far_left)",
+     "requestId": "",
+     "purpose": "the streak over the far-left signs removed by subtracting its measured light (ridge ~3 px, +52/55/58 RGB, measured on the plain grey wall), no painting",
+     "verdict": "used (a faint trace stays over the small gas-station sign)",
+     "costUSD": 0
+    },
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be7d-6394-7dd1-8b55-95d77cc2c5a1",
+     "purpose": "upscale the de-veiled far-left patch (260x180) so its texture matches the rest",
+     "verdict": "used",
+     "costUSD": 0.002
+    },
+    {
+     "model": "fal-ai/nano-banana-pro/edit (4K, 2 renders)",
+     "requestId": "01a1be70-0caf-70c3-8345-d7d6acccad71",
+     "purpose": "relight the storefront to golden hour (variants a, b)",
+     "verdict": "REJECTED: a turned the blue tower grey and changed 580 to 500; b repainted the black left wing tan and wrote mirrored lettering on the grey panel",
+     "costUSD": 0.3
+    },
+    {
+     "model": "fal-ai/nano-banana-pro/edit (4K, 2 renders)",
+     "requestId": "01a1be82-66ad-7e73-b72e-29287bc9ecdb",
+     "purpose": "relight again with every surface's real colour named in the prompt (variants c, d)",
+     "verdict": "c USED (wing dark, tower blue, panel plain); d rejected (tower turned pink-tan). In c the hours poster was garbled (put back from the photo), faint lettering on the grey panel was smoothed out, the far-left street signs (garbled) are cropped out",
+     "costUSD": 0.3
+    }
+   ],
+   "files": [
+    {
+     "file": "store/hero-800.webp",
+     "w": 800,
+     "h": 679,
+     "variant": "landscape",
+     "bytes": 47504
+    },
+    {
+     "file": "store/hero-1280.webp",
+     "w": 1280,
+     "h": 1086,
+     "variant": "landscape",
+     "bytes": 89680
+    }
+   ]
+  },
+  "wall": {
+   "alt": "A wall at Flavors Detroit with large lit green letters reading Flavors Detroit above shelves and racks of packaged products, with screens above, one showing strain art.",
+   "source": "owner's photo (wall-15.png)",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "edit": "The owner's photo, upscaled 2x (Topaz High Fidelity V2) and colour graded.",
+   "crop": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "master": [
+    1530,
+    2040
+   ],
+   "requests": [
+    {
+     "model": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+     "requestId": "01a1be4c-bd7e-7d12-ab6d-0b4ee9246957",
+     "purpose": "upscale 765x1020 to 1530x2040",
+     "verdict": "used",
+     "costUSD": 0.031
+    }
+   ],
+   "files": [
+    {
+     "file": "store/wall-400.webp",
+     "w": 400,
+     "h": 533,
+     "variant": "landscape",
+     "bytes": 46028
+    },
+    {
+     "file": "store/wall-600.webp",
+     "w": 600,
+     "h": 800,
+     "variant": "landscape",
+     "bytes": 92200
+    },
+    {
+     "file": "store/wall-900.webp",
+     "w": 900,
+     "h": 1200,
+     "variant": "landscape",
+     "bytes": 182316
+    },
+    {
+     "file": "store/wall-1200.webp",
+     "w": 1200,
+     "h": 1600,
+     "variant": "landscape",
+     "bytes": 297338
+    }
+   ]
+  }
+ }
+}

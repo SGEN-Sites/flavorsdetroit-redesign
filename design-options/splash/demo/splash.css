@@ -1,0 +1,117 @@
+/* Flavors Detroit: splash concepts, shared layer (a design option, not production code).
+   Palette, as the owner put it on 2026-11-09: black first, then blue, then whites.
+   Every concept animates transform, opacity and filter only, and sits position: fixed above
+   the page, so the page underneath is laid out once and never moves. */
+
+@font-face { font-family: "Instrument Sans"; src: url("../assets/instrument-sans.woff2") format("woff2"); font-weight: 400 700; font-stretch: 75% 100%; font-style: normal; font-display: swap; }
+@font-face { font-family: "Tilt Neon"; src: url("../assets/tilt-neon.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+
+:root {
+  --black: #08090b;
+  --black-raised: #111318;
+  --sign-black: #0b0b0a;
+  --navy: #192036;          /* store navy, measured from store photos */
+  --navy-lit: #2c3548;
+  --blue: #2a4290;          /* deep blue: buttons and the tower */
+  --led: #4b79d7;           /* LED underglow, measured */
+  --led-soft: #c3caec;
+  --white: #ffffff;
+  --off-white: #f3f5f8;
+  --spectrum: linear-gradient(90deg, #af0303, #fa8900, #f6fc1e, #ed397a, #00a3dc, #338900);
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-neon: "Tilt Neon", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in: cubic-bezier(.7, 0, .84, 0);
+  --ease-io: cubic-bezier(.7, 0, .3, 1);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--black); color: var(--white); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-sans); background: var(--black); }
+
+/* ---- the stand-in page: a black block with the site's headline and the order pill ---------- */
+.standin {
+  min-height: 100vh; min-height: 100svh; display: grid; align-content: center; justify-items: start;
+  gap: clamp(18px, 3.2vw, 34px); padding: clamp(24px, 7vw, 104px);
+  background: radial-gradient(90% 70% at 88% 0%, rgb(42 66 144 / .34), rgb(42 66 144 / 0) 64%), var(--black-raised);
+}
+.standin__title {
+  margin: 0; max-width: 15ch; font-weight: 640; font-stretch: 94%;
+  font-size: clamp(1.85rem, .9rem + 4.6vw, 4.8rem); line-height: 1.02; letter-spacing: -.015em; text-wrap: balance;
+}
+.pill {
+  display: inline-flex; align-items: center; min-height: 48px; padding: .8em 1.55em; border: 0; border-radius: 999px;
+  background: var(--blue); color: var(--white); font: 600 1rem/1 var(--font-sans); cursor: pointer;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .2), 0 12px 30px -12px rgb(75 121 215 / .85);
+}
+
+/* ---- the splash shell ------------------------------------------------------------------------ */
+/* Hidden unless the head script turned it on before first paint (never under reduced motion,
+   never without JavaScript), so it can only ever cover the page while its script is running. */
+.splash {
+  display: none; position: fixed; inset: 0; z-index: 1000; overflow: hidden;
+  container: splash / size; contain: strict;
+  cursor: pointer; user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent;
+}
+html.splash-on .splash { display: block; }
+@media (prefers-reduced-motion: reduce) { html:not(.splash-force) .splash { display: none !important; } }
+
+/* every animation waits, frozen on its first frame, until splash.js adds .is-playing (logo decoded) */
+.splash:not(.is-playing), .splash:not(.is-playing) *, .splash:not(.is-playing) *::before, .splash:not(.is-playing) *::after { animation-play-state: paused !important; }
+
+/* skip: any click, tap, key or scroll fades the whole splash out in 0.2 s */
+.splash.is-skipping { animation: splash-skip .2s ease-out both !important; animation-play-state: running !important; pointer-events: auto; }
+@keyframes splash-skip { from { opacity: 1; } to { opacity: 0; } }
+
+/* ---- the sign, shared by the concepts ------------------------------------------------------- */
+/* --sign-w is set per concept from the splash's own size (container units), so the same sign
+   scales from a 390 px phone to a wide desktop and to the 16:9 stages on the options page. */
+.board { position: relative; width: 100%; aspect-ratio: 960 / 774; }
+.logo { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
+.glow {
+  position: absolute; left: 50%; top: 40%; width: 150%; aspect-ratio: 1.35; translate: -50% -50%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgb(42 66 144 / .78), rgb(42 66 144 / .34) 46%, rgb(75 121 215 / .08) 72%, rgb(75 121 215 / 0));
+}
+
+/* bulbs: one light per measured bulb centre (logo-bulbs.json), positioned in % of the logo box.
+   The core sits exactly on the bulb painted in the artwork; ::before is its halo. */
+.bulbs { position: absolute; inset: 0; pointer-events: none; }
+.bulb {
+  position: absolute; left: calc(var(--x) * 1%); top: calc(var(--y) * 1%);
+  width: 2.75%; aspect-ratio: 1; margin: -1.375% 0 0 -1.375%; border-radius: 50%;
+  background: radial-gradient(circle closest-side, #fff 0 64%, rgb(255 255 255 / .8) 80%, rgb(195 202 236 / 0) 100%);
+}
+.bulb::before {
+  content: ""; position: absolute; inset: -100%; border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(255 255 255 / .9), rgb(195 202 236 / .5) 34%, rgb(75 121 215 / .18) 64%, rgb(75 121 215 / 0));
+}
+
+/* the tower under the sign: deep blue corrugated steel, fading into the dark */
+.tower {
+  position: absolute; left: 50%; width: 24%; translate: -50% 0; pointer-events: none;
+  background:
+    linear-gradient(90deg, rgb(8 9 11 / .6), rgb(8 9 11 / 0) 22% 78%, rgb(8 9 11 / .66)),
+    linear-gradient(90deg, color-mix(in srgb, var(--blue) 72%, var(--black)) 0 16%, var(--blue) 16% 58%, color-mix(in srgb, var(--blue) 72%, var(--led)) 58% 70%, var(--blue) 70%) 0 0 / 12.5% 100%,
+    var(--blue);
+  -webkit-mask-image: linear-gradient(180deg, #000 50%, rgb(0 0 0 / 0));
+  mask-image: linear-gradient(180deg, #000 50%, rgb(0 0 0 / 0));
+}
+/* the 5700 box on the tower, and its neon: a white-hot core with a blue LED halo */
+.plate {
+  position: absolute; left: 50%; translate: -50% 0; padding: .16em .4em .1em; border-radius: .16em; white-space: nowrap;
+  font-size: calc(var(--sign-w) * .135);
+  background: linear-gradient(180deg, var(--navy-lit), var(--navy));
+  border: max(2px, .03em) solid color-mix(in srgb, var(--blue) 70%, var(--black));
+  box-shadow: 0 .25em .5em -.2em rgb(0 0 0 / .85), inset 0 0 .45em rgb(75 121 215 / .22);
+}
+.neon {
+  display: block; font-family: var(--font-neon); font-weight: 400; letter-spacing: .04em; line-height: 1; color: var(--white);
+  text-shadow: 0 0 .02em #fff, 0 0 .1em var(--led-soft), 0 0 .24em var(--led), 0 0 .55em var(--led), 0 0 1em rgb(75 121 215 / .55);
+}
+
+/* demo-only control, shown when a concept is opened full screen (never inside the options page) */
+.demo-replay {
+  position: fixed; right: 16px; bottom: 16px; z-index: 10; min-height: 44px; padding: 0 18px; border-radius: 999px;
+  border: 1px solid rgb(195 202 236 / .28); background: rgb(17 19 24 / .86); color: var(--white);
+  font: 600 .9rem/1 var(--font-sans); cursor: pointer;
+}

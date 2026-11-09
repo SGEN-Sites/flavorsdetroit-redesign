@@ -1,45 +1,50 @@
 /* ==========================================================================
    Flavors Detroit — brand tokens
    Art direction: "Lit up on 8 Mile" — retro roadside marquee meets modern showroom.
-     NIGHT  = the roadside sign: sign black, night navy, royal-blue tower, cream letters,
-              marquee bulbs, a neon 5700.
-     DAY    = the showroom: bright glossy white, navy counters with blue LED underglow,
-              glass jars on a deli counter.
-     FLAG   = the rainbow awning stripe, used with restraint.
+   Owner direction 2026-11-09: the palette reads BLACK first, then BLUE, then WHITES.
+   The blue is the store's own deep navy (measured from store photos), not a bright royal;
+   the bright blue is only the LED underglow. The rainbow survives only as thin spectrum
+   dividers ("variety in flavors"); the striped awnings were from ~6 years ago and are gone.
+     BLACK  = the page ground and the roadside sign: sign black, marquee bulbs, a neon 5700.
+     BLUE   = the store's navy counters and walls, the tower, buttons; LED underglow as light.
+     WHITES = the showroom walls and counters, and every word set on black.
    Sources (facts/client-facts.json → brandColours):
-     MEASURED  rainbow stripes (client's social image), sign black + bulb white (logo file)
-     CHOSEN    royal / navy / LED blue / cream, from the owner's description of the store,
-               pending a store photo. Change values HERE, never at a call site.
+     MEASURED  store navy + LED underglow (owner-supplied store photos, 2026-11-09),
+               rainbow stripes (client's social image), sign black + bulb white (logo file)
+     DERIVED   the button/tower blue (store navy lifted for contrast), the blacks, the whites.
+     Change values HERE, never at a call site.
    The live Wix baseline is kept for reference in audit/baseline-styles/tokens.live.css.
    Contrast ratios in comments are measured by tools/contrast.mjs (docs/BRAND-SYSTEM.md).
    ========================================================================== */
 :root {
-  /* ---- night: the sign ---------------------------------------------------- */
+  /* ---- black: the ground and the sign --------------------------------------- */
   --sign-black: #0b0b0a;          /* MEASURED logo body */
-  --night: #060a17;               /* page ground at night */
-  --night-2: #0a1128;             /* raised night surface */
-  --navy: #0c1a3d;                /* counter navy */
-  --navy-2: #142a60;              /* lifted navy, cards on night */
-  --royal: #1f4fe0;               /* the tower. white on royal ≈ 6.4:1 */
-  --royal-deep: #1638a8;          /* tower shadow ribs */
-  --royal-bright: #4a74ff;        /* hover glow, decoration only (white on it 4.0:1) */
-  --royal-top: #3a64e6;           /* lit top edge of buttons: white on it ≈ 5.1:1 */
-  --led: #3fa9ff;                 /* LED underglow. on night ≈ 7.6:1 */
-  --led-soft: #9fd3ff;            /* LED text on night ≈ 12:1 */
-  --cream: #f4ead5;               /* sign lettering. on night ≈ 17:1 */
-  --cream-2: #d9ccb0;             /* quiet cream on night ≈ 12:1 */
+  --night: #08090b;               /* page ground: black */
+  --night-2: #111318;             /* raised black surface */
+  /* ---- blue: the store -------------------------------------------------------- */
+  --navy: #192036;                /* MEASURED store navy: counter fronts (store photos, median) */
+  --navy-2: #2c3548;              /* MEASURED store navy, a lit counter face */
+  --royal: #2a4290;               /* the store's blue lifted for buttons + tower. white on it ≈ 9.2:1 */
+  --royal-deep: #1d2f6b;          /* tower shadow ribs, kicker text on white ≈ 12:1 */
+  --royal-bright: #4b79d7;        /* MEASURED LED underglow halo: decoration only */
+  --royal-top: #3a55a6;           /* lit top edge of buttons: white on it ≈ 6.9:1 */
+  --led: #5a86e6;                 /* LED underglow (measured #4b79d7–#6e90dd). on black ≈ 5.7:1 */
+  --led-soft: #c3cdf2;            /* LED blue-white (measured core #c3caec). on black ≈ 12.7:1 */
+  /* ---- whites --------------------------------------------------------------- */
+  --cream: #f3f5f8;               /* the white for words on black (token kept from the sign-cream era) ≈ 18:1 */
+  --cream-2: #c9ced8;             /* quiet white on black ≈ 12.6:1 */
   --bulb: #fffef6;                /* MEASURED bulb white (#FFFFFE) warmed for glow */
-  --bulb-glow: #ffe7a8;           /* the warm halo of a lit bulb */
-  --mist: #aeb8d6;                /* muted text on night ≈ 10:1 */
+  --bulb-glow: #fff0cc;           /* the soft halo of a lit bulb (warm white, never gold) */
+  --mist: #aab3c8;                /* muted text on black ≈ 9.6:1 */
 
   /* ---- day: the showroom -------------------------------------------------- */
   --white: #ffffff;
   --showroom: #f4f6fb;            /* glossy white ground */
-  --showroom-2: #e8edf7;          /* recessed panel */
-  --ink: #0b1330;                 /* text on day ≈ 17:1 */
-  --ink-2: #3a4566;               /* secondary text on day ≈ 9:1 */
-  --ink-3: #5b6788;               /* captions on day ≈ 5.6:1 (no smaller than 13px) */
-  --line-day: #d3dae9;
+  --showroom-2: #e8ebf2;          /* recessed panel */
+  --ink: #0d1018;                 /* text on day: near-black ≈ 19:1 */
+  --ink-2: #3b4152;               /* secondary text on day ≈ 10:1 */
+  --ink-3: #5c6372;               /* captions on day ≈ 6:1 (no smaller than 13px) */
+  --line-day: #d6dae3;
 
   /* ---- flag: the rainbow awning (MEASURED, client social image) --------- */
   --rb-red: #af0303;
@@ -68,21 +73,13 @@
   --ink-shadow: color-mix(in srgb, var(--ink) 16%, transparent);
   --ink-shadow-strong: color-mix(in srgb, var(--ink) 28%, transparent);
 
-  /* the awning: six measured stripes, each with a folded-edge shade */
-  --awning: linear-gradient(90deg,
-      color-mix(in srgb, var(--rb-red) 70%, var(--sign-black)) 0, var(--rb-red) 6%, var(--rb-red) 16.66%,
-      color-mix(in srgb, var(--rb-orange) 82%, var(--sign-black)) 16.66%, var(--rb-orange) 22%, var(--rb-orange) 33.33%,
-      var(--rb-yellow) 33.33%, var(--rb-yellow) 50%,
-      var(--rb-pink) 50%, var(--rb-pink) 66.66%,
-      var(--rb-blue) 66.66%, var(--rb-blue) 83.33%,
-      var(--rb-green) 83.33%, var(--rb-green) 94%, color-mix(in srgb, var(--rb-green) 70%, var(--sign-black)) 100%);
+  /* the spectrum divider: the only place the six measured stripes appear ("variety in flavors") */
   --rainbow-line: linear-gradient(90deg, var(--rb-red), var(--rb-orange), var(--rb-yellow), var(--rb-pink), var(--rb-blue), var(--rb-green));
 
   /* ---- type ---------------------------------------------------------------- */
-  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
-  --font-inline: "Big Shoulders Inline Display", var(--font-display);
+  --font-display: "Jockey One", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;   /* closest measured match to the sign's lettering */
   --font-neon: "Tilt Neon", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
-  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: "Barlow", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --fs-xs: 0.8125rem;                                   /* 13px floor for visible text */
   --fs-sm: 0.9375rem;                                   /* 15px */

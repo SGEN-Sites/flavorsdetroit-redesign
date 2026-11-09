@@ -57,6 +57,8 @@ for (const [w, h] of vps) {
     reducedMotion: has('--motion') ? 'no-preference' : 'reduce',
   });
   if (!has('--gate')) await ctx.addInitScript(() => { try { localStorage.setItem('flavors-age-ok', '1|' + Date.now() + '|adult'); } catch (e) {} });
+  // the once-per-session splash would cover motion captures: skip it unless --splash asks to see it
+  if (!has('--splash')) await ctx.addInitScript(() => { try { sessionStorage.setItem('flavors-splash', '1'); } catch (e) {} });
   const page = await ctx.newPage();
   const errors = [];
   page.on('pageerror', (e) => errors.push(String(e.message || e)));

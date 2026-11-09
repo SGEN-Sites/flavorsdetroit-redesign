@@ -1,0 +1,265 @@
+{
+ "model": "fal-ai/flux-pro/v1.1-ultra",
+ "note": "AI-generated illustrations; never a stand-in for the store, staff or customers.",
+ "items": {
+  "hero-night-b": {
+   "role": "hero",
+   "alt": "Illustration: an empty multi-lane road at night with red and white light trails, streetlights and power lines",
+   "source": "assets/generated/raw/hero-night-b.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdcb-70d4-78e1-adaa-c98883b4c3dc",
+   "seed": 3222355808,
+   "prompt": "Fix round for hero-night (pseudo-text signs): empty multi-lane avenue at night after rain, light trails, streetlights receding right, haze, power lines; only dark empty land and a faint distant city glow; no buildings, shops, illuminated signs or billboards; left half dark for text. Same style anchor.",
+   "grade": null,
+   "rawSize": [
+    3136,
+    1344
+   ],
+   "files": [
+    {
+     "file": "gen/hero-night-b-1280.webp",
+     "w": 1280,
+     "h": 549,
+     "bytes": 50624,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/hero-night-b-1920.webp",
+     "w": 1920,
+     "h": 823,
+     "bytes": 91926,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/hero-night-b-2560.webp",
+     "w": 2560,
+     "h": 1097,
+     "bytes": 130470,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/hero-night-b-p-640.webp",
+     "w": 640,
+     "h": 855,
+     "bytes": 46100,
+     "variant": "portrait"
+    },
+    {
+     "file": "gen/hero-night-b-p-1000.webp",
+     "w": 1000,
+     "h": 1336,
+     "bytes": 78346,
+     "variant": "portrait"
+    }
+   ]
+  },
+  "concentrates": {
+   "role": "tile",
+   "alt": "Illustration: amber cannabis concentrate shards and an open jar of budder on black glass",
+   "source": "assets/generated/raw/concentrates.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-95c8-71e3-8701-cc61ae99aeb4",
+   "seed": 2776934909,
+   "prompt": "Macro still life: amber glass-like concentrate shards and an open glass jar of golden budder on black glass, blue rim light. Same style anchor.",
+   "grade": null,
+   "rawSize": [
+    2368,
+    1792
+   ],
+   "files": [
+    {
+     "file": "gen/concentrates-640.webp",
+     "w": 640,
+     "h": 484,
+     "bytes": 36696,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/concentrates-1100.webp",
+     "w": 1100,
+     "h": 832,
+     "bytes": 75874,
+     "variant": "landscape"
+    }
+   ]
+  },
+  "vapes-more": {
+   "role": "tile",
+   "alt": "Illustration: a blank vape cartridge, a dropper bottle and a can on navy glass over a blue LED line",
+   "source": "assets/generated/raw/vapes-more.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-9765-7b60-a665-f96a3764d674",
+   "seed": 3918085174,
+   "prompt": "Blank vape cartridge, blank amber tincture dropper bottle and blank navy can on glossy navy glass with an LED line beneath. Same style anchor.",
+   "grade": null,
+   "rawSize": [
+    2368,
+    1792
+   ],
+   "files": [
+    {
+     "file": "gen/vapes-more-640.webp",
+     "w": 640,
+     "h": 484,
+     "bytes": 9236,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/vapes-more-1100.webp",
+     "w": 1100,
+     "h": 832,
+     "bytes": 17150,
+     "variant": "landscape"
+    }
+   ]
+  },
+  "box-spotlight": {
+   "role": "backdrop",
+   "alt": "Illustration: two glass jars of top-shelf cannabis flower on black velvet under one spotlight",
+   "source": "assets/generated/raw/box-spotlight.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-98fe-7722-a681-57df8a93403a",
+   "seed": 1659917010,
+   "prompt": "Three blank glass jars of top-shelf buds on black velvet under one spotlight, cool-white marquee bulb bokeh far behind, no gold; upper half dark for a heading. Same style anchor.",
+   "grade": null,
+   "rawSize": [
+    2752,
+    1536
+   ],
+   "files": [
+    {
+     "file": "gen/box-spotlight-800.webp",
+     "w": 800,
+     "h": 447,
+     "bytes": 21742,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/box-spotlight-1280.webp",
+     "w": 1280,
+     "h": 714,
+     "bytes": 43850,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/box-spotlight-1920.webp",
+     "w": 1920,
+     "h": 1072,
+     "bytes": 75140,
+     "variant": "landscape"
+    }
+   ]
+  },
+  "neon-abstract": {
+   "role": "backdrop",
+   "alt": "Illustration: neon tube curves glowing blue, reflected on a wet floor",
+   "source": "assets/generated/raw/neon-abstract.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-9a3c-7fc0-a353-0ac42691f49a",
+   "seed": 2754173344,
+   "prompt": "Abstract royal-blue and hot-pink neon tube curves on a black wall reflected on a wet surface; no letters. Same style anchor.",
+   "grade": "blue",
+   "rawSize": [
+    2752,
+    1536
+   ],
+   "files": [
+    {
+     "file": "gen/neon-abstract-800.webp",
+     "w": 800,
+     "h": 447,
+     "bytes": 16062,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/neon-abstract-1280.webp",
+     "w": 1280,
+     "h": 714,
+     "bytes": 29320,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/neon-abstract-1920.webp",
+     "w": 1920,
+     "h": 1072,
+     "bytes": 51024,
+     "variant": "landscape"
+    }
+   ]
+  },
+  "rainbow-reflections": {
+   "role": "backdrop",
+   "alt": "Illustration: blue light reflections on wet asphalt at night",
+   "source": "assets/generated/raw/rainbow-reflections.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-9b7c-7933-9793-efd2891e2305",
+   "seed": 3827037972,
+   "prompt": "Wet asphalt at night with blurred rainbow-coloured reflections in puddles; no buildings or light sources in frame; upper half dark. Same style anchor.",
+   "grade": "blue",
+   "rawSize": [
+    2752,
+    1536
+   ],
+   "files": [
+    {
+     "file": "gen/rainbow-reflections-800.webp",
+     "w": 800,
+     "h": 447,
+     "bytes": 21380,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/rainbow-reflections-1280.webp",
+     "w": 1280,
+     "h": 714,
+     "bytes": 38432,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/rainbow-reflections-1920.webp",
+     "w": 1920,
+     "h": 1072,
+     "bytes": 63308,
+     "variant": "landscape"
+    }
+   ]
+  },
+  "bulb-bokeh": {
+   "role": "backdrop",
+   "alt": "Illustration: a row of glowing marquee bulbs in soft focus",
+   "source": "assets/generated/raw/bulb-bokeh.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bdc9-9cf2-76e2-b37e-524994e871e3",
+   "seed": 2230392704,
+   "prompt": "Diagonal row of warm-white marquee bulbs in a black panel, very shallow focus, bokeh; right half dark. Same style anchor.",
+   "grade": "cool",
+   "rawSize": [
+    2752,
+    1536
+   ],
+   "files": [
+    {
+     "file": "gen/bulb-bokeh-800.webp",
+     "w": 800,
+     "h": 447,
+     "bytes": 9452,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/bulb-bokeh-1280.webp",
+     "w": 1280,
+     "h": 714,
+     "bytes": 15332,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/bulb-bokeh-1920.webp",
+     "w": 1920,
+     "h": 1072,
+     "bytes": 24686,
+     "variant": "landscape"
+    }
+   ]
+  }
+ }
+}

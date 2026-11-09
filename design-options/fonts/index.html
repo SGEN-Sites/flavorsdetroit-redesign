@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Font pairings · Flavors Detroit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&family=Jockey+One&family=Teko:wght@500;600;700&family=Rajdhani:wght@500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Saira:wght@400;500;600;700&display=swap">
+<style>
+@font-face { font-family: "Big Shoulders Display"; src: url("assets/big-shoulders-display.woff2") format("woff2"); font-weight: 600 900; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("assets/instrument-sans.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+@font-face { font-family: "Tilt Neon"; src: url("assets/tilt-neon.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+:root {
+  /* the new palette (owner 2026-11-09): black first, then the store's blue, then whites */
+  --black: #08090b; --black-2: #111318; --sign-black: #0b0b0a;
+  --navy: #192036; --navy-2: #2c3548; --blue: #2a4290; --blue-top: #3a55a6; --led: #5a86e6; --led-soft: #c3cdf2;
+  --white: #ffffff; --white-2: #f3f5f8; --quiet: #c9ced8; --mist: #aab3c8;
+  --showroom: #f4f6fb; --ink: #0d1018; --ink-2: #3b4152; --line: #d6dae3;
+  --spectrum: linear-gradient(90deg, #af0303, #fa8900, #f6fc1e, #ed397a, #00a3dc, #338900);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--black); color: var(--white-2); font: 400 17px/1.6 "Instrument Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+a { color: var(--led-soft); }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+header.page { padding: 56px 0 28px; }
+header.page h1 { font: 800 clamp(2.4rem, 1.6rem + 3vw, 4rem)/1 "Big Shoulders Display", sans-serif; margin: 0 0 14px; }
+header.page p { max-width: 72ch; color: var(--quiet); margin: 0 0 10px; }
+.spectrum { height: 3px; background: var(--spectrum); }
+.kick { font-size: 14px; font-weight: 650; letter-spacing: .03em; color: var(--led-soft); display: inline-flex; gap: 8px; align-items: center; }
+.kick::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: #fffef6; box-shadow: 0 0 12px 2px #fff0cc; }
+
+/* ---- the verdict + evidence ---- */
+.verdict { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 28px; align-items: start; padding: 24px 0 48px; }
+.card { background: var(--black-2); border: 1px solid rgba(243,245,248,.12); border-radius: 22px; padding: 24px; }
+.card h2 { font: 800 1.9rem/1.05 "Big Shoulders Display", sans-serif; margin: 0 0 12px; }
+.card ol { margin: 0; padding-left: 22px; color: var(--quiet); }
+.card li { margin: 4px 0; }
+.card li b { color: var(--white); font-weight: 650; }
+.card img { width: 100%; border-radius: 14px; display: block; }
+.note { font-size: 14px; color: var(--mist); margin-top: 12px; }
+@media (max-width: 900px) { .verdict { grid-template-columns: 1fr; } }
+
+/* ---- an option ---- */
+.opt { margin: 0 0 64px; border-radius: 26px; overflow: hidden; border: 1px solid rgba(243,245,248,.12); }
+.opt__bar { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: baseline; justify-content: space-between; padding: 18px 24px; background: var(--black-2); }
+.opt__bar h2 { margin: 0; font: 650 1.15rem/1.2 "Instrument Sans", sans-serif; color: var(--white); }
+.opt__bar h2 span { color: var(--led-soft); font-weight: 600; }
+.opt__bar p { margin: 0; font-size: 14px; color: var(--mist); max-width: 70ch; }
+.rec { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; background: var(--blue); color: var(--white); font-size: 13px; font-weight: 650; vertical-align: 2px; }
+/* the mock: a night hero, a white band */
+.mock-hero { position: relative; background: radial-gradient(90% 90% at 80% 0, rgba(42,66,144,.45), transparent 60%), var(--black); padding: 40px 28px 44px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 28px; align-items: center; }
+.mock-nav { display: flex; align-items: center; gap: 20px; padding: 12px 28px; background: var(--black); border-bottom: 1px solid rgba(243,245,248,.08); font-size: 15px; }
+.mock-nav img { width: 72px; height: auto; }
+.mock-nav span { color: var(--white-2); }
+.mock-nav .grow { flex: 1; }
+.btn { display: inline-flex; align-items: center; gap: 10px; min-height: 48px; padding: 0 24px; border-radius: 999px; font-weight: 650; font-size: 15px; text-decoration: none; }
+.btn--order { color: var(--white); background: linear-gradient(180deg, var(--blue-top), var(--blue) 50%, #1d2f6b); box-shadow: inset 0 1px 0 rgba(255,255,255,.28), 0 12px 26px -12px rgba(90,134,230,.7); }
+.btn--ghost { color: var(--white-2); border: 1px solid rgba(243,245,248,.28); }
+.mock-hero h3 { margin: 12px 0 14px; font-size: clamp(2.6rem, 1.4rem + 4.2vw, 5rem); line-height: .94; color: var(--white); text-wrap: balance; max-width: 14ch; }
+.mock-hero h3 .accent { color: var(--led); text-shadow: 0 0 22px rgba(90,134,230,.45); }
+.mock-hero .lede { color: var(--quiet); max-width: 46ch; margin: 0 0 22px; }
+.mock-hero .ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.tag { justify-self: center; width: min(300px, 100%); padding: 26px 24px 22px; border-radius: 16px; color: var(--white); background: linear-gradient(180deg, var(--blue), #1d2f6b); box-shadow: 0 26px 40px -24px rgba(0,0,0,.9); position: relative; }
+.tag::before { content: ""; position: absolute; left: 50%; top: 10px; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; background: var(--black); }
+.tag small { display: block; font-size: 13px; font-weight: 700; margin-top: 8px; }
+.tag .price { display: flex; align-items: flex-start; gap: 2px; font-size: 5rem; line-height: .86; margin: 6px 0 4px; }
+.tag .price i { font-style: normal; font-size: .46em; margin-top: .12em; }
+.tag .price em { font-style: normal; align-self: flex-end; font-size: 15px; font-weight: 650; margin: 0 0 .5em 8px; }
+.tag .name { font-size: 1.8rem; line-height: 1; }
+.tag p { margin: 8px 0 0; font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.88); }
+.mock-day { background: var(--showroom); color: var(--ink); padding: 34px 28px 38px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.mock-day .k2 { color: #1d2f6b; }
+.mock-day .k2::before { background: var(--blue); box-shadow: 0 0 0 3px rgba(42,66,144,.25); }
+.mock-day h4 { margin: 10px 0 10px; font-size: clamp(2.2rem, 1.4rem + 2.6vw, 3.6rem); line-height: .96; color: var(--ink); }
+.mock-day h4 .accent { color: var(--blue); }
+.mock-day p { margin: 0; color: var(--ink-2); }
+.mock-day .meta { font-size: 14px; color: #5c6372; margin-top: 12px; }
+.mock-day .sample { font-size: 15px; line-height: 1.55; }
+.match { display: flex; gap: 16px; align-items: center; background: var(--sign-black); padding: 16px 28px; border-top: 1px solid rgba(243,245,248,.08); }
+.match img { width: 210px; flex: none; }
+.match .word { font-size: 2.6rem; line-height: .98; color: var(--white); letter-spacing: .02em; }
+.match small { color: var(--mist); font-size: 13px; }
+@media (max-width: 860px) { .mock-hero, .mock-day { grid-template-columns: 1fr; } .match { flex-wrap: wrap; } .mock-nav span:not(.grow) { display: none; } }
+
+/* the four pairings + the current one */
+.o-a .disp { font-family: "Jockey One", sans-serif; font-weight: 400; }
+.o-a .body { font-family: "Barlow", sans-serif; }
+.o-b .disp { font-family: "Agdasima", sans-serif; font-weight: 700; }
+.o-b .body { font-family: "Barlow", sans-serif; }
+.o-c .disp { font-family: "Teko", sans-serif; font-weight: 600; letter-spacing: .005em; }
+.o-c .body { font-family: "Saira", sans-serif; }
+.o-d .disp { font-family: "Rajdhani", sans-serif; font-weight: 700; }
+.o-d .body { font-family: "Instrument Sans", sans-serif; }
+.o-now .disp { font-family: "Big Shoulders Display", sans-serif; font-weight: 800; }
+.o-now .body { font-family: "Instrument Sans", sans-serif; }
+.o-c .mock-hero h3 { font-size: clamp(2.9rem, 1.6rem + 4.8vw, 5.6rem); line-height: .86; }
+.o-b .mock-hero h3, .o-b .mock-day h4 { line-height: .9; }
+footer.page { padding: 24px 0 64px; color: var(--mist); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="spectrum"></div>
+<header class="page wrap">
+  <p class="kick">Design options · font pairings</p>
+  <h1>Headline fonts closer to the sign</h1>
+  <p>The inline face used for the accent words is gone. Below are four pairings drawn from fonts measured against the real <b>Flavors Detroit</b> lettering on the logo, each shown on a slice of the site in the new black, blue and white palette, with the current pairing at the end for comparison.</p>
+  <p>Every font here is free to use and to host with the site (SIL Open Font License), so nothing is loaded from a third party once a pairing is chosen.</p>
+</header>
+
+<section class="wrap verdict" aria-label="Which font matches the logo">
+  <div class="card">
+    <h2>Which font matches the logo</h2>
+    <p class="note" style="margin-top:0">Measured, not eyeballed: each of the 14 letters of "FLAVORS DETROIT" was cut out of the logo file and compared pixel by pixel with the same letter set in 72 candidate fonts at the same height (overlap 1.0 = identical).</p>
+    <ol>
+      <li><b>Jockey One</b>: closest overall shape (overlap 0.834) and the same letter widths as the logo (1.01×); softly rounded corners.</li>
+      <li><b>Teko 600</b>: 0.828, a touch wider (1.04×), rounded corners.</li>
+      <li><b>Staatliches</b>: 0.818, but it has no lowercase, which would make every headline look all caps.</li>
+      <li><b>Khand 700</b>: 0.816, same width (0.99×), slightly lighter.</li>
+      <li><b>Agdasima 700</b>: 0.809, and the only one in the top ten with the logo's octagonal, cut corners on O, D, R and S.</li>
+      <li><b>Rajdhani 700</b>: 0.810, cut corners too, but wider (1.12×) and lighter.</li>
+    </ol>
+    <p class="note">The current headline font (Big Shoulders Display) scores 0.745 and is 14% narrower than the sign's letters.</p>
+  </div>
+  <div class="card">
+    <img src="assets/logo-match-sheet.png" alt="The logo lettering beside FLAVORS DETROIT set in the eleven closest fonts and the current headline font, each with its overlap and width scores">
+    <p class="note">The logo lettering (top left) beside the closest fonts, all at the same letter height. Full scores for all 72 fonts: <a href="assets/logo-match-ranking.json">logo-match-ranking.json</a>.</p>
+  </div>
+</section>
+
+<main class="wrap">
+  <!-- A -->
+  <section class="opt o-a" aria-label="Option A">
+    <div class="opt__bar"><h2>A · <span>Jockey One</span> + <span>Barlow</span><span class="rec">Recommended</span></h2><p>The closest measured match to the sign: the same letter widths and the same heavy weight, with softer corners, and it stays readable in long headlines. Barlow, drawn from highway and road signs, keeps paragraphs easy to read and suits a roadside marquee.</p></div>
+    <div class="mock-nav body"><img src="assets/logo-sign-480.webp" alt=""><span class="grow"></span><span>Shop</span><span>Deals</span><span>The Owner's Box</span><span>Visit</span><a class="btn btn--order" href="#">Order now</a></div>
+    <div class="mock-hero body">
+      <div><span class="kick">Flavors Detroit · 5700 E 8 Mile Rd</span><h3 class="disp">A traditional dispensary with a <span class="accent">modern twist</span>.</h3><p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p><div class="ctas"><a class="btn btn--order" href="#">Order now</a><a class="btn btn--ghost" href="#">Today's deals →</a></div></div>
+      <div class="tag"><small>Flavors 3.5G prepacks</small><div class="price disp"><i>$</i>10<em class="body">eighth</em></div><div class="name disp">Eighths</div><p>23 strains on the live menu, including Applelato, Kush Mints, Warheadz.</p></div>
+    </div>
+    <div class="mock-day body"><div><span class="kick k2">Shop by category</span><h4 class="disp">Our <span class="accent">flavors</span></h4><p>Flavors Detroit embodies a sleek, modern style with deli style displays that showcase our premium products with sophistication and clarity.</p></div><div><h4 class="disp" style="font-size:2.2rem">You'll feel right at home.</h4><p class="sample">For years we have been serving the finest flower and cannabis products to our patients. You'll feel right at home in our beautiful 10,000 sq ft location.</p><p class="meta">Barlow 400 / 600 for text · Jockey One (one weight) for headlines, prices and the wordmark</p></div></div>
+    <div class="match"><img src="assets/logo-sign-480.webp" alt=""><div><div class="word disp">FLAVORS DETROIT</div><small>Jockey One beside the sign</small></div></div>
+  </section>
+
+  <!-- B -->
+  <section class="opt o-b" aria-label="Option B">
+    <div class="opt__bar"><h2>B · <span>Agdasima</span> + <span>Barlow</span></h2><p>The sign's own cut corners (octagonal O, D, R and S) in every headline. Lighter than the sign's letters, so it reads more athletic-sign than heavy marquee.</p></div>
+    <div class="mock-nav body"><img src="assets/logo-sign-480.webp" alt=""><span class="grow"></span><span>Shop</span><span>Deals</span><span>The Owner's Box</span><span>Visit</span><a class="btn btn--order" href="#">Order now</a></div>
+    <div class="mock-hero body">
+      <div><span class="kick">Flavors Detroit · 5700 E 8 Mile Rd</span><h3 class="disp">A traditional dispensary with a <span class="accent">modern twist</span>.</h3><p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p><div class="ctas"><a class="btn btn--order" href="#">Order now</a><a class="btn btn--ghost" href="#">Today's deals →</a></div></div>
+      <div class="tag"><small>Flavors 3.5G prepacks</small><div class="price disp"><i>$</i>10<em class="body">eighth</em></div><div class="name disp">Eighths</div><p>23 strains on the live menu, including Applelato, Kush Mints, Warheadz.</p></div>
+    </div>
+    <div class="mock-day body"><div><span class="kick k2">Shop by category</span><h4 class="disp">Our <span class="accent">flavors</span></h4><p>Flavors Detroit embodies a sleek, modern style with deli style displays that showcase our premium products with sophistication and clarity.</p></div><div><h4 class="disp" style="font-size:2.2rem">You'll feel right at home.</h4><p class="sample">For years we have been serving the finest flower and cannabis products to our patients. You'll feel right at home in our beautiful 10,000 sq ft location.</p><p class="meta">Barlow 400 / 600 for text · Agdasima 700 for headlines and prices</p></div></div>
+    <div class="match"><img src="assets/logo-sign-480.webp" alt=""><div><div class="word disp">FLAVORS DETROIT</div><small>Agdasima 700 beside the sign</small></div></div>
+  </section>
+
+  <!-- C -->
+  <section class="opt o-c" aria-label="Option C">
+    <div class="opt__bar"><h2>C · <span>Teko</span> + <span>Saira</span></h2><p>Tall and squared, with five weights, so headlines, prices and labels can step down in one family. Saira's square-shouldered text face carries the same geometry into paragraphs.</p></div>
+    <div class="mock-nav body"><img src="assets/logo-sign-480.webp" alt=""><span class="grow"></span><span>Shop</span><span>Deals</span><span>The Owner's Box</span><span>Visit</span><a class="btn btn--order" href="#">Order now</a></div>
+    <div class="mock-hero body">
+      <div><span class="kick">Flavors Detroit · 5700 E 8 Mile Rd</span><h3 class="disp">A traditional dispensary with a <span class="accent">modern twist</span>.</h3><p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p><div class="ctas"><a class="btn btn--order" href="#">Order now</a><a class="btn btn--ghost" href="#">Today's deals →</a></div></div>
+      <div class="tag"><small>Flavors 3.5G prepacks</small><div class="price disp"><i>$</i>10<em class="body">eighth</em></div><div class="name disp">Eighths</div><p>23 strains on the live menu, including Applelato, Kush Mints, Warheadz.</p></div>
+    </div>
+    <div class="mock-day body"><div><span class="kick k2">Shop by category</span><h4 class="disp">Our <span class="accent">flavors</span></h4><p>Flavors Detroit embodies a sleek, modern style with deli style displays that showcase our premium products with sophistication and clarity.</p></div><div><h4 class="disp" style="font-size:2.4rem">You'll feel right at home.</h4><p class="sample">For years we have been serving the finest flower and cannabis products to our patients. You'll feel right at home in our beautiful 10,000 sq ft location.</p><p class="meta">Saira 400 / 600 for text · Teko 500–700 for headlines and prices</p></div></div>
+    <div class="match"><img src="assets/logo-sign-480.webp" alt=""><div><div class="word disp">FLAVORS DETROIT</div><small>Teko 600 beside the sign</small></div></div>
+  </section>
+
+  <!-- D -->
+  <section class="opt o-d" aria-label="Option D">
+    <div class="opt__bar"><h2>D · <span>Rajdhani</span> + <span>Instrument Sans</span></h2><p>Cut corners like the sign but wider and lighter, so it feels more technical and modern than athletic. Keeps the current text face.</p></div>
+    <div class="mock-nav body"><img src="assets/logo-sign-480.webp" alt=""><span class="grow"></span><span>Shop</span><span>Deals</span><span>The Owner's Box</span><span>Visit</span><a class="btn btn--order" href="#">Order now</a></div>
+    <div class="mock-hero body">
+      <div><span class="kick">Flavors Detroit · 5700 E 8 Mile Rd</span><h3 class="disp">A traditional dispensary with a <span class="accent">modern twist</span>.</h3><p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p><div class="ctas"><a class="btn btn--order" href="#">Order now</a><a class="btn btn--ghost" href="#">Today's deals →</a></div></div>
+      <div class="tag"><small>Flavors 3.5G prepacks</small><div class="price disp"><i>$</i>10<em class="body">eighth</em></div><div class="name disp">Eighths</div><p>23 strains on the live menu, including Applelato, Kush Mints, Warheadz.</p></div>
+    </div>
+    <div class="mock-day body"><div><span class="kick k2">Shop by category</span><h4 class="disp">Our <span class="accent">flavors</span></h4><p>Flavors Detroit embodies a sleek, modern style with deli style displays that showcase our premium products with sophistication and clarity.</p></div><div><h4 class="disp" style="font-size:2.2rem">You'll feel right at home.</h4><p class="sample">For years we have been serving the finest flower and cannabis products to our patients. You'll feel right at home in our beautiful 10,000 sq ft location.</p><p class="meta">Instrument Sans 400 / 650 for text · Rajdhani 700 for headlines and prices</p></div></div>
+    <div class="match"><img src="assets/logo-sign-480.webp" alt=""><div><div class="word disp">FLAVORS DETROIT</div><small>Rajdhani 700 beside the sign</small></div></div>
+  </section>
+
+  <!-- current -->
+  <section class="opt o-now" aria-label="The current pairing">
+    <div class="opt__bar"><h2>Now · <span>Big Shoulders Display</span> + <span>Instrument Sans</span></h2><p>What the preview uses today, minus the inline accent face: shown for comparison.</p></div>
+    <div class="mock-hero body">
+      <div><span class="kick">Flavors Detroit · 5700 E 8 Mile Rd</span><h3 class="disp">A traditional dispensary with a <span class="accent">modern twist</span>.</h3><p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p><div class="ctas"><a class="btn btn--order" href="#">Order now</a><a class="btn btn--ghost" href="#">Today's deals →</a></div></div>
+      <div class="tag"><small>Flavors 3.5G prepacks</small><div class="price disp"><i>$</i>10<em class="body">eighth</em></div><div class="name disp">Eighths</div><p>23 strains on the live menu, including Applelato, Kush Mints, Warheadz.</p></div>
+    </div>
+    <div class="match"><img src="assets/logo-sign-480.webp" alt=""><div><div class="word disp">FLAVORS DETROIT</div><small>Big Shoulders Display 800 beside the sign</small></div></div>
+  </section>
+</main>
+<footer class="page wrap">Design options for the Flavors Detroit redesign preview · not part of the site · fonts from Google Fonts (SIL Open Font License) · prices and copy from the site preview.</footer>
+<div class="spectrum"></div>
+</body>
+</html>

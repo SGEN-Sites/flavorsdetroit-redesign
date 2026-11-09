@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Splash concepts · Flavors Detroit</title>
+<link rel="preload" href="assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Instrument Sans"; src: url("assets/instrument-sans.woff2") format("woff2"); font-weight: 400 700; font-stretch: 75% 100%; font-style: normal; font-display: swap; }
+:root {
+  --black: #08090b; --black-raised: #111318; --navy: #192036; --navy-lit: #2c3548;
+  --blue: #2a4290; --led: #4b79d7; --led-soft: #c3caec; --white: #ffffff; --off-white: #f3f5f8;
+  --line: rgb(195 202 236 / .14);
+  --spectrum: linear-gradient(90deg, #af0303, #fa8900, #f6fc1e, #ed397a, #00a3dc, #338900);
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { background: var(--black); color: var(--white); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; font: 400 1rem/1.55 var(--font-sans); background: var(--black); }
+.wrap { width: min(1080px, 100% - 32px); margin-inline: auto; }
+a { color: var(--white); text-underline-offset: 3px; }
+:focus-visible { outline: 2px solid var(--led-soft); outline-offset: 3px; }
+
+.top { padding: clamp(24px, 4vw, 48px) 0 clamp(22px, 3vw, 32px); }
+.brand { display: flex; align-items: center; gap: 12px; margin: 0 0 clamp(16px, 2.4vw, 26px); color: var(--led-soft); font-size: .95rem; }
+.brand img { width: 60px; height: auto; display: block; }
+h1 { margin: 0; font-size: clamp(2.3rem, 1.4rem + 3.8vw, 4.2rem); line-height: 1.02; font-weight: 640; font-stretch: 94%; letter-spacing: -.015em; }
+.lede { margin: 16px 0 0; max-width: 60ch; color: var(--off-white); font-size: clamp(1.02rem, .96rem + .3vw, 1.15rem); }
+.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin-top: 24px; }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px;
+  background: var(--blue); color: var(--white); font: 600 .95rem/1 var(--font-sans); cursor: pointer;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .18), 0 10px 24px -12px rgb(75 121 215 / .9);
+}
+.btn:hover { background: color-mix(in srgb, var(--blue) 86%, var(--led)); }
+.btn[disabled] { cursor: default; opacity: .7; }
+.toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--off-white); font-size: .95rem; cursor: pointer; }
+.toggle input { appearance: none; -webkit-appearance: none; position: relative; flex: none; width: 44px; height: 26px; margin: 0; border-radius: 99px; background: var(--navy-lit); cursor: pointer; transition: background-color .2s; }
+.toggle input::after { content: ""; position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--white); transition: transform .2s; }
+.toggle input:checked { background: var(--blue); }
+.toggle input:checked::after { transform: translateX(18px); }
+.note { margin: 18px 0 0; padding: 14px 16px; max-width: 70ch; border: 1px solid var(--line); border-radius: 12px; background: var(--black-raised); color: var(--off-white); }
+.note .btn { margin-top: 10px; }
+
+.divider { height: 2px; margin: 0; border: 0; border-radius: 99px; background: var(--spectrum); }
+
+.concepts { display: grid; gap: clamp(48px, 7vw, 80px); padding: clamp(36px, 5vw, 60px) 0; }
+.concept__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.concept__num { color: var(--led-soft); font-weight: 600; font-variant-numeric: tabular-nums; }
+.concept h2 { margin: 0; font-size: clamp(1.55rem, 1.2rem + 1.3vw, 2.2rem); line-height: 1.1; font-weight: 640; font-stretch: 94%; letter-spacing: -.01em; }
+.chip { margin-left: auto; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--led-soft); font-size: .85rem; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.concept__desc { margin: 10px 0 18px; max-width: 64rem; color: var(--off-white); }
+.concept__desc span { display: block; }
+/* the stage never grows taller than the screen allows, so a whole demo and its Replay button fit in view */
+.stage {
+  position: relative; width: min(100%, calc((100vh - 170px) * 16 / 9)); aspect-ratio: 16 / 9; overflow: hidden; border-radius: 16px; background: var(--black);
+  border: 1px solid var(--line); box-shadow: 0 30px 60px -30px rgb(0 0 0 / .9);
+}
+/* color-scheme normal keeps the empty frame transparent (black stage) before its demo loads */
+.stage iframe { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border: 0; color-scheme: normal; }
+@media (max-width: 640px) { .stage { width: 100%; aspect-ratio: 4 / 5; } }
+.concept__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 14px; }
+.link { display: inline-flex; align-items: center; min-height: 44px; color: var(--led-soft); }
+
+.ship { padding: clamp(36px, 5vw, 60px) 0 clamp(32px, 5vw, 56px); }
+.ship h2 { margin: 0; font-size: clamp(1.7rem, 1.3rem + 1.5vw, 2.5rem); line-height: 1.08; font-weight: 640; font-stretch: 94%; letter-spacing: -.01em; }
+.ship > p { margin: 10px 0 0; max-width: 64ch; color: var(--off-white); }
+.ship dl { margin: 22px 0 0; border-top: 1px solid var(--line); }
+.ship dl > div { display: grid; grid-template-columns: minmax(150px, 210px) 1fr; gap: 4px 28px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.ship dt { font-weight: 600; }
+.ship dd { margin: 0; max-width: 70ch; color: var(--off-white); }
+@media (max-width: 640px) { .ship dl > div { grid-template-columns: 1fr; } }
+.foot { padding: 0 0 48px; color: var(--led-soft); font-size: .9rem; }
+.foot p { margin: 0 0 6px; }
+@media (prefers-reduced-motion: reduce) { .toggle input, .toggle input::after { transition: none; } }
+</style>
+</head>
+<body>
+<header class="top wrap">
+  <p class="brand"><img src="assets/logo-sign-960.webp" width="960" height="774" alt="Flavors Detroit"> Design options · 9 November 2026</p>
+  <h1>Splash concepts</h1>
+  <p class="lede">Four short intros for the new site, each playing live over a stand-in for the home page. Every one runs 2.4 seconds or less and then gets out of the way. Click, tap or press any key inside a demo to skip it.</p>
+  <div class="controls">
+    <button class="btn" type="button" data-replay="all">Replay all</button>
+    <label class="toggle"><input type="checkbox" id="rm"> <span>Show what visitors with reduced motion see</span></label>
+  </div>
+  <div class="note" id="rm-note" hidden>
+    Your device is set to reduce motion, so each demo shows the page straight away, exactly as the live site would for you.<br>
+    <button class="btn" type="button" id="force">Play them anyway</button>
+  </div>
+  <noscript><p class="note">Turn on JavaScript to play the demos.</p></noscript>
+</header>
+
+<div class="wrap"><hr class="divider"></div>
+
+<main class="concepts wrap">
+  <article class="concept" id="sign-ignition">
+    <div class="concept__head"><span class="concept__num">1</span><h2>Sign ignition</h2><span class="chip">2.30 s</span></div>
+    <p class="concept__desc">
+      <span>On black, the 53 marquee bulbs switch on one by one around the cloud, then the sign and its blue tower come up.</span>
+      <span>The neon 5700 flickers on, and the whole splash lifts away like a shutter to reveal the page.</span>
+    </p>
+    <div class="stage"><iframe id="f-ignition" data-src="demo/ignition.html" title="Sign ignition, live splash demo"></iframe></div>
+    <div class="concept__actions">
+      <button class="btn" type="button" data-replay="f-ignition">Replay</button>
+      <a class="link" href="demo/ignition.html" target="_blank" rel="noopener">Open full screen</a>
+    </div>
+  </article>
+
+  <article class="concept" id="spectrum-line">
+    <div class="concept__head"><span class="concept__num">2</span><h2>Spectrum line</h2><span class="chip">2.28 s</span></div>
+    <p class="concept__desc">
+      <span>A thin spectrum line draws out from the centre, and the sign comes into focus above it.</span>
+      <span>The line glows once, then the sign softens away and the black dissolves into the page.</span>
+    </p>
+    <div class="stage"><iframe id="f-spectrum" data-src="demo/spectrum.html" title="Spectrum line, live splash demo"></iframe></div>
+    <div class="concept__actions">
+      <button class="btn" type="button" data-replay="f-spectrum">Replay</button>
+      <a class="link" href="demo/spectrum.html" target="_blank" rel="noopener">Open full screen</a>
+    </div>
+  </article>
+
+  <article class="concept" id="counter-glow">
+    <div class="concept__head"><span class="concept__num">3</span><h2>Counter glow</h2><span class="chip">2.30 s</span></div>
+    <p class="concept__desc">
+      <span>A navy counter rises from the bottom and the blue LED strip along its edge switches on, like the counters in the store.</span>
+      <span>The sign rises from behind it and sits on top, then the counter drops away and the page shows through.</span>
+    </p>
+    <div class="stage"><iframe id="f-counter" data-src="demo/counter.html" title="Counter glow, live splash demo"></iframe></div>
+    <div class="concept__actions">
+      <button class="btn" type="button" data-replay="f-counter">Replay</button>
+      <a class="link" href="demo/counter.html" target="_blank" rel="noopener">Open full screen</a>
+    </div>
+  </article>
+
+  <article class="concept" id="night-drive">
+    <div class="concept__head"><span class="concept__num">4</span><h2>Night drive</h2><span class="chip">2.30 s</span></div>
+    <p class="concept__desc">
+      <span>Headlight and tail-light trails streak past on 8 Mile, and each bulb on the sign switches on as their light reaches it.</span>
+      <span>The neon 5700 catches, then the last car pulls the splash off to the right.</span>
+    </p>
+    <div class="stage"><iframe id="f-drive" data-src="demo/night-drive.html" title="Night drive, live splash demo"></iframe></div>
+    <div class="concept__actions">
+      <button class="btn" type="button" data-replay="f-drive">Replay</button>
+      <a class="link" href="demo/night-drive.html" target="_blank" rel="noopener">Open full screen</a>
+    </div>
+  </article>
+</main>
+
+<div class="wrap"><hr class="divider"></div>
+
+<section class="ship wrap" aria-labelledby="ship-title">
+  <h2 id="ship-title">How it would ship</h2>
+  <p>The same rules apply whichever concept is picked.</p>
+  <dl>
+    <div><dt>Length</dt><dd>About 2.3 seconds from the first frame to the page (2.28 to 2.30 seconds, depending on the concept). It starts as soon as the logo has loaded; if that takes longer than 0.6 seconds, the page shows straight away instead, so the splash never holds anyone up.</dd></div>
+    <div><dt>Once per session</dt><dd>It plays on the first page a visitor opens and is then remembered for the rest of that browser session, so later pages and reloads open directly. It plays again on their next visit.</dd></div>
+    <div><dt>Skip</dt><dd>A click, tap, scroll or any key fades it out in 0.2 seconds. The splash catches that tap itself, so it never lands on a link underneath.</dd></div>
+    <div><dt>Reduced motion</dt><dd>Visitors whose device is set to reduce motion never see it; the page shows directly. The same goes when JavaScript is off, and a 4-second fail-safe hands over the page if the script ever stalls. The switch at the top previews this.</dd></div>
+    <div><dt>Age gate</dt><dd>On a first visit the splash plays first, then hands off to the age gate: the gate fades in over the same black instead of the page, and the page stays locked behind it until the visitor answers. Returning visitors, whose answer is kept for 30 days, go straight from the splash to the page.</dd></div>
+    <div><dt>With the hero</dt><dd>The home page hero already switches its own sign on once per session. If Sign ignition or Night drive is picked, the splash takes over that moment, so the bulbs never light up twice.</dd></div>
+    <div><dt>Build</dt><dd>Plain HTML, CSS and a small script, no libraries. It animates only transform, opacity and filter, and sits fixed above the page, so the page layout never moves (layout shift measured at 0 in every demo). It reuses the site's own logo files and fonts.</dd></div>
+  </dl>
+</section>
+
+<footer class="foot wrap">
+  <p>Demos only: nothing on this page is wired into the site yet. The black block behind each splash stands in for the home page.</p>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+  var frames = Array.prototype.slice.call(document.querySelectorAll('.stage iframe'));
+  var rm = document.getElementById('rm');
+  var note = document.getElementById('rm-note');
+  var forceBtn = document.getElementById('force');
+  var force = false;
+  var deviceReduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  if (deviceReduce && note) note.hidden = false;
+
+  function url(f) {
+    var q = [];
+    if (rm.checked) q.push('rm=1');
+    else if (force) q.push('play=1');
+    q.push('r=' + Date.now().toString(36));
+    return f.getAttribute('data-src') + '?' + q.join('&');
+  }
+  function play(f) { f.setAttribute('data-started', ''); f.src = url(f); }
+  function replayStarted() { frames.forEach(function (f) { if (f.hasAttribute('data-started')) play(f); }); }
+
+  // Each demo starts when its stage is mostly on screen, so it plays where it can be seen.
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting && !e.target.hasAttribute('data-started')) { play(e.target); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.4 });
+    frames.forEach(function (f) { io.observe(f); });
+  } else {
+    frames.forEach(play);
+  }
+
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest ? e.target.closest('[data-replay]') : null;
+    if (!b) return;
+    var id = b.getAttribute('data-replay');
+    if (id === 'all') { frames.forEach(play); return; }
+    var f = document.getElementById(id);
+    if (f) play(f);
+  });
+  rm.addEventListener('change', replayStarted);
+  if (forceBtn) forceBtn.addEventListener('click', function () {
+    force = true; rm.checked = false; replayStarted();
+    forceBtn.disabled = true; forceBtn.textContent = 'Playing them anyway';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sign ignition · splash concept 1 · Flavors Detroit</title>
+<script>
+/* Decide before first paint. The splash only runs when motion is welcome; with ?once=1 it also
+   runs only once per browser session. ?rm=1 previews what reduced-motion visitors get.
+   ?play=1 (options page only) plays it even on a device set to reduce motion, so an owner with
+   that setting can still judge the concepts. */
+(function (d, w) {
+  var r = d.documentElement, q = w.location.search, reduce = /[?&]rm=1(&|$)/.test(q), play = /[?&]play=1(&|$)/.test(q), seen = false;
+  try { reduce = reduce || (!play && w.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+  if (/[?&]once=1(&|$)/.test(q)) { try { seen = w.sessionStorage.getItem('flavors-splash') === '1'; } catch (e) {} }
+  r.setAttribute('data-splash', reduce ? 'reduced' : seen ? 'seen' : 'pending');
+  if (reduce || seen) return;
+  r.classList.add('splash-on');
+  if (play) r.classList.add('splash-force');
+  /* fail-safe: if the splash script never runs, hand the page over after 4 s */
+  w.setTimeout(function () { if (r.classList.contains('splash-on') && /pending|loading/.test(r.getAttribute('data-splash'))) { r.classList.remove('splash-on'); r.setAttribute('data-splash', 'failsafe'); } }, 4000);
+})(document, window);
+</script>
+<link rel="preload" href="../assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/tilt-neon.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="splash.css">
+<style>
+/* Concept 1, sign ignition (2.30 s):
+   0.10-0.85 s  the 53 bulbs switch on one by one, clockwise around the cloud, on pure black
+   0.55-1.35 s  the blue backlight rises behind the sign; the sign and its tower come up
+   1.02-1.74 s  the neon 5700 flickers on
+   1.78-2.30 s  the splash lifts away, an LED strip on its bottom edge, revealing the page */
+.splash--ignite .scene { position: absolute; inset: 0; overflow: hidden; background: var(--black); --sign-w: min(74cqw, 66cqh, 540px); }
+.splash--ignite .rig { position: absolute; left: 50%; top: 50%; width: var(--sign-w); aspect-ratio: 960 / 1090; translate: -50% -50%; }
+.splash--ignite .glow { top: 36%; }
+.splash--ignite .board { position: absolute; left: 0; top: 0; }
+.splash--ignite .logo { filter: drop-shadow(0 0 1px rgb(195 202 236 / .4)); }
+.splash--ignite .tower { top: calc(var(--sign-w) * .5); height: 100cqh; }
+.splash--ignite .plate { top: calc(var(--sign-w) * .835); }
+.splash--ignite .edge {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, rgb(195 202 236 / 0), var(--led-soft) 14% 86%, rgb(195 202 236 / 0));
+  box-shadow: 0 0 10px 2px rgb(75 121 215 / .75), 0 0 36px 8px rgb(75 121 215 / .35);
+}
+
+.splash--ignite .bulb { animation: bulb-core .26s var(--ease-out) both; animation-delay: calc(100ms + var(--i) * 14.5ms); }
+.splash--ignite .bulb::before { animation: bulb-halo .9s var(--ease-out) both; animation-delay: calc(100ms + var(--i) * 14.5ms); }
+.splash--ignite .glow { animation: glow-up .8s var(--ease-out) .55s both; }
+.splash--ignite .logo { animation: fade-in .5s var(--ease-out) .72s both; }
+.splash--ignite .tower { animation: tower-up .5s var(--ease-out) .84s both; }
+.splash--ignite .plate { animation: plate-on .12s steps(2, end) .96s both; }
+.splash--ignite .neon { animation: neon-on .72s steps(1, end) 1.02s both; }
+.splash--ignite .edge { animation: fade-in .18s ease-out 1.66s both; }
+.splash--ignite .scene { animation: lift .52s var(--ease-io) 1.78s both; }
+
+@keyframes bulb-core { 0% { opacity: 0; transform: scale(.45); } 45% { opacity: 1; transform: scale(1.14); } 100% { opacity: 1; transform: none; } }
+@keyframes bulb-halo { 0% { opacity: 0; transform: scale(.4); } 28% { opacity: 1; transform: scale(1.1); } 100% { opacity: .58; transform: none; } }
+@keyframes glow-up { from { opacity: 0; transform: scale(.82); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes tower-up { from { opacity: 0; transform: translateY(8%); } to { opacity: 1; transform: none; } }
+@keyframes plate-on { from { opacity: 0; } to { opacity: 1; } }
+@keyframes neon-on { 0% { opacity: .07; } 8% { opacity: 1; } 12% { opacity: .1; } 18% { opacity: 1; } 22% { opacity: .22; } 34% { opacity: 1; } 37% { opacity: .5; } 42%, 100% { opacity: 1; } }
+@keyframes lift { from { transform: none; } to { transform: translate3d(0, -100%, 0); } }
+</style>
+</head>
+<body>
+<div class="splash splash--ignite" id="splash" aria-hidden="true" data-duration="2300">
+  <div class="scene" data-exit="lift">
+    <div class="rig">
+      <div class="glow"></div>
+      <div class="tower"></div>
+      <div class="plate"><span class="neon">5700</span></div>
+      <div class="board">
+        <img class="logo" src="../assets/logo-sign-960.webp" srcset="../assets/logo-sign-960.webp 960w, ../assets/logo-sign-1400.webp 1400w" sizes="(max-width: 720px) 80vw, 540px" width="960" height="774" alt="" decoding="async" fetchpriority="high">
+        <div class="bulbs" data-bulbs="chase"></div>
+      </div>
+    </div>
+    <div class="edge"></div>
+  </div>
+</div>
+
+<main class="standin">
+  <h1 class="standin__title">A traditional dispensary with a modern twist.</h1>
+  <button class="pill" type="button">Order now</button>
+</main>
+
+<script src="splash.js"></script>
+</body>
+</html>

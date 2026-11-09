@@ -1,7 +1,9 @@
-// fetch-fonts.mjs — self-host the four open-licence (SIL OFL) families the redesign uses.
-// Downloads the LATIN subset woff2 of each variable font from Google Fonts once, into
+// fetch-fonts.mjs — self-host the open-licence (SIL OFL) families the redesign uses.
+// Downloads the LATIN subset woff2 of each family/weight from Google Fonts once, into
 // src/assets/fonts/, and records the source URL + licence in src/assets/fonts/FONTS.json.
 // The built site never calls a font CDN at runtime.
+// 2026-11-09: the owner chose pairing A: Jockey One (headlines: the closest measured match to the
+// sign's lettering) + Barlow (text). Tilt Neon stays for the neon numerals.
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,11 +14,13 @@ fs.mkdirSync(OUT, { recursive: true });
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 
 const FAMILIES = [
-  { file: 'big-shoulders-display.woff2', css: 'Big+Shoulders+Display:wght@600..900', style: 'normal' },
-  { file: 'big-shoulders-inline-display.woff2', css: 'Big+Shoulders+Inline+Display:wght@700..900', style: 'normal' },
+  { file: 'jockey-one.woff2', css: 'Jockey+One', style: 'normal' },
   { file: 'tilt-neon.woff2', css: 'Tilt+Neon', style: 'normal' },
-  { file: 'instrument-sans.woff2', css: 'Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700', style: 'normal' },
-  { file: 'instrument-sans-italic.woff2', css: 'Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700', style: 'italic' },
+  { file: 'barlow-400.woff2', css: 'Barlow:wght@400', style: 'normal' },
+  { file: 'barlow-400-italic.woff2', css: 'Barlow:ital,wght@1,400', style: 'italic' },
+  { file: 'barlow-500.woff2', css: 'Barlow:wght@500', style: 'normal' },
+  { file: 'barlow-600.woff2', css: 'Barlow:wght@600', style: 'normal' },
+  { file: 'barlow-700.woff2', css: 'Barlow:wght@700', style: 'normal' },
 ];
 
 const record = { fetched: new Date().toISOString(), licence: 'SIL Open Font License 1.1 (all families)', fonts: [] };

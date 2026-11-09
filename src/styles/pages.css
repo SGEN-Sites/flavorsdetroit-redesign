@@ -18,15 +18,18 @@
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
 .hero__facts { margin-top: 4px; }
 .hero__art { position: relative; align-self: stretch; display: grid; align-items: center; }
-.hero__art .sign { max-width: min(500px, 100%); }
-@media (max-height: 760px) and (min-width: 761px) { .hero__art .sign { max-width: 400px; } }
+/* an empty window the size the drawn sign had: it keeps the words in the left column on wide screens,
+   and on tall ones keeps the top of the hero open so the real sign in the photo shows above the words */
+.hero__window { width: 100%; margin-inline: auto; aspect-ratio: 560 / 600; }
+.hero__art .hero__window { max-width: min(500px, 100%); }
+@media (max-height: 760px) and (min-width: 761px) { .hero__art .hero__window { max-width: 400px; } }
 
+/* --hero-win: the open space above the words on tall screens; cinema.css sizes the photo from it */
 @media (max-width: 860px) {
-  .hero { align-items: flex-start; }
+  .hero { align-items: flex-start; --hero-win: min(240px, 56vw); }
   .hero__in { grid-template-columns: 1fr; gap: 12px; }
   .hero__art { order: -1; align-self: auto; }
-  .hero__art .sign { max-width: min(240px, 56vw); }
-  .hero__art .sign__tower { bottom: 0; }
+  .hero__art .hero__window { max-width: var(--hero-win); }
   .hero__title { max-width: 14ch; }
 }
 @media (max-width: 760px) {
@@ -36,9 +39,9 @@
   .hero__ctas { gap: 10px; }
   .hero__facts { display: none; }            /* the utility bar and the dock carry status and phone on phones */
 }
-@media (max-width: 760px) and (max-height: 800px) { .hero__art .sign { max-width: 150px; } }
+@media (max-width: 760px) and (max-height: 800px) { .hero { --hero-win: 150px; } }
 @media (max-width: 760px) and (max-height: 680px) {
-  .hero__art .sign { max-width: 120px; }
+  .hero { --hero-win: 120px; }
   .hero .lede { display: none; }
 }
 .post-body .post-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 650; word-break: break-all; }
@@ -46,22 +49,21 @@
 
 /* ---- home: our flavors ------------------------------------------------------------------------- */
 .flavors__note { margin-top: clamp(22px, 3vw, 36px); display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; justify-content: space-between; }
-.flavors__deli { max-width: 62ch; color: var(--ink-2); font-size: var(--fs-sm); }
-.flavors__deli strong { color: var(--ink); }
+.flavors__deli { max-width: 62ch; color: var(--cream-2); font-size: var(--fs-sm); }
+.flavors__deli strong { color: var(--white); }
 
 /* ---- home: deals preview ------------------------------------------------------------------------- */
 .deals-preview__foot { margin-top: clamp(22px, 3vw, 32px); display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
 
 /* ---- home: about ----------------------------------------------------------------------------------- */
 .about__media { display: grid; gap: 14px; }
-.about__media .ph--counter { --ar: 5 / 4; }
+.about__photos { position: relative; padding-bottom: clamp(40px, 9%, 72px); }
 .about__text { display: grid; gap: var(--s-4); }
 .about__text .stats { margin-top: var(--s-2); }
 
 /* ---- home: visit band ------------------------------------------------------------------------------ */
 .visit-band__grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(22px, 4vw, 56px); align-items: center; }
 .visit-band__media { position: relative; display: grid; gap: 14px; }
-.visit-band__media .ph--storefront { --ar: 16 / 10; }
 .visit-band__media .street-sign { position: absolute; top: clamp(-18px, -1.5vw, -12px); right: clamp(14px, 3vw, 28px); z-index: 4; transform: rotate(-2deg); }
 @media (max-width: 900px) { .visit-band__grid { grid-template-columns: 1fr; } }
 
@@ -86,7 +88,7 @@
 .wayfind__item { display: grid; gap: 12px; align-content: start; }
 .wayfind__item h3 { font-size: var(--fs-lg); }
 .wayfind__item p { color: var(--ink-2); font-size: var(--fs-sm); }
-.wayfind__item .ph { --ar: 4 / 3; border-radius: var(--r-lg); }
+.wayfind__item .photo { border-radius: var(--r-lg); }
 @media (max-width: 900px) { .wayfind { grid-template-columns: 1fr; } .wayfind__item { grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); align-items: center; } }
 @media (max-width: 560px) { .wayfind__item { grid-template-columns: 1fr; } }
 .hours-table { width: 100%; border-collapse: collapse; font-size: var(--fs-sm); }
@@ -173,10 +175,6 @@
 .shelf-link__icon svg { width: 21px; height: 21px; }
 .shelf-link > svg { width: 16px; height: 16px; margin-left: auto; color: var(--ink-3); flex: none; }
 .shelf-link__name { min-width: 0; }
-
-/* ---- the sign inside a placeholder frame (visit wayfinding) ------------------------------------------- */
-.ph--sign .sign { width: 54%; max-width: 54%; }
-.ph--sign .sign__tower { bottom: -40%; }
 
 /* ---- 404 ------------------------------------------------------------------------------------------------ */
 .lost { position: relative; isolation: isolate; overflow: hidden; }

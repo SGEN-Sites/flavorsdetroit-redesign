@@ -1,0 +1,259 @@
+{
+  "generated": "2026-11-09T05:08:29.657Z",
+  "method": "p95/p5 background luminance under each text line, text hidden, reduced motion",
+  "checked": 598,
+  "fails": [],
+  "worst": [
+    {
+      "page": "/",
+      "vp": "1440x900",
+      "scene": "band.band--navy.band--neon",
+      "el": "span.accent",
+      "text": "prices",
+      "ratio": 3.67,
+      "need": 3,
+      "medianRatio": 4.49
+    },
+    {
+      "page": "/",
+      "vp": "1024x768",
+      "scene": "band.band--navy.band--neon",
+      "el": "span.accent",
+      "text": "prices",
+      "ratio": 3.68,
+      "need": 3,
+      "medianRatio": 4.37
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--night.band--bokeh",
+      "el": "p.form-note",
+      "text": "You're one step away! We promise we won'",
+      "ratio": 5.63,
+      "need": 4.5,
+      "medianRatio": 6.29
+    },
+    {
+      "page": "/daily-deals/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span",
+      "text": "Daily deals",
+      "ratio": 6.01,
+      "need": 4.5,
+      "medianRatio": 9.2
+    },
+    {
+      "page": "/visit/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "8 Mile",
+      "ratio": 4.09,
+      "need": 3,
+      "medianRatio": 5.25
+    },
+    {
+      "page": "/contact/",
+      "vp": "1024x768",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "location",
+      "ratio": 4.21,
+      "need": 3,
+      "medianRatio": 5.5
+    },
+    {
+      "page": "/blog/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "news",
+      "ratio": 4.39,
+      "need": 3,
+      "medianRatio": 4.7
+    },
+    {
+      "page": "/blog/",
+      "vp": "1024x768",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "news",
+      "ratio": 4.42,
+      "need": 3,
+      "medianRatio": 4.75
+    },
+    {
+      "page": "/blog/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "news",
+      "ratio": 4.47,
+      "need": 3,
+      "medianRatio": 5.21
+    },
+    {
+      "page": "/visit/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span",
+      "text": "Visit",
+      "ratio": 6.78,
+      "need": 4.5,
+      "medianRatio": 8.78
+    },
+    {
+      "page": "/daily-deals/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "& more",
+      "ratio": 4.6,
+      "need": 3,
+      "medianRatio": 5.62
+    },
+    {
+      "page": "/daily-deals/",
+      "vp": "1024x768",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "& more",
+      "ratio": 4.64,
+      "need": 3,
+      "medianRatio": 5.62
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--navy.band--neon",
+      "el": "span.accent",
+      "text": "prices",
+      "ratio": 4.65,
+      "need": 3,
+      "medianRatio": 4.76
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--black.band--spot",
+      "el": "span.accent",
+      "text": "Box",
+      "ratio": 4.74,
+      "need": 3,
+      "medianRatio": 4.85
+    },
+    {
+      "page": "/learn/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span",
+      "text": "Learn",
+      "ratio": 7.11,
+      "need": 4.5,
+      "medianRatio": 8.25
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--navy.band--neon",
+      "el": "span",
+      "text": "Live menu prices, November 8, 2026. The ",
+      "ratio": 7.19,
+      "need": 4.5,
+      "medianRatio": 7.61
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--navy.band--neon",
+      "el": "p.lede",
+      "text": "A taste of what is on the live menu righ",
+      "ratio": 7.22,
+      "need": 4.5,
+      "medianRatio": 10.22
+    },
+    {
+      "page": "/contact/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "location",
+      "ratio": 4.84,
+      "need": 3,
+      "medianRatio": 5.53
+    },
+    {
+      "page": "/",
+      "vp": "1024x768",
+      "scene": "band.band--black.band--spot",
+      "el": "span.accent",
+      "text": "Box",
+      "ratio": 4.91,
+      "need": 3,
+      "medianRatio": 5.01
+    },
+    {
+      "page": "/",
+      "vp": "1024x768",
+      "scene": "band.band--navy.band--neon",
+      "el": "span",
+      "text": "Live menu prices, November 8, 2026. The ",
+      "ratio": 7.37,
+      "need": 4.5,
+      "medianRatio": 7.67
+    },
+    {
+      "page": "/shop/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.accent",
+      "text": "live menu",
+      "ratio": 4.95,
+      "need": 3,
+      "medianRatio": 5.33
+    },
+    {
+      "page": "/daily-deals/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "& more",
+      "ratio": 4.95,
+      "need": 3,
+      "medianRatio": 5.62
+    },
+    {
+      "page": "/",
+      "vp": "1440x900",
+      "scene": "band.band--night.band--bokeh",
+      "el": "p.kicker",
+      "text": "Get social with Flavors Detroit",
+      "ratio": 7.49,
+      "need": 4.5,
+      "medianRatio": 7.93
+    },
+    {
+      "page": "/",
+      "vp": "1440x900",
+      "scene": "band.band--black.band--spot",
+      "el": "span.accent",
+      "text": "Box",
+      "ratio": 5.02,
+      "need": 3,
+      "medianRatio": 5.11
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--navy.band--neon",
+      "el": "span",
+      "text": "Live menu prices, November 8, 2026. The ",
+      "ratio": 7.55,
+      "need": 4.5,
+      "medianRatio": 7.67
+    }
+  ],
+  "verdict": "PASS"
+}

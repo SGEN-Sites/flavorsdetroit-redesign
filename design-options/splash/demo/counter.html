@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Counter glow · splash concept 3 · Flavors Detroit</title>
+<script>
+/* Decide before first paint. The splash only runs when motion is welcome; with ?once=1 it also
+   runs only once per browser session. ?rm=1 previews what reduced-motion visitors get.
+   ?play=1 (options page only) plays it even on a device set to reduce motion, so an owner with
+   that setting can still judge the concepts. */
+(function (d, w) {
+  var r = d.documentElement, q = w.location.search, reduce = /[?&]rm=1(&|$)/.test(q), play = /[?&]play=1(&|$)/.test(q), seen = false;
+  try { reduce = reduce || (!play && w.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+  if (/[?&]once=1(&|$)/.test(q)) { try { seen = w.sessionStorage.getItem('flavors-splash') === '1'; } catch (e) {} }
+  r.setAttribute('data-splash', reduce ? 'reduced' : seen ? 'seen' : 'pending');
+  if (reduce || seen) return;
+  r.classList.add('splash-on');
+  if (play) r.classList.add('splash-force');
+  /* fail-safe: if the splash script never runs, hand the page over after 4 s */
+  w.setTimeout(function () { if (r.classList.contains('splash-on') && /pending|loading/.test(r.getAttribute('data-splash'))) { r.classList.remove('splash-on'); r.setAttribute('data-splash', 'failsafe'); } }, 4000);
+})(document, window);
+</script>
+<link rel="preload" href="../assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="splash.css">
+<style>
+/* Concept 3, counter glow (2.30 s):
+   0.00-0.62 s  a store-navy counter rises from the bottom
+   0.42-0.92 s  the LED strip along its top edge switches on from the centre, light washes down its face
+   0.66-1.30 s  the sign rises from behind the counter and sits on it; a glint runs along the LED
+   1.72-2.30 s  the counter drops away (the sign fading as it goes) while the black fades into the page */
+.splash--counter .bg { position: absolute; inset: 0; background: var(--black); }
+.splash--counter .room {
+  --band-h: 34cqh;
+  --sign-w: min(68cqw, calc((100cqh - var(--band-h)) * .92), 520px);
+  position: absolute; inset: 0;
+}
+@container splash (orientation: portrait) {
+  .splash--counter .room { --band-h: 40cqh; --sign-w: min(80cqw, calc((100cqh - var(--band-h)) * .92), 520px); }
+}
+.splash--counter .haze {
+  position: absolute; left: 0; right: 0; bottom: var(--band-h); height: 70cqh; pointer-events: none;
+  background: radial-gradient(56% 78% at 50% 100%, rgb(42 66 144 / .62), rgb(42 66 144 / .2) 52%, rgb(42 66 144 / 0) 82%);
+}
+.splash--counter .seat { position: absolute; left: 50%; bottom: calc(var(--band-h) - var(--sign-w) * .045); width: var(--sign-w); translate: -50% 0; }
+.splash--counter .counter { position: absolute; left: 0; right: 0; bottom: 0; height: var(--band-h); }
+.splash--counter .counter__face {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgb(255 255 255 / .06), rgb(255 255 255 / 0) 3%),
+    linear-gradient(180deg, var(--navy-lit) 0, var(--navy) 10%, color-mix(in srgb, var(--navy) 72%, var(--black)) 100%);
+}
+.splash--counter .counter__spill {
+  position: absolute; left: 0; right: 0; top: 0; height: 80%;
+  background: radial-gradient(85% 100% at 50% 0, rgb(75 121 215 / .55), rgb(75 121 215 / .18) 42%, rgb(75 121 215 / 0) 78%);
+}
+.splash--counter .counter__led { position: absolute; left: 0; right: 0; top: 0; height: max(2px, .5cqmin); translate: 0 -50%; }
+.splash--counter .counter__led::before {
+  content: ""; position: absolute; inset: 0; border-radius: 99px;
+  background: linear-gradient(90deg, rgb(195 202 236 / 0), var(--led-soft) 7% 93%, rgb(195 202 236 / 0));
+  box-shadow: 0 0 6px 1px var(--led), 0 0 24px 5px rgb(75 121 215 / .6), 0 0 60px 10px rgb(75 121 215 / .25);
+}
+.splash--counter .counter__glint {
+  position: absolute; top: -2px; bottom: -2px; left: 0; width: 16%; border-radius: 99px;
+  background: linear-gradient(90deg, rgb(255 255 255 / 0), #fff 50%, rgb(255 255 255 / 0));
+}
+
+.splash--counter .counter { animation: rise .62s var(--ease-out) 0s both; }
+.splash--counter .counter__led { animation: led-run .5s var(--ease-out) .42s both; }
+.splash--counter .counter__led::before { animation: led-flicker .5s linear .42s both; }
+.splash--counter .counter__spill { animation: fade-in .6s ease-out .6s both; }
+.splash--counter .haze { animation: fade-in .7s ease-out .62s both; }
+.splash--counter .seat { animation: seat-up .64s var(--ease-out) .66s both; }
+.splash--counter .counter__glint { animation: glint .6s ease-in-out 1.12s both; }
+.splash--counter .room { animation: drop .58s var(--ease-in) 1.72s both; }
+.splash--counter .board { animation: bg-out .4s cubic-bezier(.4, 0, .2, 1) 1.76s both; }
+.splash--counter .bg { animation: bg-out .58s var(--ease-io) 1.72s both; }
+
+@keyframes rise { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes led-run { from { transform: scaleX(.02); } to { transform: none; } }
+@keyframes led-flicker { 0% { opacity: 0; } 10% { opacity: 1; } 18% { opacity: .35; } 28%, 100% { opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes seat-up { 0% { opacity: 0; transform: translateY(46%); } 35% { opacity: 1; } 100% { opacity: 1; transform: none; } }
+@keyframes glint { 0% { opacity: 0; transform: translateX(-110%); } 20%, 80% { opacity: 1; } 100% { opacity: 0; transform: translateX(640%); } }
+@keyframes drop { from { transform: none; } to { transform: translateY(100%); } }
+@keyframes bg-out { from { opacity: 1; } to { opacity: 0; } }
+</style>
+</head>
+<body>
+<div class="splash splash--counter" id="splash" aria-hidden="true" data-duration="2300">
+  <div class="bg" data-exit="bg-out"></div>
+  <div class="room">
+    <div class="haze"></div>
+    <div class="seat">
+      <div class="board">
+        <img class="logo" src="../assets/logo-sign-960.webp" srcset="../assets/logo-sign-960.webp 960w, ../assets/logo-sign-1400.webp 1400w" sizes="(max-width: 720px) 80vw, 520px" width="960" height="774" alt="" decoding="async" fetchpriority="high">
+      </div>
+    </div>
+    <div class="counter">
+      <div class="counter__face"></div>
+      <div class="counter__spill"></div>
+      <div class="counter__led"><i class="counter__glint"></i></div>
+    </div>
+  </div>
+</div>
+
+<main class="standin">
+  <h1 class="standin__title">A traditional dispensary with a modern twist.</h1>
+  <button class="pill" type="button">Order now</button>
+</main>
+
+<script src="splash.js"></script>
+</body>
+</html>

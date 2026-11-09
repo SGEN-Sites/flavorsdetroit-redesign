@@ -130,6 +130,7 @@ function postPage(p, i) {
     crumbs: [{ label: 'News', path: '/blog/' }, { label: p.title.length > 48 ? p.title.slice(0, 46).replace(/\s+\S*$/, '') + '…' : p.title }],
     id: 'post-title',
     titleClass: 'post-hero__title',
+    scene: 'bulb-bokeh', pos: '30% 50%', quiet: true,
   });
   const main = `${hero}
 <section class="band band--white">
@@ -188,6 +189,7 @@ function index() {
     titleHtml: 'Flavors <span class="accent">news</span>',
     lede: 'Drops, deals and events from 5700 E 8 Mile Rd, straight from the Flavors Detroit blog.',
     crumbs: [{ label: 'News' }],
+    scene: 'bulb-bokeh', pos: '30% 50%',
     aside: `<a class="btn btn--ghost btn--lg" href="${esc(SITE.instagram)}" target="_blank" rel="noopener">${icon.insta}<span>${esc(SITE.instagramHandle)}</span><span class="visually-hidden"> on Instagram (opens in a new tab)</span></a>`,
   })}
 <section class="band band--day" aria-labelledby="latest-title">

@@ -1,7 +1,7 @@
 {
   "schema": "site-reforge/change-control@1",
   "generated": "2026-11-08T23:54:54.808Z",
-  "updated": "2026-11-08T23:56:02.652Z",
+  "updated": "2026-11-09T04:30:31.192Z",
   "legend": {
     "PRESERVE": "kept as-is; content and function unchanged",
     "IMPROVE": "same content and meaning, better structure/hierarchy/design",
@@ -19649,7 +19649,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "Home hero: the roadside sign (the logo with its real bulbs lit) on the royal-blue tower with the neon 5700; H1 \"A traditional dispensary with a modern twist\" (client words); Order now.",
+      "why": "Home hero: the store itself at golden hour (the owner's storefront photo relit with AI, labelled as edited; the drawn, lit sign plays in the splash); H1 \"A traditional dispensary with a modern twist\" (client words); Order now.",
       "narrativeSlot": "value-proposition",
       "rebuiltAs": "Home hero",
       "decidedBy": "tools/plan-decisions.mjs"

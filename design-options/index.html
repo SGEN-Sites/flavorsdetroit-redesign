@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Design options · Flavors Detroit</title>
+<style>
+@font-face { font-family: "Big Shoulders Display"; src: url("fonts/assets/big-shoulders-display.woff2") format("woff2"); font-weight: 600 900; font-display: swap; }
+@font-face { font-family: "Instrument Sans"; src: url("fonts/assets/instrument-sans.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+:root { --black: #08090b; --black-2: #111318; --navy: #192036; --blue: #2a4290; --led: #5a86e6; --led-soft: #c3cdf2; --white: #f3f5f8; --quiet: #c9ced8; --mist: #aab3c8; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(80% 60% at 80% 0, rgba(42,66,144,.35), transparent 60%), var(--black); color: var(--white); font: 400 17px/1.6 "Instrument Sans", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+.spectrum { height: 3px; background: linear-gradient(90deg, #af0303, #fa8900, #f6fc1e, #ed397a, #00a3dc, #338900); }
+main { max-width: 1100px; margin: 0 auto; padding: 64px 24px; }
+h1 { font: 800 clamp(2.6rem, 1.8rem + 3vw, 4.4rem)/1 "Big Shoulders Display", sans-serif; margin: 0 0 14px; }
+p.lede { color: var(--quiet); max-width: 64ch; margin: 0 0 36px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+a.card { display: grid; gap: 8px; padding: 26px; border-radius: 22px; background: var(--black-2); border: 1px solid rgba(243,245,248,.12); color: var(--white); text-decoration: none; transition: border-color .2s, transform .3s; }
+a.card:hover { border-color: var(--led); transform: translateY(-2px); }
+a.card b { font: 800 2rem/1 "Big Shoulders Display", sans-serif; }
+a.card span { color: var(--quiet); font-size: 15px; }
+a.card em { font-style: normal; color: var(--led-soft); font-weight: 650; font-size: 15px; }
+footer { color: var(--mist); font-size: 14px; margin-top: 40px; }
+</style>
+</head>
+<body>
+<div class="spectrum"></div>
+<main>
+  <h1>Design options</h1>
+  <p class="lede">Two decisions for the Flavors Detroit redesign: the headline font (measured against the sign's own lettering) and the splash animation that opens the site. The site preview already uses the new black, blue and white palette.</p>
+  <div class="grid">
+    <a class="card" href="fonts/"><b>Font pairings</b><span>Which font matches the logo, and four pairings on a slice of the site.</span><em>Open →</em></a>
+    <a class="card" href="splash/"><b>Splash animations</b><span>Intro concepts with replay, each under 2.4 seconds and skippable.</span><em>Open →</em></a>
+    <a class="card" href="categories/"><b>Shop by category</b><span>Five layouts for the “Our flavors” band, each a working mock with the real photos and copy.</span><em>Open →</em></a>
+    <a class="card" href="http://127.0.0.1:8737/"><b>The site preview</b><span>The full site in the new palette, running on this computer.</span><em>Open →</em></a>
+  </div>
+  <footer>Not part of the site · local review pages · 2026-11-09</footer>
+</main>
+<div class="spectrum"></div>
+</body>
+</html>

@@ -61,10 +61,17 @@
     }
   },
   "building": {
-    "source": "BRIEF (operator's description of the real store; no photos supplied yet)",
+    "source": "BRIEF (operator's description of the real store) + owner update relayed 2026-11-09 with interior photos (audit/evidence/store-photos-2026-11-09.png, private: shows customers)",
     "sign": "a black, cloud-shaped sign outlined in marquee bulbs, bold cream 'FLAVORS DETROIT' lettering, a glowing neon '5700', on a royal-blue corrugated tower",
-    "storefront": "a dark building with rainbow-striped awnings and a green cross",
-    "interior": "bright white, glossy and modern, navy counters glowing with blue LED underglow, glass jars of flower displayed like a premium deli counter"
+    "storefront": "a dark building with a green cross",
+    "interior": "bright white, glossy and modern, navy counters glowing with blue LED underglow, glass jars of flower displayed like a premium deli counter",
+    "storefrontHistory": "the rainbow-striped awnings were about six years old (owner update relayed 2026-11-09): not current, removed from copy and art",
+    "photos": {
+      "source": "the owner's own store photos, supplied 2026-11-09 (originals private in assets/source/store-photos/in/: one was shot through a car windshield, one shows customers and staff); shipped retouched, see src/content/store-photos.json",
+      "storefrontPhoto": "daylight: the black cloud-shaped sign reading FLAVORS DETROIT with 5700 below, on a blue corrugated tower above a dark grey building; a black awning reading FLAVORS DETROIT and RECREATIONAL CANNABIS; a lit OPEN sign; a black CANNABIS feather flag with a green cross; traffic lights over the street",
+      "towerBlueInDaylight": "#5489BF (median of 24,306 tower pixels in the storefront photo; sunlit paint, so lighter than the site's tower blue)",
+      "interiorPhotos": "the main counter: white counters with glass display cases, blue FLAVORS DETROIT letters on a grey slatted wall, screens above, product walls either side, blue floor mats; a wall of lit green FLAVORS DETROIT letters over product shelves; a merch corner with a long dark counter edged in blue LED light, apparel, caps on mannequin heads and glass pieces, cage pendant lights and a blue wall"
+    }
   },
   "licences": [],
   "certifications": [],
@@ -182,8 +189,19 @@
       "source": "MEASURED logo file; BRIEF 'bold cream lettering'"
     },
     "royalBlue": {
-      "value": "chosen, not measured",
-      "source": "BRIEF 'royal-blue corrugated tower'. No photo of the tower was supplied; confirm the exact blue from a store photo."
+      "value": "#2A4290 (site blue)",
+      "source": "superseded 2026-11-09. Owner: \"the shade of blue in their shop looks darker than what we used\". The site blue is now the measured store navy, lifted to #2A4290 for buttons and the tower so white text keeps 9:1."
+    },
+    "storeNavy": {
+      "value": "#192036",
+      "litFace": "#2C3548",
+      "source": "MEASURED 2026-11-09 from the owner-supplied interior photos: median of the navy counter fronts (#192036), a lit counter face (#2C3548); floor runners read greyer (#242A33)"
+    },
+    "ledUnderglow": {
+      "value": "#4B79D7",
+      "range": "#4B79D7 to #6E90DD",
+      "core": "#C3CAEC",
+      "source": "MEASURED 2026-11-09, same photos: the halo and blue-white core of the counter LED strips"
     }
   },
   "corrections": [
@@ -216,6 +234,11 @@
       "what": "Category 'See Menu' links to flavors-detroit.portal42.com/menu/Flower (and /Concentrates, /Edibles) answer 'Page not found' on the portal",
       "fix": "pointed at the portal home, which works",
       "source": "MEASURED 2026-11-08 (audit/portal-probe--menu-Flower.json)"
+    },
+    {
+      "what": "Rainbow-striped awnings described as the storefront (brief) and drawn as awning banners",
+      "fix": "removed from copy, the storefront placeholder art and the page dividers; thin spectrum dividers kept",
+      "source": "owner update relayed 2026-11-09"
     }
   ],
   "liveMenu": {
@@ -433,5 +456,12 @@
         "source": "deli tier list (($8G) on the live menu)"
       }
     ]
+  },
+  "brandDirection": {
+    "date": "2026-11-09",
+    "source": "owner update relayed by the operator",
+    "palette": "majority black, then blue, then whites",
+    "spectrum": "the six stripe colours appear only as thin dividers, to show variety in flavors",
+    "removed": "the scalloped rainbow awning banners (the storefront stripes were about six years old)"
   }
 }

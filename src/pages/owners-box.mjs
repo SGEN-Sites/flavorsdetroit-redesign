@@ -16,22 +16,23 @@ function hero() {
     titleHtml: 'The Owner\'s <span class="accent">Box</span>',
     lede: esc(OWNERS_BOX.body),
     crumbs: [{ label: "The Owner's Box" }],
+    scene: 'box-spotlight', pos: '68% 60%',
     aside: `<div class="cluster">${orderBtn('btn btn--order btn--lg', 'Shop the box')}</div>`,
   });
 }
 
 function strains() {
-  const cards = OWNERS_BOX.strains.map((x, i) => `<li class="strain" data-reveal style="--i:${i}">
+  const cards = OWNERS_BOX.strains.map((x, i) => `<li class="strain" data-reveal data-tilt style="--i:${i}">
     <p class="strain__top"><span>Flavors deli-style flower</span><span>${esc(x.perGram ? x.perGram + ' a gram' : '')}</span></p>
     <h3 class="strain__name">${esc(x.name)}</h3>
     <p class="strain__meta"><span class="chip">${esc(x.type)}</span>${x.thc ? `<span class="chip">THC ${esc(x.thc)}</span>` : ''}<span class="chip">Special</span></p>
     <p class="strain__notes">${esc(x.notes)}</p>
     ${x.eighth ? `<p class="strain__price"><b>${esc(x.eighth)}</b><span>an eighth on the live menu</span></p>` : ''}
   </li>`).join('');
-  return `<section class="band band--black" aria-labelledby="in-box">
+  return `<section class="band band--black band--beam" aria-labelledby="in-box">
   <div class="container">
-    <div class="box">
-      <span class="box__rail box__rail--top" aria-hidden="true"></span>
+    <div class="box box--glass">
+      <span class="box__bulbs" aria-hidden="true"><i class="t"></i><i class="r"></i><i class="b"></i><i class="l"></i></span>
       <div class="box__head">
         ${kicker('Top shelf spotlight')}
         <h2 class="box__title" id="in-box">In the box <span class="accent">now</span></h2>
@@ -42,7 +43,6 @@ function strains() {
         <p class="asof">${icon.info}<span>On the live menu's Owners Box collection, ${esc(OWNERS_BOX.asOf)}. Tasting notes from Flavors news, ${esc(OWNERS_BOX.postDate)}. The lineup rotates.</span></p>
         ${orderBtn('btn btn--cream', 'Shop the box')}
       </div>
-      <span class="box__rail box__rail--bottom" aria-hidden="true"></span>
     </div>
   </div>
 </section>`;

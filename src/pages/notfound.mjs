@@ -23,7 +23,7 @@ export function render() {
         ${linkBtn('/', '/', 'Back home')}
       </div>
     </div>
-    <div>${sign('/', { plate: true, flicker: true })}</div>
+    <div>${sign('/')}</div>
   </div>
 </section>`;
   let html = page({
@@ -34,7 +34,5 @@ export function render() {
     main,
   });
   html = html.replace('<meta charset="utf-8">', `<meta charset="utf-8">\n<base href="${base}">\n<meta name="robots" content="noindex">`);
-  // the neon plate reads 404 here instead of the street number
-  html = html.replace('<span class="neon" data-flicker>5700</span>', '<span class="neon" data-flicker>404</span>');
   return html;
 }

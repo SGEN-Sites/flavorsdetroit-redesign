@@ -18,6 +18,10 @@ export const menu = read('src/content/menu.json');
 // src/content/posts.json as textOriginal / titleOriginal).
 export const postsData = displayPosts(read('src/content/posts.json', { posts: [] }));
 export const images = read('src/content/images.json', {});
+// AI scene stills (tools/process-gen.py): provenance sidecar with model, request id, seed and alt.
+export const gen = read('src/content/generated-images.json', { items: {} });
+// The owner's store photos (tools/store-photos.py): alt text, crops and what was retouched.
+export const photos = read('src/content/store-photos.json', { items: {} });
 export const bulbs = read('src/content/logo-bulbs.json');
 
 const addr = facts.addresses[0];

@@ -26,6 +26,7 @@ export function render() {
     titleHtml: 'Contact &amp; <span class="accent">location</span>',
     lede: esc(COPY.contactSub) + '.',
     crumbs: [{ label: 'Contact' }],
+    scene: 'hero-night-b', pos: '62% 58%',
   })}
 <section class="band band--day" aria-label="Contact Flavors Detroit">
   <div class="container contact-grid">

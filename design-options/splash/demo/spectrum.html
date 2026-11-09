@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Spectrum line · splash concept 2 · Flavors Detroit</title>
+<script>
+/* Decide before first paint. The splash only runs when motion is welcome; with ?once=1 it also
+   runs only once per browser session. ?rm=1 previews what reduced-motion visitors get.
+   ?play=1 (options page only) plays it even on a device set to reduce motion, so an owner with
+   that setting can still judge the concepts. */
+(function (d, w) {
+  var r = d.documentElement, q = w.location.search, reduce = /[?&]rm=1(&|$)/.test(q), play = /[?&]play=1(&|$)/.test(q), seen = false;
+  try { reduce = reduce || (!play && w.matchMedia('(prefers-reduced-motion: reduce)').matches); } catch (e) {}
+  if (/[?&]once=1(&|$)/.test(q)) { try { seen = w.sessionStorage.getItem('flavors-splash') === '1'; } catch (e) {} }
+  r.setAttribute('data-splash', reduce ? 'reduced' : seen ? 'seen' : 'pending');
+  if (reduce || seen) return;
+  r.classList.add('splash-on');
+  if (play) r.classList.add('splash-force');
+  /* fail-safe: if the splash script never runs, hand the page over after 4 s */
+  w.setTimeout(function () { if (r.classList.contains('splash-on') && /pending|loading/.test(r.getAttribute('data-splash'))) { r.classList.remove('splash-on'); r.setAttribute('data-splash', 'failsafe'); } }, 4000);
+})(document, window);
+</script>
+<link rel="preload" href="../assets/instrument-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="splash.css">
+<style>
+/* Concept 2, spectrum line (2.28 s):
+   0.08-0.70 s  a thin spectrum line draws out from the centre
+   0.40-1.20 s  the sign comes into focus above it (fade, scale and blur to sharp)
+   1.00-1.80 s  the line glows
+   1.62-2.12 s  the sign and line soften away (fade, blur, slight scale)
+   1.68-2.28 s  the black dissolves into the page */
+.splash--spectrum .bg { position: absolute; inset: 0; background: var(--black); }
+.splash--spectrum .lockup {
+  --sign-w: min(62cqw, 66cqh, 520px);
+  position: absolute; left: 50%; top: 50%; width: min(calc(var(--sign-w) * 1.32), 92cqw); translate: -50% -50%;
+  display: grid; justify-items: center; gap: calc(var(--sign-w) * .1);
+}
+.splash--spectrum .board { width: var(--sign-w); }
+.splash--spectrum .glow { top: 46%; width: 140%; }
+.splash--spectrum .line-wrap { position: relative; width: 100%; height: max(2px, .3cqmin); }
+.splash--spectrum .line { position: absolute; inset: 0; border-radius: 99px; background: var(--spectrum); }
+.splash--spectrum .line::before {
+  content: ""; position: absolute; inset: calc(-1 * max(4px, .6cqmin)) -1%; border-radius: 99px;
+  background: var(--spectrum); filter: blur(max(6px, .9cqmin));
+}
+
+.splash--spectrum .line { animation: draw .62s var(--ease-out) .08s both; }
+.splash--spectrum .board { animation: focus-in .8s var(--ease-out) .4s both; }
+.splash--spectrum .line::before { animation: line-glow .8s ease-out 1s both; }
+.splash--spectrum .bg { animation: bg-out .6s var(--ease-io) 1.68s both; }
+.splash--spectrum .lockup { animation: soften-out .5s cubic-bezier(.4, 0, .2, 1) 1.62s both; }
+.splash--spectrum .line-wrap { animation: widen .5s var(--ease-in) 1.62s both; }
+
+@keyframes draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes focus-in { from { opacity: 0; transform: translateY(5%) scale(.92); filter: blur(12px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes line-glow { 0% { opacity: 0; } 35% { opacity: 1; } 100% { opacity: .6; } }
+@keyframes bg-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes soften-out { from { opacity: 1; transform: none; filter: blur(0); } to { opacity: 0; transform: scale(1.06); filter: blur(10px); } }
+@keyframes widen { from { transform: none; } to { transform: scaleX(1.45); } }
+</style>
+</head>
+<body>
+<div class="splash splash--spectrum" id="splash" aria-hidden="true" data-duration="2280">
+  <div class="bg" data-exit="bg-out"></div>
+  <div class="lockup">
+    <div class="board">
+      <div class="glow"></div>
+      <img class="logo" src="../assets/logo-sign-960.webp" srcset="../assets/logo-sign-960.webp 960w, ../assets/logo-sign-1400.webp 1400w" sizes="(max-width: 720px) 66vw, 520px" width="960" height="774" alt="" decoding="async" fetchpriority="high">
+    </div>
+    <div class="line-wrap"><div class="line"></div></div>
+  </div>
+</div>
+
+<main class="standin">
+  <h1 class="standin__title">A traditional dispensary with a modern twist.</h1>
+  <button class="pill" type="button">Order now</button>
+</main>
+
+<script src="splash.js"></script>
+</body>
+</html>

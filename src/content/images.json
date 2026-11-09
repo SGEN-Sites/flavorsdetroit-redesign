@@ -65,8 +65,8 @@
  "og-flavors-detroit.jpg": {
   "w": 1200,
   "h": 630,
-  "bytes": 50215,
-  "source": "assets/brand/flavors-logo-original.png + measured rainbow (facts/client-facts.json)",
+  "bytes": 42930,
+  "source": "assets/brand/flavors-logo-original.png on measured sign black + store navy, spectrum divider (facts/client-facts.json)",
   "alt": "Flavors Detroit"
  },
  "cat-flower.webp": {

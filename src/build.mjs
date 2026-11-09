@@ -36,7 +36,7 @@ fs.mkdirSync(path.join(OUT, 'assets', 'js'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src', 'scripts', 'site.js'), path.join(OUT, 'assets', 'js', 'site.js'));
 
 // ---- one stylesheet, in cascade order, comments stripped -------------------------------------
-const SHEETS = ['tokens', 'base', 'chrome', 'components', 'pages', 'motion'];
+const SHEETS = ['tokens', 'base', 'chrome', 'components', 'pages', 'cinema', 'motion'];
 const css = SHEETS.map((n) => fs.readFileSync(path.join(ROOT, 'src', 'styles', n + '.css'), 'utf8'))
   .join('\n')
   .replace(/\/\*[\s\S]*?\*\//g, '')

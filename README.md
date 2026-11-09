@@ -7,11 +7,23 @@ site for Flavors Detroit, 5700 E 8 Mile Rd, Detroit, MI 48234. The words are the
 captured from the live site, its blog and its live ordering menu; the look is new and comes from
 the real building.
 
-**Art direction: "Lit up on 8 Mile"** — retro roadside marquee meets modern showroom.
-Night bands are the roadside sign (the logo with its 53 real marquee bulbs lit in a chase, a
-royal-blue corrugated tower, a neon 5700). Day bands are the showroom (glossy white, glass jars on
-navy counters with blue LED underglow, deli price tags). The rainbow awning stripe, measured from
-the client's own artwork, is the flag, used sparingly. See `BRAND-SYSTEM.md`.
+**Art direction: "Lit up on 8 Mile"** — retro roadside marquee meets modern showroom, in the
+owner's palette: **black first, then the store's blue, then whites** (the blue measured from store
+photos). The home hero is the store itself at golden hour (the owner's storefront photo, relit
+with AI and labelled), the street running on to the left behind the words in black and white (an
+AI extension); the drawn roadside sign (the logo with its 53 real marquee bulbs lit in a
+chase on a wide, short blue corrugated tower) plays in the opening splash and on the 404 page.
+Black bands carry the deals, the Owner's Box and the category cards. White bands are the showroom
+(glossy white, deli price tags). The six stripe colours appear only as thin spectrum dividers. The
+store itself appears in the owner's own photos (upscaled and colour graded; the storefront shot had
+the car dashboard it was taken through removed, the counter shot its customers and staff, both with
+AI fill, labelled as edited). Headlines are Jockey One (the closest measured match to the sign's lettering),
+text is Barlow. A cinematic layer sits on top: scene stills behind the inner page heroes and
+several bands (AI illustrations, labelled as such, never the store), crossing tapes, category cards on a pinned
+rail, deli tickets hanging over neon, the Owner's Box in a chasing bulb frame, a kinetic type band,
+a scroll-lit statement and a lit finale, all on one scroll-aware animation loop with a Pause motion
+button; each visit opens with the "Sign ignition" splash. The owner's design choices (fonts,
+splash) were made from the option pages in `design-options/`. See `BRAND-SYSTEM.md`.
 
 ## Pages
 
@@ -48,6 +60,11 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
 |---|---|
 | `python3 -I tools/process-images.py` | derive every picture from the client's own files (logo resized only) |
 | `python3 -I tools/detect-bulbs.py` | find the 53 marquee bulbs in the logo for the lit-sign overlay |
+| `python3 -I tools/process-gen.py` | derive the scene stills' WebP sizes from the AI renders, with IPTC "AI-generated" XMP |
+| `python3 -I tools/store-photos.py masks\|composite\|touchup\|finish` | the owner's store photos: fill masks, composite (the photo kept outside each mask), grade, crops and WebP sizes with IPTC XMP (originals private) |
+| `node tools/scene-contrast.mjs` | WCAG contrast for text over scene stills, measured on the rendered pixels |
+| `node tools/motion-check.mjs` | the motion layer with motion ON: rail, scroll-speed marquees, progress, back-to-top, finale, Pause motion, overflow, console |
+| `node tools/fetch-fonts.mjs` | self-host the fonts (Jockey One, Barlow, Tilt Neon; SIL OFL) from Google Fonts once |
 | `node tools/menu-facts.mjs` | turn the live-menu capture into `src/content/menu.json` + facts |
 | `node tools/extract-posts.mjs` | turn the captured posts into `src/content/posts.json` (100% word recall) |
 | `node tools/check.mjs` | rendered + functional checks (5 viewports, age gate, drawer, tabs, forms, map, no-JS) |
@@ -69,7 +86,7 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
 | `audit/` | the capture (raw HTML is evidence, never edited) and every check's report |
 | `docs/` | this file, `DEPLOY.md`, `BRAND-SYSTEM.md`, `CHANGE-LOG.md`, `PITCH-NOTES.md` |
 
-## Verification (final run 2026-11-09)
+## Verification (final run 2026-11-09, after the owner's store photos, the golden-hour hero, the plate-less tower and the black category band)
 
 - `tools/check.mjs`, every page: 137 pages at 1440x900 and 390x844 (274 renders) and the 10 main
   pages plus 6 posts at 360x740, 768x1024 and 1024x768 as well. 0 failures: no sideways scroll, no
@@ -83,9 +100,18 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
   animations under reduced motion, content visible without JavaScript, and the home hero fits the
   first screen with Order now visible at 1440x900, 1280x720, 1024x768, 390x844 and 360x740.
 - `sr-sweep` at 390/768/1024/1440 over 14 pages: 0 majors; 6 blockers, all "form has no action"
-  (the preview forms).
+  (the preview forms). (An earlier run flagged 29 majors: the drifting light pools were off-canvas
+  circles; they are now band-sized layers with the light drawn at the same place.)
+- `tools/motion-check.mjs` (motion on, at 1440, 1024, 390 and 360 wide): 54 of 54, including the
+  splash (plays, ends, skips, hands over to the age gate), the category rail and no sideways scroll
+  at 360. `tools/scene-contrast.mjs`: 598 lines of text over scene stills and the hero photo, all
+  clear WCAG AA on the rendered pixels (the hero's "modern twist" failed at 1024 before its accent
+  became the pale neon blue: 1.46:1 over the blue tower).
+- `tools/check.mjs` is hardened against false failures (2026-11-09): a navigation that stalls is
+  retried and noted, a page that will not load is a recorded failure (no longer a crash), and an
+  image hidden from view (the answered age gate's backdrop) is verified by loading its file.
 - `sr-fabrication`: 1,859 claims checked, all traced to the live site, the live menu or declared facts.
 - `sr-decontaminate`: clean, no trace of Wix in 141 files. `sr-seo`: 0 migration findings.
-- `tools/contrast.mjs`: every palette text pair clears WCAG AA (lowest 5.19:1).
+- `tools/contrast.mjs`: all 25 palette text pairs clear WCAG AA (lowest 5.58:1).
 - `sr-gate.mjs`: NOT-READY, 20 PASS / 7 FAIL / 2 UNPROVEN; each non-pass is explained in
   `PITCH-NOTES.md` (Gate verdict).

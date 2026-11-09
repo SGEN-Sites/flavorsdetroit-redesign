@@ -4,7 +4,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, menu } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, pageHero, jars, tag } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, pageHero, bento, tag } from '../lib/parts.mjs';
 import { breadcrumbJsonLd } from '../lib/seo.mjs';
 
 export const PATH = '/shop/';
@@ -20,6 +20,7 @@ function hero() {
     titleHtml: 'Shop the <span class="accent">live menu</span>',
     lede: `${esc(COPY.portalLine)} Browse every shelf online any time, then pick up your order at ${esc(SITE.street)}.`,
     crumbs: [{ label: 'Shop' }],
+    photo: 'cat-flower.webp', cutout: true, pos: '50% 50%',   // the client's own bud, floating
     aside: `<div class="stack" style="--stack:12px; justify-items:start">${orderBtn('btn btn--order btn--lg', 'Open the live menu')}<p class="status status-line" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="status__word">Open daily</span><span class="status__detail" data-status-text>10AM–10PM</span></p></div>`,
   });
 }
@@ -37,11 +38,10 @@ function shelves() {
 }
 
 function categoriesBand() {
-  return `<section class="band band--white" aria-labelledby="flavors-title">
+  return `<section class="band band--black band--flavors" aria-labelledby="flavors-title">
   <div class="container">
     ${sectionHead({ kick: 'Shop by category', id: 'flavors-title', titleHtml: 'Our <span class="accent">flavors</span>', lede: esc(COPY.deli) })}
-    ${jars(PATH, COPY.categories)}
-    <div class="counter-top" aria-hidden="true"></div>
+    ${bento(PATH, COPY.categories)}
   </div>
 </section>`;
 }
