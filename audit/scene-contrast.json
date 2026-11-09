@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T14:11:05.308Z",
+  "generated": "2026-11-09T14:16:51.986Z",
   "method": "p95/p5 background luminance under each text line, text hidden, reduced motion",
   "checked": 314,
   "fails": [],
@@ -73,6 +73,16 @@
       "ratio": 6.28,
       "need": 4.5,
       "medianRatio": 8.64
+    },
+    {
+      "page": "/learn/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.accent",
+      "text": "flavors",
+      "ratio": 4.2,
+      "need": 3,
+      "medianRatio": 5.68
     },
     {
       "page": "/blog/",
@@ -243,16 +253,6 @@
       "ratio": 7.94,
       "need": 4.5,
       "medianRatio": 8.06
-    },
-    {
-      "page": "/visit/",
-      "vp": "1440x900",
-      "scene": "page-hero.page-hero--scene",
-      "el": "span.accent",
-      "text": "8 Mile",
-      "ratio": 5.36,
-      "need": 3,
-      "medianRatio": 5.66
     }
   ],
   "verdict": "PASS"

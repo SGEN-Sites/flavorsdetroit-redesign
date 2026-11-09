@@ -27,7 +27,7 @@ function hero() {
     titleHtml: 'Know your <span class="accent">flavors</span>',
     lede: 'A plain-language guide to what is on the shelves at Flavors Detroit. Still deciding? Come in and have our budtenders help you decide!',
     crumbs: [{ label: 'Learn' }],
-    whole: 'learn-bud',
+    whole: 'learn-bud', wholeWide: 'learn-bud-h',
     aside: `<div class="cluster">${orderBtn('btn btn--order btn--lg', 'Browse the menu')}</div>`,
   });
 }

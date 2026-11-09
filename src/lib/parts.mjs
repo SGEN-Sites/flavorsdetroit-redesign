@@ -431,11 +431,16 @@ export function postCard(from, p, { i = 0, feature = false } = {}) {
 
 /** Inner-page hero. scene: a scene still name (full-bleed under a scrim) · photo: a client photo
  *  from images.json shown as a side light (right half, faded in) · quiet: a dimmer scene. */
-export function pageHero(from, { kick, title, titleHtml, lede, crumbs = [], aside = '', id = 'page-title', titleClass = 'h1', scene = '', photo = '', pos = '', quiet = false, cutout = false, whole = '' }) {
+export function pageHero(from, { kick, title, titleHtml, lede, crumbs = [], aside = '', id = 'page-title', titleClass = 'h1', scene = '', photo = '', pos = '', quiet = false, cutout = false, whole = '', wholeWide = '' }) {
   const bc = crumbs.length ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${A(from, '/')}">Home</a>${crumbs.map((c) => `<span aria-hidden="true">/</span>${c.path ? `<a href="${A(from, c.path)}">${esc(c.label)}</a>` : `<span aria-current="page">${esc(c.label)}</span>`}`).join('')}</nav>` : '';
   let media = '';
   // whole: a scene still shown uncropped at the side (object-fit contain), e.g. the /learn/ HD bud (owner, 2026-11-09)
-  if (whole) media = `<div class="scene scene--page scene--side scene--whole" aria-hidden="true" data-depth="0.06">${scenePicture(from, whole, { sizes: '(max-width: 860px) 100vw, 60vw', eager: true })}</div>`;
+  // wholeWide: a different still on wide screens (the /learn/ bud lying on its side, owner 2026-11-09)
+  if (whole) {
+    let pic = scenePicture(from, whole, { sizes: '(max-width: 860px) 100vw, 60vw', eager: true });
+    if (wholeWide) { const w = genItem(wholeWide).files.filter((f) => f.variant === 'landscape'); pic = pic.replace(/^<picture>|^/, `<picture><source media="(min-width: 861px)" srcset="${srcset(from, w)}" sizes="60vw">`).replace(/(<img[^>]*>)(?!<\/picture>)$/, '$1</picture>'); if (!pic.endsWith('</picture>')) pic += '</picture>'; }
+    media = `<div class="scene scene--page scene--side scene--whole" aria-hidden="true" data-depth="0.06">${pic}</div>`;
+  }
   else if (scene) media = backdrop(from, scene, { cls: 'scene--page' + (quiet ? ' scene--quiet' : ''), eager: true, depth: '0.08', pos });
   else if (photo) {
     const im = images[photo] || {}, two = photo.replace('.webp', '@2x.webp'), im2 = images[two];

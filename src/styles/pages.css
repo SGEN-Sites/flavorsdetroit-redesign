@@ -591,3 +591,31 @@ html:not(.js) .askb__panel[hidden] { display: grid; margin-top: 18px; }
     -webkit-mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); }
   .scene.scene--whole::before { top: 6%; bottom: 30%; left: 22%; right: 22%; }
 }
+/* (owner, 2026-11-09: "we do not need to show the whole bud, half of it is enough so we can reduce the height of hero
+   section closer to the news hero's height") wide screens: the button goes back beside the text (as on /blog/), and
+   the bud's top half fills the right of the hero, fading out at the bottom */
+@media (min-width: 861px) {
+  .page-hero:has(.scene--whole) .page-hero__in { align-items: end; }
+  .page-hero.page-hero--scene:has(.scene--whole) .page-hero__aside { grid-column: 2; grid-row: 1; justify-self: start; align-self: end; }
+  .scene.scene--whole { left: max(72%, calc(50% + 330px)); right: 0; }
+  .scene.scene--whole::before { left: 0; right: 0; top: 0; bottom: 40%; }
+  .scene.scene--whole img { height: 100%; margin: 0; object-fit: cover; object-position: 50% 6%;
+    -webkit-mask: linear-gradient(180deg, #000 34%, rgb(0 0 0 / .5) 62%, transparent 94%), linear-gradient(90deg, transparent, #000 14%); -webkit-mask-composite: source-in;
+    mask: linear-gradient(180deg, #000 34%, rgb(0 0 0 / .5) 62%, transparent 94%) intersect, linear-gradient(90deg, transparent, #000 14%); }
+}
+/* (owner, 2026-11-09: "lay the bud horizontally and increase its size") wide screens: the bud on its side, larger,
+   across the right of the hero, its lower part fading out */
+@media (min-width: 861px) {
+  .scene.scene--whole { left: max(54%, calc(50% + 300px)); right: -6%; }
+  .scene.scene--whole img { object-fit: cover; object-position: 30% 38%;
+    -webkit-mask: linear-gradient(180deg, #000 46%, rgb(0 0 0 / .5) 70%, transparent 96%), linear-gradient(90deg, transparent, rgb(0 0 0 / .35) 16%, #000 42%); -webkit-mask-composite: source-in;
+    mask: linear-gradient(180deg, #000 46%, rgb(0 0 0 / .5) 70%, transparent 96%) intersect, linear-gradient(90deg, transparent, rgb(0 0 0 / .35) 16%, #000 42%); }
+}
+/* (owner, 2026-11-09: "move the whole bud to the left and reduce its opacity, it is way on the right") wide screens:
+   the whole bud, centred further left behind the hero's right half, at reduced opacity */
+@media (min-width: 861px) {
+  .scene.scene--whole { left: 34%; right: 2%; opacity: .55; }
+  .scene.scene--whole img { object-fit: contain; object-position: 55% 42%;
+    -webkit-mask: radial-gradient(60% 62% at 55% 44%, #000 55%, transparent 100%); -webkit-mask-composite: source-over;
+    mask: radial-gradient(60% 62% at 55% 44%, #000 55%, transparent 100%); }
+}
