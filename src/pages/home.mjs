@@ -5,7 +5,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, OWNERS_BOX, menu, postsData, ASOF } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, deal, dealGrid, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, postCard, backdrop, kinetic } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, deal, dealGrid, ownboxStage, ownboxBackdrop, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, postCard, backdrop, kinetic } from '../lib/parts.mjs';
 import { storeJsonLd, websiteJsonLd } from '../lib/seo.mjs';
 import { niceName, presentable } from '../content/case.mjs';
 
@@ -138,9 +138,9 @@ function deals() {
   ]);
   const conc = dealGrid([
     deal(PATH, { img: 'budder-dish', kick: 'Flavors concentrates', price: '$20', per: '5G bucket', name: 'Budder buckets', detail: 'Flavors 5G budder buckets on the live menu.', size: 'feature', i: 0 }),
-    deal(PATH, { img: 'wax', kick: 'Bundle', price: '$25', per: '5G', name: 'Premium wax bucket', detail: '5G for $25.', i: 1 }),
+    deal(PATH, { img: 'waxbucket', kick: 'Bundle', price: '$25', per: '5G', name: 'Premium wax bucket', detail: '5G for $25.', i: 1 }),
     deal(PATH, { img: 'crumble', kick: 'Bundle', price: '$30', per: 'for 3', name: 'TopShelf 1G crumbles', detail: '3 for $30.', i: 2 }),
-    deal(PATH, { img: 'budders', kick: 'Bundle', price: '$45', per: 'for 5', name: 'TopShelf 1G budders', detail: '5 for $45.', size: 'wide', i: 3 }),
+    deal(PATH, { img: 'budder-1g', kick: 'Bundle', price: '$45', per: 'for 5', name: 'TopShelf 1G budders', detail: '5 for $45.', size: 'wide', i: 3 }),
   ]);
   return `<section class="band band--black band--deals" aria-labelledby="deals-title">
   <div class="container">
@@ -158,30 +158,26 @@ function deals() {
 }
 
 function ownersBox() {
-  const s = OWNERS_BOX.strains;
-  const cards = s.map((x, i) => `<li class="strain" data-reveal data-tilt style="--i:${i}">
-    <p class="strain__top"><span>Deli-style flower</span><span>${esc(x.perGram ? x.perGram + ' a gram' : '')}</span></p>
-    <h3 class="strain__name">${esc(x.name)}</h3>
-    <p class="strain__meta"><span class="chip">${esc(x.type)}</span>${x.thc ? `<span class="chip">THC ${esc(x.thc)}</span>` : ''}</p>
-    <p class="strain__notes">${esc(x.notes)}</p>
-    ${x.eighth ? `<p class="strain__price"><b>${esc(x.eighth)}</b><span>an eighth</span></p>` : ''}
-  </li>`).join('');
-  return `<section class="band band--black band--spot" aria-labelledby="box-title">
-  ${backdrop(PATH, 'box-spotlight', { sizes: '100vw', depth: '0.06' })}
-  <span class="pool pool--a" data-depth="-0.12"></span><span class="pool pool--b" data-depth="-0.06"></span>
+  // (owner, 2026-11-09) the band's background is the owner's street photo in black and white, fading
+  // into black, under the spectrum line; the box's strains ride holographic cards with a bud
+  // illustration each, and come out of the owner's road case as it opens in green smoke
+  return `${spectrum()}
+<section class="band band--black band--ownbox" aria-labelledby="box-title">
+  ${ownboxBackdrop(PATH)}
   <div class="container">
     <div class="box box--glass">
       <span class="box__bulbs" aria-hidden="true"><i class="t"></i><i class="r"></i><i class="b"></i><i class="l"></i></span>
-      <div class="box__head">
+      ${ownboxStage(PATH, OWNERS_BOX.strains, {
+        head: `<div class="box__head ownbox__head">
         ${kicker(OWNERS_BOX.intro)}
         <h2 class="box__title" id="box-title">The Owner's <span class="accent">Box</span></h2>
         <p class="lede">${esc(OWNERS_BOX.body)}</p>
-      </div>
-      <ul class="box__grid swipe" role="list">${cards}</ul>
-      <div class="deals-preview__foot">
+      </div>`,
+        foot: `<div class="deals-preview__foot ownbox__foot">
         <p class="asof">${icon.info}<span>In the box on the live menu, ${esc(OWNERS_BOX.asOf)}. The lineup rotates.</span></p>
         ${linkBtn(PATH, '/owners-box/', "Open the Owner's Box", 'btn btn--cream')}
-      </div>
+      </div>`,
+      })}
     </div>
   </div>
 </section>`;

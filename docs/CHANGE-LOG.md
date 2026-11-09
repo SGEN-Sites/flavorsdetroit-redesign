@@ -36,10 +36,10 @@ grouped below with their count; the ledger has each one.
 | `/terms-of-service` | Terms of Service | PRESERVE | — | Word for word, original capitalisation; street number corrected to 5700 |
 | new | Home hero (the store at golden hour) | ADD | value-proposition | The owner's own storefront photo, relit to golden hour with AI (owner's choice, 2026-11-09; labelled as edited): always the whole frame, a wide shot (owner: "too zoomed in, should look like a wide shot"): on wide screens the photo is the hero's height, anchored right, so the sign on its blue tower, the building, the awning, OPEN, the flag and the street all show, and it runs on to the left behind the words in black and white, darker the further left (owner: "extend the image to the left, and make it darker and Black&white smoothly as it goes to left so that hero text will remain easily readable"; the street to the left of the real frame is an AI extension, and the headline's accent there is a pale neon blue for contrast; later the same day, "make colors of the background on the right side of the hero more colorful and vivid": the photo is graded richer, colour only, and the warm light no longer hazes it); it drifts slowly under a warm, breathing light, and as the page scrolls the words drift down and the photo pushes in; on phones the whole frame runs across the top of the hero and fades out before the words; H1 from the client's own tagline; Order now. The drawn, lit sign (the logo with its 53 bulbs on a wide, short tower, no number plate) now plays in the splash at the start of each visit and on the 404 page. (Earlier the same day the hero was a night-road AI still with the drawn sign; its neon "8 Mile" and 5700 plate were removed at the owner's request.) |
 | new | Crossing tapes + spectrum divider | ADD | value-proposition | The marquee letter board (the client's own deal phrases and hours) crossed by a navy tape with the client's lines and store facts; both run faster as the page scrolls and turn round when it scrolls up; then a thin spectrum line (the striped awning banners were removed: the storefront stripes were about six years old) |
-| new | Kinetic band | ADD | — | Two rows of giant words (the client's own lines and store facts, all already on the page) sliding opposite ways with the scroll, the client's own bud photo floating over them; decorative and hidden from assistive tech |
+| new | Kinetic band | ADD | — | Two rows of giant words (the client's own lines and store facts, all already on the page) sliding opposite ways with the scroll, the client's own bud photo floating over them; decorative and hidden from assistive tech; later (owner, 2026-11-09) in Black weight, the light pools no longer cut at the band's edges, and HD bud illustrations: one over the words, four at the top corners, two half out of frame |
 | new | Motion controls | ADD | — | A "Pause motion" button in the top bar stops every loop (WCAG 2.2.2) and is remembered; a back-to-top ring and a reading-progress line in the spectrum divider under the header |
 | new | Home deals tabs | ADD | benefits-solution | Live-menu prices of November 8, 2026, linking to `/daily-deals/`; first as deli tickets hanging from a rail over a neon scene still, then (owner, 2026-11-09: "turn the background of this section into black and turn these deal cards into bento layout for all categories. Include product images.") on a black band, each category's deals a bento of cards (a large feature in the store's blue, white cards beside it) with an AI illustration of each product type; the Ounces tab keeps every tier and count of the live menu |
-| new | Home Owner's Box | ADD | trust-positioning | The live menu's Owners Box collection with the client's tasting notes, in a glass case framed by chasing marquee bulbs over a spotlight scene still |
+| new | Home Owner's Box | ADD | trust-positioning | The live menu's Owners Box collection with the client's tasting notes, in a glass case framed by chasing marquee bulbs; later (owner, 2026-11-09) under a spectrum line, over the owner's street photo in black and white fading into black, the strains on holographic cards with a bud each that fly out of the owner's road case as it opens in green smoke; compact: the case at the left of the words and cards on wide screens, under the cards on narrow ones, where the cards' row opens downward as the case opens |
 | new | Home news | ADD | — | Latest three posts |
 | new | `/daily-deals/` | ADD | benefits-solution | The live URL answered 404 on 2026-11-08 while the nav still says "Daily Deals & More"; restored |
 | new | `/shop/` | ADD | strategic-cta | The live menu hand-off: the portal refuses framing and its category paths answer "Page not found" |
@@ -245,6 +245,54 @@ swipe row keeps 14px of room above the bounce's peak).
   positioned layers; proved both ways: it passes the real cards and fails them when their colour is
   forced near-black).
 
+**The Owner's Box, the kinetic band and the deals, later the same day (owner, 2026-11-09):**
+- "upscale this image, make it Black and white and subtle the fades into black for this section's BG ...
+  add the spectrum divider on top edge. Remove the deals here and lay them on a holographic card along
+  with a product image. and add this box because I want to create an animation where the box opens and
+  the cards will come out of it and lay across on the right side in a single row as if they are
+  floating. smoke effect should be mystical green": the owner's street photo, upscaled 4x (Topaz) and
+  made black and white, fading into black, under a spectrum line; the owner's road case (cut out with
+  Bria RMBG 2.0) and an AI edit of it with the lid open (fal nano-banana-pro/edit) crossfade as it rattles
+  open; green smoke (two AI renders on black, made transparent) rises from it; the three strains ride
+  holographic cards (a turning rainbow edge, a glitter rim, a sheen) with an AI bud illustration each,
+  flying out of the case into a floating row (`tools/ownbox-assets.py`, `jobs-ownbox.json`; about $0.55).
+- "make sure to cut this properly, I can still see the background from previous file under": the first
+  cut-out (BiRefNet) had dropped the case's black panels, and putting back every dark pixel also put
+  back the floor's shadow between the wheels; the case is now cut with Bria RMBG 2.0, whole and clean.
+- "can we create a layout where this look more sleek and compact? On mobile, I want the box to be placed
+  under the cards. so when the box opens, the section will expand downwards to reveal the cards": wide
+  screens put the case at the left of the words and the cards (the box 721px tall at 1440x900, was about
+  1050) with its smoke rising where there are no words (measured: no overlap with any word at 5 widths);
+  narrow screens put the words, then the cards, then the case; the cards' row is closed until the case
+  opens, then grows open downward, the cards rising out of the case below; the cards are compact, each
+  bud standing out of its card's top, and on phones a carousel of equal cards with room between them;
+  the foot and the words centred on phones ("Center align these"; "center align texts like these").
+- "gradient in this section looks cropped": the light pools moved as whole band-sized layers, pulling
+  their edges into view; the layers now hold still and only the light inside them moves, fading out
+  before the band's top and bottom (every band with pools). "can we make them in bold or black": the
+  kinetic band's words in Outfit Black (outlined ones in the designer's static Black, letters merged).
+  "add more buds here and here but i want the bud to look more realistic and high definition and place
+  them as if they were placed naturally, some of them can go out of frame": five AI buds rendered sharp
+  front to back (fal flux-pro ultra raw mode; the client's bud photo had half its bud out of focus),
+  one over the words, four resting at the band's top corners, two half out of frame at the sides (each
+  measured inside the band's top at 7 widths).
+- Deals on phones: "cards can have same size. and can be carousel": every deal card the same size in a
+  swiping carousel. "this glass from the deal card still looks broken": the glass had been guessed back
+  out of grey-backdrop pictures and came out patchy on the blue cards; the eighths jar (AI) and the
+  owner's budder dish were re-shot on the card's own blue (fal FLUX Kontext recoloured only the backdrop,
+  so the glass shows the blue the way a photo would), upscaled 2x and cut out with Bria, with no keying.
+  "This is how a wax bucket looks like, you may use this but replace branding with Flavors": the owner's
+  product photo with its third-party label made plain black and its background white by AI (fal
+  nano-banana-pro/edit), then the client's own logo file set on the label as print on a cylinder
+  (`tools/wax-label.py`; not drawn by AI); labelled as edited. The name on the label is "Flavors
+  Detroit", as on the logo (the owner wrote "Flavors of Detroit"; see PITCH-NOTES).
+- "use this for 1G Budder, remove shadow": the owner's photo of an open 1G jar (seen from above, its lid
+  beside it) on the "TopShelf 1G budders" card; it came cut out but with its cast shadow nearly opaque, so
+  it was laid on white and cut again with Bria RMBG 2.0, which leaves the shadow out (the product is not
+  changed). The holographic cards' chips were set at 12px; they are back at the site's 13px floor.
+- The comma after "prices" in "Detroit prices, every day" fell to a line of its own on phones (the
+  heading's words animate as separate pieces); a word and the punctuation right after it now never part.
+
 **Fonts (owner, 2026-11-09, after pairing A):** "lets change pairing to Outfit + Work Sans, where titles
 or larger sized texts uses outfit". Display weights moved one step lighter (900 to 800, 800 to 700),
 and the card names are sized from the card's width so "Concentrates" fits the narrowest card. Then
@@ -270,7 +318,7 @@ The provenance sidecar the templates read is `src/content/generated-images.json`
 | still | where | what it shows | why it is safe |
 |---|---|---|---|
 | hero-night-b | the age gate (in black and white, 2026-11-09), `/contact/` (the home hero was this still until the owner chose the golden-hour storefront, 2026-11-09) | an empty multi-lane road at night: light trails, streetlights, power lines | no buildings, signs or people; atmosphere for "on 8 Mile", not a picture of 8 Mile |
-| box-spotlight | home Owner's Box band, `/owners-box/` hero | two blank jars of top-shelf flower on black velvet under a spotlight | product mood; the strains named on the page come from the live menu |
+| box-spotlight | `/owners-box/` hero (the home Owner's Box band, its first place, shows the owner's street photo since 2026-11-09) | two blank jars of top-shelf flower on black velvet under a spotlight | product mood; the strains named on the page come from the live menu |
 | neon-abstract | `/daily-deals/` hero (the home deals band, its first place, is black since the owner's 2026-11-09 change) | neon tube curves on a wet floor, graded to the store's blue | abstract, no letters |
 | rainbow-reflections | home visit band, `/visit/` hero | light reflections on wet asphalt at night, graded to the store's blue | abstract; no storefront |
 | bulb-bokeh | home mailing-list band, `/blog/` hero and posts | a row of marquee bulbs out of focus | graded cool (cream bulbs, navy shadows) so it never reads as gold |

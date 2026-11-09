@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-09T08:39:16.931Z",
+  "generated": "2026-11-09T10:11:26.306Z",
   "method": "p95/p5 background luminance under each text line, text hidden, reduced motion",
-  "checked": 503,
+  "checked": 388,
   "fails": [],
   "worst": [
     {
@@ -60,9 +60,9 @@
       "scene": "band.band--night.band--bokeh",
       "el": "p.form-note",
       "text": "You're one step away! We promise we won'",
-      "ratio": 5.62,
+      "ratio": 5.69,
       "need": 4.5,
-      "medianRatio": 6.19
+      "medianRatio": 6.21
     },
     {
       "page": "/daily-deals/",
@@ -140,7 +140,7 @@
       "scene": "band.band--night.band--bokeh",
       "el": "p.form-note",
       "text": "You're one step away! We promise we won'",
-      "ratio": 6.72,
+      "ratio": 6.74,
       "need": 4.5,
       "medianRatio": 7.63
     },
@@ -186,23 +186,13 @@
     },
     {
       "page": "/",
-      "vp": "1024x768",
-      "scene": "band.band--black.band--spot",
-      "el": "span.accent",
-      "text": "Box",
-      "ratio": 4.93,
-      "need": 3,
-      "medianRatio": 5.01
-    },
-    {
-      "page": "/",
-      "vp": "390x844",
-      "scene": "band.band--black.band--spot",
-      "el": "span.accent",
-      "text": "Box",
-      "ratio": 4.96,
-      "need": 3,
-      "medianRatio": 5.07
+      "vp": "1440x900",
+      "scene": "band.band--night.band--bokeh",
+      "el": "p.kicker",
+      "text": "Get social with Flavors Detroit",
+      "ratio": 7.48,
+      "need": 4.5,
+      "medianRatio": 8.01
     },
     {
       "page": "/shop/",
@@ -213,26 +203,6 @@
       "ratio": 4.99,
       "need": 3,
       "medianRatio": 5.68
-    },
-    {
-      "page": "/",
-      "vp": "1440x900",
-      "scene": "band.band--night.band--bokeh",
-      "el": "p.kicker",
-      "text": "Get social with Flavors Detroit",
-      "ratio": 7.49,
-      "need": 4.5,
-      "medianRatio": 8.01
-    },
-    {
-      "page": "/",
-      "vp": "1440x900",
-      "scene": "band.band--black.band--spot",
-      "el": "span.accent",
-      "text": "Box",
-      "ratio": 5.02,
-      "need": 3,
-      "medianRatio": 5.11
     },
     {
       "page": "/visit/",
@@ -253,6 +223,36 @@
       "ratio": 7.61,
       "need": 4.5,
       "medianRatio": 8.08
+    },
+    {
+      "page": "/shop/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.status__word",
+      "text": "Closed",
+      "ratio": 7.64,
+      "need": 4.5,
+      "medianRatio": 8.16
+    },
+    {
+      "page": "/learn/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.accent",
+      "text": "flavors",
+      "ratio": 5.12,
+      "need": 3,
+      "medianRatio": 5.47
+    },
+    {
+      "page": "/learn/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.accent",
+      "text": "flavors",
+      "ratio": 5.16,
+      "need": 3,
+      "medianRatio": 5.65
     }
   ],
   "verdict": "PASS"

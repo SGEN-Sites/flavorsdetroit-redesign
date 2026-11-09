@@ -96,7 +96,7 @@ Three families, all SIL Open Font License, self-hosted as latin woff2 (`src/asse
 | family | role |
 |---|---|
 | Outfit (variable, 100–900) | titles and larger text: headings, the hero, prices, tag and card names, the tapes, the kinetic band. Display weights 700–800 (one step lighter than in the Jockey One era); the card names scale with the card's width. Large headings at a .98 line height: at .92 Outfit's descenders met the next line's ascenders |
-| Outfit Outline (the designer's static Outfit 400 and 800) | outlined words only: the navy tape and the kinetic band. An outline traces every contour, and the variable file keeps each letter's parts as overlapping contours (F is three), which showed as seams inside outlined letters; these static builds have every letter merged into one outline (Google's single-weight files keep the overlaps) |
+| Outfit Outline (the designer's static Outfit 800 and Black 900) | outlined words only: the navy tape (800) and the kinetic band (Black, at the owner's request). An outline traces every contour, and the variable file keeps each letter's parts as overlapping contours (F is three), which showed as seams inside outlined letters; these static builds have every letter merged into one outline (Google's single-weight files keep the overlaps) |
 | Work Sans (variable, 100–900, + italic) | body and UI text |
 | Tilt Neon | neon numerals only: step numbers and the news date board; the outlined footer word |
 
@@ -128,7 +128,7 @@ Signature components (`src/styles/components.css`), each from the building:
 | `.ticker` + `.spectrum` | the marquee letter board, then the thin spectrum divider |
 | `.jar` + `.counter-top` | glass display cases on a navy counter with an LED strip |
 | `.tag`, `.board`, `.ladder` | deli price tags, the deli counter board, the ounce tiers |
-| `.box` | the Owner's Box: a glass case framed by chasing marquee bulbs on all four sides, glass strain cards with a royal top light |
+| `.box` + `.band--ownbox` + `.ownbox` | the Owner's Box: a glass case framed by chasing marquee bulbs, over the owner's street photo in black and white fading into black, under a spectrum line; the owner's road case opens in green smoke and the strains fly out on holographic cards (rainbow edge, glitter rim, sheen; a bud standing out of each card's top) into a floating row; wide screens: the case at the left of the words and cards; narrow: words, cards (a carousel), the case under them, the row opening downward as the case opens, the words and foot centred |
 | `.status` | a small neon OPEN sign, computed in Detroit time |
 | `.photo` | the owner's own store photos in rounded frames (`.photo--inset` lays one over the corner of another, like a print); upscaled and colour graded, two retouched with AI fill (see `CHANGE-LOG.md`, Imagery) |
 | `.street-sign` | the E 8 Mile Rd street sign with the 5700 address plate |
@@ -147,7 +147,7 @@ a **scrim** (a token gradient sized so text clears WCAG AA on the rendered pixel
 | `.band--neon` + `.hang` | deli tickets on strings from a rail over blue neon; each ticket sways on its own string (`/daily-deals/`; the home deals band became the bento below) |
 | `.band--deals` + `.deals` | the home deals on black (owner, 2026-11-09): each category tab a bento, a two-by-two feature in the store's blue and white cards beside it (two small, one wide), each with a product image standing on a soft floor shadow (the owner's own pre-roll, budder and crumble photos, AI illustrations of the other product types; clear glass always see-through, so it shows the card it stands on); prices large in Outfit; the Ounces tab lists every live-menu tier; the whole card bounces on hover, then rests a little raised |
 | `.band--spot` + `.box--glass` | the Owner's Box over a spotlight still, framed by chasing bulbs; glass cards with an orbiting edge light |
-| `.kinetic` | two rows of giant words sliding opposite ways with the scroll, the client's own bud floating over them |
+| `.kinetic` | two rows of giant words in Outfit Black sliding opposite ways with the scroll; HD bud illustrations, one floating over the words and four resting at the top corners, two half out of frame |
 | `.statement` | the "who are we" sentence, set large; its words light up in reading order |
 | `.band--rain`, `.band--bokeh` | blue reflections behind a glass store card; marquee bokeh behind glass panels |
 | `.page-hero--scene` | every inner page hero over its own still (Learn uses the client's own flower photo; Shop floats the client's own bud) |

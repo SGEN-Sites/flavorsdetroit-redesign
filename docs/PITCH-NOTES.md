@@ -25,8 +25,8 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
 - The cinematic layer (2026-11-09): a living hero (first a night-road still with the drawn sign, now
   the store itself at golden hour, below); crossing tapes over the
   seam; the category cards on a pinned rail (solid colour cards with uniformly rendered products,
-  owner's choice 2026-11-09); the day's deals as a bento of cards with product illustrations on black (owner, 2026-11-09; first as deal tickets hanging over neon); the Owner's Box in a
-  chasing bulb frame; a kinetic type band; a scroll-lit "who are we" statement with counting stats;
+  owner's choice 2026-11-09); the day's deals as a bento of cards with product illustrations on black (owner, 2026-11-09; first as deal tickets hanging over neon); the Owner's Box, where the owner's road case opens in green smoke and the
+  strains fly out on holographic cards; a kinetic type band; a scroll-lit "who are we" statement with counting stats;
   glass panels over bokeh; a scene behind every inner page hero; a footer wordmark that lights up
   at the end. One scroll-aware loop makes the page answer every scroll (marquees speed up with the
   scroll, light curtains and beams on arrival, drifting light, depth), with a **Pause motion**
@@ -76,6 +76,11 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
    flower and gummies photos on those cards (you asked for uniform renders); the flower photo is
    still on the Learn page. Would you rather the cards showed real product photography?
    Keep them for launch, or replace any with your own photography?
+
+8. **The wax bucket picture.** On the "Premium wax bucket" card, the jar from your photo now carries the
+   Flavors Detroit logo (its own label was cleared with AI and the logo file set on it). That reads as a
+   Flavors-branded product: confirm the store sells its wax buckets under its own name, and that the label
+   should say "Flavors Detroit" as on the logo (you wrote "Flavors of Detroit").
 
 ## Defects found on the live site (fixed or flagged)
 

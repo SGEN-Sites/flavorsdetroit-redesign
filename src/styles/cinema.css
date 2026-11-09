@@ -345,13 +345,19 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
   .deals { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "f f" "a b" "c c"; }
   .deals--3 { grid-template-areas: "f f" "a a" "b b"; }
 }
-/* phones: one column; the smaller cards keep the product beside the words, so the list stays short */
-@media (max-width: 560px) {
-  .deals, .deals--3 { grid-template-columns: minmax(0, 1fr); grid-template-areas: none; }
-  .deals > * { grid-area: auto !important; }
-  .deal:not(.deal--feature) { flex-direction: row; align-items: center; gap: 14px; }
-  .deal:not(.deal--feature) .deal__media { flex: 0 0 36%; height: 128px; }
-  .deal--feature .deal__media { min-height: 200px; }
+/* phones: a swiping carousel of cards all the same size, product on top and words below (owner,
+   2026-11-09: "on mobile ... cards can have same size. and can be carousel"); the row is as tall as
+   its tallest card, so every card is that height. Room above for the hover bounce, below for the glow */
+@media (max-width: 640px) {
+  .deals, .deals--3 { grid-template-columns: none; grid-template-areas: none; grid-auto-flow: column; grid-auto-columns: min(80%, 300px);
+    overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter)); padding: 26px var(--gutter) 40px; margin-block: -22px -26px; scroll-padding-inline: var(--gutter); }
+  .deals::-webkit-scrollbar { display: none; }
+  .deals > * { grid-area: auto !important; scroll-snap-align: start; }
+  .deal, .deal--wide, .deal--feature { flex-direction: column; align-items: stretch; gap: 12px; }
+  .deal .deal__media, .deal--wide .deal__media, .deal--feature .deal__media { flex: none; height: 168px; min-height: 0; align-items: flex-end; }
+  .deal--wide .deal__media::before { display: block; }
+  .deal--feature .deal__price { font-size: clamp(2.3rem, 1.6rem + 1.8vw, 3.2rem); }
 }
 
 /* ==== deals over neon: deli tickets hanging from a rail ======================================== */
@@ -445,6 +451,121 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
 .js.lit-ready .statement .w.is-lit { color: var(--ink); }
 .js.lit-ready .statement .accent .w.is-lit { color: var(--royal); text-shadow: 0 0 26px color-mix(in srgb, var(--royal) 30%, transparent); }
 
+/* ==== the Owner's Box (owner, 2026-11-09): a street in black and white fading into black, the owner's
+   road case that opens in mystical green smoke, the box's strains on holographic cards flying out of
+   it into a floating row. Wide screens: the case stands at the left of the words and the cards (owner:
+   "more sleek and compact"); narrow screens: the words, the cards, then the case under them, the
+   cards' row opening downward as the case opens (owner: "on mobile, I want the box to be placed under
+   the cards. so when the box opens, the section will expand downwards to reveal the cards"). Without
+   motion (reduced, paused or no script) it is shown open, the smoke still. ======================== */
+.band--ownbox { position: relative; isolation: isolate; overflow: hidden; background: var(--night); }
+.ownbox__bg { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.ownbox__bg img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 50% 42%; opacity: .5; }
+.ownbox__bg::after { content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, var(--night) 0, color-mix(in srgb, var(--night) 40%, transparent) 24%, color-mix(in srgb, var(--night) 50%, transparent) 62%, var(--night) 100%),
+              radial-gradient(130% 95% at 50% 45%, transparent 45%, var(--night) 100%); }
+.ownbox { position: relative; display: grid; grid-template-columns: minmax(0, 1fr); }
+.ownbox .ownbox__head { position: relative; z-index: 3; margin-bottom: 0; }
+.ownbox__foot { position: relative; z-index: 3; }
+.ownbox__reveal { position: relative; z-index: 2; display: grid; grid-template-rows: 1fr; }
+.ownbox__cards { min-height: 0; list-style: none; margin: 0; padding: 0; }
+/* the case (decoration): closed and open pictures on one canvas, crossfading in place */
+.ownbox__case { position: relative; z-index: 1; aspect-ratio: 1.055; }   /* the canvas of the two case pictures (ownbox-assets.json) */
+.ownbox__case img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: contain; }
+.ownbox__shadow { position: absolute; left: 4%; right: 4%; bottom: -3%; height: 10%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--night) 85%, transparent), transparent); }
+.ownbox__glow { position: absolute; left: 6%; right: 6%; top: 4%; height: 52%; border-radius: 50%; pointer-events: none; opacity: 0; mix-blend-mode: screen;
+  background: radial-gradient(55% 60% at 50% 72%, color-mix(in srgb, #39ff8a 62%, transparent), color-mix(in srgb, #19c46a 20%, transparent) 55%, transparent 75%); filter: blur(10px); }
+.ownbox__case img.ownbox__smoke { inset: auto; left: 50%; bottom: 46%; width: 92%; height: auto; translate: -50% 0; opacity: 0; pointer-events: none; mix-blend-mode: screen; transform-origin: 50% 100%;
+  -webkit-mask-image: radial-gradient(50% 50% at 50% 55%, #000 55%, transparent 100%); mask-image: radial-gradient(50% 50% at 50% 55%, #000 55%, transparent 100%); }   /* no edge of the picture ever shows */
+.ownbox__case img.ownbox__smoke--b { width: 80%; translate: -22% 0; }
+.ownbox__open { opacity: 0; }
+/* the holographic cards: compact, the bud standing out of the top of its card */
+@property --holo-a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+.holo-slot { position: relative; min-width: 0; }
+.holo { position: relative; height: 100%; border-radius: 22px; padding: 3px;
+  background: conic-gradient(from var(--holo-a), #ff7ad9, #ffd36e, #7dffb2, #6ec8ff, #b18cff, #ff7ad9);
+  box-shadow: 0 0 24px -8px color-mix(in srgb, #7dffb2 70%, transparent), 0 30px 54px -30px #000;
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .6s var(--ease); }
+.holo::before { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: inherit; padding: 3px; pointer-events: none; opacity: .85;
+  background: radial-gradient(circle, rgba(255,255,255,.95) 0 1px, transparent 1.7px) 0 0 / 17px 23px, radial-gradient(circle, rgba(255,255,255,.75) 0 .8px, transparent 1.5px) 7px 11px / 29px 31px;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); }
+.holo__bud { position: absolute; z-index: 3; top: -54px; right: 12px; width: auto; height: 104px; max-width: 42%; object-fit: contain; object-position: 50% 100%; pointer-events: none;
+  filter: drop-shadow(0 12px 12px rgba(0, 0, 0, .6)) drop-shadow(0 0 16px color-mix(in srgb, #39ff8a 32%, transparent)); }
+.holo__in { position: relative; height: 100%; display: flex; flex-direction: column; gap: 7px; overflow: hidden; border-radius: 19px; padding: 16px 16px 14px;
+  background: radial-gradient(120% 70% at 88% 0%, #20304d, #0c0f18 64%); color: var(--cream); }
+.holo__in::after { content: ""; position: absolute; inset: -30%; pointer-events: none; translate: -45% 0;
+  background: linear-gradient(115deg, transparent 38%, rgba(255,255,255,.10) 46%, rgba(125,255,178,.10) 50%, rgba(110,200,255,.10) 54%, transparent 62%); }
+.holo__top { padding-right: 46px; font-size: var(--fs-xs); font-weight: 700; color: var(--led-soft); }   /* only the bud's narrow lower part reaches this line (its widest part is above the card) */
+.holo__name { font-size: clamp(1.3rem, 1.08rem + .55vw, 1.6rem); line-height: 1.05; color: var(--white); }
+.holo__meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.holo__meta .chip { min-height: 26px; padding: 3px 10px; font-size: var(--fs-xs); }   /* 13px: the site's floor for visible text (check.mjs) */
+.holo__notes { font-size: .84rem; line-height: 1.42; color: var(--cream-2); }
+.holo__price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 7px; margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line-night-strong); }
+.holo__price b { font-family: var(--font-display); font-weight: 800; font-size: 1.75rem; line-height: 1; color: var(--white); }
+.holo__price span { color: var(--cream-2); font-size: var(--fs-xs); }
+.holo__price .holo__gram { margin-left: auto; color: var(--led-soft); font-weight: 700; }
+/* the opening: the case rattles, its lid opens (the two pictures crossfade), green light and smoke rise,
+   the cards fly from the opening (site.js sets --fx/--fy, the way back to it) to their places, then float */
+.js .ownbox:not(.is-open) .holo-slot { opacity: 0; transform: translate(var(--fx, 0px), var(--fy, 0px)) scale(.16) rotate(var(--fr, -10deg)); }
+.ownbox .holo-slot { transition: transform 1.3s cubic-bezier(.18, .9, .28, 1.12) calc(.9s + var(--i, 0) * .2s), opacity .5s ease calc(.9s + var(--i, 0) * .2s); }
+.ownbox.is-open .ownbox__case { animation: case-rattle .55s ease-in-out; }
+.ownbox.is-open .ownbox__shut { opacity: 0; transition: opacity .3s ease .55s; }
+.ownbox.is-open .ownbox__open { opacity: 1; transition: opacity .3s ease .5s; }
+.ownbox.is-open .ownbox__glow { opacity: .95; transition: opacity .9s ease .6s; }
+.js .ownbox.is-open .ownbox__smoke { animation: smoke-rise 7s ease-in-out .7s infinite; }
+.js .ownbox.is-open .ownbox__smoke--b { animation-duration: 8.6s; animation-delay: 1.6s; }
+.ownbox.is-floating .holo-slot { animation: holo-float 5.4s ease-in-out calc(var(--i, 0) * -1.8s) infinite; }
+.js .holo { animation: holo-turn 9s linear infinite; }
+.js .holo__in::after { animation: holo-sheen 6.5s ease-in-out infinite; }
+@keyframes case-rattle { 0%, 100% { rotate: 0deg; } 20% { rotate: -2.2deg; } 40% { rotate: 2deg; } 60% { rotate: -1.4deg; } 80% { rotate: .7deg; } }
+@keyframes smoke-rise { 0% { opacity: 0; transform: translateY(16%) scale(.82); } 22% { opacity: .9; } 70% { opacity: .55; } 100% { opacity: 0; transform: translateY(-30%) scale(1.28); } }
+@keyframes holo-float { 0%, 100% { translate: 0 0; rotate: 0deg; } 50% { translate: 0 -10px; rotate: .7deg; } }
+@keyframes holo-turn { to { --holo-a: 360deg; } }
+@keyframes holo-sheen { 0%, 25% { translate: -45% 0; } 65%, 100% { translate: 45% 0; } }
+/* no motion: open at once, still smoke */
+.ownbox.is-instant .holo-slot, .ownbox.is-instant .ownbox__shut, .ownbox.is-instant .ownbox__open, .ownbox.is-instant .ownbox__glow, .ownbox.is-instant .ownbox__reveal, .ownbox.is-instant .ownbox__cards { transition: none !important; }
+.ownbox.is-instant .ownbox__case { animation: none; }
+html:not(.js) .ownbox__shut { opacity: 0; } html:not(.js) .ownbox__open { opacity: 1; } html:not(.js) .ownbox__glow { opacity: .9; }
+html:not(.js) .ownbox__smoke, .ownbox.is-instant .ownbox__smoke, .motion-off .ownbox.is-open .ownbox__smoke { animation: none !important; opacity: .45; transform: none; }
+@media (prefers-reduced-motion: reduce) { .ownbox .ownbox__smoke { animation: none !important; opacity: .45; } }
+/* wide screens: the case at the left of the words and the cards, standing on the cards' floor; its
+   smoke rises into the space above it, where there are no words */
+@media (min-width: 1100px) {
+  .ownbox { grid-template-columns: minmax(230px, 26%) minmax(0, 1fr); grid-template-areas: "case head" "case cards" "foot foot"; column-gap: clamp(28px, 3.2vw, 52px); }
+  .ownbox__head { grid-area: head; }
+  .ownbox__reveal { grid-area: cards; margin-top: clamp(64px, 5.5vw, 76px); }   /* room above for the buds standing out of the cards */
+  .ownbox__case { grid-area: case; align-self: end; }
+  .ownbox__foot { grid-area: foot; }
+  .ownbox__cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.4vw, 20px); }
+}
+/* narrow screens (ul.: the padding must beat base.css ul[class] { padding: 0 }): the words, the cards (a carousel of equal cards), the case under them. Before the case
+   opens the cards' row is closed (height 0); as it opens the row grows open downward, the case moving
+   down with it, and the cards rise out of the case below into their places. The smoke starts once the
+   row is open, so it only ever rises behind the cards, never behind the words */
+@media (max-width: 1099px) {
+  .ownbox__reveal { transition: grid-template-rows .9s var(--ease) .35s; }
+  .js .ownbox:not(.is-open) .ownbox__reveal { grid-template-rows: 0fr; }
+  /* the row's padding (room for the buds above, the glow below) closes and opens with it */
+  .ownbox ul.ownbox__cards { transition: padding-block .9s var(--ease) .35s; }
+  .js .ownbox:not(.is-open) ul.ownbox__cards { padding-block: 0; }
+  .ownbox ul.ownbox__cards { display: grid; grid-auto-flow: column; grid-auto-columns: min(78%, 300px); gap: 22px; overflow-x: auto;   /* room between cards (owner, 2026-11-09) */ scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    scrollbar-width: none; margin-inline: calc(-1 * clamp(18px, 4vw, 48px)); padding: 72px clamp(18px, 4vw, 48px) 34px; scroll-padding-inline: clamp(18px, 4vw, 48px); }
+  .ownbox__cards::-webkit-scrollbar { display: none; }
+  .holo-slot { scroll-snap-align: start; }
+  .js .ownbox:not(.is-open) .holo-slot { transform: translateY(70%) scale(.72); }
+  .ownbox__case { width: min(280px, 64vw); justify-self: center; margin-top: 6px; }
+  /* the words centred too, like the case and the foot (owner, 2026-11-09: "on mobile let's center align
+     texts like these"): the grid centres each line, the kicker's bulb stays beside its words */
+  .ownbox .ownbox__head { justify-items: center; text-align: center; margin-inline: auto; }
+  .ownbox__head .kicker { justify-content: center; }
+  /* the line and the button centred under the centred case (owner, 2026-11-09: "Center align these") */
+  .ownbox__foot { flex-direction: column; justify-content: center; text-align: center; }
+  .ownbox__foot .asof { justify-content: center; }
+  .ownbox__case img.ownbox__smoke { width: 70%; } .ownbox__case img.ownbox__smoke--b { width: 60%; }
+  .js .ownbox.is-open .ownbox__smoke { animation-delay: 1.4s; }
+  .js .ownbox.is-open .ownbox__smoke--b { animation-delay: 2.2s; }
+}
+
 /* ==== visit: rainbow reflections on wet asphalt, a glass store card ============================= */
 .band--rain .scene img { object-position: 50% 80%; }
 .band--rain::before {
@@ -511,6 +632,7 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
 
 /* ==== split headings: words rise into place (site.js wraps them; motion only) ================== */
 .js .is-split .sw { display: inline-block; overflow: clip; overflow-clip-margin: .14em; vertical-align: top; padding-bottom: .06em; margin-bottom: -.06em; }
+.sw-glue { white-space: nowrap; }   /* a word and the punctuation that follows it never part (site.js) */
 .js .is-split .sw__i { display: inline-block; translate: 0 108%; transition: translate 1s var(--ease); transition-delay: calc(var(--w, 0) * 55ms); }
 .js .is-split.is-in .sw__i, .js.reveal-all .is-split .sw__i { translate: 0 0; }
 
@@ -590,20 +712,30 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
 }
 .motion-off *, .motion-off *::before, .motion-off *::after { animation-play-state: paused !important; }
 
-/* drifting LED light pools behind the dark bands. Each pool is a layer the size of its band, so
-   its box never reaches past the band or the viewport (sr-sweep flagged the earlier off-canvas
-   circles); the light inside sits where those circles had their centres: (--px, --py), radius --pr */
+/* drifting LED light pools behind the dark bands. Each pool is a STILL layer the size of its band
+   (its box never reaches past the band or the viewport: sr-sweep flagged the earlier off-canvas
+   circles), clipping a light larger than the band (::before, 160% of it) that does all the moving:
+   the drift animation and the scroll depth (site.js sets --dy). Moving the band-sized layer itself
+   had pulled its edge into view, a hard line through the glow (owner, 2026-11-09: "gradient in this
+   section looks cropped"). The light also fades out before the band's top and bottom edges, so a band
+   never starts or ends on a cut. Centres (--qx, --qy) are in the ::before's own box: a band point
+   (x, y) is (x + 30%W, y + 30%H) there, as a share of 160% */
 .pool {
   --pr: min(36vmax, 490px);
-  position: absolute; inset: 0; z-index: -1; pointer-events: none; mix-blend-mode: screen;
-  transform-origin: var(--px) var(--py);
-  background: radial-gradient(circle var(--pr) at var(--px) var(--py), color-mix(in srgb, var(--led) 20%, transparent), color-mix(in srgb, var(--led) 7%, transparent) 55%, transparent 72%);
+  position: absolute; inset: 0; z-index: -1; pointer-events: none; mix-blend-mode: screen; overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 24%, #000 76%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 24%, #000 76%, transparent);
 }
-.pool--a { --px: calc(-22% + var(--pr)); --py: calc(-30% + var(--pr)); }
-.pool--b { --px: calc(126% - var(--pr)); --py: calc(136% - var(--pr));
-  background: radial-gradient(circle var(--pr) at var(--px) var(--py), color-mix(in srgb, var(--royal) 42%, transparent), color-mix(in srgb, var(--royal) 12%, transparent) 55%, transparent 72%); }
-.js .pool { animation: pool-drift 24s var(--ease-in-out) infinite alternate; }
-.js .pool--b { animation-duration: 31s; animation-delay: -11s; }
+.pool::before {
+  content: ""; position: absolute; inset: -30%;
+  transform: translate3d(0, var(--dy, 0px), 0); transform-origin: var(--qx) var(--qy);
+  background: radial-gradient(circle var(--pr) at var(--qx) var(--qy), color-mix(in srgb, var(--led) 20%, transparent), color-mix(in srgb, var(--led) 7%, transparent) 55%, transparent 72%);
+}
+.pool--a { --qx: calc(5% + var(--pr)); --qy: var(--pr); }                 /* band (-22% + r, -30% + r) */
+.pool--b { --qx: calc(97.5% - var(--pr)); --qy: calc(103.75% - var(--pr)); }   /* band (126% - r, 136% - r) */
+.pool--b::before { background: radial-gradient(circle var(--pr) at var(--qx) var(--qy), color-mix(in srgb, var(--royal) 42%, transparent), color-mix(in srgb, var(--royal) 12%, transparent) 55%, transparent 72%); }
+.js .pool::before { animation: pool-drift 24s var(--ease-in-out) infinite alternate; }
+.js .pool--b::before { animation-duration: 31s; animation-delay: -11s; }
 @keyframes pool-drift { 0% { translate: 0 0; scale: 1; } 50% { translate: 7vw 5vh; scale: 1.1; } 100% { translate: -5vw 8vh; scale: .94; } }
 
 /* rising sparks: little LED glints drifting up through the dark */
@@ -621,14 +753,28 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
 .kinetic__list { display: flex; flex: none; align-items: center; }
 .kinetic__item {
   display: inline-flex; align-items: center; gap: .5em; padding-left: .5em; white-space: nowrap;
-  font-family: var(--font-outline); font-weight: 400; font-size: clamp(3.2rem, 1.4rem + 7.4vw, 9.6rem); line-height: 1.02;
+  font-family: var(--font-outline); font-weight: 900; font-size: clamp(3.2rem, 1.4rem + 7.4vw, 9.6rem); line-height: 1.02;   /* Black (owner, 2026-11-09) */
   color: transparent; -webkit-text-stroke: 1.5px color-mix(in srgb, var(--led-soft) 72%, transparent);
 }
-.kinetic__item--solid { color: var(--cream); -webkit-text-stroke: 0; }
+.kinetic__item--solid { font-family: var(--font-display); color: var(--cream); -webkit-text-stroke: 0; }   /* solid words in the variable Outfit at 900 */
 .kinetic__item::after { content: ""; width: .14em; height: .14em; rotate: 45deg; background: var(--led); box-shadow: 0 0 16px var(--led-glow); }
-.kinetic__bud { position: absolute; inset: 0; margin: auto; z-index: 2; width: clamp(170px, 24vw, 340px); height: auto; pointer-events: none;
-  filter: drop-shadow(0 34px 44px color-mix(in srgb, var(--night) 92%, transparent)) drop-shadow(0 0 40px color-mix(in srgb, var(--led) 28%, transparent)); }
+/* the buds: one floats over the middle of the words, four rest at the top corners as if set down
+   there, two half out of frame at the sides (the band clips them; under reduced motion the band is
+   hidden), never cut by the band's top: each top is the overhang its turn adds (about .2 of its width
+   at 28 degrees) plus room for the float. Each one's resting angle is a transform: the float animation
+   moves translate and rotate */
+.kinetic__bud { position: absolute; z-index: 2; height: auto; max-width: none; pointer-events: none;
+  filter: drop-shadow(0 26px 30px color-mix(in srgb, var(--night) 92%, transparent)) drop-shadow(0 0 34px color-mix(in srgb, var(--led) 20%, transparent)); }
+.kinetic__bud--main { inset: 0; margin: auto; width: clamp(180px, 25vw, 360px); transform: rotate(-6deg); }
+.kinetic__bud--tl { left: max(-74px, -5vw); top: calc(clamp(126px, 17vw, 250px) * .2 + 16px); width: clamp(126px, 17vw, 250px); transform: rotate(28deg); }
+.kinetic__bud--tl2 { left: 13%; top: calc(clamp(60px, 8vw, 120px) * .17 + 22px); width: clamp(60px, 8vw, 120px); transform: rotate(-22deg); }
+.kinetic__bud--tr { right: max(-84px, -5.6vw); top: calc(clamp(136px, 18vw, 270px) * .18 + 16px); width: clamp(136px, 18vw, 270px); transform: rotate(-24deg); }
+.kinetic__bud--tr2 { right: 15%; top: calc(clamp(66px, 8.6vw, 135px) * .13 + 26px); width: clamp(66px, 8.6vw, 135px); transform: rotate(16deg); }
 .js .kinetic__bud { animation: float 7s var(--ease-in-out) infinite alternate; }
+.js .kinetic__bud--tl { animation-duration: 9s; animation-delay: -3s; }
+.js .kinetic__bud--tl2 { animation-duration: 6s; animation-delay: -1s; }
+.js .kinetic__bud--tr { animation-duration: 10s; animation-delay: -6s; }
+.js .kinetic__bud--tr2 { animation-duration: 8s; animation-delay: -2s; }
 
 /* the pinned rail: on big screens the categories slide sideways while the page scrolls */
 .rail__pin { position: relative; }

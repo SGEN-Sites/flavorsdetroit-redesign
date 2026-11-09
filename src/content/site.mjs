@@ -26,6 +26,8 @@ export const photos = read('src/content/store-photos.json', { items: {} });
 export const catRenders = read('src/content/category-renders.json', { items: {} });
 // The home deals band's product images (tools/deal-renders.py): files, alt, aspect, provenance.
 export const dealRenders = read('src/content/deal-renders.json', { items: {} });
+// The home Owner's Box band's images (tools/ownbox-assets.py): street background, road case, smoke.
+export const ownboxAssets = read('src/content/ownbox-assets.json', {});
 export const bulbs = read('src/content/logo-bulbs.json');
 
 const addr = facts.addresses[0];

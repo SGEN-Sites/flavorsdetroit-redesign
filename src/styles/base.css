@@ -10,7 +10,7 @@
 /* outlined words only: the designer's static Outfit builds, every letter merged into one outline, so
    -webkit-text-stroke draws no seams inside the letters (the variable file keeps overlapping parts).
    Decorative, so "block": a moment of nothing rather than a moment of seamed letters. */
-@font-face { font-family: "Outfit Outline"; src: url("../fonts/outfit-outline-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: "Outfit Outline"; src: url("../fonts/outfit-outline-900.woff2") format("woff2"); font-weight: 900; font-style: normal; font-display: block; }
 @font-face { font-family: "Outfit Outline"; src: url("../fonts/outfit-outline-800.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: block; }
 
 *, *::before, *::after { box-sizing: border-box; }

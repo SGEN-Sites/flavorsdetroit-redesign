@@ -241,7 +241,11 @@
       (function walk(node) {
         Array.prototype.slice.call(node.childNodes).forEach(function (n) {
           if (n.nodeType === 3) {
-            var frag = doc.createDocumentFragment();
+            var frag = doc.createDocumentFragment(), first = null;
+            // text that starts right after a tag with no space (", every day" after <span>prices</span>)
+            // stays on the line of that tag's last word: the two are glued (owner, 2026-11-09: the
+            // comma fell to a line of its own; separate inline-blocks may break between them)
+            var lead = /^\S/.test(n.textContent) && n.previousSibling && n.previousSibling.nodeType === 1 ? n.previousSibling : null;
             n.textContent.split(/(\s+)/).forEach(function (part) {
               if (!part) return;
               if (/^\s+$/.test(part)) { frag.appendChild(doc.createTextNode(part)); return; }
@@ -249,8 +253,13 @@
               o.className = 'sw'; o.setAttribute('aria-hidden', 'true');
               i.className = 'sw__i'; i.style.setProperty('--w', w++); i.textContent = part;
               o.appendChild(i); frag.appendChild(o);
+              if (!first) first = o;
             });
             n.parentNode.replaceChild(frag, n);
+            if (lead && first) {
+              var g = doc.createElement('span'); g.className = 'sw-glue';
+              lead.parentNode.insertBefore(g, lead); g.appendChild(lead); g.appendChild(first);
+            }
           } else if (n.nodeType === 1 && !/^(svg|br)$/i.test(n.tagName)) walk(n);
         });
       })(h);
@@ -369,16 +378,21 @@
     });
 
     // depth: [data-depth] layers drift against the scroll (lighter on touch, off on small screens)
-    var depthEls = $$('[data-depth]').map(function (el) { return { el: el, d: parseFloat(el.getAttribute('data-depth')) || 0, g: hostGeo(el.closest('section, footer, .kinetic') || el.parentElement) }; });
+    // (a light pool stays still and band-sized: its light inside takes the depth, as --dy)
+    var depthEls = $$('[data-depth]').map(function (el) { return { el: el, pool: el.classList.contains('pool'), d: parseFloat(el.getAttribute('data-depth')) || 0, g: hostGeo(el.closest('section, footer, .kinetic') || el.parentElement) }; });
+    var depthSet = function (o, v) {
+      if (o.pool) { if (v) o.el.style.setProperty('--dy', v); else o.el.style.removeProperty('--dy'); }
+      else o.el.style.transform = v ? 'translate3d(0,' + v + ',0)' : '';
+    };
     var depthOn = false, amp = fine ? 1 : 0.6;
-    measureFns.push(function () { depthOn = window.innerWidth >= 700; if (!depthOn) depthEls.forEach(function (o) { o.el.style.transform = ''; }); });
+    measureFns.push(function () { depthOn = window.innerWidth >= 700; if (!depthOn) depthEls.forEach(function (o) { depthSet(o, ''); }); });
     scrollFns.push(function (y, vh) {
       if (!depthOn) return;
       for (var i = 0; i < depthEls.length; i++) {
         var o = depthEls[i], top = o.g.top - y;
-        if (motionPaused) { o.el.style.transform = ''; continue; }
+        if (motionPaused) { depthSet(o, ''); continue; }
         if (top + o.g.h < -240 || top > vh + 240) continue;
-        o.el.style.transform = 'translate3d(0,' + ((top + o.g.h / 2 - vh / 2) * -o.d * amp).toFixed(1) + 'px,0)';
+        depthSet(o, ((top + o.g.h / 2 - vh / 2) * -o.d * amp).toFixed(1) + 'px');
       }
     });
 
@@ -578,6 +592,44 @@
     if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(remeasure);
     remeasure();
   }
+
+  /* ---- the Owner's Box: the road case opens and the cards fly out to their floating row ------
+     (owner, 2026-11-09). Each card starts at the case's opening: --fx/--fy is the way from its own
+     place back there (measured from its layout box, which a transform never moves). It runs once,
+     when a third of the stage is in view; without motion (reduced or paused) or without
+     IntersectionObserver the box is simply shown open. */
+  (function () {
+    var ob = $('[data-ownbox]');
+    if (!ob) return;
+    var cs = $('.ownbox__case', ob), list = $('.ownbox__cards', ob), slots = $$('.holo-slot', ob);
+    function aim() {
+      var c = cs.getBoundingClientRect(), l = list.getBoundingClientRect();
+      var ox = c.left + c.width * 0.5, oy = c.top + c.height * 0.32;
+      slots.forEach(function (s, i) {
+        var cx = l.left - list.scrollLeft + s.offsetLeft + s.offsetWidth / 2, cy = l.top + s.offsetTop + s.offsetHeight / 2;
+        s.style.setProperty('--fx', Math.round(ox - cx) + 'px');
+        s.style.setProperty('--fy', Math.round(oy - cy) + 'px');
+        s.style.setProperty('--fr', ((i - (slots.length - 1) / 2) * 16) + 'deg');
+      });
+    }
+    var still = function () { return reduceMotion || root.classList.contains('motion-off') || !('IntersectionObserver' in window); };
+    function open() {
+      if (ob.classList.contains('is-open')) return;
+      aim();
+      if (still()) { ob.classList.add('is-instant', 'is-open'); return; }
+      raf(function () {
+        ob.classList.add('is-open');
+        setTimeout(function () { ob.classList.add('is-floating'); }, 900 + 200 * slots.length + 1300);
+      });
+    }
+    if (still()) { open(); return; }
+    aim();
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { io.disconnect(); open(); } });
+    }, { threshold: 0.33 });
+    io.observe(ob);
+    window.addEventListener('resize', function () { if (!ob.classList.contains('is-open')) aim(); }, { passive: true });
+  })();
 
   /* ---- preview forms: validate, never post ------------------------------------------------ */
   $$('form[data-preview-form]').forEach(function (form) {

@@ -1,6 +1,6 @@
 // parts.mjs — shared section components. Markup only; looks live in components.css and cinema.css.
 import { esc, rel, icon, moreArt } from './html.mjs';
-import { SITE, COPY, bulbs, menu, ASOF, gen, images, photos, catRenders, dealRenders } from '../content/site.mjs';
+import { SITE, COPY, bulbs, menu, ASOF, gen, images, photos, catRenders, dealRenders, ownboxAssets } from '../content/site.mjs';
 
 const A = rel;
 
@@ -83,12 +83,26 @@ export function kinetic(from, rows) {
     const seq = words.map((w, i) => `<span class="kinetic__item${i % 2 ? ' kinetic__item--solid' : ''}">${esc(w)}</span>`).join('');
     return `<div class="kinetic__row" data-dir="${dir}"><div class="kinetic__track"><div class="kinetic__list">${seq}</div><div class="kinetic__list">${seq}</div></div></div>`;
   };
-  const im = images['cat-flower.webp'] || { w: 560, h: 560 }, im2 = images['cat-flower@2x.webp'];
+  // the buds (owner, 2026-11-09: "add more buds ... i want the bud to look more realistic and high
+  // definition and place them as if they were placed naturally, some of them can go out of frame as a
+  // style"): HD illustrations; one floats over the middle of the words (it was the client's own bud
+  // photo, shot with a shallow focus, so half of it was soft), four rest at the top corners where the
+  // band meets the Owner's Box, two of them half out of frame
+  const nug = (id, cls, sizes) => {
+    const r = dealRenders?.items?.[id];
+    if (!r) throw new Error('bud missing from deal-renders.json: ' + id);
+    const [f1, f2] = r.files;
+    return `<img class="kinetic__bud ${cls}" src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} ${f1.w}w, ${A(from, '/assets/img/' + f2.file)} ${f2.w}w" sizes="${sizes}" width="${f1.w}" height="${f1.h}" alt="" data-ai="generated" loading="lazy" decoding="async">`;
+  };
   return `<div class="kinetic" aria-hidden="true" data-kinetic>
   <span class="pool pool--a" data-depth="-0.1"></span><span class="pool pool--b" data-depth="-0.05"></span>
   ${row(rows[0], -1)}
   ${row(rows[1], 1)}
-  <img class="kinetic__bud" src="${A(from, '/assets/img/cat-flower.webp')}" srcset="${A(from, '/assets/img/cat-flower.webp')} ${im.w}w${im2 ? `, ${A(from, '/assets/img/cat-flower@2x.webp')} ${im2.w}w` : ''}" sizes="(max-width: 760px) 46vw, 340px" width="${im.w}" height="${im.h}" alt="" loading="lazy" decoding="async" data-depth="0.2">
+  ${nug('nug-1', 'kinetic__bud--main', '(max-width: 760px) 48vw, 360px')}
+  ${nug('nug-3', 'kinetic__bud--tl', '(max-width: 760px) 30vw, 250px')}
+  ${nug('nug-2', 'kinetic__bud--tl2', '(max-width: 760px) 16vw, 120px')}
+  ${nug('nug-4', 'kinetic__bud--tr', '(max-width: 760px) 32vw, 270px')}
+  ${nug('nug-5', 'kinetic__bud--tr2', '(max-width: 760px) 17vw, 135px')}
 </div>`;
 }
 
@@ -231,7 +245,7 @@ export function deal(from, { img, kick, price, per = '', name, detail = '', size
   const m = String(price).match(/^\$(.+)$/);
   const p = m ? `<span class="deal__cur">$</span>${esc(m[1])}` : esc(price);
   return `<article class="deal deal--${size}" data-reveal style="--i:${i}">
-  <div class="deal__media"><img src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} 1x, ${A(from, '/assets/img/' + f2.file)} 2x" width="${f1.w}" height="${f1.h}" alt="${esc(r.alt)}"${r.kind === 'owner' ? '' : ' data-ai="generated"'} loading="lazy" decoding="async"></div>
+  <div class="deal__media"><img src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} 1x, ${A(from, '/assets/img/' + f2.file)} 2x" width="${f1.w}" height="${f1.h}" alt="${esc(r.alt)}"${r.dataAi ? ` data-ai="${r.dataAi}"` : ''} loading="lazy" decoding="async"></div>
   <div class="deal__body">
     ${kick ? `<p class="deal__kicker">${esc(kick)}</p>` : ''}
     <p class="deal__price">${p}${per ? `<span class="deal__per">${esc(per)}</span>` : ''}</p>
@@ -240,8 +254,66 @@ export function deal(from, { img, kick, price, per = '', name, detail = '', size
   </div>
 </article>`;
 }
+/** The home Owner's Box stage (owner, 2026-11-09: "add this box because I want to create an animation
+ *  where the box opens and the cards will come out of it and lay across on the right side in a single
+ *  row as if they are floating. smoke effect should be mystical green"). The owner's road case (closed,
+ *  and opened by AI) and green smoke are decoration (aria-hidden); the strains, on holographic cards
+ *  with a bud illustration each, carry the content. site.js runs the opening once it is in view.
+ *  Then (owner, 2026-11-09: "more sleek and compact"; "on mobile, I want the box to be placed under the
+ *  cards"): the stage holds the words and the button too, in reading order (words, cards, case, foot);
+ *  the CSS grid stands the case at the left of the words and cards on wide screens, under the cards on
+ *  narrow ones. The cards are compact, each bud standing out of its card's top. */
+export function ownboxStage(from, strains, { head = '', foot = '' } = {}) {
+  const o = ownboxAssets || {};
+  const srcset = (it) => it.files.map((f) => `${A(from, '/assets/img/' + f.file)} ${f.w}w`).join(', ');
+  const deco = (it, cls, sizes, extra = '') => {
+    if (!it || !it.files?.length) throw new Error('Owner\'s Box image missing from ownbox-assets.json: ' + cls);
+    const f = it.files[it.files.length - 1];
+    return `<img class="${cls}" src="${A(from, '/assets/img/' + it.files[0].file)}" srcset="${srcset(it)}" sizes="${sizes}" width="${f.w}" height="${f.h}" alt="" loading="lazy" decoding="async"${extra}>`;
+  };
+  const buds = ['bud-a', 'bud-b', 'bud-c'];
+  const cards = strains.map((x, i) => {
+    const r = dealRenders?.items?.[buds[i % buds.length]];
+    if (!r) throw new Error('bud illustration missing from deal-renders.json: ' + buds[i % buds.length]);
+    const [f1, f2] = r.files;
+    return `<li class="holo-slot" style="--i:${i}">
+    <div class="holo" data-tilt>
+      <img class="holo__bud" src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} 1x, ${A(from, '/assets/img/' + f2.file)} 2x" width="${f1.w}" height="${f1.h}" alt="${esc(r.alt)}" data-ai="generated" loading="lazy" decoding="async">
+      <div class="holo__in">
+        <p class="holo__top">Deli-style flower</p>
+        <h3 class="holo__name">${esc(x.name)}</h3>
+        <p class="holo__meta"><span class="chip">${esc(x.type)}</span>${x.thc ? `<span class="chip">THC ${esc(x.thc)}</span>` : ''}</p>
+        <p class="holo__notes">${esc(x.notes)}</p>
+        <p class="holo__price">${x.eighth ? `<b>${esc(x.eighth)}</b><span>an eighth</span>` : ''}${x.perGram ? `<span class="holo__gram">${esc(x.perGram)} a gram</span>` : ''}</p>
+      </div>
+    </div>
+  </li>`;
+  }).join('\n');
+  return `<div class="ownbox" data-ownbox>
+  ${head}
+  <div class="ownbox__reveal"><ul class="ownbox__cards" role="list">${cards}</ul></div>
+  <div class="ownbox__case" aria-hidden="true">
+    <span class="ownbox__shadow"></span>
+    <span class="ownbox__glow"></span>
+    ${deco(o.smokeA, 'ownbox__smoke ownbox__smoke--a', '(max-width: 1099px) 46vw, 280px', ' data-ai="generated"')}
+    ${deco(o.smokeB, 'ownbox__smoke ownbox__smoke--b', '(max-width: 1099px) 40vw, 240px', ' data-ai="generated"')}
+    ${deco(o.caseClosed, 'ownbox__shut', '(max-width: 1099px) min(280px, 64vw), 320px')}
+    ${deco(o.caseOpen, 'ownbox__open', '(max-width: 1099px) min(280px, 64vw), 320px', ' data-ai="edited"')}
+  </div>
+  ${foot}
+</div>`;
+}
+/** The Owner's Box band's background: the owner's street photo in black and white (the fades are CSS). */
+export function ownboxBackdrop(from) {
+  const it = ownboxAssets?.street;
+  if (!it || !it.files?.length) return '';
+  const f = it.files[Math.min(1, it.files.length - 1)];
+  return `<div class="ownbox__bg" aria-hidden="true"><img src="${A(from, '/assets/img/' + f.file)}" srcset="${it.files.map((x) => `${A(from, '/assets/img/' + x.file)} ${x.w}w`).join(', ')}" sizes="100vw" width="${f.w}" height="${f.h}" alt="" loading="lazy" decoding="async"></div>`;
+}
+
 /** The bento: four cards (a feature, two small, one wide) or three (a feature, two wide). */
-export const dealGrid = (cards) => `<div class="deals deals--${cards.length}">${cards.join('\n')}</div>`;
+export const dealGrid = (cards) => `<div class="deals deals--${cards.length} swipe">${cards.join('\n')}</div>
+<p class="swipe-hint">${icon.swipe}<span>Swipe for more</span></p>`;   // a carousel on phones (cinema.css)
 
 /** Accessible tabs. panels: [{id, label, html}] */
 export function tabs(id, panels, { label = 'Categories' } = {}) {

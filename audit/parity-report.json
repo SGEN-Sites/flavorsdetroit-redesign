@@ -1,6 +1,6 @@
 {
   "schema": "site-reforge/parity-report@1",
-  "generated": "2026-11-09T08:41:35.936Z",
+  "generated": "2026-11-09T10:13:52.498Z",
   "sourcePages": 142,
   "rebuiltFiles": 137,
   "mappedPages": 142,
@@ -32,7 +32,7 @@
       "missingWords": 49,
       "longestMissingRun": 4,
       "sourceWords": 290,
-      "rebuiltWords": 1253,
+      "rebuiltWords": 1265,
       "sourceH1": [
         "(313) 733-4464",
         "OUR FLAVORS",
@@ -78,7 +78,7 @@
         {
           "severity": "minor",
           "code": "alt-missing",
-          "title": "8 image(s) without alt",
+          "title": "16 image(s) without alt",
           "detail": "index.html"
         }
       ]

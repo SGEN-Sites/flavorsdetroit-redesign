@@ -1,0 +1,40 @@
+{
+ "note": "Home Owner's Box band (owner, 2026-11-09): the background street photo, the road case that opens, green smoke. The owner's own images (street photo, road case) stay private in assets/source/owner-products/; no link to them or to anything made from them is kept here (request ids only). The holographic cards' bud illustrations are in jobs-deals.json (bud-a, bud-b, bud-c).",
+ "items": {
+  "street": {
+   "source": "assets/source/owner-products/street-photo.png (supplied by the owner)",
+   "upscale": "fal-ai/topaz/upscale/image (High Fidelity V2, 4x, face enhancement off)",
+   "upscaleRequestId": "01a1bf7c-daf0-7c53-b68e-21564c49b9ae",
+   "then": "black and white, a gentle curve, darker (tools/ownbox-assets.py)"
+  },
+  "caseClosed": {
+   "source": "assets/source/owner-products/road-case.png (supplied by the owner)",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)",
+   "cutoutRequestId": "01a1bfa7-c4c0-7ba0-8e44-b58455a3fa63",
+   "earlierCutout": "fal-ai/birefnet/v2 01a1bf7c-ddaf-7da2-9ac8-176ad6fb9e0e (dropped the black panels; retired)"
+  },
+  "caseOpen": {
+   "model": "fal-ai/nano-banana-pro/edit (2K)",
+   "requestId": "01a1bf7c-dc56-7cf3-ad1c-d99ba382e0e2",
+   "cutoutRequestId": "01a1bfa7-c65e-7b20-9285-423252d78a3c",
+   "prompt": "Open the lid of this black aluminium-edged road case. The lid is hinged along the back top edge and swung up and back so it stands open at about 100 degrees, its inside facing the camera, lined with dark grey egg-crate foam. The case is empty, its interior dark. Keep everything else exactly as it is: the same camera angle and framing, the case body, the aluminium edges and ball corners, the latches, the side handles, the blue wheels and the white FLAVORS DETROIT cloud logo with its dots on the front panel, unchanged. Plain white background. No smoke, no light beams, no cards, no other objects.",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)",
+   "earlierCutout": "fal-ai/birefnet/v2 01a1bf7e-48c1-7e92-a756-2ca98e31758e (retired)"
+  },
+  "smokeA": {
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bf7c-e3bc-7c03-872d-8626804ca7d3",
+   "seed": 424242,
+   "url": "https://v3b.fal.media/files/b/0ab1c0d8/qSCVUhwZStl5HzJom9brr_a1b6836841994674a8589141a0a2602f.png",
+   "prompt": "Wisps of glowing, mystical emerald green smoke curling and rising upward in soft swirls from the bottom of the frame, luminous at the core, fading softly at the edges, against a pure black background, ethereal, cinematic, high detail. No objects, no text, no people."
+  },
+  "smokeB": {
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bf7c-e516-7931-854a-45b1f3863758",
+   "seed": 777,
+   "url": "https://v3b.fal.media/files/b/0ab1c0d8/pqhD6ndBtFEK_43zLTW8K_8e1d668d74f1471eb2f328114cff698d.png",
+   "prompt": "as smokeA"
+  }
+ },
+ "spend": "fal list prices: Topaz 4x about $0.09, one nano-banana-pro edit about $0.15, two flux-pro ultra smoke renders $0.12, three bud renders $0.18, four BiRefNet cut-outs (pennies): about $0.55"
+}

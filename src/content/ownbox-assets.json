@@ -1,0 +1,123 @@
+{
+ "street": {
+  "alt": "",
+  "files": [
+   {
+    "file": "ownbox/street-bw-1280.webp",
+    "w": 1280,
+    "h": 626,
+    "bytes": 46868
+   },
+   {
+    "file": "ownbox/street-bw-1920.webp",
+    "w": 1920,
+    "h": 939,
+    "bytes": 81740
+   },
+   {
+    "file": "ownbox/street-bw-2560.webp",
+    "w": 2560,
+    "h": 1252,
+    "bytes": 119470
+   },
+   {
+    "file": "ownbox/street-bw-3200.webp",
+    "w": 3200,
+    "h": 1565,
+    "bytes": 160004
+   }
+  ],
+  "source": "assets/source/owner-products/street-photo.png",
+  "note": "background; the fades into black are CSS"
+ },
+ "caseClosed": {
+  "alt": "",
+  "files": [
+   {
+    "file": "ownbox/case-closed-480.webp",
+    "w": 480,
+    "h": 455,
+    "bytes": 39284
+   },
+   {
+    "file": "ownbox/case-closed-720.webp",
+    "w": 720,
+    "h": 683,
+    "bytes": 70534
+   },
+   {
+    "file": "ownbox/case-closed-960.webp",
+    "w": 960,
+    "h": 910,
+    "bytes": 108608
+   }
+  ],
+  "source": "assets/source/owner-products/road-case.png"
+ },
+ "caseOpen": {
+  "alt": "",
+  "files": [
+   {
+    "file": "ownbox/case-open-480.webp",
+    "w": 480,
+    "h": 455,
+    "bytes": 44886
+   },
+   {
+    "file": "ownbox/case-open-720.webp",
+    "w": 720,
+    "h": 683,
+    "bytes": 78416
+   },
+   {
+    "file": "ownbox/case-open-960.webp",
+    "w": 960,
+    "h": 910,
+    "bytes": 118424
+   }
+  ],
+  "source": "fal-ai/nano-banana-pro/edit of the owner's road case"
+ },
+ "case": {
+  "aspect": 1.0548,
+  "scaleOpen": 0.6028,
+  "opening": {
+   "x": 0.503,
+   "y": 0.36
+  }
+ },
+ "smokeA": {
+  "alt": "",
+  "files": [
+   {
+    "file": "ownbox/smoke-a-400.webp",
+    "w": 400,
+    "h": 600,
+    "bytes": 46546
+   },
+   {
+    "file": "ownbox/smoke-a-800.webp",
+    "w": 800,
+    "h": 1200,
+    "bytes": 125382
+   }
+  ]
+ },
+ "smokeB": {
+  "alt": "",
+  "files": [
+   {
+    "file": "ownbox/smoke-b-400.webp",
+    "w": 400,
+    "h": 600,
+    "bytes": 67008
+   },
+   {
+    "file": "ownbox/smoke-b-800.webp",
+    "w": 800,
+    "h": 1200,
+    "bytes": 188404
+   }
+  ]
+ }
+}

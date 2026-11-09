@@ -1,7 +1,7 @@
 {
   "schema": "site-reforge/change-control@1",
   "generated": "2026-11-08T23:54:54.808Z",
-  "updated": "2026-11-09T08:02:37.032Z",
+  "updated": "2026-11-09T09:48:29.076Z",
   "legend": {
     "PRESERVE": "kept as-is; content and function unchanged",
     "IMPROVE": "same content and meaning, better structure/hierarchy/design",
@@ -19694,7 +19694,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "The Owner's Box teaser: the live menu's Owners Box collection with the client's own tasting notes.",
+      "why": "The Owner's Box teaser: the live menu's Owners Box collection with the client's own tasting notes, on holographic cards that fly out of the owner's road case as it opens (owner, 2026-11-09).",
       "narrativeSlot": "trust-positioning",
       "rebuiltAs": "Home Owner's Box band",
       "decidedBy": "tools/plan-decisions.mjs"

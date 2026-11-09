@@ -85,7 +85,7 @@
 
   /* ---- type ---------------------------------------------------------------- */
   --font-display: "Outfit", "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif;   /* titles and larger text (owner's choice 2026-11-09) */
-  --font-outline: "Outfit Outline", "Outfit", "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif;   /* outlined words: static, merged letters (400 and 800 only) */
+  --font-outline: "Outfit Outline", "Outfit", "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif;   /* outlined words: static, merged letters (800 and 900 only) */
   --font-neon: "Tilt Neon", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 

@@ -46,6 +46,16 @@ ALT = {
     'budders': 'Illustration: five small glass jars with black lids, filled with golden budder',
     'ounce': 'Illustration: a plain black stand-up pouch with a heap of green cannabis buds in front of it',
     'shake': 'Illustration: a glass jar with a black lid, filled with small pieces of cannabis flower',
+    # the Owner's Box holographic cards: a premium bud each, never a particular strain
+    'bud-a': 'Illustration: a large cannabis bud with green leaves and orange hairs',
+    'bud-b': 'Illustration: a large cannabis bud with dark purple and green leaves',
+    'bud-c': 'Illustration: a large cannabis bud with green and burgundy tones and orange hairs',
+    # the kinetic band's loose buds (owner, 2026-11-09: "more realistic and high definition ... placed naturally")
+    'nug-1': 'Illustration: a large, frosty cannabis bud, green with orange hairs',
+    'nug-2': 'Illustration: a small round cannabis bud, purple and green',
+    'nug-3': 'Illustration: an elongated cannabis bud with a short stem',
+    'nug-4': 'Illustration: a chunky, pale green, frosty cannabis bud',
+    'nug-5': 'Illustration: a dark green cannabis bud with burgundy accents',
 }
 # which objects get their glass walls rebuilt: the largest object, every object over 10% of the
 # product's area ('each'), or none (piles of buds, pre-rolls, pens: no straight walls to rebuild)
@@ -225,7 +235,17 @@ OWNER_ALT = {
     'preroll-flat': 'A pre-roll with a kraft paper tip, at a slant',
     'crumble': 'A piece of golden, crumbly cannabis concentrate',
     'budder-dish': 'Golden budder swirled in a small clear glass dish, seen from above',
+    'waxbucket': 'A clear jar of golden wax with a black lid and a black Flavors Detroit label',
+    'budder-1g': 'An open jar of golden budder seen from above, its black lid beside it',
 }
+# On a coloured card the glass must show that card's colour (owner, 2026-11-09: "this glass from the deal
+# card still looks broken ... reflect the blue background, and NOT WHITE"). Guessing the glass back out of
+# a grey-backdrop photo (glass_key) left patches; these are instead re-shot on the card's own colour (fal
+# FLUX Kontext recoloured only the backdrop, so the glass shows that blue the way a photo would), upscaled
+# with Topaz and cut out with Bria RMBG 2.0 whole, and are used as they come: no keying, no wall repair
+OVERRIDE = {'eighths': ('deal-eighths-blue-up.png', 'deal-eighths-blue-cut.png'),
+            'budder-dish': ('owner-budder-dish-blue-up.png', 'owner-budder-dish-blue-cut.png')}
+CLEAN = {'eighths', 'budder-dish', 'waxbucket', 'budder-1g'}
 ROTATE = {'preroll-flat': -58}      # degrees counter-clockwise: the flat pre-roll stands at a slant, leaning left
 GLASS = {'eighths', 'premium', 'topshelf', 'budder', 'wax', 'crumbles', 'budders', 'shake', 'budder-dish'}
 
@@ -242,6 +262,7 @@ def main():
     for did, job in (jobs.get('owner') or {}).get('items', {}).items():
         up = os.path.join(RAW, f'owner-{did}-up.png')
         entries.append((did, 'owner', up if os.path.exists(up) else os.path.join(ROOT, job['source']), os.path.join(RAW, f'owner-{did}-cut.png'), job))
+    entries = [(d, k, *(os.path.join(RAW, f) for f in OVERRIDE[d]), j) if d in OVERRIDE else (d, k, p_, c_, j) for d, k, p_, c_, j in entries]
     for did, kind, photo_path, cut_path, job in entries:
         photo = np.asarray(Image.open(photo_path).convert('RGB'))
         rgba = np.asarray(Image.open(cut_path).convert('RGBA')).copy()
@@ -258,11 +279,13 @@ def main():
         outside = (1 - solid).copy()
         cv2.floodFill(outside, np.zeros((H + 2, W + 2), np.uint8), (0, 0), 2)
         holes = cv2.morphologyEx((outside == 1).astype(np.uint8), cv2.MORPH_DILATE, np.ones((3, 3), np.uint8)).astype(bool) & (rgba[..., 3] < 250)
+        if did.startswith(('bud-', 'nug-')):
+            holes[:] = False                             # a loose bud: its gaps are real gaps between leaves
         rgba[holes, :3] = photo[holes]
         rgba[holes, 3] = np.maximum(rgba[holes, 3], glass_alpha[holes])
         # rebuilt walls, per object
         restored = 0
-        mode = REPAIR.get(did)
+        mode = None if did in CLEAN else REPAIR.get(did)
         if mode:
             solid = (rgba[..., 3] > 127).astype(np.uint8)
             n, lbl, stats, _ = cv2.connectedComponentsWithStats(solid)
@@ -271,10 +294,10 @@ def main():
             for k in picks:
                 restored += repair_edges(rgba, photo, lbl == k)
         bg = np.median(ring, axis=0).astype(np.uint8)
-        dish = dish_outline(rgba, photo) if did == 'budder-dish' else None
+        dish = dish_outline(rgba, photo) if did == 'budder-dish' and did not in CLEAN else None
         trimmed = trim_backdrop(rgba, photo, bg) if did.startswith('preroll-') else 0
         keyed = (glass_key(rgba, photo, bg, core_mode='largest', d0=18, d1=46) if did == 'budder-dish'
-                 else glass_key(rgba, photo, bg)) if did in GLASS else 0
+                 else glass_key(rgba, photo, bg)) if did in GLASS and did not in CLEAN else 0
         img = Image.fromarray(rgba)
         if did in ROTATE:
             img = img.rotate(ROTATE[did], resample=Image.BICUBIC, expand=True)
@@ -286,19 +309,19 @@ def main():
         cw, chh = crop.size
         if kind == 'ai':
             alt, st = ALT[did], 'trainedAlgorithmicMedia'
-            desc = alt.replace('Illustration: ', 'AI illustration (' + jobs['model'] + ', background removed with fal BiRefNet v2): ')
+            desc = alt.replace('Illustration: ', 'AI illustration (' + jobs['model'] + (', backdrop recoloured with FLUX Kontext, cut out with Bria RMBG 2.0' if did in OVERRIDE else ', background removed with fal BiRefNet v2') + '): ')
         else:
-            alt, st = OWNER_ALT[did], 'algorithmicallyEnhanced'
-            desc = ('Product photo supplied by the owner (2026-11-09): ' + alt + '. Background removed with fal BiRefNet v2'
-                    + ('; upscaled 2x with Topaz High Fidelity V2' if job.get('upscaleRequestId') else '')
-                    + ('; clear glass made see-through' if did in GLASS else '') + '.')
+            alt = OWNER_ALT[did]
+            st = 'compositeWithTrainedAlgorithmicMedia' if job.get('edited') else 'algorithmicallyEnhanced'
+            desc = ('Product photo supplied by the owner (2026-11-09): ' + alt + '. ' + (job.get('editNote') or 'Background removed with fal BiRefNet v2'
+                    + ('; upscaled 2x with Topaz High Fidelity V2' if job.get('upscaleRequestId') else '')) + '.')
         files = []
         for hh in HEIGHTS:
             ww = round(cw * hh / chh)
             fn = f'deal/{did}-{hh}.webp'
             crop.resize((ww, hh), Image.LANCZOS).save(os.path.join(ROOT, 'src', 'assets', 'img', fn), 'WEBP', quality=86, method=6, xmp=xmp(desc, st))
             files.append({'file': fn, 'w': ww, 'h': hh, 'bytes': os.path.getsize(os.path.join(ROOT, 'src', 'assets', 'img', fn))})
-        items[did] = {'kind': kind, 'alt': alt, 'digitalSourceType': st, 'aspect': round(cw / chh, 4), 'files': files, 'holesFilled': int(holes.sum()),
+        items[did] = {'kind': kind, 'alt': alt, 'digitalSourceType': st, 'dataAi': 'generated' if kind == 'ai' else ('edited' if job.get('edited') else ''), 'aspect': round(cw / chh, 4), 'files': files, 'holesFilled': int(holes.sum()),
                       'wallPixelsRestored': restored, 'glassPixelsKeyed': keyed, 'rotated': ROTATE.get(did, 0), 'floorPixelsTrimmed': trimmed, 'dish': dish,
                       'requestId': job.get('requestId'), 'cutoutRequestId': job.get('cutoutRequestId'), 'upscaleRequestId': job.get('upscaleRequestId'),
                       'source': (jobs['model'] if kind == 'ai' else job['source']), 'cutout': 'fal-ai/birefnet/v2 (General Use (Heavy), 2048)'}

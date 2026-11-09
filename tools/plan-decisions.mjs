@@ -49,7 +49,7 @@ const ADD = [
   ['new:/#hero', 'Home hero: the store itself at golden hour (the owner\'s storefront photo relit with AI, labelled as edited; the drawn, lit sign plays in the splash); H1 "A traditional dispensary with a modern twist" (client words); Order now.', 'value-proposition', 'Home hero'],
   ['new:/#marquee', 'Marquee letter board of the client\'s own deal phrases and hours, then the rainbow awning.', 'value-proposition', 'Home ticker + awning'],
   ['new:/#deals', 'Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/; on a black band, each category a bento of deal cards with an AI illustration of each product type (owner, 2026-11-09).', 'benefits-solution', 'Home deals band'],
-  ['new:/#owners-box', 'The Owner\'s Box teaser: the live menu\'s Owners Box collection with the client\'s own tasting notes.', 'trust-positioning', 'Home Owner\'s Box band'],
+  ['new:/#owners-box', 'The Owner\'s Box teaser: the live menu\'s Owners Box collection with the client\'s own tasting notes, on holographic cards that fly out of the owner\'s road case as it opens (owner, 2026-11-09).', 'trust-positioning', 'Home Owner\'s Box band'],
   ['new:/#news', 'Latest three Flavors news posts.', '', 'Home news band'],
   ['new:/daily-deals/', 'Deals page restored at the live URL /daily-deals/ (it answered 404 on 2026-11-08; the live nav still says "Daily Deals & More").', 'benefits-solution', '/daily-deals/'],
   ['new:/shop/', 'Shop page: the live menu hand-off (the portal refuses to be framed; its category paths answer "Page not found"), every shelf, how ordering works, house lines.', 'strategic-cta', '/shop/'],

@@ -5,24 +5,25 @@
    "kind": "ai",
    "alt": "Illustration: a small glass jar with a black lid, filled with green cannabis buds, two loose buds beside it",
    "digitalSourceType": "trainedAlgorithmicMedia",
-   "aspect": 1.0,
+   "dataAi": "generated",
+   "aspect": 1.0058,
    "files": [
     {
      "file": "deal/eighths-360.webp",
-     "w": 360,
+     "w": 362,
      "h": 360,
-     "bytes": 52992
+     "bytes": 40790
     },
     {
      "file": "deal/eighths-720.webp",
-     "w": 720,
+     "w": 724,
      "h": 720,
-     "bytes": 181218
+     "bytes": 139352
     }
    ],
-   "holesFilled": 690,
-   "wallPixelsRestored": 34915,
-   "glassPixelsKeyed": 94577,
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
    "rotated": 0,
    "floorPixelsTrimmed": 0,
    "dish": null,
@@ -36,6 +37,7 @@
    "kind": "ai",
    "alt": "Illustration: a white dish heaped with loose green cannabis buds",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 1.3566,
    "files": [
     {
@@ -67,6 +69,7 @@
    "kind": "ai",
    "alt": "Illustration: two small glass jars with black lids, filled with green cannabis buds",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 1.1561,
    "files": [
     {
@@ -98,6 +101,7 @@
    "kind": "ai",
    "alt": "Illustration: a small glass jar with a black lid, filled with frosty cannabis buds",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.6485,
    "files": [
     {
@@ -129,6 +133,7 @@
    "kind": "ai",
    "alt": "Illustration: a single white pre-roll",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.1141,
    "files": [
     {
@@ -160,6 +165,7 @@
    "kind": "ai",
    "alt": "Illustration: seven white pre-rolls standing together",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.9121,
    "files": [
     {
@@ -191,6 +197,7 @@
    "kind": "ai",
    "alt": "Illustration: a vape cartridge, golden oil in a clear tank under a black mouthpiece",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.1875,
    "files": [
     {
@@ -222,6 +229,7 @@
    "kind": "ai",
    "alt": "Illustration: a slim black disposable vape pen",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.131,
    "files": [
     {
@@ -253,6 +261,7 @@
    "kind": "ai",
    "alt": "Illustration: a wide glass jar with a black lid, filled with golden whipped budder",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.6985,
    "files": [
     {
@@ -284,6 +293,7 @@
    "kind": "ai",
    "alt": "Illustration: a wide glass jar with a white lid, filled with amber crumbly wax",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.7885,
    "files": [
     {
@@ -315,6 +325,7 @@
    "kind": "ai",
    "alt": "Illustration: three small glass jars with black lids, filled with golden crumble",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 1.9474,
    "files": [
     {
@@ -346,6 +357,7 @@
    "kind": "ai",
    "alt": "Illustration: five small glass jars with black lids, filled with golden budder",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 2.5642,
    "files": [
     {
@@ -377,6 +389,7 @@
    "kind": "ai",
    "alt": "Illustration: a plain black stand-up pouch with a heap of green cannabis buds in front of it",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 1.1107,
    "files": [
     {
@@ -408,6 +421,7 @@
    "kind": "ai",
    "alt": "Illustration: a glass jar with a black lid, filled with small pieces of cannabis flower",
    "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
    "aspect": 0.6079,
    "files": [
     {
@@ -435,10 +449,267 @@
    "source": "fal-ai/flux-pro/v1.1-ultra",
    "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
   },
+  "bud-a": {
+   "kind": "ai",
+   "alt": "Illustration: a large cannabis bud with green leaves and orange hairs",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.5803,
+   "files": [
+    {
+     "file": "deal/bud-a-360.webp",
+     "w": 209,
+     "h": 360,
+     "bytes": 37316
+    },
+    {
+     "file": "deal/bud-a-720.webp",
+     "w": 418,
+     "h": 720,
+     "bytes": 131732
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf7c-df1f-7b22-a3c3-cc1ec2c09922",
+   "cutoutRequestId": "01a1bf7e-4a34-7192-92da-8711eb5eb2b6",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "bud-b": {
+   "kind": "ai",
+   "alt": "Illustration: a large cannabis bud with dark purple and green leaves",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.5613,
+   "files": [
+    {
+     "file": "deal/bud-b-360.webp",
+     "w": 202,
+     "h": 360,
+     "bytes": 36266
+    },
+    {
+     "file": "deal/bud-b-720.webp",
+     "w": 404,
+     "h": 720,
+     "bytes": 126766
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf7c-e07e-7b03-ab89-0072f41e52d8",
+   "cutoutRequestId": "01a1bf7e-4b97-75b1-b9b8-f39830960bdf",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "bud-c": {
+   "kind": "ai",
+   "alt": "Illustration: a large cannabis bud with green and burgundy tones and orange hairs",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.5694,
+   "files": [
+    {
+     "file": "deal/bud-c-360.webp",
+     "w": 205,
+     "h": 360,
+     "bytes": 39548
+    },
+    {
+     "file": "deal/bud-c-720.webp",
+     "w": 410,
+     "h": 720,
+     "bytes": 134140
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf7c-e1cf-7ed0-b3d6-db6a51d33fa7",
+   "cutoutRequestId": "01a1bf7e-4d07-7f03-80eb-236bfd509ee9",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "nug-1": {
+   "kind": "ai",
+   "alt": "Illustration: a large, frosty cannabis bud, green with orange hairs",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.6514,
+   "files": [
+    {
+     "file": "deal/nug-1-360.webp",
+     "w": 594,
+     "h": 360,
+     "bytes": 93966
+    },
+    {
+     "file": "deal/nug-1-720.webp",
+     "w": 1189,
+     "h": 720,
+     "bytes": 318914
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf98-dcdc-7b71-ac81-0a0320453c86",
+   "cutoutRequestId": "01a1bf9b-fab5-70d1-81fc-89addbc28415",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "nug-2": {
+   "kind": "ai",
+   "alt": "Illustration: a small round cannabis bud, purple and green",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.6058,
+   "files": [
+    {
+     "file": "deal/nug-2-360.webp",
+     "w": 578,
+     "h": 360,
+     "bytes": 82696
+    },
+    {
+     "file": "deal/nug-2-720.webp",
+     "w": 1156,
+     "h": 720,
+     "bytes": 230846
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf98-de37-7390-85d0-9bea6ccdd2db",
+   "cutoutRequestId": "01a1bf9b-fc46-7803-88e4-29096d9a62be",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "nug-3": {
+   "kind": "ai",
+   "alt": "Illustration: an elongated cannabis bud with a short stem",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.6728,
+   "files": [
+    {
+     "file": "deal/nug-3-360.webp",
+     "w": 602,
+     "h": 360,
+     "bytes": 93806
+    },
+    {
+     "file": "deal/nug-3-720.webp",
+     "w": 1204,
+     "h": 720,
+     "bytes": 261274
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf98-df89-7d70-ab9d-ee32a69feda5",
+   "cutoutRequestId": "01a1bf9b-fdb1-73d3-902f-e0cb643b5315",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "nug-4": {
+   "kind": "ai",
+   "alt": "Illustration: a chunky, pale green, frosty cannabis bud",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.4209,
+   "files": [
+    {
+     "file": "deal/nug-4-360.webp",
+     "w": 512,
+     "h": 360,
+     "bytes": 77856
+    },
+    {
+     "file": "deal/nug-4-720.webp",
+     "w": 1023,
+     "h": 720,
+     "bytes": 251660
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf98-e0d8-7971-8898-f0bf4905ab1b",
+   "cutoutRequestId": "01a1bf9b-ff56-77f3-882a-fa90803d29d7",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "nug-5": {
+   "kind": "ai",
+   "alt": "Illustration: a dark green cannabis bud with burgundy accents",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.5032,
+   "files": [
+    {
+     "file": "deal/nug-5-360.webp",
+     "w": 541,
+     "h": 360,
+     "bytes": 84098
+    },
+    {
+     "file": "deal/nug-5-720.webp",
+     "w": 1082,
+     "h": 720,
+     "bytes": 240566
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf98-e22f-7663-a513-9db422a0ddf4",
+   "cutoutRequestId": "01a1bf9c-00de-7bc0-ba8a-956dc811caff",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
   "preroll-stand": {
    "kind": "owner",
    "alt": "A pre-roll with a kraft paper tip, standing at a slant",
    "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
    "aspect": 0.347,
    "files": [
     {
@@ -470,6 +741,7 @@
    "kind": "owner",
    "alt": "A pre-roll with a kraft paper tip, at a slant",
    "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
    "aspect": 0.6702,
    "files": [
     {
@@ -501,6 +773,7 @@
    "kind": "owner",
    "alt": "A piece of golden, crumbly cannabis concentrate",
    "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
    "aspect": 1.1032,
    "files": [
     {
@@ -531,37 +804,97 @@
   "budder-dish": {
    "kind": "owner",
    "alt": "Golden budder swirled in a small clear glass dish, seen from above",
-   "digitalSourceType": "algorithmicallyEnhanced",
-   "aspect": 1.0,
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "dataAi": "edited",
+   "aspect": 1.0098,
    "files": [
     {
      "file": "deal/budder-dish-360.webp",
-     "w": 360,
+     "w": 364,
      "h": 360,
-     "bytes": 57656
+     "bytes": 34292
     },
     {
      "file": "deal/budder-dish-720.webp",
-     "w": 720,
+     "w": 727,
      "h": 720,
-     "bytes": 183934
+     "bytes": 103608
     }
    ],
-   "holesFilled": 70,
+   "holesFilled": 144368,
    "wallPixelsRestored": 0,
-   "glassPixelsKeyed": 835202,
+   "glassPixelsKeyed": 0,
    "rotated": 0,
    "floorPixelsTrimmed": 0,
-   "dish": {
-    "cx": 1190,
-    "cy": 862,
-    "rimR": 635,
-    "outerR": 650
-   },
+   "dish": null,
    "requestId": null,
    "cutoutRequestId": "01a1bf5e-c734-7800-967a-023bb7e3982a",
    "upscaleRequestId": "01a1bf5d-526c-77d2-b8b6-29cf601dbcc1",
    "source": "assets/source/owner-products/budder-dish.png",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "waxbucket": {
+   "kind": "owner",
+   "alt": "A clear jar of golden wax with a black lid and a black Flavors Detroit label",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "dataAi": "edited",
+   "aspect": 0.8175,
+   "files": [
+    {
+     "file": "deal/waxbucket-360.webp",
+     "w": 294,
+     "h": 360,
+     "bytes": 14718
+    },
+    {
+     "file": "deal/waxbucket-720.webp",
+     "w": 589,
+     "h": 720,
+     "bytes": 30036
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1bfae-4de6-7103-86aa-619c7045daab",
+   "upscaleRequestId": null,
+   "source": "assets/source/owner-products/wax-bucket-ref.png (a product photo the owner supplied: \"this is how a wax bucket looks like ... replace branding with Flavors\")",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "budder-1g": {
+   "kind": "owner",
+   "alt": "An open jar of golden budder seen from above, its black lid beside it",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
+   "aspect": 0.6561,
+   "files": [
+    {
+     "file": "deal/budder-1g-360.webp",
+     "w": 236,
+     "h": 360,
+     "bytes": 27806
+    },
+    {
+     "file": "deal/budder-1g-720.webp",
+     "w": 472,
+     "h": 720,
+     "bytes": 83310
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1bfbe-a19f-76a1-a008-317531e431c0",
+   "upscaleRequestId": null,
+   "source": "assets/source/owner-products/budder-1g-ref.png",
    "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
   }
  }

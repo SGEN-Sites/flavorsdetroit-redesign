@@ -18,7 +18,7 @@ the car dashboard it was taken through removed, the counter shot its customers a
 AI fill, labelled as edited). Titles and larger text are Outfit, text is Work Sans (the owner's
 choice); outlined words use Outfit's own static builds so their outlines have no seams. A cinematic layer sits on top: scene stills behind the inner page heroes and
 several bands (AI illustrations, labelled as such, never the store), crossing tapes, category cards on a pinned
-rail, the day's deals as a bento with product illustrations on black, the Owner's Box in a chasing bulb frame, a kinetic type band,
+rail, the day's deals as a bento with product images on black, the Owner's Box (a road case opening in green smoke, holographic strain cards flying out), a kinetic type band with HD buds,
 a scroll-lit statement and a lit finale, all on one scroll-aware animation loop with a Pause motion
 button; each visit opens with the "Sign ignition" splash. The owner's design choices (fonts,
 splash) were made from the option pages in `design-options/`. See `BRAND-SYSTEM.md`.
@@ -61,6 +61,9 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
 | `python3 -I tools/process-gen.py` | derive the scene stills' WebP sizes from the AI renders, with IPTC "AI-generated" XMP |
 | `python3 -I tools/category-renders.py` | the category cards' product renders: measures each card's colour (the render's backdrop) and its ink contrast, takes the BiRefNet cut-out, fills gaps inside the glass, rebuilds jar walls the cut-out bit away, writes WebP sizes with IPTC "AI-generated" XMP |
 | `node tools/deal-download.mjs [--cutouts]` + `python3 -I tools/deal-renders.py` | the home deals bento's product images (AI illustrations and the owner's own photos; provenance `assets/generated/jobs-deals.json`): download renders and cut-outs, fill gaps in the glass, rebuild bitten walls object by object, make clear glass see-through (the dish found as a circle, its shadow a darkening), WebP sizes with IPTC XMP |
+| `python3 -I tools/ownbox-assets.py` | the home Owner's Box band's images: the owner's street photo (B&W), the road case closed and open on one canvas, the green smoke made transparent (provenance `assets/generated/jobs-ownbox.json`) |
+| `python3 -I tools/wax-label.py` | the wax bucket card's jar: the client's own logo set on the label of the owner's (AI-cleared) jar photo, as print on a cylinder |
+| `node tools/fetch-list.mjs <list.json>` | download a list of generated files (fal links are temporary) to paths inside the project |
 | `python3 -I tools/store-photos.py masks\|composite\|touchup\|finish` | the owner's store photos: fill masks, composite (the photo kept outside each mask), grade, crops and WebP sizes with IPTC XMP (originals private) |
 | `node tools/scene-contrast.mjs` | WCAG contrast for text over scene stills, measured on the rendered pixels |
 | `node tools/motion-check.mjs` | the motion layer with motion ON: rail, scroll-speed marquees, progress, back-to-top, finale, Pause motion, overflow, console |

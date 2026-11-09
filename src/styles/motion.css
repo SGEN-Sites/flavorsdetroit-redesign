@@ -30,7 +30,7 @@
   .tape { display: none; }
   /* the alive layer: the kinetic band is pure movement, so it steps aside too; light effects off */
   .kinetic, .curtain, .beam, .orbit, .spot, .to-top, .splash { display: none !important; }
-  .js .pool, .js .sparks i, .js .kinetic__bud, .js .scene--cutout img { animation: none !important; }
+  .js .pool, .js .pool::before, .js .sparks i, .js .kinetic__bud, .js .scene--cutout img { animation: none !important; }
   .sparks { display: none; }
   .hero__light { display: none; }
   .js .hero__frame, .js .hero__sun, .js.igniting .hero__sun { animation: none !important; }

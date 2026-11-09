@@ -31,10 +31,13 @@ const RETIRED = ['jockey-one.woff2', 'barlow-400.woff2', 'barlow-400-italic.woff
 // 2026-11-09: F3 a3 r2 t2); the designer's static builds have every letter merged (F1 a2 r1 t1).
 // Pinned to the repo's commit; subset to the same Latin range as outfit.woff2 with fontTools.
 const OUTLINE_REPO = 'https://raw.githubusercontent.com/Outfitio/Outfit-Fonts/902773808eb372f70fb34e8946dd1ffe604efc79/';
+// (the kinetic band's words went from 400 to Black 900 at the owner's request, 2026-11-09: "can we
+// make them in bold or black if that thickness is available?")
 const OUTLINE = [
-  { file: 'outfit-outline-400.woff2', weight: 400, src: OUTLINE_REPO + 'fonts/webfonts/Outfit-Regular.woff2' },
   { file: 'outfit-outline-800.woff2', weight: 800, src: OUTLINE_REPO + 'fonts/webfonts/Outfit-ExtraBold.woff2' },
+  { file: 'outfit-outline-900.woff2', weight: 900, src: OUTLINE_REPO + 'fonts/webfonts/Outfit-Black.woff2' },
 ];
+RETIRED.push('outfit-outline-400.woff2');
 
 const record = { fetched: new Date().toISOString(), licence: 'SIL Open Font License 1.1 (all families)', fonts: [] };
 for (const f of FAMILIES) {
