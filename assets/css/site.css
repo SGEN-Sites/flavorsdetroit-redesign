@@ -1316,6 +1316,12 @@ filter: drop-shadow(0 0 3px var(--bulb-glow)) drop-shadow(0 0 9px color-mix(in s
 .site-footer::before { height: 44px; background-size: 24px 44px; }   
 @media (max-width: 760px) { .loop__strip { box-shadow: 0 12px 22px -14px rgb(0 0 0 / .45); } }
 .deal__media img[src*="eighth-pouch"] { scale: .78; transform-origin: 50% 100%; }   
+@media (min-width: 861px) {
+.scene.scene--whole { left: 56%; right: 4%; }
+.scene.scene--whole img { object-position: 50% 0; padding: 0; height: 74%; margin-top: 7%;
+-webkit-mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); }
+.scene.scene--whole::before { top: 6%; bottom: 30%; left: 22%; right: 22%; }
+}
 :root {
 --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 1'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
 --glass-dark: color-mix(in srgb, var(--night-2) 78%, transparent);
