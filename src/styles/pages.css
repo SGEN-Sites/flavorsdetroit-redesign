@@ -583,3 +583,11 @@ html:not(.js) .askb__panel[hidden] { display: grid; margin-top: 18px; }
 /* phones: a smaller, tighter shadow under the mail strip so the band edge never crops it (owner, 2026-11-09) */
 @media (max-width: 760px) { .loop__strip { box-shadow: 0 12px 22px -14px rgb(0 0 0 / .45); } }
 .deal__media img[src*="eighth-pouch"] { scale: .78; transform-origin: 50% 100%; }   /* the eighth reads smaller than the ounce bag beside it (owner, 2026-11-09: "a smaller packet") */
+/* /learn/ hero on wide screens (owner, 2026-11-09: "this is too big; make it look like it is peeking with a gradient
+   at the bottom like mobile's"): a smaller bud at the top right, fading out downward into the hero */
+@media (min-width: 861px) {
+  .scene.scene--whole { left: 56%; right: 4%; }
+  .scene.scene--whole img { object-position: 50% 0; padding: 0; height: 74%; margin-top: 7%;
+    -webkit-mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); mask: linear-gradient(180deg, #000 30%, rgb(0 0 0 / .55) 58%, transparent 92%); }
+  .scene.scene--whole::before { top: 6%; bottom: 30%; left: 22%; right: 22%; }
+}
