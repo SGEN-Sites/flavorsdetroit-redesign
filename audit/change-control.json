@@ -1,7 +1,7 @@
 {
   "schema": "site-reforge/change-control@1",
   "generated": "2026-11-08T23:54:54.808Z",
-  "updated": "2026-11-09T09:48:29.076Z",
+  "updated": "2026-11-09T11:42:22.619Z",
   "legend": {
     "PRESERVE": "kept as-is; content and function unchanged",
     "IMPROVE": "same content and meaning, better structure/hierarchy/design",
@@ -19724,7 +19724,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "Deals page restored at the live URL /daily-deals/ (it answered 404 on 2026-11-08; the live nav still says \"Daily Deals & More\").",
+      "why": "Deals page restored at the live URL /daily-deals/ (it answered 404 on 2026-11-08; the live nav still says \"Daily Deals & More\"). By category follows the home deals band: each shelf a bento of cards with product images on black; the Owner's Box callout is the home band (owner, 2026-11-09).",
       "narrativeSlot": "benefits-solution",
       "rebuiltAs": "/daily-deals/",
       "decidedBy": "tools/plan-decisions.mjs"
@@ -19754,7 +19754,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "The Owner's Box page (owner's brief), from the live menu collection and the October 11, 2026 post.",
+      "why": "The Owner's Box page (owner's brief), from the live menu collection and the October 11, 2026 post; In the box now is the home Owner's Box band (owner, 2026-11-09).",
       "narrativeSlot": "trust-positioning",
       "rebuiltAs": "/owners-box/",
       "decidedBy": "tools/plan-decisions.mjs"

@@ -111,11 +111,12 @@ for (const [w, h] of VPS) {
     const end = await page.evaluate(async () => {
       scrollTo(0, document.documentElement.scrollHeight); await new Promise((r) => setTimeout(r, 400));
       const fill = document.querySelector('.rainbow-rule__fill'), top = document.querySelector('[data-to-top]'), fin = document.querySelector('[data-finale]');
-      return { p: +getComputedStyle(fill).getPropertyValue('--p') || +fill.style.getPropertyValue('--p'), toTop: top.classList.contains('is-on'), lit: +fin.style.getPropertyValue('--lit'), toTopBox: top.getBoundingClientRect().width };
+      return { p: +getComputedStyle(fill).getPropertyValue('--p') || +fill.style.getPropertyValue('--p'), toTop: top.classList.contains('is-on'), lit: fin ? +fin.style.getPropertyValue('--lit') : null, toTopBox: top.getBoundingClientRect().width };
     });
     ok(vp, 'progress line full at the end', end.p > 0.98, `--p ${end.p}`);
     ok(vp, 'back-to-top shown, 44px+', end.toTop && end.toTopBox >= 44, `on ${end.toTop}, ${end.toTopBox}px`);
-    ok(vp, 'footer finale fully lit at the end', end.lit > 0.98, `--lit ${end.lit}`);
+    // (the footer wordmark finale was removed at the owner's request, 2026-11-09: its test applies only when it is on the page)
+    if (end.lit !== null) ok(vp, 'footer finale fully lit at the end', end.lit > 0.98, `--lit ${end.lit}`);
     await page.screenshot({ path: path.join(SHOTS, `motion-${vp}-finale.png`) });
     await page.click('[data-to-top]'); await page.waitForTimeout(2600);
     const yTop = await page.evaluate(() => scrollY);

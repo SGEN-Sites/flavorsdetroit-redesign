@@ -47,6 +47,10 @@ SPECS = {
                           alt='Illustration: neon tube curves glowing blue, reflected on a wet floor'),
     'rainbow-reflections': dict(role='backdrop', widths=[800, 1280, 1920], q=66, grade='blue',
                                 alt='Illustration: blue light reflections on wet asphalt at night'),
+    # /learn/ hero (owner, 2026-11-09: "ensure BG image here is crisp and high definition"): an HD bud on black,
+    # shown whole (never cropped), replacing the client's noisy archive photo there
+    'learn-bud': dict(role='backdrop', widths=[800, 1280, 1792], q=82,
+                      alt='Illustration: a single cannabis bud with purple calyxes, orange pistils and white trichomes on black'),
     'bulb-bokeh': dict(role='backdrop', widths=[800, 1280, 1920], q=70, grade='cool',
                        alt='Illustration: a row of glowing marquee bulbs in soft focus'),
     # 'showroom-glow-b' retired 2026-11-09: the owner asked for the flavors band to be black, without

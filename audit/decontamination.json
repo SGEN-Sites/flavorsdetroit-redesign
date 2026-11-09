@@ -1,9 +1,9 @@
 {
   "schema": "site-reforge/decontamination@1",
-  "generated": "2026-11-09T10:13:53.031Z",
+  "generated": "2026-11-09T13:59:34.925Z",
   "target": "./dist",
-  "filesFound": 141,
-  "filesScanned": 141,
+  "filesFound": 142,
+  "filesScanned": 142,
   "filesSkipped": 0,
   "counts": {},
   "clean": true,

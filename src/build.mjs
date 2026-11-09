@@ -34,6 +34,7 @@ copyDir(path.join(ROOT, 'src', 'assets', 'fonts'), path.join(OUT, 'assets', 'fon
 copyDir(path.join(ROOT, 'src', 'assets', 'img'), path.join(OUT, 'assets', 'img'));
 fs.mkdirSync(path.join(OUT, 'assets', 'js'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'src', 'scripts', 'site.js'), path.join(OUT, 'assets', 'js', 'site.js'));
+fs.copyFileSync(path.join(ROOT, 'src', 'scripts', 'lanyard.js'), path.join(OUT, 'assets', 'js', 'lanyard.js'));   // /visit/ only (page({ scripts }))
 
 // ---- one stylesheet, in cascade order, comments stripped -------------------------------------
 const SHEETS = ['tokens', 'base', 'chrome', 'components', 'pages', 'cinema', 'motion'];

@@ -42,6 +42,8 @@ const svg = (body, vb = '0 0 24 24', fill = 'none') =>
 
 export const icon = {
   arrow: svg('<path d="M5 12h14M13 6l6 6-6 6"/>'),
+  chevL: svg('<path d="M15 5l-7 7 7 7"/>'),
+  chevR: svg('<path d="M9 5l7 7-7 7"/>'),
   ext: svg('<path d="M7 17 17 7M9 7h8v8"/>'),
   phone: svg('<path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/>'),
   pin: svg('<path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/>'),
@@ -51,6 +53,9 @@ export const icon = {
   close: svg('<path d="M6 6l12 12M18 6 6 18"/>'),
   bag: svg('<path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/>'),
   store: svg('<path d="M4 10v10h16V10"/><path d="M3 10 5 4h14l2 6"/><path d="M3 10c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3c0 1.7 1.3 3 3 3s3-1.3 3-3"/><path d="M10 20v-5h4v5"/>'),
+  joint: svg('<path d="M4 19.5 15.5 8l1.8 1.8L5.8 21.3z"/><path d="M15.5 8 17 6.5l1.8 1.8-1.5 1.5M18.5 4.5c.4-1 1.1-1.7 2-2M20.5 6.5c.9-.3 1.6-.9 2-1.8"/>'),   // pre-roll
+  vape: svg('<rect x="9.5" y="7" width="5" height="15" rx="1.5"/><path d="M10.5 7V4.5a1.5 1.5 0 0 1 3 0V7M9.5 12h5"/>'),   // cart / pen
+  chat: svg('<path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8 9.5h8M8 12.5h5"/>'),   // ask a budtender
   id: svg('<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2"/><path d="M6 16c.6-1.5 1.7-2 3-2s2.4.5 3 2M14 10h4M14 13h3"/>'),
   mail: svg('<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/>'),
   directions: svg('<path d="M12 2 22 12 12 22 2 12z"/><path d="M9 13v-2h5V8.5L17 11.5 14 14.5V12"/>'),

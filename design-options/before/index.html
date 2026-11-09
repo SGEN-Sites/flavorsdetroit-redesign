@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Lanyard options</title>
+<!-- /visit/ "Three things to know" with the lanyard effect (owner, 2026-11-09: "use the effect here
+     reactbits.dev/components/lanyard, match it with the branding ... show me options for that section").
+     The lanyard is an original vanilla build (lanyard.js), not the React Bits code. Serve the PROJECT ROOT
+     and open /design-options/before/. Copy = the page's own words (COPY.idLine, COPY.portalLine). The badge
+     is a store badge, deliberately not styled like a government ID. -->
+<link rel="stylesheet" href="../../dist/assets/css/site.css">
+<style>
+  body { background: var(--sign-black); color: var(--cream); margin: 0; }
+  .opt-head { padding: 28px var(--gutter, 16px) 10px; max-width: var(--container); margin: 0 auto; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .opt-head b { font-family: var(--font-display); font-size: 1.35rem; color: var(--white); }
+  .opt-head span { color: var(--mist); font-size: var(--fs-sm); }
+  .ob { position: relative; overflow: hidden; padding-block: clamp(44px, 5vw, 72px); }
+  .ob .h2 { margin: 8px 0 0; color: var(--white); }
+
+  /* ================= the lanyard ================= */
+  .lanyard { --band: 210px; --card-w: 230px; position: relative; height: calc(var(--band) + var(--card-w) * 1.42 + 40px); touch-action: none; user-select: none; }
+  .lanyard__band { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .lanyard__edge { fill: none; stroke: var(--royal); stroke-width: 22; stroke-linecap: butt; }
+  .lanyard__strap { fill: none; stroke: #050506; stroke-width: 17; stroke-linecap: butt; }
+  .lanyard__print { font-family: var(--font-display); font-weight: 800; font-size: 8.5px; letter-spacing: .14em; fill: var(--cream); dominant-baseline: central; }
+  .lanyard__card { position: absolute; left: 0; top: 0; width: var(--card-w); aspect-ratio: 5 / 7; padding: 0; border: 0; background: none; cursor: grab;
+    transform-origin: 50% 0; transform-style: preserve-3d; will-change: transform; font: inherit; color: inherit; }
+  .lanyard__card.is-grabbed { cursor: grabbing; }
+  .lanyard__card:focus-visible { outline: none; }
+  .lanyard__card:focus-visible .lanyard__face--front, .lanyard__card:focus-visible .lanyard__face--back { box-shadow: 0 0 0 3px var(--led), 0 30px 50px -20px rgb(0 0 0 / .7); }
+  .lanyard__card::before {           /* the metal clip */
+    content: ""; position: absolute; left: 50%; top: -14px; width: 30px; height: 26px; translate: -50% 0; border-radius: 6px 6px 8px 8px; z-index: 3;
+    background: linear-gradient(180deg, #d9dde6, #8b93a3 55%, #c9ced8); box-shadow: inset 0 -2px 0 rgb(0 0 0 / .25), 0 3px 6px rgb(0 0 0 / .4);
+  }
+  .lanyard__face { position: absolute; inset: 0; border-radius: 18px; overflow: hidden; backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    display: flex; flex-direction: column; align-items: center; text-align: center; padding: 34px 18px 0; box-shadow: 0 30px 50px -20px rgb(0 0 0 / .7); }
+  .lanyard__face::before {           /* the slot punched for the clip */
+    content: ""; position: absolute; top: 12px; left: 50%; width: 46px; height: 9px; translate: -50% 0; border-radius: 9px; background: rgb(0 0 0 / .65); box-shadow: inset 0 1px 2px rgb(0 0 0 / .8); }
+  .lanyard__face--front { background: radial-gradient(120% 70% at 50% 0%, #1b2138, var(--sign-black) 70%); border: 1px solid var(--line-night-strong); }
+  .lanyard__face--back { transform: rotateY(180deg); color: var(--white); justify-content: center; gap: 10px; padding-top: 24px;
+    background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--white) 10%, transparent) 0 2px, transparent 2px 9px, color-mix(in srgb, var(--royal-deep) 70%, transparent) 9px 11px, transparent 11px 14px),
+      linear-gradient(180deg, var(--royal-bright), var(--royal) 45%, var(--royal-deep)); }
+  .lanyard__logo { position: relative; width: 58%; margin: 6px auto 10px; isolation: isolate; }
+  .lanyard__logo::before { content: ""; position: absolute; z-index: -1; left: 4%; right: 4%; bottom: -8%; height: 58%; border-radius: 50%; background: radial-gradient(closest-side, color-mix(in srgb, var(--led) 75%, transparent), transparent); filter: blur(10px); }
+  .lanyard__logo img { display: block; width: 100%; height: auto; }
+  .lanyard__chip { display: inline-block; padding: 4px 12px; border-radius: 999px; background: var(--royal); color: var(--white); font-family: var(--font-display); font-weight: 800; font-size: .95rem; letter-spacing: .04em; box-shadow: 0 0 0 1px color-mix(in srgb, var(--led) 60%, transparent), 0 0 18px -4px var(--led-glow); }
+  .lanyard__title { font-family: var(--font-display); font-weight: 800; font-size: 1.45rem; line-height: 1.02; color: var(--white); margin: 10px 0 6px; }
+  .lanyard__line { font-size: .8rem; line-height: 1.45; color: var(--cream-2); margin: 0; }
+  .lanyard__spec { position: absolute; left: 0; right: 0; bottom: 0; height: 7px; background: var(--rainbow-line); }
+  .lanyard__back-big { font-family: var(--font-display); font-weight: 800; font-size: 2.6rem; line-height: .9; }
+  .lanyard__back-small { font-size: .8rem; color: color-mix(in srgb, var(--white) 86%, transparent); margin: 0; }
+  .lanyard__hint { position: absolute; left: 50%; bottom: 0; translate: -50% 0; font-size: var(--fs-xs); color: var(--mist); white-space: nowrap; pointer-events: none; }
+
+  /* numbered tips */
+  .tips { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: tip; }
+  .tip { counter-increment: tip; display: grid; grid-template-columns: 46px minmax(0, 1fr); gap: 16px; align-items: start; padding: 18px 20px; border-radius: 20px;
+    background: color-mix(in srgb, var(--cream) 4%, transparent); border: 1px solid var(--line-night); }
+  .tip::before { content: counter(tip); display: grid; place-items: center; width: 46px; height: 46px; border-radius: 14px; background: var(--royal); color: var(--white);
+    font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; box-shadow: 0 10px 24px -12px var(--led-glow); }
+  .tip h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--white); margin: 0 0 3px; }
+  .tip p { margin: 0; color: var(--cream-2); font-size: var(--fs-sm); }
+
+  /* ===== A: badge hanging beside a compact list ===== */
+  .la { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+  .la__text { display: grid; gap: 22px; padding-top: 8px; }
+  .ob--a .lanyard { margin-top: calc(-1 * clamp(44px, 5vw, 72px)); }   /* hangs from the band's top edge */
+
+  /* ===== B: heading + a row of three cards on the left, the badge in its own column on the right ===== */
+  .lb { display: grid; grid-template-columns: minmax(0, 1fr) 250px; grid-template-areas: "head badge" "row badge"; column-gap: clamp(24px, 3vw, 48px); align-items: start; }
+  .lb__head { grid-area: head; }
+  .ob--b .lanyard { grid-area: badge; --band: 170px; margin-top: calc(-1 * clamp(44px, 5vw, 72px)); }
+  .lb__row { grid-area: row; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 1.6vw, 20px); margin-top: 28px; }
+  .lb__row .tip { grid-template-columns: 1fr; gap: 12px; align-content: start; }
+
+  /* ===== C: three badges on a rail, one per tip ===== */
+  .lc__rail { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(12px, 2vw, 28px); margin-top: 26px; }
+  .lc__rail::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--rainbow-line); border-radius: 3px; }
+  .ob--c .lanyard { --band: 110px; --card-w: 220px; }
+  .ob--c .lanyard__title { font-size: 1.35rem; }
+  .lanyard__num { font-family: var(--font-display); font-weight: 800; font-size: 3.2rem; line-height: .9; color: var(--led-soft); text-shadow: 0 0 20px var(--led-glow); margin-top: 6px; }
+
+  @media (max-width: 1100px) { .lb__row { grid-template-columns: 1fr; } .lb__row .tip { grid-template-columns: 46px minmax(0, 1fr); } }
+  @media (max-width: 900px) {
+    .la { grid-template-columns: 1fr; }
+    .ob--a .lanyard { order: -1; --band: 120px; --card-w: 200px; margin-top: calc(-1 * clamp(44px, 5vw, 72px)); }
+    .lb { grid-template-columns: minmax(0, 1fr); grid-template-areas: "badge" "head" "row"; }
+    .ob--b .lanyard { --band: 110px; --card-w: 200px; }
+    .lb__row { margin-top: 16px; }
+    .lc__rail { grid-template-columns: repeat(3, minmax(78vw, 1fr)); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+    .lc__rail > .lanyard { scroll-snap-align: center; }
+    .lc__rail::before { width: calc(300% + 2 * 12px); right: auto; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<!-- shared badge content -->
+<template id="badge-id">
+  <span class="lanyard__face lanyard__face--front">
+    <span class="lanyard__logo"><img src="../../dist/assets/img/logo-sign-480.webp" width="480" height="387" alt=""></span>
+    <span class="lanyard__chip">21+</span>
+    <span class="lanyard__title">Bring your ID</span>
+    <span class="lanyard__line">For adults 21+ only. Valid government-issued photo ID required.</span>
+    <span class="lanyard__spec"></span>
+  </span>
+  <span class="lanyard__face lanyard__face--back">
+    <span class="lanyard__back-big">5700</span>
+    <span class="lanyard__title" style="margin:0">E 8 Mile Rd</span>
+    <span class="lanyard__back-small">Open every day, 10AM to 10PM</span>
+  </span>
+</template>
+
+<div class="opt-head"><b>Option A · Badge beside the list</b><span>The ID badge hangs from the band's top edge next to the three tips as compact numbered rows</span></div>
+<section class="band band--navy ob ob--a" aria-labelledby="a-title">
+  <div class="container la">
+    <div class="la__text">
+      <div><p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Before you come</p>
+      <h2 class="h2" id="a-title">Three things to <span class="accent">know</span></h2></div>
+      <ol class="tips">
+        <li class="tip"><div><h3>Bring your ID</h3><p>For adults 21+ only. Valid government-issued photo ID required.</p></div></li>
+        <li class="tip"><div><h3>Order ahead</h3><p>Order cannabis online for pickup. Online orders any time.</p></div></li>
+        <li class="tip"><div><h3>Ask a budtender</h3><p>Look for a strain you love, or come in and have our budtenders help you decide!</p></div></li>
+      </ol>
+    </div>
+    <div class="lanyard" data-badge="badge-id"><button class="lanyard__card" type="button" aria-pressed="false" aria-label="Flavors Detroit badge: bring your ID. Press to flip, arrow keys to swing."></button><span class="lanyard__hint">Drag, throw or tap to flip</span></div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option B · Badge over the cards</b><span>Heading and a row of three compact cards on the left, the badge hanging in its own column at the right</span></div>
+<section class="band band--navy ob ob--b" aria-labelledby="b-title">
+  <div class="container">
+    <div class="lb">
+    <div class="lb__head"><p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Before you come</p>
+      <h2 class="h2" id="b-title">Three things to <span class="accent">know</span></h2></div>
+    <div class="lanyard" data-badge="badge-id"><button class="lanyard__card" type="button" aria-pressed="false" aria-label="Flavors Detroit badge: bring your ID. Press to flip, arrow keys to swing."></button></div>
+    <ol class="tips lb__row">
+      <li class="tip"><div><h3>Bring your ID</h3><p>For adults 21+ only. Valid government-issued photo ID required.</p></div></li>
+      <li class="tip"><div><h3>Order ahead</h3><p>Order cannabis online for pickup. Online orders any time.</p></div></li>
+      <li class="tip"><div><h3>Ask a budtender</h3><p>Look for a strain you love, or come in and have our budtenders help you decide!</p></div></li>
+    </ol>
+    </div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option C · Three badges on a rail</b><span>Each tip is its own badge hanging from a spectrum rail; drag any of them, tap to flip for the Flavors side</span></div>
+<section class="band band--navy ob ob--c" aria-labelledby="c-title">
+  <div class="container">
+    <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Before you come</p>
+    <h2 class="h2" id="c-title">Three things to <span class="accent">know</span></h2>
+    <div class="lc__rail">
+      <div class="lanyard"><button class="lanyard__card" type="button" aria-pressed="false" aria-label="Tip 1: Bring your ID. Press to flip, arrow keys to swing.">
+        <span class="lanyard__face lanyard__face--front"><span class="lanyard__num">1</span><span class="lanyard__title">Bring your ID</span><span class="lanyard__line">For adults 21+ only. Valid government-issued photo ID required.</span><span class="lanyard__spec"></span></span>
+        <span class="lanyard__face lanyard__face--back"><span class="lanyard__logo" style="width:70%"><img src="../../dist/assets/img/logo-sign-480.webp" width="480" height="387" alt=""></span><span class="lanyard__chip">21+</span></span>
+      </button></div>
+      <div class="lanyard"><button class="lanyard__card" type="button" aria-pressed="false" aria-label="Tip 2: Order ahead. Press to flip, arrow keys to swing.">
+        <span class="lanyard__face lanyard__face--front"><span class="lanyard__num">2</span><span class="lanyard__title">Order ahead</span><span class="lanyard__line">Order cannabis online for pickup. Online orders any time.</span><span class="lanyard__spec"></span></span>
+        <span class="lanyard__face lanyard__face--back"><span class="lanyard__logo" style="width:70%"><img src="../../dist/assets/img/logo-sign-480.webp" width="480" height="387" alt=""></span><span class="lanyard__back-small">Ready for pickup in store</span></span>
+      </button></div>
+      <div class="lanyard"><button class="lanyard__card" type="button" aria-pressed="false" aria-label="Tip 3: Ask a budtender. Press to flip, arrow keys to swing.">
+        <span class="lanyard__face lanyard__face--front"><span class="lanyard__num">3</span><span class="lanyard__title">Ask a budtender</span><span class="lanyard__line">Look for a strain you love, or come in and have our budtenders help you decide!</span><span class="lanyard__spec"></span></span>
+        <span class="lanyard__face lanyard__face--back"><span class="lanyard__logo" style="width:70%"><img src="../../dist/assets/img/logo-sign-480.webp" width="480" height="387" alt=""></span><span class="lanyard__back-small">5700 E 8 Mile Rd</span></span>
+      </button></div>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+  // fill the shared badge (options A and B) before the lanyards start
+  document.querySelectorAll('.lanyard[data-badge]').forEach(function (el) {
+    var t = document.getElementById(el.getAttribute('data-badge'));
+    el.querySelector('.lanyard__card').appendChild(t.content.cloneNode(true));
+  });
+</script>
+<script src="lanyard.js"></script>
+</body>
+</html>

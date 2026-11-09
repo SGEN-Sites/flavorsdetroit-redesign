@@ -3,14 +3,15 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY } from '../content/site.mjs';
-import { kicker, orderBtn, sectionHead, pageHero, storeCard, mailForm } from '../lib/parts.mjs';
+import { kicker, orderBtn, sectionHead, pageHero, storeCard, mailStrip, spectrum } from '../lib/parts.mjs';
 import { breadcrumbJsonLd } from '../lib/seo.mjs';
 
 export const PATH = '/contact/';
 
 export function render() {
-  const form = `<form class="form panel" data-preview-form="Thanks! This is a design preview, so your message was not sent. On the live site it goes straight to the Flavors Detroit team." novalidate aria-labelledby="form-title">
-  <h2 class="h3" id="form-title">Send us a message</h2>
+  // (owner, 2026-11-09: "update /contact/ to match the other pages") black bands, a dark glass form, the slim mail strip
+  const form = `<form class="form panel panel--night on-night contact-form" data-preview-form="Thanks! This is a design preview, so your message was not sent. On the live site it goes straight to the Flavors Detroit team." novalidate aria-labelledby="form-title">
+  <div class="contact-form__head"><span class="contact-form__ico" aria-hidden="true">${icon.chat}</span><h2 class="h3" id="form-title">Send us a message</h2></div>
   <div class="form__row">
     <div class="field"><label for="c-name">Name <span aria-hidden="true">*</span></label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
     <div class="field"><label for="c-email">Email <span aria-hidden="true">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
@@ -28,7 +29,8 @@ export function render() {
     crumbs: [{ label: 'Contact' }],
     scene: 'hero-night-b', pos: '62% 58%',
   })}
-<section class="band band--day" aria-label="Contact Flavors Detroit">
+${spectrum()}
+<section class="band band--black" aria-label="Contact Flavors Detroit">
   <div class="container contact-grid">
     ${form}
     <div class="stack" style="--stack:16px">
@@ -41,12 +43,7 @@ export function render() {
     </div>
   </div>
 </section>
-<section class="band band--white band--tight" aria-labelledby="contact-mail">
-  <div class="container split">
-    <div class="stack" style="--stack:12px">${kicker('New product alerts')}<h2 class="h2" id="contact-mail">${esc(COPY.mailTitle)}</h2><p class="lede">${esc(COPY.mailSub)}.</p></div>
-    ${mailForm('contact-mail-form')}
-  </div>
-</section>`;
+${mailStrip(PATH, { id: 'contact-mail', key: 'contact-mail-form' })}`;
   return page({
     path: PATH,
     title: 'Contact & Location | Flavors Detroit, 5700 E 8 Mile Rd',

@@ -164,6 +164,43 @@
     }
    ]
   },
+  "learn-bud": {
+   "role": "backdrop",
+   "alt": "Illustration: a single cannabis bud with purple calyxes, orange pistils and white trichomes on black",
+   "source": "assets/generated/raw/learn-bud.jpg",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1c061-768e-7b11-b339-846063966373",
+   "seed": 515151,
+   "prompt": "Extreme macro studio photograph of a single dense top-shelf cannabis flower bud, purple and violet calyxes with bright orange pistils and a thick coat of sparkling white trichomes, razor sharp focus across the whole bud, crisp high definition detail, shot on a pure black background with a soft cool rim light from the upper right and gentle warm fill, the bud filling the right two thirds of a tall portrait frame, deep black negative space on the left, no text, no props, no smoke (raw mode; image 2 of 2, image 1 not used). Owner 2026-11-09: the /learn/ hero background must be crisp and HD; the client photo it replaces is too noisy to restore (Topaz Low Resolution V2 and Wonder 3 tried, 01a1c05f-f67a / 01a1c05f-f7b3, both rejected).",
+   "grade": null,
+   "rawSize": [
+    1792,
+    2368
+   ],
+   "files": [
+    {
+     "file": "gen/learn-bud-800.webp",
+     "w": 800,
+     "h": 1057,
+     "bytes": 138812,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/learn-bud-1280.webp",
+     "w": 1280,
+     "h": 1691,
+     "bytes": 269068,
+     "variant": "landscape"
+    },
+    {
+     "file": "gen/learn-bud-1792.webp",
+     "w": 1792,
+     "h": 2368,
+     "bytes": 393576,
+     "variant": "landscape"
+    }
+   ]
+  },
   "bulb-bokeh": {
    "role": "backdrop",
    "alt": "Illustration: a row of glowing marquee bulbs in soft focus",

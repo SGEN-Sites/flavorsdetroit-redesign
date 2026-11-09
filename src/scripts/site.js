@@ -278,7 +278,7 @@
     var loopIO = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) { en.target.classList.toggle('is-paused', !en.isIntersecting || doc.hidden); });
     }, { threshold: 0 });
-    var loops = $$('.ticker, .sign, .hero, .tapes, .box, .tags--hang, .site-footer, .kinetic, .band--spot, .band--rain, .band--bokeh, [data-rail], .page-hero--scene');
+    var loops = $$('.ticker, .sign, .hero, .tapes, .box, .tags--hang, .site-footer, .kinetic, .band--spot, .band--rain, .band--bokeh, [data-rail], .page-hero--scene, .neon-sign');
     loops.forEach(function (el) { loopIO.observe(el); });
     doc.addEventListener('visibilitychange', function () {
       loops.forEach(function (el) {
@@ -631,6 +631,163 @@
     window.addEventListener('resize', function () { if (!ob.classList.contains('is-open')) aim(); }, { passive: true });
   })();
 
+  /* ---- the store gallery: photos on a wall that curves around the viewer ------------------
+     (owner, 2026-11-09). Panel i hangs at the angle a = (i - pos) * step on a drum of radius R, seen
+     from inside it at the perspective distance P: x = R sin a, z = R (1 - cos a), turned by -a, so the
+     side panels come closer and turn in. pos drifts slowly; a drag keeps the wall under the pointer, a
+     flick carries on and the wall settles with a panel centred; a click on a side panel, the buttons,
+     the arrow keys and a sideways swipe turn it. It drifts only while in view, never under reduced or
+     paused motion, and brakes while a mouse rests on it or the keyboard is in it (WCAG 2.2.2). Without
+     this script the list is a plain swipe row (cinema.css). */
+  $$('[data-cave]').forEach(function (cv) {
+    var stage = $('.cave__stage', cv), wall = $('.cave__wall', cv), panels = $$('.cave__panel', cv), n = panels.length;
+    if (!n || !stage || !wall) return;
+    var cap = $('.cave__caption', cv), capT = $('.cave__title', cv), capS = $('.cave__sub', cv), num = $('[data-cave-n]', cv);
+    cv.classList.add('cave-on');
+    var DRIFT = 0.12;                                     // panels per second
+    var pos = 0, target = null, speed = 0, h = 0, w = 0, gap = 0, R = 0, step = 0;
+    var hover = false, keyIn = false, inView = !('IntersectionObserver' in window), dragging = false;
+    var frame = 0, last = 0, shown = -1;
+    var still = function () { return reduceMotion || root.classList.contains('motion-off') || doc.hidden; };
+    var wrap = function (d) { var m = ((d % n) + n) % n; return m >= n / 2 ? m - n : m; };   // into [-n/2, n/2)
+    function measure() {
+      var W = stage.clientWidth;
+      h = Math.round(Math.max(150, Math.min(300, W * 0.205)));
+      w = Math.round(h * 1.25); gap = Math.round(Math.max(10, h * 0.055));
+      var P = h * 4; R = P * 1.08; step = (w + gap) / R;
+      cv.style.setProperty('--ph', h + 'px'); cv.style.setProperty('--pw', w + 'px');
+      wall.style.perspective = P + 'px';
+      stage.style.height = Math.round(h * 1.6) + 'px';
+      paint();
+    }
+    function paint() {
+      for (var i = 0; i < n; i++) {
+        var d = wrap(i - pos), a = d * step, z = R * (1 - Math.cos(a)), el = panels[i];
+        var op = Math.max(0, Math.min(1, (n / 2 - 0.55 - Math.abs(d)) / 0.6));   // gone before it wraps round
+        el.style.transform = 'translate3d(' + (R * Math.sin(a)).toFixed(1) + 'px,0,' + z.toFixed(1) + 'px) rotateY(' + (-a).toFixed(4) + 'rad)';
+        el.style.opacity = op.toFixed(3);
+        el.style.visibility = op > 0 ? '' : 'hidden';
+        el.style.zIndex = String(100 + Math.round(z / 4));
+      }
+      var c = ((Math.round(pos) % n) + n) % n;
+      if (c === shown) return;
+      shown = c;
+      if (capT) capT.textContent = panels[c].getAttribute('data-title') || '';
+      if (capS) capS.textContent = panels[c].getAttribute('data-sub') || '';
+      if (num) num.textContent = (c < 9 ? '0' : '') + (c + 1);
+      if (cap) { cap.classList.remove('is-new'); void cap.offsetWidth; cap.classList.add('is-new'); }
+      panels.forEach(function (p, k) { if (k === c) p.setAttribute('aria-current', 'true'); else p.removeAttribute('aria-current'); });
+    }
+    function tick(now) {
+      frame = 0;
+      var dt = Math.min(0.05, Math.max(0, (now - last) / 1000)); last = now;
+      var moving = dragging;
+      if (!dragging && target !== null) {
+        pos += (target - pos) * (1 - Math.exp(-dt * 9));
+        if (Math.abs(target - pos) < 0.0006) { pos = target; target = null; }
+        moving = true;
+      } else if (!dragging) {
+        var brake = hover || keyIn || still() || !inView;
+        speed += ((brake ? 0 : DRIFT) - speed) * (1 - Math.exp(-dt * 2.5));
+        if (brake && Math.abs(speed) < 0.002) speed = 0;
+        if (speed) { pos += speed * dt; moving = true; }
+        else if (brake && (hover || keyIn) && Math.abs(pos - Math.round(pos)) > 0.0006) { target = Math.round(pos); moving = true; }
+      }
+      paint();
+      if (moving || (inView && !still() && !hover && !keyIn)) frame = requestAnimationFrame(tick);
+    }
+    function kick() { if (!frame) { last = performance.now(); frame = requestAnimationFrame(tick); } }
+    function settle(t) {
+      speed = 0;
+      if (still()) { pos = t; target = null; paint(); return; }   // reduced motion: the wall moves only as asked, at once
+      target = t; kick();
+    }
+    function go(dir) { settle((target !== null ? target : Math.round(pos)) + dir); }
+    // drag, flick, click
+    var startX = 0, startPos = 0, lastX = 0, lastT = 0, vel = 0, moved = 0, pid = null;
+    stage.addEventListener('pointerdown', function (e) {
+      if (e.pointerType === 'mouse' && e.button !== 0) return;
+      dragging = true; target = null; speed = 0; pid = e.pointerId;
+      startX = lastX = e.clientX; startPos = pos; lastT = performance.now(); vel = 0; moved = 0;
+      try { stage.setPointerCapture(pid); } catch (err) { /* capture is a nicety */ }
+      cv.classList.add('is-dragging'); kick();
+    });
+    stage.addEventListener('pointermove', function (e) {
+      if (!dragging || e.pointerId !== pid) return;
+      var dx = e.clientX - startX, now = performance.now(), dt = Math.max(8, now - lastT);
+      moved = Math.max(moved, Math.abs(dx));
+      pos = startPos - dx / (w + gap);
+      vel = 0.75 * vel + 0.25 * (-(e.clientX - lastX) / (w + gap)) / (dt / 1000);
+      lastX = e.clientX; lastT = now;
+      paint();
+    });
+    function release(e) {
+      if (!dragging || e.pointerId !== pid) return;
+      dragging = false; cv.classList.remove('is-dragging');
+      if (e.type === 'pointerup' && moved < 6) {           // a click: turn to the panel under it
+        var hit = doc.elementFromPoint(e.clientX, e.clientY), p = hit && hit.closest ? hit.closest('.cave__panel') : null;
+        var k = p ? panels.indexOf(p) : -1, c = Math.round(pos);
+        settle(k >= 0 ? c + Math.round(wrap(k - c)) : c);
+        return;
+      }
+      if (performance.now() - lastT > 120) vel = 0;        // held still before letting go: no flick
+      settle(Math.round(pos + Math.max(-3, Math.min(3, vel * 0.35))));
+    }
+    stage.addEventListener('pointerup', release);
+    stage.addEventListener('pointercancel', release);
+    // a sideways swipe on a trackpad turns it; an up-and-down wheel stays the page's
+    var wheelT = 0;
+    stage.addEventListener('wheel', function (e) {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+      e.preventDefault(); target = null; speed = 0;
+      pos += e.deltaX / (w + gap); paint();
+      clearTimeout(wheelT); wheelT = setTimeout(function () { settle(Math.round(pos)); }, 140);
+    }, { passive: false });
+    stage.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+      else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    });
+    var prev = $('[data-cave-prev]', cv), next = $('[data-cave-next]', cv);
+    if (prev) prev.addEventListener('click', function () { go(-1); });
+    if (next) next.addEventListener('click', function () { go(1); });
+    stage.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = true; kick(); } });
+    stage.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hover = false; kick(); } });
+    cv.addEventListener('focusin', function (e) { if (e.target.matches && e.target.matches(':focus-visible')) { keyIn = true; kick(); } });
+    cv.addEventListener('focusout', function (e) { if (!cv.contains(e.relatedTarget)) { keyIn = false; kick(); } });
+    if (!inView) new IntersectionObserver(function (es) { inView = es[es.length - 1].isIntersecting; kick(); }, { rootMargin: '80px 0px' }).observe(stage);
+    doc.addEventListener('visibilitychange', kick);
+    new MutationObserver(kick).observe(root, { attributes: true, attributeFilter: ['class'] });   // Pause motion
+    window.addEventListener('resize', measure, { passive: true });
+    measure(); kick();
+  });
+
+  /* ---- the order bar: on from the second screen, closable for the visit (owner, 2026-11-09) ---- */
+  (function () {
+    var bar = $('[data-orderbar]');
+    if (!bar) return;
+    var KEY = 'flavors-orderbar-off';
+    try { if (window.sessionStorage.getItem(KEY) === '1') return; } catch (e) { /* storage blocked: show it */ }
+    bar.hidden = false;
+    root.classList.add('has-orderbar');
+    var on = false;
+    var update = function () {
+      var want = (window.scrollY || 0) > Math.min(window.innerHeight * 0.8, 720);
+      if (want !== on) { on = want; bar.classList.toggle('is-on', on); }
+    };
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+    var close = $('[data-orderbar-close]', bar);
+    if (close) close.addEventListener('click', function () {
+      try { window.sessionStorage.setItem(KEY, '1'); } catch (e) { /* closed for this page only */ }
+      var hadFocus = bar.contains(doc.activeElement);
+      window.removeEventListener('scroll', update);
+      bar.classList.remove('is-on'); root.classList.remove('has-orderbar');
+      setTimeout(function () { bar.hidden = true; }, 650);
+      if (hadFocus) { var t = $('.masthead .btn--order') || $('#main'); if (t) { if (!t.hasAttribute('tabindex') && t.id === 'main') t.setAttribute('tabindex', '-1'); t.focus(); } }
+    });
+  })();
+
   /* ---- preview forms: validate, never post ------------------------------------------------ */
   $$('form[data-preview-form]').forEach(function (form) {
     var status = $('.form-status', form) || $('.form-status', form.parentNode);
@@ -647,6 +804,24 @@
   });
 
   /* ---- map: loads only when asked (no third-party request until then) -------------------- */
+  // /visit/ "ask a budtender" questions: tabs (click, arrow keys, Home / End); the answer arrives as a chat reply
+  $$('[data-askb]').forEach(function (box) {
+    var tabs = $$('[role="tab"]', box), panels = $$('[role="tabpanel"]', box);
+    function show(n, focus) {
+      tabs.forEach(function (t, k) { t.setAttribute('aria-selected', k === n ? 'true' : 'false'); t.tabIndex = k === n ? 0 : -1; });
+      panels.forEach(function (p, k) { p.hidden = k !== n; p.classList.toggle('is-new', k === n); });
+      if (focus) tabs[n].focus();
+      // phones: the chip row scrolls sideways; keep the chosen chip in view without moving the page
+      var row = tabs[n].parentElement;
+      if (row.scrollWidth > row.clientWidth) row.scrollTo({ left: Math.max(0, tabs[n].offsetLeft - 16), behavior: reduceMotion ? 'auto' : 'smooth' });
+    }
+    tabs.forEach(function (t, k) { t.addEventListener('click', function () { show(k, false); }); });
+    box.addEventListener('keydown', function (e) {
+      var cur = tabs.indexOf(document.activeElement); if (cur < 0) return;
+      var n = { ArrowRight: cur + 1, ArrowDown: cur + 1, ArrowLeft: cur - 1, ArrowUp: cur - 1, Home: 0, End: tabs.length - 1 }[e.key];
+      if (n === undefined) return; e.preventDefault(); show((n + tabs.length) % tabs.length, true);
+    });
+  });
   $$('[data-map-load]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       var frame = btn.closest('.map-frame'); if (!frame) return;

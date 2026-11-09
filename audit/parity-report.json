@@ -1,6 +1,6 @@
 {
   "schema": "site-reforge/parity-report@1",
-  "generated": "2026-11-09T10:13:52.498Z",
+  "generated": "2026-11-09T13:59:33.873Z",
   "sourcePages": 142,
   "rebuiltFiles": 137,
   "mappedPages": 142,
@@ -15,11 +15,11 @@
   ],
   "recallFloor": 0.95,
   "contentRunFloor": 12,
-  "meanRecall": 0.9487,
+  "meanRecall": 0.9492,
   "counts": {
     "minor": 412,
-    "major": 17,
-    "blocker": 146
+    "blocker": 147,
+    "major": 16
   },
   "verdict": "DRIFT",
   "rows": [
@@ -28,11 +28,11 @@
       "file": "index.html",
       "pageType": "home",
       "status": "DIFFERS",
-      "recall": 0.8322,
-      "missingWords": 49,
-      "longestMissingRun": 4,
+      "recall": 0.7705,
+      "missingWords": 67,
+      "longestMissingRun": 6,
       "sourceWords": 290,
-      "rebuiltWords": 1265,
+      "rebuiltWords": 1224,
       "sourceH1": [
         "(313) 733-4464",
         "OUR FLAVORS",
@@ -43,7 +43,7 @@
         "A traditional dispensary with a modern twist ."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 67,
+      "rebuiltLinks": 69,
       "findings": [
         {
           "severity": "minor",
@@ -58,9 +58,9 @@
           "detail": "\"(313) 733-4464\" -> \"A traditional dispensary with a modern twist .\""
         },
         {
-          "severity": "major",
+          "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 83.2% (floor 95%)",
+          "title": "Body content recall 77.1% (floor 95%)",
           "detail": "missing words: hero banner 6 strain come budtenders help decide batter prerolls have selection infused variety tastes craving quality occasions be sure find need let know you're"
         },
         {
@@ -78,7 +78,7 @@
         {
           "severity": "minor",
           "code": "alt-missing",
-          "title": "16 image(s) without alt",
+          "title": "15 image(s) without alt",
           "detail": "index.html"
         }
       ]
@@ -92,7 +92,7 @@
       "missingWords": 52,
       "longestMissingRun": 3,
       "sourceWords": 413,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464"
       ],
@@ -100,7 +100,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -143,7 +143,7 @@
       "missingWords": 13,
       "longestMissingRun": 1,
       "sourceWords": 98,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464"
       ],
@@ -151,7 +151,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -194,7 +194,7 @@
       "missingWords": 1,
       "longestMissingRun": 1,
       "sourceWords": 38,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464"
       ],
@@ -202,7 +202,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -239,7 +239,7 @@
       "missingWords": 1,
       "longestMissingRun": 1,
       "sourceWords": 38,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464"
       ],
@@ -247,7 +247,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -293,7 +293,7 @@
         "12 Days of Flavors: Shatterday Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -339,7 +339,7 @@
         "2020 Flavors Detroit New Arrivals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -379,7 +379,7 @@
         "3 Day Birthday Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -425,7 +425,7 @@
         "4/19: Out of State Patients Qualify for 4/20 Specials a day early!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -471,7 +471,7 @@
         "4/20 is here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -517,7 +517,7 @@
         "4/20 sneak peek"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -563,7 +563,7 @@
         "420 Events in Detroit 2026 | Flavors Detroit 420 Weekend (April 17–20)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -603,7 +603,7 @@
         "7/10 is almost here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -649,7 +649,7 @@
         "All Day Happy Hour Monday!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -695,7 +695,7 @@
         "Angels Night Specials (New Strains and Extracts)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -741,7 +741,7 @@
         "April 1st: Opening Day Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -787,7 +787,7 @@
         "April 1st Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -833,7 +833,7 @@
         "Are you ready for the weekend?"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -879,7 +879,7 @@
         "Back to school!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -925,7 +925,7 @@
         "Black Friday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -971,7 +971,7 @@
         "Top Shelf Black Friday Specials at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1011,7 +1011,7 @@
         "Black Saturday Flame Sale @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -1057,7 +1057,7 @@
         "Flavors Fit For A FatheR"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1109,7 +1109,7 @@
         "Crumble, Budder, HCFSE and more!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -1155,7 +1155,7 @@
         "Cyber Monday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1201,7 +1201,7 @@
         "Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1247,7 +1247,7 @@
         "Easter Candy for the Grown Ups!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -1293,7 +1293,7 @@
         "Easter Candy for the grown-ups"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -1339,7 +1339,7 @@
         "Extended Weekend Epic Deal !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1385,7 +1385,7 @@
         "Fall To Frost Specials @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 63,
+      "rebuiltLinks": 65,
       "findings": [
         {
           "severity": "minor",
@@ -1431,7 +1431,7 @@
         "Featured Flower: Purple Alien"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1477,7 +1477,7 @@
         "February 2020 Extra Special Specials!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1523,7 +1523,7 @@
         "Flavors Mid Week Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1569,7 +1569,7 @@
         "Fresh Drop Alert: Autumn Edition!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1615,7 +1615,7 @@
         "Fresh Drop Alert: Saturday in December"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1661,7 +1661,7 @@
         "Fresh Drop Alert! Sunday Morning Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1707,7 +1707,7 @@
         "Fresh Drop Alert: Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1753,7 +1753,7 @@
         "Fresh Drop: Bubble Gum"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -1799,7 +1799,7 @@
         "Fresh drop Friday"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1845,7 +1845,7 @@
         "Fresh Drop: New Strains!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1891,7 +1891,7 @@
         "Fresh Drop Tuesday"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1937,7 +1937,7 @@
         "Fresh Drop Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -1983,7 +1983,7 @@
         "Friday fire 🔥"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2029,7 +2029,7 @@
         "Friday fire!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -2075,7 +2075,7 @@
         "Friday fire !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2121,7 +2121,7 @@
         "Friday Fire 2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2167,7 +2167,7 @@
         "Friday Fire at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -2213,7 +2213,7 @@
         "Friday Fire: Major Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2259,7 +2259,7 @@
         "Friday Fire Shakeathon"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2305,7 +2305,7 @@
         "Friday Fire: Weekend Edition"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2351,7 +2351,7 @@
         "Friday Happy Hour Special 4pm - 9pm"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2397,7 +2397,7 @@
         "Friday the 13th at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2437,7 +2437,7 @@
         "Friday the 13th in December sale"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2483,7 +2483,7 @@
         "Friday the 13th in November!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2532,7 +2532,7 @@
         "Halloween at Flavors Detroit: New Flower, $10 Eighths, $5 Concentrates & $85 Ounces"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2572,7 +2572,7 @@
         "Halloween Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2618,7 +2618,7 @@
         "Happy 4th of July"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2664,7 +2664,7 @@
         "Happy Cinco De Mayo"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -2710,7 +2710,7 @@
         "Happy Cinco De Mayo 5/5/2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2756,7 +2756,7 @@
         "Happy Father's Day from Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2802,7 +2802,7 @@
         "Happy Halloween from Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2842,7 +2842,7 @@
         "Happy Halloween, From your Friends @ Flavors Detroit"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2888,7 +2888,7 @@
         "Happy Holidays to all from your friends @ Flavors Detroit !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -2934,7 +2934,7 @@
         "Happy Hour at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -2974,7 +2974,7 @@
         "Happy Memorial Day (Updated Hours!)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3020,7 +3020,7 @@
         "Happy MLK Day: Monday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3066,7 +3066,7 @@
         "Happy Mother's Day @ Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3112,7 +3112,7 @@
         "Happy Mother's Day-2025!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3158,7 +3158,7 @@
         "Happy Thanksgiving! Yes, we're open."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3204,7 +3204,7 @@
         "Happy Valentine's Day!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3250,7 +3250,7 @@
         "Hello Summer !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3296,7 +3296,7 @@
         "Hello Summer !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3342,7 +3342,7 @@
         "Holiday Hours and Last Minute Gift Ideas"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3388,7 +3388,7 @@
         "Holiday Private Reserve Slabs!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3434,7 +3434,7 @@
         "Important Information: Updated 5/11"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3480,7 +3480,7 @@
         "In Store deals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3526,7 +3526,7 @@
         "Independence Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 71,
+      "rebuiltLinks": 73,
       "findings": [
         {
           "severity": "minor",
@@ -3572,7 +3572,7 @@
         "It's Shatterday at Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -3612,7 +3612,7 @@
         "It's Tarantula Time!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3658,7 +3658,7 @@
         "It's the 1st of the Month"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3704,7 +3704,7 @@
         "Keeping Safe and Healthy"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3750,7 +3750,7 @@
         "Labor Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -3796,7 +3796,7 @@
         "Labor Day Weekend Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3842,7 +3842,7 @@
         "Lazy Sunday at Flavors Detroit: New Products available!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -3882,7 +3882,7 @@
         "MAC is back!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -3928,7 +3928,7 @@
         "New Product: Terp Management Crumbles"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 55,
+      "rebuiltLinks": 57,
       "findings": [
         {
           "severity": "minor",
@@ -3974,7 +3974,7 @@
         "March 2020 Extract Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4020,7 +4020,7 @@
         "Massive Shake-a-thon Sale and more!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4066,7 +4066,7 @@
         "Memorial Day-2025"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4112,7 +4112,7 @@
         "Memorial Day Weekend Moonrock Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4158,7 +4158,7 @@
         "Monday Morning Flower Drop!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -4204,7 +4204,7 @@
         "Moonrock Madness"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4250,7 +4250,7 @@
         "Need some Entertainment? The Royal Rumble is Tonight"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4296,7 +4296,7 @@
         "New Product Alert: Flavors Extracts Thriller #4 Crumble"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4342,7 +4342,7 @@
         "New Products from Lit Labs now available at Flavors Detroit!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4382,7 +4382,7 @@
         "New Strain Alert: Christmas Edition!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -4428,7 +4428,7 @@
         "New Strain Alert! New Concentrates! New Edibles!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4474,7 +4474,7 @@
         "October is here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4520,7 +4520,7 @@
         "October Specials + Strain of the Month & Honorable Mentions!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 60,
+      "rebuiltLinks": 62,
       "findings": [
         {
           "severity": "minor",
@@ -4566,7 +4566,7 @@
         "October Weekend Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4612,7 +4612,7 @@
         "Pick 8 ($20) 1G Shatter's only $100 Out the Door"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4658,7 +4658,7 @@
         "Prices Slashed on Over 30 Strains ! & New Fire !"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4704,7 +4704,7 @@
         "Ready for the Weekend?"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4750,7 +4750,7 @@
         "Saturday Blowout!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4796,7 +4796,7 @@
         "Snow day specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4842,7 +4842,7 @@
         "Starling 1000MG CBD Darts"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -4888,7 +4888,7 @@
         "Still Christmas Shopping? We can help!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4934,7 +4934,7 @@
         "Stocking Stuffers (Treats for the grown-ups)"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -4990,7 +4990,7 @@
         "The Ultimate Summer Savings Event at Flavors Detroit - Front & Center in Detroit Cannabis Deals"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 64,
+      "rebuiltLinks": 66,
       "findings": [
         {
           "severity": "minor",
@@ -5030,7 +5030,7 @@
         "Summer Time Moonrocks and More...."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5076,7 +5076,7 @@
         "Super Bowl Sunday Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5122,7 +5122,7 @@
         "T.G.I.F."
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -5168,7 +5168,7 @@
         "T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 56,
+      "rebuiltLinks": 58,
       "findings": [
         {
           "severity": "minor",
@@ -5214,7 +5214,7 @@
         "T.G.I.F. Specials!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5260,7 +5260,7 @@
         "TGIF at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5300,7 +5300,7 @@
         "TGIF at Flavors Detroit"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5340,7 +5340,7 @@
         "TGIF at Flavors Detroit: Massive New Flower Drop!"
       ],
       "sourceLinks": 2,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5380,7 +5380,7 @@
         "TGIF: End of the Month Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -5426,7 +5426,7 @@
         "TGIF: February Snow"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5472,7 +5472,7 @@
         "TGIF: Gelato Weekend!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5518,7 +5518,7 @@
         "TGIF: Stock up and Save!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5564,7 +5564,7 @@
         "TGIF: Valentine Weekend"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5610,7 +5610,7 @@
         "Thanksgiving a day early!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5656,7 +5656,7 @@
         "The 3rd Annual 4/20 Spectacular is Here!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -5702,7 +5702,7 @@
         "The First of June!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5748,7 +5748,7 @@
         "The last day of March 2021"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5794,7 +5794,7 @@
         "The New and Improved Connoisseur Carts have arrived!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5840,7 +5840,7 @@
         "Turn up the Weekend!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 58,
+      "rebuiltLinks": 60,
       "findings": [
         {
           "severity": "minor",
@@ -5886,7 +5886,7 @@
         "Valentine's Day Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5932,7 +5932,7 @@
         "We're Back!"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -5978,7 +5978,7 @@
         "Wrestlemania 2 Day Special"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 57,
+      "rebuiltLinks": 59,
       "findings": [
         {
           "severity": "minor",
@@ -6024,7 +6024,7 @@
         "Wrestlemania Weekend Specials"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 59,
+      "rebuiltLinks": 61,
       "findings": [
         {
           "severity": "minor",
@@ -6057,11 +6057,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.8012,
-      "missingWords": 67,
+      "recall": 0.8042,
+      "missingWords": 66,
       "longestMissingRun": 7,
       "sourceWords": 342,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Flavors Detroit"
@@ -6070,7 +6070,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6087,8 +6087,8 @@
         {
           "severity": "major",
           "code": "content-loss",
-          "title": "Body content recall 80.1% (floor 95%)",
-          "detail": "missing words: admin followers 0 following follow actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85"
+          "title": "Body content recall 80.4% (floor 95%)",
+          "detail": "missing words: admin followers 0 following actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85 tier"
         },
         {
           "severity": "major",
@@ -6115,11 +6115,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.8012,
-      "missingWords": 67,
+      "recall": 0.8042,
+      "missingWords": 66,
       "longestMissingRun": 7,
       "sourceWords": 342,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Flavors Detroit"
@@ -6128,7 +6128,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6145,8 +6145,8 @@
         {
           "severity": "major",
           "code": "content-loss",
-          "title": "Body content recall 80.1% (floor 95%)",
-          "detail": "missing words: admin followers 0 following follow actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85"
+          "title": "Body content recall 80.4% (floor 95%)",
+          "detail": "missing words: admin followers 0 following actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85 tier"
         },
         {
           "severity": "major",
@@ -6173,11 +6173,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.8012,
-      "missingWords": 32,
+      "recall": 0.8075,
+      "missingWords": 31,
       "longestMissingRun": 7,
       "sourceWords": 154,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Emily Gilbert"
@@ -6186,7 +6186,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6203,8 +6203,8 @@
         {
           "severity": "major",
           "code": "content-loss",
-          "title": "Body content recall 80.1% (floor 95%)",
-          "detail": "missing words: emily gilbert admin followers 0 following follow actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
+          "title": "Body content recall 80.7% (floor 95%)",
+          "detail": "missing words: emily gilbert admin followers 0 following actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
         },
         {
           "severity": "major",
@@ -6231,11 +6231,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.8012,
-      "missingWords": 32,
+      "recall": 0.8075,
+      "missingWords": 31,
       "longestMissingRun": 7,
       "sourceWords": 154,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Emily Gilbert"
@@ -6244,7 +6244,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6261,8 +6261,8 @@
         {
           "severity": "major",
           "code": "content-loss",
-          "title": "Body content recall 80.1% (floor 95%)",
-          "detail": "missing words: emily gilbert admin followers 0 following follow actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
+          "title": "Body content recall 80.7% (floor 95%)",
+          "detail": "missing words: emily gilbert admin followers 0 following actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
         },
         {
           "severity": "major",
@@ -6289,11 +6289,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.2593,
-      "missingWords": 20,
+      "recall": 0.2963,
+      "missingWords": 19,
       "longestMissingRun": 7,
       "sourceWords": 27,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Miki Bielik"
@@ -6302,7 +6302,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6319,8 +6319,8 @@
         {
           "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 25.9% (floor 95%)",
-          "detail": "missing words: miki bielik admin followers 0 following follow actions profile date apr likes received comments answers"
+          "title": "Body content recall 29.6% (floor 95%)",
+          "detail": "missing words: miki bielik admin followers 0 following actions profile date apr likes received comments answers"
         },
         {
           "severity": "major",
@@ -6347,11 +6347,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.2593,
-      "missingWords": 20,
+      "recall": 0.2963,
+      "missingWords": 19,
       "longestMissingRun": 7,
       "sourceWords": 27,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "Miki Bielik"
@@ -6360,7 +6360,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6377,8 +6377,8 @@
         {
           "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 25.9% (floor 95%)",
-          "detail": "missing words: miki bielik admin followers 0 following follow actions profile date apr likes received comments answers"
+          "title": "Body content recall 29.6% (floor 95%)",
+          "detail": "missing words: miki bielik admin followers 0 following actions profile date apr likes received comments answers"
         },
         {
           "severity": "major",
@@ -6405,11 +6405,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.2593,
-      "missingWords": 20,
+      "recall": 0.2963,
+      "missingWords": 19,
       "longestMissingRun": 7,
       "sourceWords": 27,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "flavorsdetroit3"
@@ -6418,7 +6418,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6435,8 +6435,8 @@
         {
           "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 25.9% (floor 95%)",
-          "detail": "missing words: flavorsdetroit3 admin followers 0 following follow actions profile date feb likes received comments answers"
+          "title": "Body content recall 29.6% (floor 95%)",
+          "detail": "missing words: flavorsdetroit3 admin followers 0 following actions profile date feb likes received comments answers"
         },
         {
           "severity": "major",
@@ -6463,11 +6463,11 @@
       "file": "blog/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.2593,
-      "missingWords": 20,
+      "recall": 0.2963,
+      "missingWords": 19,
       "longestMissingRun": 7,
       "sourceWords": 27,
-      "rebuiltWords": 5326,
+      "rebuiltWords": 5337,
       "sourceH1": [
         "(313) 733-4464",
         "flavorsdetroit3"
@@ -6476,7 +6476,7 @@
         "Flavors news"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 174,
+      "rebuiltLinks": 177,
       "findings": [
         {
           "severity": "minor",
@@ -6493,8 +6493,8 @@
         {
           "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 25.9% (floor 95%)",
-          "detail": "missing words: flavorsdetroit3 admin followers 0 following follow actions profile date feb likes received comments answers"
+          "title": "Body content recall 29.6% (floor 95%)",
+          "detail": "missing words: flavorsdetroit3 admin followers 0 following actions profile date feb likes received comments answers"
         },
         {
           "severity": "major",
@@ -6521,11 +6521,11 @@
       "file": "daily-deals/index.html",
       "pageType": "page",
       "status": "DIFFERS",
-      "recall": 0.4615,
-      "missingWords": 35,
-      "longestMissingRun": 5,
+      "recall": 0.4308,
+      "missingWords": 37,
+      "longestMissingRun": 9,
       "sourceWords": 33,
-      "rebuiltWords": 949,
+      "rebuiltWords": 999,
       "sourceH1": [
         "(313) 733-4464",
         "$6/G",
@@ -6563,7 +6563,7 @@
         "Daily deals & more"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 52,
+      "rebuiltLinks": 54,
       "findings": [
         {
           "severity": "minor",
@@ -6580,8 +6580,8 @@
         {
           "severity": "blocker",
           "code": "content-loss",
-          "title": "Body content recall 46.2% (floor 95%)",
-          "detail": "missing words: specials quater 175 340 12 90 half g 60 110 200 380 www flavorsdetroit com"
+          "title": "Body content recall 43.1% (floor 95%)",
+          "detail": "missing words: specials quater 175 340 12 90 half ounce g 60 110 200 380 www flavorsdetroit com"
         },
         {
           "severity": "blocker",
@@ -6592,7 +6592,7 @@
         {
           "severity": "minor",
           "code": "alt-missing",
-          "title": "3 image(s) without alt",
+          "title": "8 image(s) without alt",
           "detail": "daily-deals/index.html"
         }
       ]
@@ -6614,7 +6614,7 @@
         "Terms of service"
       ],
       "sourceLinks": 1,
-      "rebuiltLinks": 44,
+      "rebuiltLinks": 46,
       "findings": [
         {
           "severity": "minor",

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T10:09:52.080Z",
+  "generated": "2026-11-09T13:58:42.120Z",
   "results": [
     {
       "vp": "1440x900",
@@ -23,7 +23,7 @@
       "vp": "1440x900",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 15 stops"
+      "detail": "worst 0px over 13 stops"
     },
     {
       "vp": "1440x900",
@@ -41,7 +41,7 @@
       "vp": "1440x900",
       "name": "kinetic band drifts, and runs faster while scrolling",
       "pass": true,
-      "detail": "{\"idle\":25.1,\"scrolling\":259.4}"
+      "detail": "{\"idle\":25.8,\"scrolling\":276.9}"
     },
     {
       "vp": "1440x900",
@@ -54,12 +54,6 @@
       "name": "back-to-top shown, 44px+",
       "pass": true,
       "detail": "on true, 52px"
-    },
-    {
-      "vp": "1440x900",
-      "name": "footer finale fully lit at the end",
-      "pass": true,
-      "detail": "--lit 1"
     },
     {
       "vp": "1440x900",
@@ -101,7 +95,7 @@
       "vp": "1024x768",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 16 stops"
+      "detail": "worst 0px over 15 stops"
     },
     {
       "vp": "1024x768",
@@ -125,7 +119,7 @@
       "vp": "1024x768",
       "name": "kinetic band drifts, and runs faster while scrolling",
       "pass": true,
-      "detail": "{\"idle\":34,\"scrolling\":263.4}"
+      "detail": "{\"idle\":35,\"scrolling\":264}"
     },
     {
       "vp": "1024x768",
@@ -138,12 +132,6 @@
       "name": "back-to-top shown, 44px+",
       "pass": true,
       "detail": "on true, 52px"
-    },
-    {
-      "vp": "1024x768",
-      "name": "footer finale fully lit at the end",
-      "pass": true,
-      "detail": "--lit 1"
     },
     {
       "vp": "1024x768",
@@ -185,7 +173,7 @@
       "vp": "390x844",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 16 stops"
+      "detail": "worst 0px over 15 stops"
     },
     {
       "vp": "390x844",
@@ -221,7 +209,7 @@
       "vp": "360x740",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 19 stops"
+      "detail": "worst 0px over 17 stops"
     },
     {
       "vp": "360x740",
@@ -269,7 +257,7 @@
       "vp": "1440x900",
       "name": "a key press skips the splash",
       "pass": true,
-      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 426ms"
+      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 350ms"
     },
     {
       "vp": "1440x900",
@@ -311,7 +299,7 @@
       "vp": "390x844",
       "name": "a key press skips the splash",
       "pass": true,
-      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 258ms"
+      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 240ms"
     },
     {
       "vp": "390x844",

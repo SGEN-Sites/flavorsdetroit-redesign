@@ -3,7 +3,7 @@
 // serves from a domain root or a GitHub Pages subpath.
 import { esc, rel, icon, ext } from './html.mjs';
 import { SITE, NAV, COPY, bulbs } from '../content/site.mjs';
-import { scenePicture, sparks } from './parts.mjs';
+import { scenePicture } from './parts.mjs';
 
 const A = (from, p) => rel(from, p);
 
@@ -57,7 +57,7 @@ function masthead(path) {
   const items = NAV.map((n) => `<li><a href="${A(path, n.path)}"${path === n.path || (n.path === '/blog/' && path.startsWith('/post/')) ? ' aria-current="page"' : ''}>${esc(n.label)}</a></li>`).join('');
   return `<div class="masthead">
   <div class="container masthead__in">
-    <a class="brand" href="${A(path, '/')}" aria-label="Flavors Detroit, home"><span class="brand__tower"><img src="${A(path, '/assets/img/logo-sign-240.webp')}" srcset="${A(path, '/assets/img/logo-sign-240.webp')} 240w, ${A(path, '/assets/img/logo-sign-480.webp')} 480w" sizes="118px" width="240" height="194" alt="Flavors Detroit"></span></a>
+    <a class="brand" href="${A(path, '/')}" aria-label="Flavors Detroit, home"><span class="brand__tower logo-glow"><img src="${A(path, '/assets/img/logo-sign-240.webp')}" srcset="${A(path, '/assets/img/logo-sign-240.webp')} 240w, ${A(path, '/assets/img/logo-sign-480.webp')} 480w" sizes="118px" width="240" height="194" alt="Flavors Detroit"></span></a>
     <nav class="nav" aria-label="Main"><ul>${items}</ul></nav>
     <div class="masthead__actions">
       <a class="btn btn--order" href="${esc(SITE.portal)}" target="_blank" rel="noopener">${icon.bag}<span>Order now</span><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
@@ -93,11 +93,10 @@ function footer(path) {
   const col = (title, links) => `<div><h2 class="footer__h">${esc(title)}</h2><ul class="footer__list">${links.join('')}</ul></div>`;
   const li = (p, label) => `<li><a href="${A(path, p)}">${esc(label)}</a></li>`;
   return `<footer class="site-footer">
-  <div class="footer__neon" aria-hidden="true">5700</div>
   <div class="container">
     <div class="footer__main">
       <div class="footer__brand">
-        <a href="${A(path, '/')}" aria-label="Flavors Detroit, home"><img src="${A(path, '/assets/img/logo-sign-480.webp')}" width="480" height="387" alt="Flavors Detroit" loading="lazy" decoding="async"></a>
+        <a class="logo-glow" href="${A(path, '/')}" aria-label="Flavors Detroit, home"><img src="${A(path, '/assets/img/logo-sign-480.webp')}" width="480" height="387" alt="Flavors Detroit" loading="lazy" decoding="async"></a>
         <p class="footer__tag">${esc(COPY.tagline)}.</p>
       </div>
       ${col('Shop', [
@@ -120,12 +119,28 @@ function footer(path) {
       </div>
     </div>
   </div>
-  <div class="footer__mark" aria-hidden="true" data-finale><span class="pool pool--a"></span>${sparks(12, 7)}<span class="footer__bulbs"></span><span class="footer__word">Flavors</span></div>
 </footer>`;
 }
 
 function dock() {
-  return `<nav class="dock" aria-label="Quick actions">
+  // the order bar (owner, 2026-11-09: "let's also add a sticky bottom bar like this for this site"): on
+  // wider screens, from the second screen on, a dark glass bar at the foot of the window with the client's
+  // own line, the live open state and the two things people come for; it can be closed for the visit
+  // (site.js). Phones keep the dock below. Its words: the client's portal line and the menu's ID note
+  const bar = `<aside class="orderbar" aria-label="Order for pickup" data-orderbar hidden>
+  <span class="orderbar__icon" aria-hidden="true">${icon.bag}</span>
+  <div class="orderbar__text">
+    <p class="orderbar__title">Order cannabis online for <span class="accent">pickup</span></p>
+    <p class="orderbar__line"><span class="status status-line" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="status__word">Open daily</span><span class="status__detail" data-status-text>10AM–10PM</span></span><span class="orderbar__id"><span class="orderbar__sep" aria-hidden="true">·</span>Bring a valid ID</span></p>
+  </div>
+  <div class="orderbar__actions">
+    <a class="btn btn--order" href="${esc(SITE.portal)}" target="_blank" rel="noopener"><span>Order online</span>${icon.arrow}<span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
+    <a class="btn btn--ghost" href="${esc(SITE.directionsUrl)}" target="_blank" rel="noopener">${icon.directions}<span>Get directions</span><span class="visually-hidden"> (opens Google Maps in a new tab)</span></a>
+  </div>
+  <button class="orderbar__close" type="button" data-orderbar-close aria-label="Hide this bar">${icon.close}</button>
+</aside>`;
+  return `${bar}
+<nav class="dock" aria-label="Quick actions">
   <a class="btn btn--order" href="${esc(SITE.portal)}" target="_blank" rel="noopener">${icon.bag}<span>Order now</span><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
   <a class="dock__icon" href="${SITE.tel}" aria-label="Call Flavors Detroit, ${esc(SITE.phone)}">${icon.phone}</a>
   <a class="dock__icon" href="${esc(SITE.directionsUrl)}" target="_blank" rel="noopener" aria-label="Directions to ${esc(SITE.addressLine)} (opens Google Maps in a new tab)">${icon.directions}</a>
@@ -199,6 +214,7 @@ ${drawer(o.path)}
 </div>
 ${o.gateExempt ? '' : ageGate(o.path)}
 <script src="${A(o.path, '/assets/js/site.js')}" defer></script>
+${(o.scripts || []).map((s) => `<script src="${A(o.path, s)}" defer></script>`).join('\n')}
 </body>
 </html>
 `;

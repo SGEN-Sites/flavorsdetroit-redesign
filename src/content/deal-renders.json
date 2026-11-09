@@ -705,6 +705,454 @@
    "source": "fal-ai/flux-pro/v1.1-ultra",
    "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
   },
+  "infused-1": {
+   "kind": "ai",
+   "alt": "Illustration: a pre-roll coated in golden kief",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.1263,
+   "files": [
+    {
+     "file": "deal/infused-1-360.webp",
+     "w": 45,
+     "h": 360,
+     "bytes": 4878
+    },
+    {
+     "file": "deal/infused-1-720.webp",
+     "w": 91,
+     "h": 720,
+     "bytes": 12300
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-afee-7062-85f5-8f849dd93946",
+   "cutoutRequestId": "01a1bffb-ed70-7d70-aef0-b1c1f2d7858b",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "infused-3": {
+   "kind": "ai",
+   "alt": "Illustration: three thick pre-rolls coated in golden kief",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.0878,
+   "files": [
+    {
+     "file": "deal/infused-3-360.webp",
+     "w": 392,
+     "h": 360,
+     "bytes": 53298
+    },
+    {
+     "file": "deal/infused-3-720.webp",
+     "w": 783,
+     "h": 720,
+     "bytes": 171530
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b150-72a3-a70c-f2a1a6ec45b7",
+   "cutoutRequestId": "01a1bffb-eede-7463-8286-2a376bce303b",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "infused-5": {
+   "kind": "ai",
+   "alt": "Illustration: five slim pre-rolls dusted with golden kief",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.3407,
+   "files": [
+    {
+     "file": "deal/infused-5-360.webp",
+     "w": 483,
+     "h": 360,
+     "bytes": 33492
+    },
+    {
+     "file": "deal/infused-5-720.webp",
+     "w": 965,
+     "h": 720,
+     "bytes": 94780
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b33c-76b2-a427-b13e88ba7a1f",
+   "cutoutRequestId": "01a1bffb-f07e-70b0-a044-a44693b35ec5",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "disp-3": {
+   "kind": "ai",
+   "alt": "Illustration: three slim disposable vape pens in black, white and silver",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.4385,
+   "files": [
+    {
+     "file": "deal/disp-3-360.webp",
+     "w": 158,
+     "h": 360,
+     "bytes": 8244
+    },
+    {
+     "file": "deal/disp-3-720.webp",
+     "w": 316,
+     "h": 720,
+     "bytes": 18072
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b493-7772-8b7f-0a79be99cc52",
+   "cutoutRequestId": "01a1bffb-f208-7882-9d6e-990b09d50f86",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "disp-5": {
+   "kind": "ai",
+   "alt": "Illustration: five slim black disposable vape pens",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.8987,
+   "files": [
+    {
+     "file": "deal/disp-5-360.webp",
+     "w": 324,
+     "h": 360,
+     "bytes": 24550
+    },
+    {
+     "file": "deal/disp-5-720.webp",
+     "w": 647,
+     "h": 720,
+     "bytes": 54606
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b5f8-7bc2-979c-da176e1b842c",
+   "cutoutRequestId": "01a1bffb-f36e-7b81-ab73-d1edc5d025e1",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "carts-2": {
+   "kind": "ai",
+   "alt": "Illustration: two vape cartridges of golden oil with black mouthpieces",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.4835,
+   "files": [
+    {
+     "file": "deal/carts-2-360.webp",
+     "w": 174,
+     "h": 360,
+     "bytes": 15666
+    },
+    {
+     "file": "deal/carts-2-720.webp",
+     "w": 348,
+     "h": 720,
+     "bytes": 37784
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b760-7123-b136-fd11b29e6b7c",
+   "cutoutRequestId": "01a1bffb-f4d2-71a3-a56c-3ee314b6609e",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "sugar": {
+   "kind": "ai",
+   "alt": "Illustration: a wide glass jar of golden cured sugar concentrate with a black lid",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.6507,
+   "files": [
+    {
+     "file": "deal/sugar-360.webp",
+     "w": 234,
+     "h": 360,
+     "bytes": 37462
+    },
+    {
+     "file": "deal/sugar-720.webp",
+     "w": 468,
+     "h": 720,
+     "bytes": 133322
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-b9a5-7493-8f6c-04c12e6b5663",
+   "cutoutRequestId": "01a1bffb-f6bb-7ce3-b43f-d09c0a86f1b1",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "diamonds": {
+   "kind": "ai",
+   "alt": "Illustration: a small glass jar of clear diamond crystals in golden sauce",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.699,
+   "files": [
+    {
+     "file": "deal/diamonds-360.webp",
+     "w": 252,
+     "h": 360,
+     "bytes": 33752
+    },
+    {
+     "file": "deal/diamonds-720.webp",
+     "w": 503,
+     "h": 720,
+     "bytes": 111756
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-bb55-70b3-8495-c0023b56a188",
+   "cutoutRequestId": "01a1bffb-f828-7672-b23a-b5f70c170700",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "gummies": {
+   "kind": "ai",
+   "alt": "Illustration: a small pile of sugar-coated fruit gummy cubes",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 2.33,
+   "files": [
+    {
+     "file": "deal/gummies-360.webp",
+     "w": 839,
+     "h": 360,
+     "bytes": 71208
+    },
+    {
+     "file": "deal/gummies-720.webp",
+     "w": 1678,
+     "h": 720,
+     "bytes": 190310
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-bcc1-7b52-ab45-f6bd1b15c077",
+   "cutoutRequestId": "01a1bffb-f98d-7622-a4a1-f7303be9ddbf",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "chews": {
+   "kind": "ai",
+   "alt": "Illustration: a small pile of soft fruit chews in plain silver wrappers",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 2.4593,
+   "files": [
+    {
+     "file": "deal/chews-360.webp",
+     "w": 885,
+     "h": 360,
+     "bytes": 74138
+    },
+    {
+     "file": "deal/chews-720.webp",
+     "w": 1771,
+     "h": 720,
+     "bytes": 185336
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-be2e-7271-b3ed-efa363e99e78",
+   "cutoutRequestId": "01a1bffb-faf3-7892-b100-f98e7716838a",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "rope": {
+   "kind": "ai",
+   "alt": "Illustration: a few coiled lengths of sugar-coated fruit rope",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 1.5051,
+   "files": [
+    {
+     "file": "deal/rope-360.webp",
+     "w": 542,
+     "h": 360,
+     "bytes": 79200
+    },
+    {
+     "file": "deal/rope-720.webp",
+     "w": 1084,
+     "h": 720,
+     "bytes": 232468
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-bf99-7d40-9b6b-65cfabb062a9",
+   "cutoutRequestId": "01a1bffb-fc71-7311-87bb-fafb618c929c",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "syrup": {
+   "kind": "ai",
+   "alt": "Illustration: a small amber glass bottle of syrup with a black cap",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.7657,
+   "files": [
+    {
+     "file": "deal/syrup-360.webp",
+     "w": 276,
+     "h": 360,
+     "bytes": 14912
+    },
+    {
+     "file": "deal/syrup-720.webp",
+     "w": 551,
+     "h": 720,
+     "bytes": 31546
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-c1cd-7d22-a4f6-0a0ce0801f20",
+   "cutoutRequestId": "01a1bffb-fdd9-7950-a5c3-1500921cfa06",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "gummy-jar": {
+   "kind": "ai",
+   "alt": "Illustration: a small glass jar of sugar-coated fruit gummy cubes with a black lid",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.5964,
+   "files": [
+    {
+     "file": "deal/gummy-jar-360.webp",
+     "w": 215,
+     "h": 360,
+     "bytes": 25714
+    },
+    {
+     "file": "deal/gummy-jar-720.webp",
+     "w": 429,
+     "h": 720,
+     "bytes": 89942
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bffa-c379-73f1-b9e6-7826b92d0693",
+   "cutoutRequestId": "01a1bffb-ff46-7792-adb2-337b966eba46",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "eighth-pouch": {
+   "kind": "ai",
+   "alt": "Illustration: a small plain black stand-up pouch with a small heap of green cannabis buds in front of it",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "dataAi": "generated",
+   "aspect": 0.7655,
+   "files": [
+    {
+     "file": "deal/eighth-pouch-360.webp",
+     "w": 276,
+     "h": 360,
+     "bytes": 18234
+    },
+    {
+     "file": "deal/eighth-pouch-720.webp",
+     "w": 551,
+     "h": 720,
+     "bytes": 50086
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1c079-9a9c-7d50-a785-ca498840a439",
+   "cutoutRequestId": "01a1c07a-55a1-7b80-9d3a-d2371f872c95",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
   "preroll-stand": {
    "kind": "owner",
    "alt": "A pre-roll with a kraft paper tip, standing at a slant",
@@ -863,7 +1311,7 @@
    "cutoutRequestId": "01a1bfae-4de6-7103-86aa-619c7045daab",
    "upscaleRequestId": null,
    "source": "assets/source/owner-products/wax-bucket-ref.png (a product photo the owner supplied: \"this is how a wax bucket looks like ... replace branding with Flavors\")",
-   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+   "cutout": "fal-ai/bria/background/remove"
   },
   "budder-1g": {
    "kind": "owner",
@@ -895,7 +1343,172 @@
    "cutoutRequestId": "01a1bfbe-a19f-76a1-a008-317531e431c0",
    "upscaleRequestId": null,
    "source": "assets/source/owner-products/budder-1g-ref.png",
+   "cutout": "fal-ai/bria/background/remove"
+  },
+  "budder-dish-white": {
+   "kind": "owner",
+   "alt": "Golden budder swirled in a small clear glass dish, seen from above",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
+   "aspect": 1.0,
+   "files": [
+    {
+     "file": "deal/budder-dish-white-360.webp",
+     "w": 360,
+     "h": 360,
+     "bytes": 21570
+    },
+    {
+     "file": "deal/budder-dish-white-720.webp",
+     "w": 720,
+     "h": 720,
+     "bytes": 53454
+    }
+   ],
+   "holesFilled": 70,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": {
+    "cx": 1190,
+    "cy": 862,
+    "rimR": 635,
+    "outerR": 650
+   },
+   "requestId": null,
+   "cutoutRequestId": "01a1bf5e-c734-7800-967a-023bb7e3982a",
+   "upscaleRequestId": "01a1bf5d-526c-77d2-b8b6-29cf601dbcc1",
+   "source": "assets/source/owner-products/budder-dish.png",
    "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "party-jar": {
+   "kind": "owner",
+   "alt": "A clear glass jar packed with pre-rolls in RAW papers",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
+   "aspect": 0.5832,
+   "files": [
+    {
+     "file": "deal/party-jar-360.webp",
+     "w": 210,
+     "h": 360,
+     "bytes": 20544
+    },
+    {
+     "file": "deal/party-jar-720.webp",
+     "w": 420,
+     "h": 720,
+     "bytes": 57428
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1c089-3cc9-7822-aaed-89dfb02993ff",
+   "upscaleRequestId": "01a1c087-f1c5-7951-9a8b-3f3efa3d8f21",
+   "source": "assets/source/owner-products/party-jar.png",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "tarantula": {
+   "kind": "owner",
+   "alt": "A Flavors Detroit Tarantula 4.5G tube with a white cap, and two Tarantula joints",
+   "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
+   "dataAi": "edited",
+   "aspect": 0.9217,
+   "files": [
+    {
+     "file": "deal/tarantula-360.webp",
+     "w": 332,
+     "h": 360,
+     "bytes": 24234
+    },
+    {
+     "file": "deal/tarantula-720.webp",
+     "w": 664,
+     "h": 720,
+     "bytes": 65066
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1c089-3b59-7993-8b30-7554bc458722",
+   "upscaleRequestId": "01a1c087-f31d-72f3-9f70-45d4372ed56a",
+   "source": "assets/source/owner-products/tarantula-berry-pie.png",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "infused-single": {
+   "kind": "owner",
+   "alt": "An infused pre-roll with a twisted tip and a white filter",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
+   "aspect": 0.1361,
+   "files": [
+    {
+     "file": "deal/infused-single-360.webp",
+     "w": 49,
+     "h": 360,
+     "bytes": 9296
+    },
+    {
+     "file": "deal/infused-single-720.webp",
+     "w": 98,
+     "h": 720,
+     "bytes": 25018
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1c08e-170d-7cf3-b143-14f3507051df",
+   "upscaleRequestId": "01a1c08d-a0f9-7532-89b7-8d4da7597db8",
+   "source": "assets/source/owner-products/infused-single.png",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
+  },
+  "rocket-stick": {
+   "kind": "owner",
+   "alt": "A Rocket Stick injected pre-roll tube in orange with a rocket on it, beside a pre-roll",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "dataAi": "",
+   "aspect": 0.3723,
+   "files": [
+    {
+     "file": "deal/rocket-stick-360.webp",
+     "w": 134,
+     "h": 360,
+     "bytes": 18222
+    },
+    {
+     "file": "deal/rocket-stick-720.webp",
+     "w": 268,
+     "h": 720,
+     "bytes": 44548
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1c08e-15df-7e02-a669-c0bb8b131540",
+   "upscaleRequestId": "01a1c08d-9fad-7dc2-ad7a-d4a24b93853c",
+   "source": "assets/source/owner-products/rocket-stick.png",
+   "cutout": "fal-ai/bria/background/remove (RMBG 2.0)"
   }
  }
 }

@@ -238,7 +238,7 @@ export function tag({ kick, price, per = '', name, detail = '', foot = '', featu
  *  layout for all categories. Include product images."). img: an id in deal-renders.json (an AI
  *  illustration of the product type, labelled); size: 'feature' (two by two, the store's blue),
  *  'small' or 'wide' (the image beside the words). detail is trusted HTML (callers escape). */
-export function deal(from, { img, kick, price, per = '', name, detail = '', size = 'small', i = 0 }) {
+export function deal(from, { img, kick, price, per = '', name, detail = '', foot = '', size = 'small', i = 0 }) {
   const r = dealRenders?.items?.[img];
   if (!r) throw new Error('deal render missing from deal-renders.json: ' + img);
   const [f1, f2] = r.files;
@@ -251,6 +251,7 @@ export function deal(from, { img, kick, price, per = '', name, detail = '', size
     <p class="deal__price">${p}${per ? `<span class="deal__per">${esc(per)}</span>` : ''}</p>
     <h3 class="deal__name">${esc(name)}</h3>
     ${detail ? `<div class="deal__detail">${detail}</div>` : ''}
+    ${foot ? `<p class="deal__foot">${foot}</p>` : ''}
   </div>
 </article>`;
 }
@@ -311,8 +312,38 @@ export function ownboxBackdrop(from) {
   return `<div class="ownbox__bg" aria-hidden="true"><img src="${A(from, '/assets/img/' + f.file)}" srcset="${it.files.map((x) => `${A(from, '/assets/img/' + x.file)} ${x.w}w`).join(', ')}" sizes="100vw" width="${f.w}" height="${f.h}" alt="" loading="lazy" decoding="async"></div>`;
 }
 
+/** The store gallery (owner, 2026-11-09: "can we do something like this [a concave carousel] to show the
+ *  images?"): the owner's store photos hung on a wall that curves around the viewer. An original build,
+ *  not the paid component: real <img>s in a list, turned in 3D by site.js (a slow drift, drag and flick
+ *  with a settle, buttons, arrow keys, a horizontal swipe); without the script, a plain swipe row.
+ *  panels: [{ slot, title, sub }]; slot = a store-photos.json item (5:4, cine grade). */
+export function cave(from, panels) {
+  const n = panels.length;
+  const items = panels.map(({ slot, title, sub }, i) => {
+    const it = photos?.items?.[slot];
+    if (!it) throw new Error('gallery photo missing from store-photos.json: ' + slot);
+    const def = it.files[Math.min(1, it.files.length - 1)];
+    const edited = it.digitalSourceType === 'compositeWithTrainedAlgorithmicMedia';
+    const set = it.files.map((f) => `${A(from, '/assets/img/' + f.file)} ${f.w}w`).join(', ');
+    return `<li class="cave__panel" data-title="${esc(title)}" data-sub="${esc(sub)}" aria-roledescription="slide" aria-label="${i + 1} of ${n}: ${esc(title)}">
+      <img src="${A(from, '/assets/img/' + def.file)}" srcset="${set}" sizes="(max-width: 760px) 62vw, 420px" width="${def.w}" height="${def.h}" alt="${esc(it.alt)}" data-photo="store"${edited ? ' data-ai="edited"' : ''} loading="${i < 3 || i === n - 1 ? 'eager' : 'lazy'}" decoding="async" draggable="false">
+    </li>`;
+  }).join('\n');
+  return `<div class="cave" data-cave data-reveal>
+  <div class="cave__stage" tabindex="0" role="group" aria-roledescription="carousel" aria-label="Photos of the store: use the arrow keys or the buttons to turn the wall">
+    <ul class="cave__wall" role="list">${items}</ul>
+  </div>
+  <p class="cave__caption" aria-hidden="true"><b class="cave__title">${esc(panels[0].title)}</b><span class="cave__sub">${esc(panels[0].sub)}</span></p>
+  <div class="cave__controls">
+    <button class="cave__btn" type="button" data-cave-prev aria-label="Previous photo">${icon.chevL}</button>
+    <span class="cave__count" aria-hidden="true"><b data-cave-n>01</b> / ${String(n).padStart(2, '0')}</span>
+    <button class="cave__btn" type="button" data-cave-next aria-label="Next photo">${icon.chevR}</button>
+  </div>
+</div>`;
+}
+
 /** The bento: four cards (a feature, two small, one wide) or three (a feature, two wide). */
-export const dealGrid = (cards) => `<div class="deals deals--${cards.length} swipe">${cards.join('\n')}</div>
+export const dealGrid = (cards, { many = false } = {}) => `<div class="deals deals--${cards.length}${many ? ' deals--many' : ''} swipe">${cards.join('\n')}</div>
 <p class="swipe-hint">${icon.swipe}<span>Swipe for more</span></p>`;   // a carousel on phones (cinema.css)
 
 /** Accessible tabs. panels: [{id, label, html}] */
@@ -346,7 +377,14 @@ export function storeCard(from, { heading = true } = {}) {
 }
 
 /** Mailing list form (preview: validates, never posts). */
-export function mailForm(id, { night = false } = {}) {
+export function mailForm(id, { night = false, pill = false } = {}) {
+  // pill (home strip, owner's option A 2026-11-09): input + button in one rounded bar, label read by screen readers only
+  if (pill) return `<form class="form on-night" data-preview-form="Thanks! This is a design preview, so nothing was sent. On the live site this signs you up for new product alerts." novalidate>
+  <label class="visually-hidden" for="${id}-email">Email address</label>
+  <div class="pill-form"><input id="${id}-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"><button class="btn btn--order" type="submit">${esc(COPY.mailButton)}</button></div>
+  <p class="form-note">${esc(COPY.mailNote)}</p>
+  <p class="form-status" aria-live="polite"></p>
+</form>`;
   return `<form class="form${night ? ' on-night' : ''}" data-preview-form="Thanks! This is a design preview, so nothing was sent. On the live site this signs you up for new product alerts." novalidate>
   <div class="inline-form">
     <div class="field"><label for="${id}-email">Email address</label><input id="${id}-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
@@ -393,15 +431,17 @@ export function postCard(from, p, { i = 0, feature = false } = {}) {
 
 /** Inner-page hero. scene: a scene still name (full-bleed under a scrim) · photo: a client photo
  *  from images.json shown as a side light (right half, faded in) · quiet: a dimmer scene. */
-export function pageHero(from, { kick, title, titleHtml, lede, crumbs = [], aside = '', id = 'page-title', titleClass = 'h1', scene = '', photo = '', pos = '', quiet = false, cutout = false }) {
+export function pageHero(from, { kick, title, titleHtml, lede, crumbs = [], aside = '', id = 'page-title', titleClass = 'h1', scene = '', photo = '', pos = '', quiet = false, cutout = false, whole = '' }) {
   const bc = crumbs.length ? `<nav class="crumbs" aria-label="Breadcrumb"><a href="${A(from, '/')}">Home</a>${crumbs.map((c) => `<span aria-hidden="true">/</span>${c.path ? `<a href="${A(from, c.path)}">${esc(c.label)}</a>` : `<span aria-current="page">${esc(c.label)}</span>`}`).join('')}</nav>` : '';
   let media = '';
-  if (scene) media = backdrop(from, scene, { cls: 'scene--page' + (quiet ? ' scene--quiet' : ''), eager: true, depth: '0.08', pos });
+  // whole: a scene still shown uncropped at the side (object-fit contain), e.g. the /learn/ HD bud (owner, 2026-11-09)
+  if (whole) media = `<div class="scene scene--page scene--side scene--whole" aria-hidden="true" data-depth="0.06">${scenePicture(from, whole, { sizes: '(max-width: 860px) 100vw, 60vw', eager: true })}</div>`;
+  else if (scene) media = backdrop(from, scene, { cls: 'scene--page' + (quiet ? ' scene--quiet' : ''), eager: true, depth: '0.08', pos });
   else if (photo) {
     const im = images[photo] || {}, two = photo.replace('.webp', '@2x.webp'), im2 = images[two];
     media = `<div class="scene scene--page scene--side${cutout ? ' scene--cutout' : ''}" aria-hidden="true" data-depth="${cutout ? '-0.12' : '0.06'}"><img src="${A(from, '/assets/img/' + photo)}" srcset="${A(from, '/assets/img/' + photo)} ${im.w}w${im2 ? `, ${A(from, '/assets/img/' + two)} ${im2.w}w` : ''}" sizes="(max-width: 860px) 100vw, 55vw" width="${im.w}" height="${im.h}" alt=""${pos ? ` style="object-position:${pos}"` : ''} fetchpriority="high" decoding="async"></div>`;
   }
-  return `<section class="page-hero${media ? ' page-hero--scene' : ''}${photo ? ' page-hero--side' : ''}" aria-labelledby="${id}">
+  return `<section class="page-hero${media ? ' page-hero--scene' : ''}${photo || whole ? ' page-hero--side' : ''}" aria-labelledby="${id}">
   ${media}
   <div class="container page-hero__in">
     <div class="page-hero__text">
@@ -414,6 +454,56 @@ export function pageHero(from, { kick, title, titleHtml, lede, crumbs = [], asid
   </div>
 </section>
 <div class="bulb-rail" aria-hidden="true"></div>`;
+}
+
+/** The slim mailing-list + Instagram strip (owner's option A, 2026-11-09; home, /contact/, /blog/). seam: the home
+ *  version, where the spectrum line runs behind the strip's middle and the lower half is the next band's white. */
+export function mailStrip(from, { id, key, seam = false }) {
+  const title = esc(COPY.mailTitle).replace(/ today!$/, ' <span class="accent">today!</span>');
+  return `${seam ? '' : spectrum()}
+<section class="band band--black loop${seam ? '' : ' loop--plain'}" aria-labelledby="${id}">
+  <div class="container">
+    <div class="loop__strip" data-reveal>
+      <div class="loop__head">
+        ${kicker('New product alerts')}
+        <h2 class="loop__title" id="${id}">${title}</h2>
+        <p class="loop__sub">${esc(COPY.mailSub)}.</p>
+      </div>
+      ${mailForm(key, { pill: true })}
+      <a class="loop__social" href="${esc(SITE.instagram)}" target="_blank" rel="noopener">
+        <span class="loop__social-ico" aria-hidden="true">${icon.insta}</span>
+        <span><small>${esc(COPY.socialFollow)}</small><strong>${esc(SITE.instagramHandle)}</strong></span>
+        <span class="visually-hidden"> on Instagram (opens in a new tab)</span>
+      </a>
+    </div>
+  </div>
+</section>`;
+}
+
+/** "Ask a budtender" questions (owner, 2026-11-09, /visit/ then /learn/): equal question pills (tabs) beside the
+ *  top half of a phone rising from the band's bottom edge, the answer as a chat reply from Flavors. Every answer is
+ *  in the HTML (without JavaScript they all show). items: [{ q, a (HTML), icon }]; key keeps the ids unique. */
+export function askBudtender(from, { key, id, kick = 'Questions', titleHtml, items }) {
+  const tab = (x, n) => `<button class="askb__chip" type="button" role="tab" id="${key}-tab-${n}" aria-controls="${key}-panel-${n}" aria-selected="${n === 0}" tabindex="${n === 0 ? 0 : -1}"><span class="askb__ico" aria-hidden="true">${icon[x.icon] || icon.chat}</span><span>${esc(x.q)}</span></button>`;
+  const panel = (x, n) => `<div class="askb__panel" role="tabpanel" id="${key}-panel-${n}" aria-labelledby="${key}-tab-${n}"${n ? ' hidden' : ''}>
+          <div class="msg msg--q"><p>${esc(x.q)}</p></div>
+          <div class="msg msg--a">${x.a}</div>
+        </div>`;
+  return `<section class="band band--black band--askb" aria-labelledby="${id}">
+  <div class="container">
+    ${sectionHead({ kick, id, titleHtml })}
+    <div class="askb" data-askb>
+      <div class="askb__chips" role="tablist" aria-label="Questions">${items.map(tab).join('')}</div>
+      <div class="askb__phone">
+        <div class="askb__screen">
+          <div class="askb__status" aria-hidden="true"><span>10:00</span><span class="askb__island"></span><span class="askb__sys"><i class="askb__sig"></i><i class="askb__bat"></i></span></div>
+          <div class="askb__head" aria-hidden="true"><span class="askb__back">${icon.chevL}</span><img src="${A(from, '/assets/img/logo-sign-240.webp')}" width="240" height="194" alt="" loading="lazy" decoding="async"><span><strong>Flavors Detroit</strong><small>5700 E 8 Mile Rd</small></span></div>
+          <div class="askb__chat">${items.map(panel).join('')}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`;
 }
 
 export const faq = (items) => `<div class="faq">${items.map((q) => `<details><summary>${esc(q.q)}</summary><div class="faq__a">${q.a}</div></details>`).join('')}</div>`;

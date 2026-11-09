@@ -27,11 +27,12 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
   seam; the category cards on a pinned rail (solid colour cards with uniformly rendered products,
   owner's choice 2026-11-09); the day's deals as a bento of cards with product illustrations on black (owner, 2026-11-09; first as deal tickets hanging over neon); the Owner's Box, where the owner's road case opens in green smoke and the
   strains fly out on holographic cards; a kinetic type band; a scroll-lit "who are we" statement with counting stats;
-  glass panels over bokeh; a scene behind every inner page hero; a footer wordmark that lights up
-  at the end. One scroll-aware loop makes the page answer every scroll (marquees speed up with the
+  glass panels over bokeh; a scene behind every inner page hero. One scroll-aware loop makes the page answer every scroll (marquees speed up with the
   scroll, light curtains and beams on arrival, drifting light, depth), with a **Pause motion**
-  button (WCAG 2.2.2). Eight scene stills are AI illustrations (fal flux-pro 1.1 ultra), labelled in
-  the files, the markup and the footer, and none shows the store (`CHANGE-LOG.md`, Imagery).
+  button (WCAG 2.2.2). Five scene stills are AI illustrations (fal flux-pro 1.1 ultra), labelled in
+  the files, the markup and the footer, and none shows the store; the product images on the category and
+  deal cards are AI illustrations of product types too (labelled in the files, the markup and their alt
+  text), apart from the owner's own product photos (`CHANGE-LOG.md`, Imagery).
 - The owner's choices, 2026-11-09: the palette reads black first, then the store's blue (measured
   from store photos), then whites; the striped awnings are gone (the six colours stay as thin
   dividers); headlines first in Jockey One with Barlow text (pairing A, measured as the closest

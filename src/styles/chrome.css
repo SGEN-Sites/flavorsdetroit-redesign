@@ -40,21 +40,20 @@
 .is-scrolled .masthead { background: color-mix(in srgb, var(--night) 97%, transparent); box-shadow: 0 10px 30px -18px color-mix(in srgb, var(--night) 90%, transparent); }
 .masthead__in { height: 100%; display: flex; align-items: center; gap: clamp(16px, 2.4vw, 36px); }
 
-/* the logo mounted on a slice of the royal-blue corrugated tower */
+/* just the logo, lit from below by an LED underglow so the black cloud stands out on the dark header
+   (owner, 2026-11-09: "replace these with just the brand logo ... an underglow ... throughout the site";
+   it replaced the royal-blue corrugated tower tile). The same .logo-glow treatment is on the footer logo. */
 .brand { position: relative; display: block; align-self: flex-start; flex: none; text-decoration: none; z-index: 2; }
-.brand__tower {
-  display: grid; place-items: center;
-  width: clamp(92px, 8.4vw, 118px); height: calc(var(--header-h) + 18px);
-  padding: 8px 8px 10px;
-  background:
-    repeating-linear-gradient(90deg, color-mix(in srgb, var(--white) 10%, transparent) 0 2px, transparent 2px 9px, color-mix(in srgb, var(--royal-deep) 70%, transparent) 9px 11px, transparent 11px 14px),
-    linear-gradient(180deg, var(--royal-bright), var(--royal) 40%, var(--royal-deep));
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 14px 26px -12px color-mix(in srgb, var(--royal) 70%, transparent), inset 0 -3px 0 color-mix(in srgb, var(--night) 25%, transparent);
-  transition: height var(--dur-2) var(--ease);
+.brand__tower { display: grid; place-items: center; height: var(--header-h); padding-top: 4px; transition: height var(--dur-2) var(--ease); }
+.brand__tower img { width: auto; height: calc(var(--header-h) + 4px); transition: height var(--dur-2) var(--ease); }
+.is-scrolled .brand__tower img { height: calc(var(--header-h) - 10px); }
+.logo-glow { position: relative; isolation: isolate; }
+.logo-glow::before {                 /* the pool of LED light under the sign */
+  content: ""; position: absolute; z-index: -1; left: 2%; right: 2%; bottom: -6%; height: 58%; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--led) 75%, transparent), color-mix(in srgb, var(--led) 30%, transparent) 55%, transparent);
+  filter: blur(10px);
 }
-.brand__tower img { width: 100%; height: auto; filter: drop-shadow(0 3px 6px color-mix(in srgb, var(--night) 60%, transparent)); }
-.is-scrolled .brand__tower { height: var(--header-h); padding-bottom: 6px; }
+.logo-glow img { filter: drop-shadow(0 0 1px color-mix(in srgb, var(--led-soft) 85%, transparent)) drop-shadow(0 6px 14px var(--led-glow)); }
 .brand:focus-visible { outline-offset: -3px; }
 
 .nav { margin-inline-start: auto; }
@@ -96,7 +95,7 @@
 }
 @media (max-width: 760px) {
   .utility__ig, .utility__addr { display: none; }
-  .brand__tower { width: 84px; height: calc(var(--header-h) + 12px); padding: 6px 7px 8px; }
+  .brand__tower img { height: calc(var(--header-h) - 2px); }
   .masthead .btn--order { display: none; }           /* the phone dock carries Order now */
   .menu-btn span { display: none; }
 }
@@ -152,9 +151,7 @@
 .site-footer { position: relative; background: var(--sign-black); color: var(--cream-2); overflow: hidden; isolation: isolate; }
 .site-footer::before { content: ""; display: block; height: 3px; background: var(--rainbow-line); }   /* the spectrum divider */
 .footer__main { display: grid; grid-template-columns: 1.25fr repeat(2, minmax(0, .8fr)) 1.3fr; gap: clamp(28px, 4vw, 56px); padding-block: clamp(48px, 6vw, 80px) clamp(32px, 4vw, 48px); }
-.footer__brand > a { display: inline-grid; place-items: center; width: 168px; padding: 14px 14px 18px; border-radius: 16px;
-  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--white) 10%, transparent) 0 2px, transparent 2px 9px, color-mix(in srgb, var(--royal-deep) 70%, transparent) 9px 11px, transparent 11px 14px), linear-gradient(180deg, var(--royal-bright), var(--royal) 40%, var(--royal-deep));
-  box-shadow: 0 18px 40px -18px color-mix(in srgb, var(--royal) 80%, transparent); }
+.footer__brand > a { display: inline-grid; place-items: center; width: 168px; padding: 4px 0 10px; }   /* just the logo with the underglow (.logo-glow) */
 .footer__brand img { width: 100%; height: auto; }
 .footer__tag { margin-top: var(--s-4); font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; line-height: 1.05; color: var(--cream); max-width: 16ch; }
 .footer__h { font-family: var(--font-sans); font-size: var(--fs-xs); letter-spacing: var(--track-kicker); font-weight: 700; color: var(--led-soft); margin-bottom: var(--s-3); }
@@ -166,16 +163,16 @@
 .footer__visit a { color: var(--cream); text-decoration: none; min-height: 44px; display: inline-flex; align-items: center; gap: 10px; }
 .footer__visit a:hover { text-decoration: underline; }
 .footer__visit svg { width: 17px; height: 17px; color: var(--led-soft); flex: none; }
-.footer__neon {
-  position: absolute; right: var(--gutter); top: clamp(48px, 6vw, 80px); z-index: -1; pointer-events: none; max-width: calc(100% - 2 * var(--gutter)); overflow: hidden;
-  font-family: var(--font-neon); font-size: clamp(7rem, 16vw, 15rem); line-height: .8; letter-spacing: .02em;
-  color: transparent; -webkit-text-stroke: 1.5px color-mix(in srgb, var(--led) 32%, transparent);
-  text-shadow: 0 0 40px color-mix(in srgb, var(--led) 14%, transparent);
-}
+/* the outlined neon "5700" behind the footer was removed at the owner's request (2026-11-09) */
 .footer__legal { border-top: 1px solid var(--line-night); padding-block: var(--s-5) var(--s-6); display: grid; gap: var(--s-3); font-size: var(--fs-xs); color: var(--mist); }
-.footer__legal-row { display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-5); align-items: center; justify-content: space-between; }
+/* (owner, 2026-11-09: "texts in here can be in a single row and this must be center aligned, along
+   with [the copyright line]") the warning is one centred line where it fits (balanced, centred lines on
+   phones); the copyright line and the preview note sit centred under it */
+.footer__legal-row { display: flex; flex-direction: column; align-items: center; gap: var(--s-2); text-align: center; }
 .footer__legal a { color: var(--cream-2); min-height: 44px; display: inline-flex; align-items: center; }
-.footer__warning { border: 1px solid var(--line-night-strong); border-radius: var(--r-md); padding: 12px 16px; color: var(--cream-2); max-width: 74ch; }
+.footer__warning { justify-self: center; width: fit-content; max-width: 100%; border: 1px solid var(--line-night-strong); border-radius: var(--r-md);
+  padding: 12px 20px; color: var(--cream-2); text-align: center; text-wrap: balance; }
+.footer__legal-row .preview-pill { max-width: min(100%, 100ch); border-radius: var(--r-md); justify-content: center; text-wrap: balance; }   /* wraps: a rounded box, not an oval */
 .preview-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: var(--r-pill); border: 1px dashed var(--line-night-strong); color: var(--cream-2); }
 
 @media (max-width: 1080px) {
@@ -219,4 +216,42 @@ html.gate-open .age-gate[hidden] { display: grid; }   /* shown from first paint 
 @media (max-width: 480px) { .age-gate__actions { grid-template-columns: 1fr; } }
 html.gate-open, html.gate-open body { overflow: hidden; }
 
-@media (max-width: 760px) { .footer__neon { display: none; } }
+
+/* ---- the order bar: a dark glass bar at the foot of the window on wider screens (owner, 2026-11-09) ---- */
+.orderbar[hidden] { display: none; }
+.orderbar {
+  position: fixed; left: 50%; bottom: max(16px, env(safe-area-inset-bottom)); z-index: var(--z-dock);
+  width: min(1000px, calc(100% - 2 * var(--gutter))); display: flex; align-items: center; gap: 16px; padding: 12px 10px 12px 12px;
+  border-radius: 22px; border: 1px solid var(--line-night-strong); color: var(--cream);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--night-2) 88%, transparent), color-mix(in srgb, var(--sign-black) 94%, transparent));
+  -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2);
+  box-shadow: inset 0 1px 0 color-mix(in srgb, var(--white) 10%, transparent), 0 26px 50px -22px rgb(0 0 0 / .75), 0 0 0 1px color-mix(in srgb, var(--night) 40%, transparent);
+  opacity: 0; visibility: hidden; translate: -50% 22px;
+  transition: opacity .45s var(--ease), translate .6s var(--ease), visibility 0s linear .6s;
+}
+.orderbar.is-on { opacity: 1; visibility: visible; translate: -50% 0; transition: opacity .45s var(--ease), translate .6s var(--ease), visibility 0s; }
+.gate-open .orderbar, .drawer-open .orderbar, .splash-on .orderbar { opacity: 0; visibility: hidden; }
+.orderbar__icon { flex: none; display: grid; place-items: center; width: 52px; height: 52px; border-radius: 15px; color: var(--white);
+  background: linear-gradient(160deg, var(--royal-top), var(--royal) 60%, var(--royal-deep)); box-shadow: inset 0 1px 0 color-mix(in srgb, var(--white) 26%, transparent), 0 8px 18px -8px var(--royal-haze); }
+.orderbar__icon svg { width: 24px; height: 24px; }
+.orderbar__text { flex: 1; min-width: 0; display: grid; gap: 4px; }
+.orderbar__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.05rem, .9rem + .4vw, 1.25rem); line-height: 1.15; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.orderbar__title .accent { color: var(--led-soft); }
+.orderbar__line { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 10px; font-size: var(--fs-sm); color: var(--cream-2); }
+.orderbar__line .status-line { margin: 0; }
+.orderbar__sep { margin-right: 10px; color: var(--mist); }
+.orderbar__actions { flex: none; display: flex; gap: 10px; }
+.orderbar__actions .btn svg { width: 18px; height: 18px; }
+.orderbar__close { flex: none; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: transparent; color: var(--cream-2); cursor: pointer;
+  transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease); }
+.orderbar__close:hover { color: var(--white); background: color-mix(in srgb, var(--white) 9%, transparent); }
+.orderbar__close:focus-visible { outline: 3px solid var(--led-soft); outline-offset: 2px; }
+.orderbar__close svg { width: 20px; height: 20px; }
+@media (max-width: 1100px) { .orderbar__id { display: none; } }
+@media (max-width: 900px) { .orderbar__actions .btn--ghost span:not(.visually-hidden) { display: none; } .orderbar__actions .btn--ghost { padding-inline: 14px; } }
+@media (max-width: 760px) { .orderbar { display: none !important; } }
+/* while it is on: the back-to-top ring sits above it, and the footer ends above it */
+@media (min-width: 761px) {
+  html.has-orderbar .to-top { bottom: calc(max(16px, env(safe-area-inset-bottom)) + 110px); }   /* clear of the bar (95px tall at its narrowest) */
+  html.has-orderbar .site-footer { padding-bottom: 104px; }
+}

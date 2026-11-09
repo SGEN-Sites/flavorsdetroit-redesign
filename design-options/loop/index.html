@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Mailing list options</title>
+<!-- Design options for the home "stay in the loop" band (owner, 2026-11-09: "3 more compact and modern
+     versions of this section that matches with how we've done the rest of the homepage").
+     Uses the site's own built stylesheet (fonts, tokens, buttons, kickers, fields), so serve the PROJECT
+     ROOT (not dist/) and open /design-options/loop/. Copy is the client's own words (COPY.mail*, COPY.social*);
+     option B/C cut the social line to its first sentence. Product cut-outs are the site's existing
+     AI renders (data-ai="generated"). Forms are previews: nothing is sent. -->
+<link rel="stylesheet" href="../../dist/assets/css/site.css">
+<style>
+  body { background: var(--sign-black); color: var(--cream); margin: 0; }
+  .opt-head { padding: 28px var(--gutter, 16px) 10px; max-width: var(--container); margin: 0 auto; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .opt-head b { font-family: var(--font-display); font-size: 1.35rem; color: var(--white); }
+  .opt-head span { color: var(--mist); font-size: var(--fs-sm); }
+  .opt-band { position: relative; overflow: hidden; padding-block: clamp(32px, 4.5vw, 56px); }
+  .opt-band .container { position: relative; z-index: 2; }
+  .opt-title { font-family: var(--font-display); font-weight: 800; line-height: var(--lh-tight); letter-spacing: -.01em; color: var(--white); margin: 0; }
+  .opt-title .accent { color: var(--led-soft); }
+
+  /* the pill form: input + button in one rounded bar */
+  .pill-form { display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 999px;
+    background: color-mix(in srgb, var(--cream) 7%, transparent); border: 1px solid var(--line-night-strong); }
+  .pill-form:focus-within { border-color: var(--led); box-shadow: 0 0 0 4px var(--led-haze); }
+  .pill-form input { flex: 1; min-width: 0; min-height: 46px; border: 0; background: transparent; color: var(--cream);
+    font: inherit; font-size: var(--fs-base); padding: 0 18px; outline: none; }
+  .pill-form input::placeholder { color: var(--mist); }
+  .pill-form .btn { flex: none; min-height: 46px; }
+  .form-note { font-size: var(--fs-xs); color: var(--mist); margin: 8px 0 0 18px; }
+  .ig-ico { display: inline-grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; flex: none;
+    background: var(--cream); color: var(--ink); transition: background var(--dur-1), transform var(--dur-1) var(--ease); }
+  .ig-ico svg { width: 22px; height: 22px; }
+  a:hover > .ig-ico, .ig-ico:hover { background: var(--bulb); transform: rotate(-8deg); }
+
+  /* ===== Option A: one slim strip ===== */
+  .strip { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr) auto; gap: clamp(18px, 2.6vw, 40px); align-items: center;
+    padding: clamp(20px, 2.2vw, 28px) clamp(20px, 2.6vw, 36px); border-radius: 28px;
+    background: linear-gradient(115deg, var(--night-2), var(--sign-black) 60%); border: 1px solid var(--line-night); }
+  .strip .opt-title { font-size: clamp(1.6rem, 1rem + 1.3vw, 2.25rem); margin-top: 6px; }
+  .strip__sub { margin: 6px 0 0; color: var(--cream-2); font-size: var(--fs-sm); }
+  .strip__ig { display: flex; align-items: center; gap: 12px; padding-left: clamp(18px, 2.4vw, 36px); border-left: 1px solid var(--line-night);
+    color: var(--cream); text-decoration: none; }
+  .strip__ig small { display: block; color: var(--mist); font-size: var(--fs-xs); }
+  .strip__ig strong { font-family: var(--font-display); font-size: 1.1rem; white-space: nowrap; }
+
+  /* ===== Option B: bento pair (deals language: royal feature + white small card, product standing out of the top) ===== */
+  .pair { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); gap: clamp(12px, 1.6vw, 20px); padding-top: 54px; }
+  .pair__mail { position: relative; border-radius: 28px; padding: clamp(24px, 2.6vw, 36px); padding-right: clamp(150px, 18vw, 240px);
+    background: radial-gradient(120% 140% at 100% 0%, var(--royal-bright), var(--royal) 45%, var(--royal-deep)); color: var(--white); }
+  .pair__mail .kicker { color: color-mix(in srgb, var(--white) 82%, transparent); }
+  .pair__mail .opt-title { font-size: clamp(1.8rem, 1rem + 1.8vw, 2.7rem); margin: 8px 0 6px; }
+  .pair__mail p { margin: 0 0 18px; color: color-mix(in srgb, var(--white) 86%, transparent); }
+  .pair__mail .pill-form { background: var(--white); border-color: transparent; }
+  .pair__mail .pill-form input { color: var(--ink); }
+  .pair__mail .pill-form input::placeholder { color: var(--ink-3); }
+  .pair__mail .btn--order { background: var(--sign-black); }
+  .pair__mail .form-note { color: color-mix(in srgb, var(--white) 78%, transparent); }
+  .pair__prod { position: absolute; right: clamp(8px, 2vw, 28px); top: -54px; height: clamp(170px, 17vw, 230px); width: auto; pointer-events: none;
+    filter: drop-shadow(0 18px 24px rgb(0 0 0 / .45)); transition: transform .5s var(--ease); }
+  .pair__mail:hover .pair__prod { transform: translateY(-8px) rotate(-3deg); }
+  .pair__ig { border-radius: 28px; padding: clamp(24px, 2.6vw, 32px); background: var(--white); color: var(--ink);
+    display: flex; flex-direction: column; gap: 10px; justify-content: space-between; }
+  .pair__ig .kicker { color: var(--ink-2); }
+  .pair__ig .kicker__bulb { background: var(--royal); box-shadow: 0 0 0 3px var(--royal-haze); }
+  .pair__ig .opt-title { color: var(--ink); font-size: clamp(1.5rem, 1rem + 1vw, 2rem); }
+  .pair__ig p { margin: 0; color: var(--ink-2); }
+  .pair__ig .btn { background: var(--sign-black); color: var(--white); --btn-bg: var(--sign-black); --btn-fg: var(--white); justify-content: center; }
+
+  /* ===== Option C: marquee ticket (the logo's lit bulbs as the frame) ===== */
+  .opt-band--c .scene-dim { position: absolute; inset: 0; z-index: 0; }
+  .opt-band--c .scene-dim img { width: 100%; height: 100%; object-fit: cover; opacity: .32; filter: saturate(.6); }
+  .opt-band--c .scene-dim::after { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 90% at 50% 50%, transparent, var(--sign-black) 85%); }
+  .ticket { position: relative; max-width: 860px; margin: 0 auto; border-radius: 34px; padding: clamp(24px, 2.6vw, 34px) clamp(22px, 4vw, 52px);
+    background: color-mix(in srgb, var(--sign-black) 88%, transparent); text-align: center;
+    box-shadow: 0 30px 70px -30px rgb(0 0 0 / .8), 0 0 60px -20px var(--bulb-glow); }
+  .ticket::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 12px; pointer-events: none;
+    background: radial-gradient(circle, var(--bulb) 0 2.3px, color-mix(in srgb, var(--bulb) 25%, transparent) 3.4px, transparent 4.6px) center / 20px 20px space;
+    -webkit-mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    filter: drop-shadow(0 0 4px var(--bulb-glow)); animation: twinkle 2.4s ease-in-out infinite; }
+  @keyframes twinkle { 50% { opacity: .6; } }
+  @media (prefers-reduced-motion: reduce) { .ticket::before { animation: none; } }
+  .ticket .kicker { justify-content: center; }
+  .ticket .opt-title { font-size: clamp(1.8rem, 1rem + 1.9vw, 2.6rem); margin: 8px 0 4px; }
+  .ticket > p { margin: 0 auto 16px; color: var(--cream-2); }
+  .ticket .pill-form { max-width: 560px; margin: 0 auto; }
+  .ticket .form-note { margin: 10px 0 0; }
+  .ticket__ig { display: inline-flex; align-items: center; gap: 12px; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line-night-strong);
+    color: var(--cream); text-decoration: none; font-weight: 600; }
+  .ticket__ig .ig-ico { width: 40px; height: 40px; }
+  .ticket__ig .ig-ico svg { width: 18px; height: 18px; }
+  .ticket__ig b { color: var(--led-soft); }
+
+  @media (max-width: 1100px) {
+    .strip { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+    .strip__ig { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid var(--line-night); padding-top: 16px; }
+  }
+  @media (max-width: 860px) {
+    .strip { grid-template-columns: 1fr; }
+    .pair { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .pill-form { flex-direction: column; align-items: stretch; border-radius: 26px; }
+    .pill-form input { text-align: center; }
+    .form-note { margin-left: 0; text-align: center; }
+    .pair__mail { padding-right: clamp(24px, 2.6vw, 36px); padding-top: 90px; }
+    .pair__prod { right: 50%; translate: 50% 0; top: -50px; height: 132px; }
+    .ticket::before { padding: 10px; background-size: 16px 16px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<div class="opt-head"><b>Option A · One slim strip</b><span>Mailing list and Instagram in one row · 268px tall on desktop vs 623px today</span></div>
+<div class="spectrum" aria-hidden="true"></div>
+<section class="band band--black opt-band" aria-labelledby="a-title">
+  <div class="container">
+    <div class="strip">
+      <div>
+        <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>New product alerts</p>
+        <h2 class="opt-title" id="a-title">Join our mailing list <span class="accent">today!</span></h2>
+        <p class="strip__sub">Receive new product alerts before everyone else.</p>
+      </div>
+      <form data-preview novalidate>
+        <label class="visually-hidden" for="a-email">Email address</label>
+        <div class="pill-form"><input id="a-email" type="email" autocomplete="email" placeholder="you@example.com" required><button class="btn btn--order" type="submit">Subscribe now</button></div>
+        <p class="form-note">You're one step away! We promise we won't spam you.</p>
+      </form>
+      <a class="strip__ig" href="https://www.instagram.com/flavorsdetroit_/" target="_blank" rel="noopener">
+        <span class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <span><small>Follow us today!</small><strong>@flavorsdetroit_</strong></span>
+        <span class="visually-hidden"> on Instagram (opens in a new tab)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option B · Bento pair</b><span>Matches the deals bento: royal feature card with a product standing out of the top, white small card · 481px</span></div>
+<div class="spectrum" aria-hidden="true"></div>
+<section class="band band--black opt-band" aria-labelledby="b-title">
+  <div class="container">
+    <div class="pair">
+      <div class="pair__mail">
+        <img class="pair__prod" src="../../dist/assets/img/deal/gummy-jar-360.webp" alt="" data-ai="generated">
+        <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>New product alerts</p>
+        <h2 class="opt-title" id="b-title">Join our mailing list today!</h2>
+        <p>Receive new product alerts before everyone else.</p>
+        <form data-preview novalidate>
+          <label class="visually-hidden" for="b-email">Email address</label>
+          <div class="pill-form"><input id="b-email" type="email" autocomplete="email" placeholder="you@example.com" required><button class="btn btn--order" type="submit">Subscribe now</button></div>
+          <p class="form-note">You're one step away! We promise we won't spam you.</p>
+        </form>
+      </div>
+      <div class="pair__ig">
+        <div>
+          <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Get social with Flavors Detroit</p>
+          <h3 class="opt-title">Follow us today!</h3>
+        </div>
+        <p>Updated with our specials, product photos, news, and so much more!</p>
+        <a class="btn btn--lg" href="https://www.instagram.com/flavorsdetroit_/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Follow @flavorsdetroit_</span><span class="visually-hidden"> on Instagram (opens in a new tab)</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option C · Marquee ticket</b><span>One centred card framed by the sign's lit bulbs (they twinkle), Instagram as a line under the form · 477px</span></div>
+<div class="spectrum" aria-hidden="true"></div>
+<section class="band band--black opt-band opt-band--c" aria-labelledby="c-title">
+  <div class="scene-dim" aria-hidden="true"><img src="../../dist/assets/img/gen/bulb-bokeh-1280.webp" alt="" data-ai="generated"></div>
+  <div class="container">
+    <div class="ticket">
+      <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>New product alerts</p>
+      <h2 class="opt-title" id="c-title">Join our mailing list <span class="accent">today!</span></h2>
+      <p>Receive new product alerts before everyone else.</p>
+      <form data-preview novalidate>
+        <label class="visually-hidden" for="c-email">Email address</label>
+        <div class="pill-form"><input id="c-email" type="email" autocomplete="email" placeholder="you@example.com" required><button class="btn btn--order" type="submit">Subscribe now</button></div>
+        <p class="form-note">You're one step away! We promise we won't spam you.</p>
+      </form>
+      <a class="ticket__ig" href="https://www.instagram.com/flavorsdetroit_/" target="_blank" rel="noopener">
+        <span class="ig-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <span>Follow us today! <b>@flavorsdetroit_</b></span><span class="visually-hidden"> on Instagram (opens in a new tab)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<script>
+  document.querySelectorAll('form[data-preview]').forEach(function (f) {
+    f.addEventListener('submit', function (e) { e.preventDefault(); var n = f.querySelector('.form-note'); if (n) n.textContent = 'Thanks! This is a design preview, so nothing was sent.'; });
+  });
+</script>
+</body>
+</html>

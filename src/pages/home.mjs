@@ -5,7 +5,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, OWNERS_BOX, menu, postsData, ASOF } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, deal, dealGrid, ownboxStage, ownboxBackdrop, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, postCard, backdrop, kinetic } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, deal, dealGrid, ownboxStage, ownboxBackdrop, cave, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, mailStrip, postCard, backdrop, kinetic } from '../lib/parts.mjs';
 import { storeJsonLd, websiteJsonLd } from '../lib/seo.mjs';
 import { niceName, presentable } from '../content/case.mjs';
 
@@ -184,47 +184,66 @@ function ownersBox() {
 }
 
 function about() {
-  // the first "who are we" line becomes a scroll-lit statement (words switch on like bulbs as it
-  // scrolls through); the rest of the client's copy stays in the text column
+  // (owner, 2026-11-09: "make layout more compact and sleek and make all images look more cinematic";
+  // then "can we do something like this [a concave carousel] to show the images?") the client's first
+  // "who are we" line is a scroll-lit statement; the store's own photos hang on a wall that curves round
+  // the viewer (the counter shown with its customers and staff removed for their privacy, as before);
+  // the rest of the client's copy and the store facts sit in one compact row under it
   const [lead, ...rest] = COPY.who;
   const statement = esc(lead).replace('a traditional dispensary with a modern twist', 'a traditional dispensary with a <span class="accent">modern twist</span>');
   return `<section class="band band--white about" aria-labelledby="about-title">
-  <div class="container">
+  <div class="container about__top">
     ${kicker(COPY.whoTitle)}
     <p class="statement" data-scroll-lit>${statement}</p>
   </div>
-  <div class="container split">
-    <div class="about__media about__photos" data-reveal>
-      ${storePhoto(PATH, 'counter', { sizes: '(max-width: 900px) 92vw, 620px', ar: '5 / 4' })}
-      ${storePhoto(PATH, 'wall', { sizes: '(max-width: 900px) 34vw, 220px', ar: '3 / 4', cls: 'photo--inset' })}
-    </div>
+  ${cave(PATH, [
+    { slot: 'gal-counter', title: 'The main counter', sub: 'Glass cases under the Flavors Detroit letters' },
+    { slot: 'gal-wall', title: 'The letter wall', sub: 'Lit green letters over the shelves' },
+    { slot: 'gal-merch', title: 'Flavors merch', sub: 'Beanies, hoodies and tanks' },
+    { slot: 'gal-clouds', title: 'The cloud wall', sub: 'The logo in red, pink, white and blue' },
+    { slot: 'gal-led', title: 'The merch corner', sub: 'Lit in the store\u2019s blue LED' },
+    { slot: 'gal-store', title: '5700 E 8 Mile Rd', sub: 'Look for the sign' },
+  ])}
+  <div class="container about__row">
     <div class="about__text">
       <h2 class="h2" id="about-title">You'll feel right <span class="accent">at home</span>.</h2>
       ${rest.map((p, i) => `<p class="${i === 0 ? 'lede' : ''}">${esc(p)}</p>`).join('\n      ')}
-      <div class="stats" role="list">
-        <div class="stat" role="listitem"><p class="stat__n"><span data-count="10000">10,000</span></p><p class="stat__l">square feet of store</p></div>
-        <div class="stat" role="listitem"><p class="stat__n"><span data-count="7">7</span> days</p><p class="stat__l">a week, 10AM to 10PM</p></div>
-        <div class="stat" role="listitem"><p class="stat__n">1M+</p><p class="stat__l">customers served</p></div>
-      </div>
+    </div>
+    <div class="stats" role="list">
+      <div class="stat" role="listitem"><p class="stat__n"><span data-count="10000">10,000</span></p><p class="stat__l">square feet of store</p></div>
+      <div class="stat" role="listitem"><p class="stat__n"><span data-count="7">7</span> days</p><p class="stat__l">a week, 10AM to 10PM</p></div>
+      <div class="stat" role="listitem"><p class="stat__n">1M+</p><p class="stat__l">customers served</p></div>
     </div>
   </div>
 </section>`;
 }
 
 function visit() {
+  // (owner, 2026-11-09: "for this section let's make it more simple, make more compact and ensure we are
+  // using the improved version of the storefront image") the address, the live status, the hours and
+  // the phone in one quiet column, two buttons, and the golden-hour storefront as in the hero (whole,
+  // uncropped); no store card box. The wayfinding line lives on /visit/. The "E 8 Mile Rd / 5700"
+  // street-sign plate on the photo was restored at the owner's request (2026-11-09: "revert the 8mile road sign")
   return `<section class="band band--night band--rain" aria-labelledby="visit-title">
   ${backdrop(PATH, 'rainbow-reflections', { sizes: '100vw' })}
-  <span class="pool pool--b" data-depth="-0.08"></span>
   <div class="container visit-band__grid">
-    <div class="stack" style="--stack:20px">
+    <div class="visit-band__text">
       ${kicker(COPY.contactTitle)}
       <h2 class="h2" id="visit-title">5700 E <span class="accent">8 Mile</span> Rd, Detroit.</h2>
-      <p class="lede">Look for the sign: a black marquee cloud lit with bulbs on a blue tower, with a neon 5700. Then the green cross.</p>
-      ${storeCard(PATH, { heading: false })}
-      <p class="muted">${esc(COPY.contactSub)}. <a class="text-link" href="${A('/contact/')}">Send us a message ${icon.arrow}</a></p>
+      <p class="status status-line" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="status__word">Open daily</span><span class="status__detail" data-status-text>10AM–10PM</span></p>
+      <ul class="visit-band__facts" role="list">
+        <li>${icon.clock}<span>${esc(SITE.hoursLabel)}</span></li>
+        <li>${icon.phone}<a href="${SITE.tel}">${esc(SITE.phone)}</a></li>
+        <li>${icon.pin}<a href="${esc(SITE.mapsUrl)}" target="_blank" rel="noopener">${esc(SITE.street)}, Detroit, MI ${SITE.zip}<span class="visually-hidden"> (opens Google Maps in a new tab)</span></a></li>
+      </ul>
+      <div class="cluster">
+        <a class="btn btn--cream" href="${esc(SITE.directionsUrl)}" target="_blank" rel="noopener">${icon.directions}<span>Directions</span><span class="visually-hidden"> (opens Google Maps in a new tab)</span></a>
+        <a class="btn btn--ghost" href="${SITE.tel}">${icon.phone}<span>Call</span></a>
+      </div>
+      <p class="muted visit-band__note">${esc(COPY.contactSub)}. <a class="text-link" href="${A('/contact/')}">Send us a message ${icon.arrow}</a></p>
     </div>
     <div class="visit-band__media" data-reveal>
-      ${storePhoto(PATH, 'storefront', { sizes: '(max-width: 900px) 92vw, 640px', ar: '16 / 11' })}
+      ${storePhoto(PATH, 'store-golden', { sizes: '(max-width: 900px) 92vw, 620px', ar: '4224 / 3584' })}
       <div class="street-sign" aria-hidden="true"><span class="street-sign__plate">E 8 Mile <small>Rd</small></span><span class="street-sign__num">5700</span></div>
     </div>
   </div>
@@ -232,25 +251,9 @@ function visit() {
 }
 
 function loop() {
-  return `${spectrum()}
-<section class="band band--night band--bokeh" aria-labelledby="loop-title">
-  ${backdrop(PATH, 'bulb-bokeh', { sizes: '100vw', depth: '0.08' })}
-  <span class="pool pool--a" data-depth="-0.1"></span>
-  <div class="container loop__grid">
-    <div class="panel panel--night panel--glass stack" style="--stack:16px" data-reveal>
-      ${kicker('New product alerts')}
-      <h2 class="h2" id="loop-title">${esc(COPY.mailTitle)}</h2>
-      <p class="lede">${esc(COPY.mailSub)}.</p>
-      ${mailForm('home-mail', { night: true })}
-    </div>
-    <div class="panel loop__ig" data-reveal style="--i:1">
-      ${kicker(COPY.socialTitle)}
-      <p class="ig-handle">${esc(COPY.socialFollow)}</p>
-      <p>${esc(COPY.socialText)}</p>
-      <a class="btn btn--cream btn--lg" href="${esc(SITE.instagram)}" target="_blank" rel="noopener">${icon.insta}<span>Follow ${esc(SITE.instagramHandle)}</span><span class="visually-hidden"> on Instagram (opens in a new tab)</span></a>
-    </div>
-  </div>
-</section>`;
+  // (owner, 2026-11-09: option A of design-options/loop/, "one slim strip"; the spectrum line behind its middle,
+  // the lower half the next band's white) the shared mailStrip(); the client's longer social line stays on /contact/
+  return mailStrip(PATH, { id: 'loop-title', key: 'home-mail', seam: true });
 }
 
 function news() {

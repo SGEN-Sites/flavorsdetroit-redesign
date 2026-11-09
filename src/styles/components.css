@@ -191,8 +191,13 @@
 /* the deli board: price tiers on a black letter board */
 .board { background: var(--sign-black); color: var(--cream); border-radius: var(--r-lg); padding: clamp(18px, 3vw, 32px); border: 1px solid var(--line-night-strong); box-shadow: var(--shadow-night); position: relative; }
 .board::before { content: ""; position: absolute; inset: 7px; border: 1px solid var(--line-night); border-radius: calc(var(--r-lg) - 6px); pointer-events: none; }
-.board__rows { display: grid; }
-.board__row { display: grid; grid-template-columns: 6.5ch 1fr auto; align-items: baseline; gap: 14px; padding: 14px 4px; border-bottom: 1px dashed var(--line-night-strong); }
+/* (owner, 2026-11-09: "looks like there is a spacing issue here") the tiers share one grid, every row a
+   subgrid of it, so the price column is as wide as the widest price ("$10/g" and "$15/g" had run into
+   their words in a fixed column) and the words still line up down the board. Without subgrid each row
+   sizes its own price column: never an overlap, only a ragged edge. */
+.board__rows { display: grid; grid-template-columns: max-content minmax(0, 1fr) auto; column-gap: 14px; }
+.board__row { grid-column: 1 / -1; display: grid; grid-template-columns: max-content minmax(0, 1fr) auto; grid-template-columns: subgrid;
+  align-items: baseline; gap: 14px; padding: 14px 4px; border-bottom: 1px dashed var(--line-night-strong); }
 .board__row:last-child { border-bottom: 0; }
 .board__g { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.9rem, 1.5rem + 1.4vw, 2.6rem); line-height: 1; color: var(--white); }
 .board__g small { font-size: .5em; color: var(--mist); font-weight: 700; margin-left: 2px; }
@@ -203,7 +208,8 @@
 .board__eighth small { display: block; font-family: var(--font-sans); font-size: var(--fs-xs); font-weight: 600; color: var(--mist); margin-top: 4px; }
 .board__row--box .board__g, .board__row--box .board__what strong { color: var(--bulb); text-shadow: 0 0 14px var(--bulb-glow); }
 @media (max-width: 520px) {
-  .board__row { grid-template-columns: 5.2ch 1fr; }
+  .board__rows { grid-template-columns: max-content minmax(0, 1fr); }
+  .board__row { grid-template-columns: max-content minmax(0, 1fr); grid-template-columns: subgrid; }
   .board__eighth { grid-column: 2; text-align: left; }
   .board__eighth small { display: inline; margin-left: 6px; }
 }
@@ -267,13 +273,17 @@
 .strain__price span { font-size: var(--fs-sm); color: var(--ink-2); }
 
 /* ---- store card, hours, facts --------------------------------------------------------------- */
-.store-card { display: grid; gap: var(--s-4); padding: clamp(22px, 3vw, 32px); border-radius: var(--r-xl); background: var(--night-2); border: 1px solid var(--line-night-strong); color: var(--cream); box-shadow: var(--shadow-night); }
-.store-card__row { display: grid; grid-template-columns: 22px 1fr; gap: 12px; align-items: start; }
-.store-card__row svg { width: 20px; height: 20px; color: var(--led-soft); margin-top: 3px; }
-.store-card__row a { display: inline-flex; align-items: center; min-height: 44px; color: var(--cream); text-decoration: none; font-weight: 600; }
+/* compact (owner, 2026-11-09: "let's make this more compact"): one line per fact, every row the 44px tap height,
+   the Address / Hours / Phone labels kept for screen readers only, the buttons close under them */
+.store-card { display: grid; gap: 4px; padding: clamp(18px, 2.2vw, 24px) clamp(18px, 2.4vw, 26px); border-radius: var(--r-xl); background: var(--night-2); border: 1px solid var(--line-night-strong); color: var(--cream); box-shadow: var(--shadow-night); }
+.store-card > .h3 { margin-bottom: 4px; }
+.store-card > .status { margin-bottom: 4px; }
+.store-card__row { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 44px; font-size: var(--fs-base); }
+.store-card__row svg { width: 18px; height: 18px; color: var(--led-soft); }
+.store-card__row a { display: inline-flex; align-items: center; min-height: 44px; color: var(--cream); text-decoration: none; font-weight: 400; }
 .store-card__row a:hover { text-decoration: underline; }
-.store-card__label { display: block; font-size: var(--fs-xs); color: var(--mist); letter-spacing: .02em; font-weight: 650; }
-.store-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.store-card__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.store-card__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
 .status-line { display: inline-flex; align-items: center; gap: 10px; font-weight: 650; }
 .status-line .status__dot { width: 11px; height: 11px; }
 
@@ -410,6 +420,14 @@
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 64px); align-items: center; }
 .split--wide-left { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
 @media (max-width: 900px) { .split, .split--wide-left { grid-template-columns: 1fr; } }
+/* the words follow (owner, 2026-11-09: "for all layout similar to this [the deli counter] text should
+   follow when scrolled down"): side by side, the text column stays in view below the header while the
+   taller column beside it scrolls past, and stops at the end of its row. Side by side only (901px up) */
+@media (min-width: 901px) {
+  .split > .stack:first-child, .deals-intro > .stack:first-child, .visit-grid > .stack:first-child, .contact-grid > .stack:last-child {
+    position: sticky; top: calc(var(--header-h) + 3px + clamp(20px, 3vh, 36px)); align-self: start;
+  }
+}
 .panel { padding: clamp(22px, 3vw, 34px); border-radius: var(--r-xl); background: var(--white); border: 1px solid var(--line-day); box-shadow: var(--shadow-card); }
 .panel--night { background: var(--night-2); border-color: var(--line-night-strong); color: var(--cream); box-shadow: var(--shadow-night); }
 .ig-handle { font-family: var(--font-display); font-weight: 800; font-size: clamp(2rem, 1.4rem + 2.4vw, 3.4rem); line-height: 1; letter-spacing: .005em; }
@@ -459,3 +477,14 @@
 
 @media (min-width: 1000px) { .tags { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 @media (min-width: 641px) and (max-width: 999px) { .tags { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* ---- CTAs on phones (owner, 2026-11-09: "CTAs can be stacked and must be wide and will occupy 1 line per
+   CTA and that applies across whole site for mobile"): every button in the page's content is as wide as
+   its column, one per line, its label on one line; a row of buttons becomes a stack. Not the dock, the
+   header or the map's load control, which are tools rather than calls to action */
+@media (max-width: 760px) {
+  main .btn:not(.map-frame__load .btn), .age-gate__actions .btn { display: flex; width: 100%; justify-content: center; white-space: nowrap; }
+  main :is(.cluster, .hero__ctas, .store-card__actions, .deals-preview__foot, .flavors__note):has(> .btn) { flex-direction: column; align-items: stretch; }
+  main .store-card__actions { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .age-gate__actions { grid-template-columns: minmax(0, 1fr); }
+}

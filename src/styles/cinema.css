@@ -190,9 +190,8 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
    tilted a little the other way, with a gap that stays open at both ends, and both a size smaller */
 @media (max-width: 860px) {
   .tapes { padding-block: 22px 14px; }
-  /* the two 2deg tilts close the gap by 3.5% of the width toward the right edge: measured, this keeps
-     8px or more open there at 360 to 860 wide */
-  .tape { position: relative; left: auto; right: auto; top: auto; translate: none; margin-inline: -6%; margin-bottom: calc(8px + 3.5vw); rotate: 2deg; padding-block: 8px; }
+  /* the two 2deg tilts close the gap by 3.5% of the width toward the right edge (measured) */
+  .tape { position: relative; left: auto; right: auto; top: auto; translate: none; margin-inline: -6%; margin-bottom: calc(3.5vw - 10px); rotate: 2deg; padding-block: 8px; }   /* the bars meet and overlap ~10px at the right end (owner: "can overlap a little"), open towards the left */
   .tapes .ticker { rotate: -2deg; padding-block: 13px; }
   .tapes .ticker__item { font-size: 1.15rem; gap: 16px; padding-inline: 16px; }
   .tapes .ticker__item::after { width: 8px; height: 8px; margin-left: 16px; }
@@ -340,6 +339,23 @@ ul.hero__plate {               /* ul.: beats base.css ul[class] { padding: 0 } *
 .deal--wide { flex-direction: row; align-items: center; gap: clamp(14px, 2vw, 26px); }
 .deal--wide .deal__media { flex: 0 0 40%; height: clamp(130px, 13vw, 180px); align-items: center; }   /* a wide product (five jars) sits centred, not on the floor line */
 .deal--wide .deal__media::before { display: none; }
+.deal__foot { margin-top: 6px; font-size: var(--fs-sm); }
+.deal .text-link { color: var(--royal); }
+.deal--feature .text-link { color: var(--white); }
+/* a shelf with more deals (/daily-deals/): the feature two by two, the rest small or wide, packed in rows of four.
+   (The spans carry !important too: the reset's !important "auto" otherwise wins over a plain span and
+   every card sat one by one.) */
+@media (min-width: 641px) {
+  .deals.deals--many { grid-template-areas: none; grid-auto-flow: row dense; }
+  .deals--many > * { grid-area: auto !important; }
+  .deals--many > .deal--feature { grid-column: span 2 !important; grid-row: span 2 !important; }
+  .deals--many > .deal--wide { grid-column: span 2 !important; }
+  /* a wide card in a row of taller small cards: its product grows into the card's height (the image is
+     laid over the box, so it fills the row's height and never sets it) */
+  .deals--many > .deal--wide .deal__media { align-self: stretch; height: auto; min-height: clamp(130px, 13vw, 180px); }
+  .deals--many > .deal--wide .deal__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-position: 50% 50%; }
+}
+@media (min-width: 641px) and (max-width: 960px) { .deals--many > .deal--feature { grid-row: span 1 !important; } }
 .deal--wide .deal__body { flex: 1; }
 @media (max-width: 960px) {
   .deals { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-areas: "f f" "a b" "c c"; }
@@ -566,6 +582,50 @@ html:not(.js) .ownbox__smoke, .ownbox.is-instant .ownbox__smoke, .motion-off .ow
   .js .ownbox.is-open .ownbox__smoke--b { animation-delay: 2.2s; }
 }
 
+/* ==== who are we: compact, the store's photos on a curving wall (owner, 2026-11-09) =========== */
+.about__top .statement { font-size: clamp(2rem, 1.1rem + 2.6vw, 3.6rem); max-width: 24ch; margin-bottom: clamp(6px, 1.2vw, 16px); }
+.about__row { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); align-items: end; gap: clamp(20px, 3.4vw, 56px); margin-top: clamp(18px, 2.6vw, 36px); }
+.about__row .about__text { display: grid; gap: var(--s-3); }
+@media (max-width: 900px) { .about__row { grid-template-columns: minmax(0, 1fr); } }
+/* the store facts stacked, each a wide card on one or two lines (owner, 2026-11-09) */
+.about__row .stats { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.about__row .stat { display: flex; align-items: center; gap: clamp(14px, 2vw, 22px); padding: 14px clamp(16px, 2vw, 22px); }
+.about__row .stat__n { flex: none; min-width: 4.7em; font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem); }
+.about__row .stat__l { margin-top: 0; font-size: var(--fs-base); }
+/* the gallery: site.js sizes the panels (--pw, --ph) and hangs them on the arc; the stage fades into
+   the band at its left and right, a faint reflection lies on the floor below each panel */
+.cave { position: relative; }
+.cave__stage { position: relative; }
+.cave-on .cave__stage { overflow: hidden; touch-action: pan-y; cursor: grab; user-select: none; -webkit-user-select: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 13%, #000 87%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 13%, #000 87%, transparent 100%); }
+.cave-on.is-dragging .cave__stage { cursor: grabbing; }
+.cave__stage:focus-visible { outline: 3px solid var(--royal); outline-offset: -3px; }
+.cave__wall { list-style: none; margin: 0; padding: 0; }
+.cave-on .cave__wall { position: absolute; inset: 0; perspective-origin: 50% 42%; }
+.cave__panel { overflow: hidden; border-radius: 14px; background: var(--showroom-2); box-shadow: 0 34px 50px -34px color-mix(in srgb, var(--ink) 60%, transparent); }
+.cave-on .cave__panel { position: absolute; left: 50%; top: 42%; width: var(--pw); height: var(--ph); margin: calc(var(--ph) / -2) 0 0 calc(var(--pw) / -2);
+  backface-visibility: hidden; will-change: transform, opacity;
+  -webkit-box-reflect: below 10px linear-gradient(transparent 76%, rgb(0 0 0 / .075)); }   /* faint, as on a showroom floor */
+.cave__panel img { display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; pointer-events: none; user-select: none; -webkit-user-drag: none; }
+.cave__caption { display: grid; justify-items: center; gap: 2px; min-height: 3.1em; margin-top: 4px; text-align: center; }
+.cave__caption.is-new { animation: cave-cap .55s var(--ease); }
+@keyframes cave-cap { from { opacity: 0; translate: 0 6px; } }
+.cave__title { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.1rem, 1rem + .4vw, 1.35rem); line-height: 1.2; color: var(--ink); }
+.cave__sub { font-size: var(--fs-sm); line-height: 1.4; color: var(--ink-2); }
+.cave__controls { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 12px; }
+.cave__btn { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line-day); background: var(--white); color: var(--ink);
+  box-shadow: var(--shadow-card); cursor: pointer; transition: background var(--dur-2) var(--ease), color var(--dur-2) var(--ease), transform var(--dur-2) var(--ease); }
+.cave__btn:hover { background: var(--ink); color: var(--white); transform: translateY(-1px); }
+.cave__btn:focus-visible { outline: 3px solid var(--royal); outline-offset: 2px; }
+.cave__btn svg { width: 18px; height: 18px; }
+.cave__count { min-width: 4.6em; text-align: center; font: 600 var(--fs-sm)/1 var(--font-sans); font-variant-numeric: tabular-nums; color: var(--ink-3); }
+.cave__count b { color: var(--ink); }
+/* no script: the same panels in a swipe row */
+.cave:not(.cave-on) .cave__wall { display: grid; grid-auto-flow: column; grid-auto-columns: min(78%, 420px); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 6px var(--gutter) 18px; }
+.cave:not(.cave-on) .cave__panel { aspect-ratio: 5 / 4; scroll-snap-align: center; }
+.cave:not(.cave-on) .cave__caption, .cave:not(.cave-on) .cave__controls { display: none; }
+
 /* ==== visit: rainbow reflections on wet asphalt, a glass store card ============================= */
 .band--rain .scene img { object-position: 50% 80%; }
 .band--rain::before {
@@ -775,6 +835,15 @@ html:not(.js) .ownbox__smoke, .ownbox.is-instant .ownbox__smoke, .motion-off .ow
 .js .kinetic__bud--tl2 { animation-duration: 6s; animation-delay: -1s; }
 .js .kinetic__bud--tr { animation-duration: 10s; animation-delay: -6s; }
 .js .kinetic__bud--tr2 { animation-duration: 8s; animation-delay: -2s; }
+/* phones: smaller buds, so the words still read between them (owner, 2026-11-09: "reduce size of these
+   buds on mobile"); each top keeps the same rule, the overhang its turn adds plus room for the float */
+@media (max-width: 760px) {
+  .kinetic__bud--main { width: 30vw; }
+  .kinetic__bud--tl { left: -4vw; width: 22vw; top: calc(22vw * .2 + 12px); }
+  .kinetic__bud--tl2 { left: 16%; width: 12vw; top: calc(12vw * .17 + 16px); }
+  .kinetic__bud--tr { right: -5vw; width: 24vw; top: calc(24vw * .18 + 12px); }
+  .kinetic__bud--tr2 { right: 18%; width: 13vw; top: calc(13vw * .13 + 18px); }
+}
 
 /* the pinned rail: on big screens the categories slide sideways while the page scrolls */
 .rail__pin { position: relative; }

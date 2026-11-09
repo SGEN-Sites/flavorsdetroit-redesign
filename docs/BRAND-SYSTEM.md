@@ -98,7 +98,7 @@ Three families, all SIL Open Font License, self-hosted as latin woff2 (`src/asse
 | Outfit (variable, 100–900) | titles and larger text: headings, the hero, prices, tag and card names, the tapes, the kinetic band. Display weights 700–800 (one step lighter than in the Jockey One era); the card names scale with the card's width. Large headings at a .98 line height: at .92 Outfit's descenders met the next line's ascenders |
 | Outfit Outline (the designer's static Outfit 800 and Black 900) | outlined words only: the navy tape (800) and the kinetic band (Black, at the owner's request). An outline traces every contour, and the variable file keeps each letter's parts as overlapping contours (F is three), which showed as seams inside outlined letters; these static builds have every letter merged into one outline (Google's single-weight files keep the overlaps) |
 | Work Sans (variable, 100–900, + italic) | body and UI text |
-| Tilt Neon | neon numerals only: step numbers and the news date board; the outlined footer word |
+| Tilt Neon | neon numerals only: step numbers and the news date board |
 
 One accent word per heading is set in the LED blue (on white bands, the site blue; in the home hero,
 over the photo, a pale neon-blue core with an LED glow, which keeps 3:1 there). The inline
@@ -127,8 +127,8 @@ Signature components (`src/styles/components.css`), each from the building:
 | `.brand__tower` | the logo mounted on a slice of the tower, in the header and footer |
 | `.ticker` + `.spectrum` | the marquee letter board, then the thin spectrum divider |
 | `.jar` + `.counter-top` | glass display cases on a navy counter with an LED strip |
-| `.tag`, `.board`, `.ladder` | deli price tags, the deli counter board, the ounce tiers |
-| `.box` + `.band--ownbox` + `.ownbox` | the Owner's Box: a glass case framed by chasing marquee bulbs, over the owner's street photo in black and white fading into black, under a spectrum line; the owner's road case opens in green smoke and the strains fly out on holographic cards (rainbow edge, glitter rim, sheen; a bud standing out of each card's top) into a floating row; wide screens: the case at the left of the words and cards; narrow: words, cards (a carousel), the case under them, the row opening downward as the case opens, the words and foot centred |
+| `.tag`, `.board`, `.ladder` | deli price tags, the deli counter board (its tiers share one grid, each row a subgrid, so the price column fits the widest price), the ounce tiers |
+| `.box` + `.band--ownbox` + `.ownbox` | the Owner's Box (the home page, `/daily-deals/` and `/owners-box/`): a glass case framed by chasing marquee bulbs, over the owner's street photo in black and white fading into black, under a spectrum line; the owner's road case opens in green smoke and the strains fly out on holographic cards (rainbow edge, glitter rim, sheen; a bud standing out of each card's top) into a floating row; wide screens: the case at the left of the words and cards; narrow: words, cards (a carousel), the case under them, the row opening downward as the case opens, the words and foot centred |
 | `.status` | a small neon OPEN sign, computed in Detroit time |
 | `.photo` | the owner's own store photos in rounded frames (`.photo--inset` lays one over the corner of another, like a print); upscaled and colour graded, two retouched with AI fill (see `CHANGE-LOG.md`, Imagery) |
 | `.street-sign` | the E 8 Mile Rd street sign with the 5700 address plate |
@@ -144,14 +144,16 @@ a **scrim** (a token gradient sized so text clears WCAG AA on the rendered pixel
 | `.hero` | the store at golden hour (the owner's storefront photo, relit with AI), always the whole frame as a wide shot: the hero's height, anchored right, the street running on to the left (an AI extension) in black and white and darker the further left, behind the words (two copies of the photo: a black-and-white one underneath, the colour one masked from where the words end to where the sign starts, in container units) → shade behind the words → a warm, breathing light and one LED light pool; a glass fact plate; as the page scrolls the words drift down and the photo pushes in; on phones the whole frame runs across the top of the hero and fades out exactly where the words begin (`--hero-win`) |
 | `.tapes` | the marquee letter board crossed by a navy tape, laid over the seam under the hero, then a thin spectrum line; up to 860 wide the two are stacked, tilted apart with a gap that stays open, a size smaller, so both read (owner, 2026-11-09) |
 | `.band--flavors` + `.bento` + `[data-rail]` | a black band with a soft navy glow from the top, white only as accents (the words, the progress bar); four equal solid colour cards (`--card-flower`, `--card-concentrates`, `--card-edibles`, `--card-more`: the logo's green, blue, pink and orange, each its product render's own backdrop colour) with one uniformly rendered product each, cut out of its backdrop, the same height on every card (container units, not what the text leaves), each card starting a third of the way down its product so the top third stands above it over the black band; the name large at the bottom left in ink (6.7:1 or more), sized from the card's width, and a dark square order button at the bottom right; the light sweep crosses the card only, under the product; the cards are sized to fit four across the content column, with breathing room above the heading and below the pickup row; where four fit (1280 wide and up) the band holds still at its own height, otherwise (1024 to about 1200 wide) it pins and the cards slide past ("01 / 04"); on hover the whole card bounces, product and all, then rests a little raised; on phones the row swipes, with room for the bounce and the glow |
-| `.band--neon` + `.hang` | deli tickets on strings from a rail over blue neon; each ticket sways on its own string (`/daily-deals/`; the home deals band became the bento below) |
-| `.band--deals` + `.deals` | the home deals on black (owner, 2026-11-09): each category tab a bento, a two-by-two feature in the store's blue and white cards beside it (two small, one wide), each with a product image standing on a soft floor shadow (the owner's own pre-roll, budder and crumble photos, AI illustrations of the other product types; clear glass always see-through, so it shows the card it stands on); prices large in Outfit; the Ounces tab lists every live-menu tier; the whole card bounces on hover, then rests a little raised |
-| `.band--spot` + `.box--glass` | the Owner's Box over a spotlight still, framed by chasing bulbs; glass cards with an orbiting edge light |
+| `.band--neon` + `.hang` | retired 2026-11-09: deli tickets on strings from a rail over blue neon; both deals bands are now the bento below (styles kept, no page uses them) |
+| `.band--deals` + `.deals` | the home deals on black (owner, 2026-11-09): each category tab a bento, a two-by-two feature in the store's blue and white cards beside it (two small, one wide), each with a product image standing on a soft floor shadow (the owner's own pre-roll, budder and crumble photos, AI illustrations of the other product types; clear glass always see-through, so it shows the card it stands on); prices large in Outfit; the Ounces tab lists every live-menu tier; the whole card bounces on hover, then rests a little raised; `/daily-deals/` By category uses the same bento for every shelf, the longer ones (`.deals--many`) packed in rows of four with no gaps, two columns on tablets, phones a same-size carousel |
+| `.band--spot` + `.box--glass` | retired 2026-11-09: the Owner's Box over a spotlight still with glass strain cards; every Owner's Box section is now the `.ownbox` band above (the bulb frame `.box--glass` stays) |
 | `.kinetic` | two rows of giant words in Outfit Black sliding opposite ways with the scroll; HD bud illustrations, one floating over the words and four resting at the top corners, two half out of frame |
 | `.statement` | the "who are we" sentence, set large; its words light up in reading order |
 | `.band--rain`, `.band--bokeh` | blue reflections behind a glass store card; marquee bokeh behind glass panels |
 | `.page-hero--scene` | every inner page hero over its own still (Learn uses the client's own flower photo; Shop floats the client's own bud) |
-| `.footer__mark` | the finale: a giant cropped "Flavors" under a bulb row; it lights up, bulb by bulb, over the last stretch of the page |
+| `.footer__mark` | removed at the owner's request (2026-11-09): the giant cropped "Flavors" under a bulb row at the foot of every page |
+| `.orderbar` | wider screens, from the second screen on: a dark glass bar at the foot of the window (order online for pickup, the live open state, Order online, Get directions, close for the visit); phones keep their dock |
+| phone buttons | up to 760px wide every button in the page and the age gate is full width, one per line, its words on one line |
 
 Rules: tokens only (tints through `color-mix`); scene images are decorative (`alt=""`); the category
 cards' product renders carry alt text describing the pixels; phones drop the pointer light, tilt,
@@ -180,11 +182,8 @@ scrolling. A **Pause motion** button in the top bar stops every loop (WCAG 2.2.2
 | Light curtain down each band as it arrives; a beam across cards, photos and frames | scrolling into view, once |
 | Drifting LED light pools; rising sparks; a light orbiting the glass cards' edges | continuous; off screen they pause; orbits and spotlights need a fine pointer |
 | Reading progress in the spectrum line under the header; the back-to-top ring | scroll position |
-| Finale: the footer "Flavors" and its bulbs light up | the last stretch of the page |
 | The store photo drifts slowly (34 s) and a warm golden-hour light breathes over it (9 s) | page load; pauses off screen and under Pause motion |
-| Deal tickets sway on their strings | page load; pause on hover and off screen |
 | Bulbs chase around the Owner's Box frame (clockwise) | page load; pause off screen |
-| Footer wordmark light sweep (9s) | page load; pauses off screen |
 | A soft LED spotlight follows the pointer over the dark bands | fine pointer only |
 | Film grain drift on the hero | large fine-pointer screens only |
 | Reveal: rise 24px and brighten, 90ms stagger | scrolling into view; if the observer never reports in 2.5s, everything shows |

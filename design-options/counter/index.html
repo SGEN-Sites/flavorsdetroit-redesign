@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>More from the counter</title>
+<!-- Layout options for /owners-box/ "More from the counter" (owner, 2026-11-09: "show design layout options
+     for this section, at least 3"). Serve the PROJECT ROOT and open /design-options/counter/. Uses the built
+     site stylesheet; copy and numbers are the page's own (eighths count 23 = menu.eighths.count at build).
+     Product cut-outs = the site's existing AI deal renders (data-ai="generated"); the storefront = the owner's
+     photo relit to golden hour (edited). -->
+<link rel="stylesheet" href="../../dist/assets/css/site.css">
+<style>
+  body { background: var(--sign-black); color: var(--cream); margin: 0; }
+  .opt-head { padding: 28px var(--gutter, 16px) 10px; max-width: var(--container); margin: 0 auto; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
+  .opt-head b { font-family: var(--font-display); font-size: 1.35rem; color: var(--white); }
+  .opt-head span { color: var(--mist); font-size: var(--fs-sm); }
+  .ob { padding-block: clamp(40px, 5vw, 72px); }
+  .ob .h2 { margin: 8px 0 clamp(24px, 3vw, 40px); }
+  .ob--black .h2 { color: var(--white); }
+  .price { font-family: var(--font-display); font-weight: 800; line-height: .9; letter-spacing: -.02em; }
+  .go { display: inline-flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; }
+  .go svg { width: 18px; height: 18px; transition: translate var(--dur-1) var(--ease); }
+  a:hover .go svg, .go:hover svg { translate: 4px 0; }
+
+  /* ===== A: colour cards with the product standing out of the top (the home category cards) ===== */
+  .cc { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 1.8vw, 24px); padding-top: 70px; }
+  .cc__card { position: relative; display: flex; flex-direction: column; gap: 6px; min-height: 300px; padding: 150px clamp(20px, 2vw, 28px) 24px;
+    border-radius: 26px; color: var(--ink); text-decoration: none; transition: translate .35s var(--ease), rotate .35s var(--ease); }
+  .cc__card:hover { translate: 0 -10px; rotate: -1deg; }
+  .cc__card--lime { background: var(--card-flower); }
+  .cc__card--cyan { background: var(--card-concentrates); }
+  .cc__card--orange { background: var(--card-more); }
+  .cc__img { position: absolute; left: 50%; top: -70px; translate: -50% 0; height: 200px; width: auto; pointer-events: none; filter: drop-shadow(0 18px 18px rgb(0 0 0 / .28)); }
+  .cc__img--photo { height: 190px; width: 78%; object-fit: cover; border-radius: 18px; border: 4px solid var(--white); }
+  .cc__card .price { font-size: clamp(2.4rem, 1.6rem + 2vw, 3.4rem); }
+  .cc__card h3 { font-family: var(--font-display); font-size: 1.5rem; margin: 0; }
+  .cc__card p { margin: 0 0 10px; color: color-mix(in srgb, var(--ink) 85%, transparent); }
+  .cc__card .go { margin-top: auto; color: var(--ink); }
+
+  /* ===== B: black bento (the home deals band) ===== */
+  .bb { display: grid; grid-template-columns: 1.25fr 1fr; grid-template-rows: auto auto; gap: clamp(12px, 1.6vw, 20px); }
+  .bb__card { position: relative; overflow: hidden; border-radius: 26px; padding: clamp(22px, 2.4vw, 32px); text-decoration: none; display: flex; flex-direction: column; gap: 6px; min-height: 220px; transition: translate .35s var(--ease); }
+  .bb__card:hover { translate: 0 -6px; }
+  .bb__card--feature { grid-row: span 2; background: radial-gradient(120% 120% at 100% 0%, var(--royal-bright), var(--royal) 45%, var(--royal-deep)); color: var(--white); padding-bottom: 200px; }
+  .bb__card--feature .price { font-size: clamp(3.4rem, 2rem + 4vw, 5.6rem); }
+  .bb__card--feature img { position: absolute; right: 6%; bottom: -10px; height: 260px; width: auto; filter: drop-shadow(0 24px 24px rgb(0 0 0 / .4)); transition: translate .4s var(--ease); }
+  .bb__card--feature:hover img { translate: 0 -8px; }
+  .bb__card--white { background: var(--white); color: var(--ink); padding-right: 42%; }
+  .bb__card--white img { position: absolute; right: 4%; top: 50%; translate: 0 -50%; height: 78%; width: auto; filter: drop-shadow(0 14px 16px rgb(0 0 0 / .22)); }
+  .bb__card--photo { color: var(--white); background: var(--night); }
+  .bb__card--photo > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+  .bb__card--photo::after { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(90deg, rgb(8 9 12 / .96), rgb(8 9 12 / .82) 50%, rgb(8 9 12 / .2)); }
+  .bb__card--photo > :not(img) { position: relative; z-index: 1; max-width: 56%; }
+  .bb__card .price { font-size: clamp(2.2rem, 1.4rem + 1.8vw, 3rem); }
+  .bb__card h3 { font-family: var(--font-display); font-size: 1.45rem; margin: 0; }
+  .bb__card p { margin: 0 0 8px; opacity: .88; }
+  .bb__card .go { margin-top: auto; }
+  .bb__card--white .go { color: var(--royal); }
+
+  /* ===== C: deli board (the home deli counter board) ===== */
+  .db { position: relative; max-width: 1040px; margin: 0 auto; border-radius: 26px; padding: clamp(10px, 1.4vw, 16px); background: var(--sign-black); border: 1px solid var(--line-night-strong); box-shadow: 0 30px 60px -30px rgb(0 0 0 / .8); }
+  .db::before { content: ""; position: absolute; inset: 7px; border: 1px solid var(--line-night); border-radius: 20px; pointer-events: none; }
+  .db__row { position: relative; display: grid; grid-template-columns: var(--pc) minmax(0, 1fr) auto; --pc: clamp(5.6rem, 3.6rem + 3vw, 7.2rem); gap: clamp(16px, 2.4vw, 32px); align-items: center;
+    padding: clamp(16px, 1.8vw, 22px) clamp(16px, 2.4vw, 28px); border-radius: 18px; color: var(--cream); text-decoration: none; transition: background var(--dur-1); }
+  .db__row + .db__row { border-top: 1px dashed var(--line-night-strong); }
+  .db__row:hover { background: color-mix(in srgb, var(--royal) 22%, transparent); }
+  .db__row .price { font-size: clamp(2rem, 1.3rem + 1.8vw, 2.9rem); color: var(--led-soft); text-shadow: 0 0 18px var(--led-glow); }
+  .db__row h3 { font-family: var(--font-display); font-size: 1.35rem; color: var(--white); margin: 0 0 2px; }
+  .db__row p { margin: 0; color: var(--cream-2); font-size: var(--fs-sm); }
+  .db__row .go { color: var(--led-soft); white-space: nowrap; }
+  .db__thumb { display: none; }
+  @media (min-width: 900px) {
+    .db__row { grid-template-columns: var(--pc) 72px minmax(0, 1fr) auto; }
+    .db__thumb { display: block; width: 72px; height: 72px; object-fit: contain; }
+    .db__thumb--photo { object-fit: cover; border-radius: 14px; }
+  }
+
+  @media (max-width: 900px) {
+    .cc { grid-template-columns: 1fr; gap: 90px; padding-top: 70px; }
+    .bb { grid-template-columns: 1fr; }
+    .bb__card--feature { grid-row: auto; padding-bottom: 210px; }
+    .bb__card--feature img { height: 220px; }
+  }
+  @media (max-width: 600px) {
+    .db__row { grid-template-columns: 1fr; gap: 6px; }
+    .bb__card--white { padding-right: 38%; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<div class="opt-head"><b>Option A · Colour cards</b><span>The home category cards: one solid colour each, the product standing out of the top, the price large</span></div>
+<section class="band band--black ob ob--black" aria-labelledby="a-title">
+  <div class="container">
+    <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Keep exploring</p>
+    <h2 class="h2" id="a-title">More from the <span class="accent">counter</span></h2>
+    <div class="cc">
+      <a class="cc__card cc__card--lime" href="#"><img class="cc__img" src="../../dist/assets/img/deal/eighths-720.webp" alt="" data-ai="generated"><span class="price">$10</span><h3>Eighths</h3><p>Flavors 3.5G prepacks, 23 strains on the live menu.</p><span class="go">Daily deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="cc__card cc__card--cyan" href="#"><img class="cc__img" src="../../dist/assets/img/deal/ounce-720.webp" alt="" data-ai="generated"><span class="price">$19</span><h3>Ounces</h3><p>Prepacked 28G ounces from $19 up to the $85 premium tier.</p><span class="go">Ounce tiers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="cc__card cc__card--orange" href="#"><img class="cc__img cc__img--photo" src="../../dist/assets/img/store/store-golden-800.webp" alt="" data-ai="edited"><span class="price">5700</span><h3>Visit us</h3><p>Open every day, 10AM to 10PM, at 5700 E 8 Mile Rd.</p><span class="go">Plan a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option B · Black bento</b><span>The home deals band: Eighths as the royal feature, Ounces white with the product, Visit on the golden-hour storefront</span></div>
+<section class="band band--black ob ob--black" aria-labelledby="b-title">
+  <div class="container">
+    <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Keep exploring</p>
+    <h2 class="h2" id="b-title">More from the <span class="accent">counter</span></h2>
+    <div class="bb">
+      <a class="bb__card bb__card--feature" href="#"><span class="price">$10</span><h3>Eighths</h3><p>Flavors 3.5G prepacks, 23 strains on the live menu.</p><span class="go">Daily deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><img src="../../dist/assets/img/deal/eighths-720.webp" alt="" data-ai="generated"></a>
+      <a class="bb__card bb__card--white" href="#"><span class="price">$19</span><h3>Ounces</h3><p>Prepacked 28G ounces from $19 up to the $85 premium tier.</p><span class="go">Ounce tiers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><img src="../../dist/assets/img/deal/ounce-720.webp" alt="" data-ai="generated"></a>
+      <a class="bb__card bb__card--photo" href="#"><img src="../../dist/assets/img/store/store-golden-800.webp" alt="" data-ai="edited"><span class="price">5700</span><h3>Visit us</h3><p>Open every day, 10AM to 10PM, at 5700 E 8 Mile Rd.</p><span class="go">Plan a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<div class="opt-head"><b>Option C · Deli board</b><span>The home deli counter board: three lit price rows on black, the most compact of the three</span></div>
+<section class="band band--black ob ob--black" aria-labelledby="c-title">
+  <div class="container">
+    <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Keep exploring</p>
+    <h2 class="h2" id="c-title">More from the <span class="accent">counter</span></h2>
+    <div class="db">
+      <a class="db__row" href="#"><span class="price">$10</span><img class="db__thumb" src="../../dist/assets/img/deal/eighths-360.webp" alt="" data-ai="generated"><span><h3>Eighths</h3><p>Flavors 3.5G prepacks, 23 strains on the live menu.</p></span><span class="go">Daily deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="db__row" href="#"><span class="price">$19</span><img class="db__thumb" src="../../dist/assets/img/deal/ounce-360.webp" alt="" data-ai="generated"><span><h3>Ounces</h3><p>Prepacked 28G ounces from $19 up to the $85 premium tier.</p></span><span class="go">Ounce tiers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      <a class="db__row" href="#"><span class="price">5700</span><img class="db__thumb db__thumb--photo" src="../../dist/assets/img/store/store-golden-800.webp" alt="" data-ai="edited"><span><h3>Visit us</h3><p>Open every day, 10AM to 10PM, at 5700 E 8 Mile Rd.</p></span><span class="go">Plan a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

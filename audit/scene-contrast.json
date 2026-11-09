@@ -1,7 +1,7 @@
 {
-  "generated": "2026-11-09T10:11:26.306Z",
+  "generated": "2026-11-09T13:56:58.653Z",
   "method": "p95/p5 background luminance under each text line, text hidden, reduced motion",
-  "checked": 388,
+  "checked": 314,
   "fails": [],
   "worst": [
     {
@@ -45,26 +45,6 @@
       "medianRatio": 5.39
     },
     {
-      "page": "/visit/",
-      "vp": "390x844",
-      "scene": "page-hero.page-hero--scene",
-      "el": "span",
-      "text": "Visit",
-      "ratio": 5.43,
-      "need": 4.5,
-      "medianRatio": 8.66
-    },
-    {
-      "page": "/",
-      "vp": "390x844",
-      "scene": "band.band--night.band--bokeh",
-      "el": "p.form-note",
-      "text": "You're one step away! We promise we won'",
-      "ratio": 5.69,
-      "need": 4.5,
-      "medianRatio": 6.21
-    },
-    {
       "page": "/daily-deals/",
       "vp": "390x844",
       "scene": "page-hero.page-hero--scene",
@@ -80,9 +60,19 @@
       "scene": "page-hero.page-hero--scene",
       "el": "span.accent",
       "text": "8 Mile",
-      "ratio": 4.01,
+      "ratio": 4.11,
       "need": 3,
-      "medianRatio": 5.11
+      "medianRatio": 5.25
+    },
+    {
+      "page": "/visit/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span",
+      "text": "Visit",
+      "ratio": 6.28,
+      "need": 4.5,
+      "medianRatio": 8.64
     },
     {
       "page": "/blog/",
@@ -135,16 +125,6 @@
       "medianRatio": 8.49
     },
     {
-      "page": "/",
-      "vp": "390x844",
-      "scene": "band.band--night.band--bokeh",
-      "el": "p.form-note",
-      "text": "You're one step away! We promise we won'",
-      "ratio": 6.74,
-      "need": 4.5,
-      "medianRatio": 7.63
-    },
-    {
       "page": "/daily-deals/",
       "vp": "1440x900",
       "scene": "page-hero.page-hero--scene",
@@ -153,26 +133,6 @@
       "ratio": 4.55,
       "need": 3,
       "medianRatio": 5.61
-    },
-    {
-      "page": "/learn/",
-      "vp": "1024x768",
-      "scene": "page-hero.page-hero--scene.page-hero--side",
-      "el": "span.accent",
-      "text": "flavors",
-      "ratio": 4.68,
-      "need": 3,
-      "medianRatio": 5.53
-    },
-    {
-      "page": "/learn/",
-      "vp": "390x844",
-      "scene": "page-hero.page-hero--scene.page-hero--side",
-      "el": "span",
-      "text": "Learn",
-      "ratio": 7.07,
-      "need": 4.5,
-      "medianRatio": 8.49
     },
     {
       "page": "/daily-deals/",
@@ -185,14 +145,14 @@
       "medianRatio": 5.61
     },
     {
-      "page": "/",
-      "vp": "1440x900",
-      "scene": "band.band--night.band--bokeh",
-      "el": "p.kicker",
-      "text": "Get social with Flavors Detroit",
-      "ratio": 7.48,
-      "need": 4.5,
-      "medianRatio": 8.01
+      "page": "/visit/",
+      "vp": "1024x768",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "8 Mile",
+      "ratio": 4.9,
+      "need": 3,
+      "medianRatio": 5.64
     },
     {
       "page": "/shop/",
@@ -203,16 +163,6 @@
       "ratio": 4.99,
       "need": 3,
       "medianRatio": 5.68
-    },
-    {
-      "page": "/visit/",
-      "vp": "1024x768",
-      "scene": "page-hero.page-hero--scene",
-      "el": "span.accent",
-      "text": "8 Mile",
-      "ratio": 5.04,
-      "need": 3,
-      "medianRatio": 5.65
     },
     {
       "page": "/shop/",
@@ -235,24 +185,74 @@
       "medianRatio": 8.16
     },
     {
+      "page": "/shop/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.status__detail",
+      "text": "opens 10AM",
+      "ratio": 7.83,
+      "need": 4.5,
+      "medianRatio": 8.42
+    },
+    {
+      "page": "/shop/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "el": "span.accent",
+      "text": "live menu",
+      "ratio": 5.23,
+      "need": 3,
+      "medianRatio": 5.58
+    },
+    {
       "page": "/learn/",
       "vp": "390x844",
       "scene": "page-hero.page-hero--scene.page-hero--side",
       "el": "span.accent",
       "text": "flavors",
-      "ratio": 5.12,
+      "ratio": 5.23,
       "need": 3,
-      "medianRatio": 5.47
+      "medianRatio": 5.61
     },
     {
-      "page": "/learn/",
-      "vp": "1440x900",
-      "scene": "page-hero.page-hero--scene.page-hero--side",
+      "page": "/visit/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
+      "el": "p.kicker",
+      "text": "Visit us",
+      "ratio": 7.89,
+      "need": 4.5,
+      "medianRatio": 8.87
+    },
+    {
+      "page": "/contact/",
+      "vp": "390x844",
+      "scene": "page-hero.page-hero--scene",
       "el": "span.accent",
-      "text": "flavors",
-      "ratio": 5.16,
+      "text": "location",
+      "ratio": 5.27,
       "need": 3,
-      "medianRatio": 5.65
+      "medianRatio": 5.59
+    },
+    {
+      "page": "/",
+      "vp": "390x844",
+      "scene": "band.band--night.band--rain",
+      "el": "span.status__word",
+      "text": "Closed",
+      "ratio": 7.94,
+      "need": 4.5,
+      "medianRatio": 8.06
+    },
+    {
+      "page": "/visit/",
+      "vp": "1440x900",
+      "scene": "page-hero.page-hero--scene",
+      "el": "span.accent",
+      "text": "8 Mile",
+      "ratio": 5.36,
+      "need": 3,
+      "medianRatio": 5.66
     }
   ],
   "verdict": "PASS"

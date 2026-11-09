@@ -36,7 +36,7 @@ MANIFEST = os.path.join(ROOT, 'src', 'content', 'store-photos.json')
 LOG = os.path.join(BASE, 'log.json')
 PAD = (1360, 1024)          # FLUX works in multiples of 16: pad the 1360x1020 photos by 4 rows
 
-SOURCES = {'storefront': 'storefront-19.png', 'counter': 'counter-16.png'}
+SOURCES = {'storefront': 'storefront-19.png', 'counter': 'counter-16.png', 'merch-72': 'merch-72.png (owner, 2026-11-09)', 'fresheners-73': 'fresheners-73.png (owner, 2026-11-09)'}
 
 # ---- masks (coordinates in the 1360x1020 originals, traced on gridded crops) ---------------------
 # storefront: everything below the dashboard's top edge, the phone mount included (its top ~y 760)
@@ -557,6 +557,39 @@ def vivid(im, vib=0.7, sat=1.34, warm=0.05, cool=0.05, punch=0.14):
     return Image.fromarray((np.clip(a, 0, 1) * 255 + 0.5).astype(np.uint8))
 
 
+def cine(im, seed=7):
+    """The store gallery's film look (owner, 2026-11-09: "make all images look more cinematic"), on top of
+    each photo's own grade. Colour and tone only, nothing moved, added or removed: a soft bloom round the
+    lights, a deeper filmic curve with a gently lifted black (a matte toe), navy shadows and warm cream
+    highlights (never gold), slightly quieter mid colour, a stronger vignette and fine grain."""
+    import cv2
+    W3 = np.array([0.2126, 0.7152, 0.0722], np.float32)
+    a = np.asarray(im, np.float32) / 255.0
+    h, w = a.shape[:2]
+    # bloom: the brightest parts, blurred wide, added back softly
+    lum = a @ W3
+    hi = np.clip((lum - 0.72) / 0.28, 0, 1)[..., None] * a
+    k = max(3, int(0.012 * max(h, w)) | 1)
+    a = a + 0.22 * cv2.GaussianBlur(hi, (0, 0), k)
+    # filmic curve: S-curve with a lifted toe and a rolled shoulder
+    a = np.clip(a, 0, 1.2)
+    s = a * a * (3 - 2 * np.clip(a, 0, 1))
+    a = 0.45 * a + 0.55 * s
+    a = np.clip(0.035 + 0.94 * a, 0, 1)                                     # matte black, never pure 0; and no value
+    lum = a @ W3                                                            # over 1 (the bloom), or (1 - lum) ** x is NaN
+    # split tone: navy shadows, warm cream highlights
+    a = a + ((1 - lum) ** 2.4)[..., None] * np.array([-0.028, -0.004, 0.05], np.float32)
+    a = a + (lum ** 2.2)[..., None] * np.array([0.03, 0.016, -0.012], np.float32)
+    lum = a @ W3
+    a = lum[..., None] + (a - lum[..., None]) * 0.9                         # quieter mid colour
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    r = np.sqrt(((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2) / np.sqrt(2) * 1.3
+    a = a * (1 - 0.42 * smoothstep(0.42, 1.15, r))[..., None]
+    rng = np.random.default_rng(seed)
+    a = a + rng.normal(0, 0.006, (h, w, 1)).astype(np.float32)
+    return Image.fromarray((np.clip(a, 0, 1) * 255 + 0.5).astype(np.uint8))
+
+
 # slot -> (master, crop box as fractions of the master, widths, quality, alt)
 SLOTS = {
     'storefront': dict(src='storefront', box=(0, 0, 1, 0.9167), widths=[800, 1200, 1600], q=78,
@@ -564,23 +597,26 @@ SLOTS = {
             'Flavors Detroit 5700 on a blue corrugated tower above a dark grey building, its black awning '
             'reading Flavors Detroit and Recreational Cannabis, a lit Open sign and a Cannabis feather flag '
             'with a green cross, with traffic lights hanging over the street.'),
-    # no retouched pixels fall inside this crop (the edits start at original y 585), so it is labelled
-    # as upscaled and graded only (independent review, 2026-11-09)
-    'sign': dict(src='storefront', box=(0.2794, 0.0, 0.7059, 0.4265), widths=[600, 900, 1160], q=80, edited=False,
-        alt='The Flavors Detroit sign against a clear sky: a black cloud outlined in bulbs, reading Flavors '
-            'Detroit with 5700 below, on a tall blue corrugated tower, behind a utility pole and wires.'),
-    'front': dict(src='storefront', box=(0.2426, 0.3235, 0.8235, 0.9049), widths=[600, 900, 1200, 1580], q=80,
-        alt='The front of Flavors Detroit: a dark grey building under the blue tower, a black awning reading '
+    # /visit/ wayfinding photos (sign, front, merch): owner, 2026-11-09: "turn these images to look cinematic",
+    # then "I want them have a golden hour lighting to make it more dramatic". sign + front are cropped from the
+    # approved golden-hour master (the hero's AI relight, real signage restored), boxes found by registering the
+    # old storefront crops onto it (SIFT homography, 270 inliers, median error 0.45 px at 1600 wide), with the
+    # hero's grade (vivid + cine). Labelled edited: the relight is AI.
+    'sign': dict(src='golden', grade='vivid+cine', box=(0.1818, 0.0, 0.6657, 0.4264), widths=[600, 900, 1160], q=80,
+        alt='The Flavors Detroit sign at golden hour: a black cloud outlined in bulbs, reading Flavors '
+            'Detroit with 5700 below, on a tall blue corrugated tower lit by low warm sun, behind a utility pole and wires.'),
+    'front': dict(src='golden', grade='vivid+cine', box=(0.1403, 0.3226, 0.7994, 0.9073), widths=[600, 900, 1200, 1580], q=80,
+        alt='The front of Flavors Detroit at golden hour: a dark grey building under the blue tower, a black awning reading '
             'Flavors Detroit and Recreational Cannabis, a lit Open sign in the window, a parked silver car and '
-            'a black Cannabis feather flag with a green cross.'),
+            'a black Cannabis feather flag with a green cross, with long warm shadows across the street.'),
     'counter': dict(src='counter', box=(0.03125, 0, 0.96875, 1), widths=[800, 1200, 1600, 2400], q=78,
         alt='Inside Flavors Detroit: the main sales counter under bright ceiling lights, with white glass '
             'display cases, blue Flavors Detroit letters on the back wall, screens above and walls of '
             'packaged products on both sides, over blue floor mats.'),
-    'merch': dict(src='merch-17', box=(0, 0, 1, 1), widths=[600, 900, 1200, 1600], q=78,
-        alt='The merch corner at Flavors Detroit: a long dark counter edged with blue LED light, piled with '
-            'folded T-shirts and hoodies, caps on mannequin heads and glass pieces on shelves, under hanging '
-            'cage pendant lights and a blue wall with menu screens.'),
+    'merch': dict(src='golden-merch', grade='cine', box=(0, 0, 1, 1), widths=[600, 900, 1200, 1600], q=78,
+        alt='The merch corner at Flavors Detroit in warm late-afternoon light: sun streaming through the front door and '
+            'windows across the floor mats and a long dark counter edged with blue LED light, piled with folded T-shirts '
+            'and hoodies, caps and glass pieces on shelves, under hanging cage pendant lights and a blue wall with menu screens.'),
     # the home hero (owner, 2026-11-09): the storefront relit to golden hour, see cmd_golden, with the
     # vivid() grade (the owner asked for more colourful, vivid colour on the hero's colour side).
     # Always the whole frame, a wide shot (owner: "too zoomed in, should look like a wide shot").
@@ -597,6 +633,32 @@ SLOTS = {
     'wall': dict(src='wall-15', box=(0, 0, 1, 1), widths=[400, 600, 900, 1200], q=80,
         alt='A wall at Flavors Detroit with large lit green letters reading Flavors Detroit above shelves '
             'and racks of packaged products, with screens above, one showing strain art.'),
+    # the home visit band (owner, 2026-11-09: "ensure we are using the improved version of the storefront
+    # image"): the golden-hour storefront, as in the hero, in full
+    'store-golden': dict(src='golden', grade='vivid', box=(0, 0, 1, 1), widths=[800, 1200, 1600], q=74,
+        alt='The Flavors Detroit store at golden hour: the black cloud-shaped sign reading Flavors Detroit 5700 '
+            'on its blue corrugated tower, the dark building with its black awning reading Flavors Detroit and '
+            'Recreational Cannabis, a lit Open sign and a Cannabis feather flag, under a warm evening sky.'),
+    # the store gallery in "who are we" (owner, 2026-11-09: the concave wall, "make all images look more
+    # cinematic"): every panel 5:4, with the cine() film look on top of the photo's own grade
+    'gal-counter': dict(src='counter', grade='cine', box=(0.03125, 0, 0.96875, 1), widths=[480, 800, 1200], q=78,
+        alt='Inside Flavors Detroit: the main sales counter under bright ceiling lights, with glass display '
+            'cases, blue Flavors Detroit letters on the back wall, screens above and walls of packaged products '
+            'on both sides.'),
+    'gal-wall': dict(src='wall-15', grade='cine', box=(0, 0.15, 1, 0.75), widths=[480, 800, 1200], q=78,
+        alt='Large lit green letters reading Flavors Detroit on a striped wall, under screens, above shelves '
+            'of packaged products.'),
+    'gal-merch': dict(src='merch-72', grade='cine', box=(0, 0.14, 1, 0.74), widths=[480, 800, 1200], q=78,
+        alt='Flavors Detroit merch: beanies on mannequin heads above glass shelves of black logo hoodies and '
+            'tie-dye hoodies, with bright tank tops laid out on the counter in front.'),
+    'gal-clouds': dict(src='fresheners-73', grade='cine', box=(0, 0.10, 1, 0.55), widths=[480, 800, 1148], q=78,
+        alt='Rows of cloud-shaped Flavors Detroit logo pieces in red, pink and white hanging on a wire wall.'),
+    'gal-led': dict(src='merch-17', grade='cine', box=(0.03125, 0, 0.96875, 1), widths=[480, 800, 1200], q=78,
+        alt='The merch corner at Flavors Detroit: a long dark counter edged with blue LED light, piled with '
+            'folded T-shirts and hoodies, caps on mannequin heads and glass pieces on shelves.'),
+    'gal-store': dict(src='golden', grade='vivid+cine', box=(0, 0, 1, 0.9428), widths=[480, 800, 1200], q=78,
+        alt='The Flavors Detroit store at golden hour: the black cloud-shaped sign on its blue tower above the '
+            'dark building and its black awning.'),
 }
 EDITED = {'storefront': 'The car dashboard, phone mount and a wiper streak in the original phone photo were '
                         'removed and the street below filled in with AI (fal FLUX.1 [pro] Fill inside a mask; '
@@ -612,6 +674,9 @@ EDITED = {'storefront': 'The car dashboard, phone mount and a wiper streak in th
                     'the relight left on a plain grey panel was smoothed out, and the far-left street signs it '
                     'garbled are cropped out. Colour graded for richer colour (more saturated, warmer highlights, '
                     'bluer shadows).',
+          'golden-merch': 'The owner\'s merch-corner photo, upscaled 2x (Topaz High Fidelity V2), relit to golden hour with AI '
+                          '(fal Nano Banana Pro edit); the two menu screens and the ATM sign were put back from the photo. '
+                          'Colour graded.',
           'golden-wide': 'The golden-hour storefront (relit with AI, as for the hero) with the street to its left '
                          'extended by AI (fal FLUX.1 [pro] Fill outpainting) so the photo can run behind the '
                          'headline; the real frame is kept on the right, nothing in it moved, added or removed. '
@@ -636,19 +701,27 @@ def cmd_finish():
             os.remove(os.path.join(OUT, f))
     log = json.load(open(LOG)) if os.path.exists(LOG) else {}
     masters = {}
-    for i, src in enumerate(['storefront', 'counter', 'merch-17', 'wall-15']):
+    for i, src in enumerate(['storefront', 'counter', 'merch-17', 'wall-15', 'merch-72', 'fresheners-73']):
         up = Image.open(os.path.join(UP, f'{src}.png')).convert('RGB')
         masters[src] = cinematic(up, seed=11 + i)
     masters['golden'] = Image.open(os.path.join(BASE, 'relight', 'golden-master.png')).convert('RGB')
     masters['golden-wide'] = Image.open(os.path.join(BASE, 'relight', 'golden-wide.png')).convert('RGB')
+    # /visit/ 'Step inside' at golden hour (owner, 2026-11-09): AI relight of merch-17, the menu screens and the ATM sign
+    # put back from the photo (relight/merch/merch-gold-restore.json)
+    masters['golden-merch'] = Image.open(os.path.join(BASE, 'relight', 'merch', 'merch-gold-a-restored.png')).convert('RGB')
     items = {}
     graded = {}
     for slot, spec in SLOTS.items():
         m = masters[spec['src']]
-        if spec.get('grade') == 'vivid':
-            if spec['src'] not in graded:
-                graded[spec['src']] = vivid(m)
-            m = graded[spec['src']]
+        gr = spec.get('grade', '')
+        if gr:
+            key = spec['src'] + '|' + gr
+            if key not in graded:
+                g = m
+                for step in gr.split('+'):
+                    g = vivid(g) if step == 'vivid' else cine(g) if step == 'cine' else g
+                graded[key] = g
+            m = graded[key]
         W, H = m.size
         x0, y0, x1, y1 = spec['box']
         crop = m.crop((round(x0 * W), round(y0 * H), round(x1 * W), round(y1 * H)))

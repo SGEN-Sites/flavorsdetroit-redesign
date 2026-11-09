@@ -21,9 +21,9 @@ grouped below with their count; the ledger has each one.
 | `/` | Edibles text | IMPROVE | benefits-solution | The Edibles card shows a line cut from the client's words (owner: shorten the descriptions) |
 | `/` | Much more text | IMPROVE | benefits-solution | The Much more card shows a line cut from the client's words (owner: shorten the descriptions) |
 | `/` | Flavors Detroit: who are we? | IMPROVE | trust-positioning | Word for word in sentence case; the first sentence is a large statement whose words light up as it scrolls into view; the store facts are stat cards that count up; the owner's own photos of the main counter and the green letter wall (Imagery, below) |
-| `/` | Join our mailing list today! | IMPROVE | strategic-cta | Client words kept; repeated on Deals, Contact, News and every post (preview: validates, never posts) |
-| `/` | Get social with Flavors Detroit | IMPROVE | strategic-cta | Word for word with a follow button to @flavorsdetroit_ |
-| `/` | Contact & location | IMPROVE | strategic-cta | Heading and "Tell us what you think" on the home visit band; the full form on `/contact/` |
+| `/` | Join our mailing list today! | IMPROVE | strategic-cta | Client words kept; repeated on Deals, Contact, News and every post (preview: validates, never posts). Home (owner's option A, 2026-11-09): one slim black strip, title, a pill form (input + button in one bar) and a round Instagram button, 275px tall at 1440 (was 623px) |
+| `/` | Get social with Flavors Detroit | IMPROVE | strategic-cta | Word for word with a follow button to @flavorsdetroit_ on `/contact/`; on home (owner's option A, 2026-11-09) "Follow us today!" + the handle as a round Instagram button in the mailing-list strip |
+| `/` | Contact & location | IMPROVE | strategic-cta | Heading and "Tell us what you think" on the home visit band; the full form on `/contact/`. The "E 8 Mile Rd / 5700" street-sign plate on the storefront photo restored (owner, 2026-11-09) |
 | `/` | "[PHOTO OF CURRENT BUILDING GOES HERE…]" | REMOVE | — | Placeholder text published on the live page; removed per the owner's brief; the slot now holds the owner's own storefront photo (Imagery, below) |
 | `/` | Address / hours / phone strip | IMPROVE | footer | Rebuilt as the shared footer and the visit band, address corrected to 5700 |
 | `/blog` (4) and `/blog/hashtags/*` (3) | Post listing | IMPROVE | — | Flavors news index: latest post featured, every post as a card, year filter, show more; hashtag listings fold into it |
@@ -41,15 +41,21 @@ grouped below with their count; the ledger has each one.
 | new | Home deals tabs | ADD | benefits-solution | Live-menu prices of November 8, 2026, linking to `/daily-deals/`; first as deli tickets hanging from a rail over a neon scene still, then (owner, 2026-11-09: "turn the background of this section into black and turn these deal cards into bento layout for all categories. Include product images.") on a black band, each category's deals a bento of cards (a large feature in the store's blue, white cards beside it) with an AI illustration of each product type; the Ounces tab keeps every tier and count of the live menu |
 | new | Home Owner's Box | ADD | trust-positioning | The live menu's Owners Box collection with the client's tasting notes, in a glass case framed by chasing marquee bulbs; later (owner, 2026-11-09) under a spectrum line, over the owner's street photo in black and white fading into black, the strains on holographic cards with a bud each that fly out of the owner's road case as it opens in green smoke; compact: the case at the left of the words and cards on wide screens, under the cards on narrow ones, where the cards' row opens downward as the case opens |
 | new | Home news | ADD | — | Latest three posts |
-| new | `/daily-deals/` | ADD | benefits-solution | The live URL answered 404 on 2026-11-08 while the nav still says "Daily Deals & More"; restored |
+| new | `/daily-deals/` | ADD | benefits-solution | The live URL answered 404 on 2026-11-08 while the nav still says "Daily Deals & More"; restored. By category follows the home deals band (owner, 2026-11-09): each shelf a bento of cards with product images on black; the Owner's Box callout is the home band |
 | new | `/shop/` | ADD | strategic-cta | The live menu hand-off: the portal refuses framing and its category paths answer "Page not found" |
-| new | `/owners-box/` | ADD | trust-positioning | From the owner's brief, the live menu collection and the October 11, 2026 post |
+| new | `/owners-box/` | ADD | trust-positioning | From the owner's brief, the live menu collection and the October 11, 2026 post; its In the box now section is the home Owner's Box band (owner, 2026-11-09) |
 | new | `/visit/` | ADD | objection-handling | Hours (today marked), click-to-load map, wayfinding from the owner's description, what to bring, FAQ |
 | new | `/learn/` | ADD | objection-handling | Menu codes and sizes, the shelves, first visit, FAQ |
 | new | `/contact/` | ADD | strategic-cta | The live home page's contact form on its own page |
 | new | `/404.html` | ADD | — | Not-found page in the brand |
 | new | Age gate | ADD | — | The live gate's own question; 21+ or medical patient; remembered 30 days; opens over the night-road still, in black and white (owner, 2026-11-09) |
 | new | Splash, "Sign ignition" | ADD | — | The owner's pick of four concepts (`design-options/splash/`): 2.3 s on the first page of a visit, skippable, never under reduced or paused motion, then the age gate on a first visit; it replaces the hero's own ignition so the bulbs never light twice |
+| new | Store card (`/visit/`, `/contact/`) | IMPROVE | — | Compact (owner, 2026-11-09): one line per fact, every row 44px, the Address / Hours / Phone labels kept for screen readers only; 397px to 298px tall on `/visit/` at 1440 |
+| new | `/visit/` hours + how to find us | IMPROVE | objection-handling | Merged into one dark section (owner, 2026-11-09): "You can't miss 5700" with 5700 as a neon tube sign whose 7 flickers (still under reduced or paused motion, paused off screen), the hours once in large type over seven day chips with today lit (the full table read aloud), a shorter map, then the three wayfinding photos, now with the same cinematic film grade as the home "Who are we" wall (owner, 2026-11-09; `tools/store-photos.py` grade `cine`); words unchanged |
+| new | `/visit/` Three things to know | IMPROVE | objection-handling | Owner's option A (`design-options/before/`, 2026-11-09): a Flavors badge on a woven lanyard (the React Bits "Lanyard" effect the owner pointed to, rebuilt in plain JavaScript: drag, throw, tap or Enter to flip) beside the three tips as rows with icons (ID card, bag, speech bubble) in place of the numbers; a store badge, not styled like a real ID. A spectrum divider on the section's top edge, the lanyard hanging from it |
+| new | Header + footer logo | IMPROVE | — | Owner, 2026-11-09: the royal-blue corrugated tower tile behind the logo removed site-wide; just the logo (resized only), lit from below by an LED-blue underglow so the black cloud still stands out on the dark header and footer |
+| new | Footer neon "5700" | REMOVE | — | The large outlined neon "5700" behind the footer columns removed at the owner's request (2026-11-09); the address stays in the Visit column |
+| new | `/owners-box/` More from the counter | IMPROVE | strategic-cta | Owner's option B (`design-options/counter/`, 2026-11-09, after first picking C): a black bento like the home deals band, Eighths as the royal feature with a large jar of which only the top half rises from the card's bottom edge (owner), Ounces white with the pouch, Visit over the golden-hour storefront; same words and numbers. A spectrum divider now sits on the top edge of "Our most exclusive flower" and of this section |
 
 ## Copy that changed
 
@@ -275,7 +281,8 @@ swipe row keeps 14px of room above the bounce's peak).
   them as if they were placed naturally, some of them can go out of frame": five AI buds rendered sharp
   front to back (fal flux-pro ultra raw mode; the client's bud photo had half its bud out of focus),
   one over the words, four resting at the band's top corners, two half out of frame at the sides (each
-  measured inside the band's top at 7 widths).
+  measured inside the band's top at 7 widths). "reduce size of these buds on mobile": on phones they scale with the screen (the
+  middle one 30% of its width, the corner ones 12 to 24%), so the words read between them.
 - Deals on phones: "cards can have same size. and can be carousel": every deal card the same size in a
   swiping carousel. "this glass from the deal card still looks broken": the glass had been guessed back
   out of grey-backdrop pictures and came out patchy on the blue cards; the eighths jar (AI) and the
@@ -292,6 +299,69 @@ swipe row keeps 14px of room above the bounce's peak).
   changed). The holographic cards' chips were set at 12px; they are back at the site's 13px floor.
 - The comma after "prices" in "Detroit prices, every day" fell to a line of its own on phones (the
   heading's words animate as separate pieces); a word and the punctuation right after it now never part.
+
+**Who are we, the visit band, an order bar and text that follows (owner, 2026-11-09):**
+- "add these images to this section, make layout more compact and sleek and make all images look more
+  cinematic", then "can we do something like this [a concave carousel] to show the images?": the store's
+  own photos hang on a wall that curves around the viewer: the side panels come closer and turn in, the
+  wall drifts slowly, brakes under a resting mouse or the keyboard, turns with a drag (a flick carries on
+  and it settles with a panel centred), a click on a side panel, the buttons, the arrow keys or a
+  sideways swipe; captions name the centred photo. An original build in the site's own script and
+  styles, not the paid component the owner pointed to (it needs a licence); without the script it is a
+  plain swipe row, under reduced or paused motion it only moves when asked. Six panels, every one 5:4
+  with a film look on top of the photo's own grade (a soft bloom round the lights, a deeper curve, navy
+  shadows, cream highlights, a vignette and fine grain): the main counter, the green letter wall, the
+  merch shelves and the logo clouds (two new owner photos, upscaled 2x), the merch corner and the
+  golden-hour storefront. One of the three photos sent, the counter with its customers and staff, is the
+  same photograph as the counter already on the site (matched point for point); the site keeps the
+  version with those people removed for their privacy (owner question 3). The section is more compact: a
+  smaller statement, then the wall, then the copy beside the store facts, stacked as wide one-line cards
+  ("we can have these cards stacked ... texts in 1-2 lines per card").
+- "for all layout similar to this text should follow when scrolled down": in two-column layouts the
+  text column stays in view under the header while the taller column beside it scrolls, and stops at
+  the end of its row (wide screens; on phones the columns stack).
+- "for this section let's make it more simple, make more compact and ensure we are using the improved
+  version of the storefront image": the home visit band is one quiet column (the address, the live open
+  state, hours, phone, Directions and Call, the message link) beside the golden-hour storefront, whole;
+  the store card box, the street-sign art and the wayfinding line (which stays on /visit/) are gone here.
+- "let's also add a sticky bottom bar like this for this site": on wider screens, from the second screen
+  on, a dark glass bar at the foot of the window: the client's own line "Order cannabis online for
+  pickup", the live open state and "Bring a valid ID" (from the live menu), Order online, Get
+  directions, and a close button that hides it for the visit; phones keep their dock. The reference
+  listed accepted payment cards; no source records the store's payment methods, so the bar does not.
+- "these marquee bars can overlap a little" (phones): the stacked tape and letter board now meet and
+  overlap about 10px at the right end.
+
+**Buttons on phones, the deals page and the footer (owner, 2026-11-09):**
+- "CTAs can be stacked and must be wide and will occupy 1 line per CTA and that applies across whole
+  site for mobile": on screens up to 760px every button in the page (and the age gate's two) runs the
+  full width of its column, one per line, its words on one line; button rows stack.
+- "[the deals page's By category] should follow how we design from Home Page": `/daily-deals/` By
+  category is now the home band: black, each shelf a bento (the feature two by two in the store's blue,
+  white small and wide cards), every card with a product image. The longer shelves are packed in rows
+  of four with no gaps (two columns on tablets, the same-size carousel on phones). 13 more AI product
+  illustrations were rendered for it with the same template (fal flux-pro/v1.1-ultra, $0.78 at the
+  $0.06 list price: one, three and five infused pre-rolls, three and five disposables, two cartridges, a
+  jar of cured sugar, a jar of diamonds, a pile of gummies, wrapped chews, loose lengths of rope candy, a
+  bottle of syrup, a jar of gummies), cut out with Bria RMBG 2.0 and used as cut (13 cut-outs); every request id
+  in `assets/generated/jobs-deals.json`. The owner's own photos stand where they match (the pre-roll
+  stand and the flat pre-roll, the crumble, the budder dish, the wax bucket, the 1G budder jar).
+  "This section too may get elements from what we did for the home page": the deals page's Owner's Box
+  is now the home band (the spectrum line, the street in black and white, the road case opening in green
+  smoke, the holographic strain cards).
+- "we can remove this section of the footer": the giant "Flavors" word and its bulb row at the foot of
+  every page are gone (its scroll finale with it).
+- "texts in here can be in a single row and this must be center aligned, along with [the copyright
+  line]": the 21+ line at the foot of every page is one centred line where it fits (from about 1024px
+  wide; narrower, balanced centred lines), with the copyright line and the preview note centred under it.
+- "looks like there is a spacing issue here" (the deli counter board on `/daily-deals/`): the price
+  column had a fixed width, so "$10/g" and "$15/g" ran into their words. The tiers now share one grid
+  whose price column takes the widest price: measured at least 14px between every price and its words,
+  with the words lined up down the board, from 320 to 1440 wide.
+- "[In the box now on `/owners-box/`] should take after how we designed deals in the home section": it
+  is now the home band (the spectrum line, the street in black and white, the road case opening in green
+  smoke, the three strains on holographic cards with a bud each), with its own heading, the dated
+  live-menu note and Shop the box.
 
 **Fonts (owner, 2026-11-09, after pairing A):** "lets change pairing to Outfit + Work Sans, where titles
 or larger sized texts uses outfit". Display weights moved one step lighter (900 to 800, 800 to 700),

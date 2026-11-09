@@ -4,7 +4,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, OWNERS_BOX, menu, postsData, ASOF } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, tag, hangRow, tabs, asof, pageHero, mailForm } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, deal, dealGrid, ownboxStage, ownboxBackdrop, spectrum, tabs, asof, pageHero, mailForm } from '../lib/parts.mjs';
 import { breadcrumbJsonLd } from '../lib/seo.mjs';
 import { niceName, presentable } from '../content/case.mjs';
 
@@ -60,7 +60,6 @@ const EDIBLES = [
   C('2/$10 Chill Medicated - Syrup To-Go 100mg', 'Chill Medicated syrup to-go 100mg', '$10', 'for 2', '2 for $10.'),
 ];
 
-const tags = (list, lead = []) => hangRow([...lead, ...list.map((d, i) => tag({ kick: d.kick, price: d.price, per: d.per, name: d.name, detail: esc(d.detail), i: (i + lead.length) % 4 }))]);
 
 function hero() {
   return pageHero(PATH, {
@@ -102,29 +101,71 @@ function deliCounter() {
 }
 
 function categories() {
+  // (owner, 2026-11-09: "this should follow how we design from Home Page") a black band; each shelf a
+  // bento of deal cards with a product picture on each, as on the home page: the owner's own photos
+  // where there is one, AI illustrations of the product type for the rest (labelled); every price,
+  // count and name from the live menu, as on the deli tickets these replace
   const e = menu.eighths;
-  const flowerLead = [
-    tag({ kick: 'Flavors 3.5G prepacks', price: '$10', per: 'eighth', name: 'Eighths', detail: `${e.count} strains on the live menu, from ${esc(niceName(e.strains[0]))} to ${esc(niceName(e.strains[e.strains.length - 1]))}.`, feature: true, i: 0 }),
-  ];
-  const oz = (menu.ounceTiers || []);
-  const ladder = `<div class="ladder" role="list">${oz.map((t, i) => `<div class="ladder__step" role="listitem" style="--n:${i}"><span class="ladder__price">${esc(t.price)}</span><span class="ladder__meta">${esc(t.kind)} · 28G<br>${t.count} on the menu</span></div>`).join('')}</div>
-  ${hangRow(oz.filter((t) => ['$19', '$25', '$85'].includes(t.price)).map((t, i) => tag({ kick: t.kind + ' · 28G', price: t.price, per: 'ounce', name: t.price === '$85' ? 'The premium tier' : t.price === '$19' ? 'Top shelf shake' : 'Prepacked ounces', detail: esc(presentable(t.strains.map(niceName)).slice(0, 4).join(', ')) + (t.strains.length > 4 ? ' and more.' : '.'), feature: t.price === '$85', i })), 'margin-top:28px')}`;
-  const rollLead = [tag({ kick: 'Hello Farms 1G singles', price: '$1', per: 'pre-roll', name: 'Dollar pre-rolls', detail: esc(presentable(menu.prerolls.dollar.strains.map(niceName)).join(', ')) + '.', feature: true, i: 0 })];
+  // card sizes for a bento of n (the first is the feature): small 1 cell, wide 2, feature 4, rows of 4
+  const sizes = (n) => {
+    const k = n - 1;
+    for (let w = 1; w <= k; w++) { const sm = k - w; if ((4 + sm + 2 * w) % 4 === 0) return ['feature', ...Array(sm).fill('small'), ...Array(w).fill('wide')]; }
+    return ['feature', ...Array(k).fill('small')];
+  };
+  const grid = (cards) => {
+    const sz = sizes(cards.length);
+    return dealGrid(cards.map((c, i) => deal(PATH, { ...c, size: sz[i], i: i % 4 })), { many: cards.length > 4 });
+  };
+  const d = (x, img) => ({ img, kick: x.kick, price: x.price, per: x.per, name: x.name, detail: esc(x.detail) });
+  const [FL1, FL2, FL3] = FLOWER;
+  const flower = grid([
+    { img: 'eighths', kick: 'Flavors 3.5G prepacks', price: '$10', per: 'eighth', name: 'Eighths', detail: `${e.count} strains on the live menu, from ${esc(niceName(e.strains[0]))} to ${esc(niceName(e.strains[e.strains.length - 1]))}.` },
+    d(FL1, 'premium'), d(FL2, 'topshelf'), d(FL3, 'nug-1'),
+  ]);
+  // the ounces: every tier and count of the live menu, as on the home page
+  const tiers = menu.ounceTiers || [];
+  const pre = tiers.filter((t) => /prepacked/i.test(t.kind)), shake = tiers.filter((t) => /shake/i.test(t.kind));
+  const tierList = (list) => `<ul class="deal__tiers">${list.map((t) => `<li><b>${esc(t.price)}</b><span>${t.count} on the menu</span></li>`).join('')}</ul>`;
+  const top = tiers.find((t) => t.price === '$85');
+  const ounces = dealGrid([
+    deal(PATH, { img: 'ounce', kick: 'Prepacked 28G ounces', price: pre[0]?.price || '$25', per: 'and up', name: 'Prepacked ounces', detail: tierList(pre), size: 'feature', i: 0 }),
+    deal(PATH, { img: 'shake', kick: 'Top shelf shake', price: shake[0]?.price || '$19', per: 'ounce', name: 'Top shelf shake', detail: shake.map((t) => `${esc(t.price)}: ${t.count} on the menu`).join(' · ') + '.', size: 'wide', i: 1 }),
+    deal(PATH, { img: 'topshelf', kick: 'Prepacked 28G ounce', price: '$85', per: 'ounce', name: 'The premium tier', detail: esc(presentable((top?.strains || []).map(niceName)).slice(0, 4).join(', ')) + ((top?.strains || []).length > 4 ? ' and more.' : '.'), size: 'wide', i: 2 }),
+  ]);
+  const [PR1, PR2, PR3, PR4, PR5, PR6] = PREROLLS;
+  const rolls = grid([
+    { img: 'preroll-stand', kick: 'Hello Farms 1G singles', price: '$1', per: 'pre-roll', name: 'Dollar pre-rolls', detail: esc(presentable(menu.prerolls.dollar.strains.map(niceName)).join(', ')) + '.' },
+    // the owner's own product photos (2026-11-09): party jar, Tarantula tube, infused single, Rocket Stick
+    d(PR1, 'preroll-flat'), d(PR2, 'party-jar'), d(PR3, 'tarantula'), d(PR4, 'infused-single'), d(PR5, 'rocket-stick'), d(PR6, 'infused-5'),
+  ]);
+  const [VA1, VA2, VA3, VA4, VA5, VA6] = VAPES;
+  const vapes = grid([d(VA1, 'cart'), d(VA2, 'disposable'), d(VA3, 'disp-5'), d(VA4, 'disp-3'), d(VA5, 'disposable'), d(VA6, 'carts-2')]);
   const box5 = (postsData.posts || []).find((p) => p.slug === 'halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces');
-  const concLead = [
-    tag({ kick: 'Flavors concentrates', price: '$20', per: '5G bucket', name: 'Budder buckets', detail: 'Flavors 5G budder buckets on the live menu.', feature: true, i: 0 }),
-    ...(box5 ? [tag({ kick: 'Flavors news, ' + box5.dateLabel, price: '$5', per: 'gram', name: '$5 concentrate lab', detail: 'Budders, cured sugars and sugar waxes joined the $5 grams.', foot: `<a class="text-link" href="${A(box5.path)}">Read the post ${icon.arrow}</a>`, i: 1 })] : []),
-  ];
-  return `<section class="band band--navy" aria-labelledby="cats-title">
+  const byName = (list, name) => { const x = list.find((q) => q.name === name); if (!x) throw new Error('deals.mjs: deal not found: ' + name); return x; };
+  const conc = grid([
+    { img: 'budder-dish', kick: 'Flavors concentrates', price: '$20', per: '5G bucket', name: 'Budder buckets', detail: 'Flavors 5G budder buckets on the live menu.' },
+    ...(box5 ? [{ img: 'budders', kick: 'Flavors news, ' + box5.dateLabel, price: '$5', per: 'gram', name: '$5 concentrate lab', detail: 'Budders, cured sugars and sugar waxes joined the $5 grams.', foot: `<a class="text-link" href="${A(box5.path)}">Read the post ${icon.arrow}</a>` }] : []),
+    d(byName(CONC, 'Premium wax bucket'), 'waxbucket'),
+    d(byName(CONC, 'TopShelf 1G cured sugar diamonds'), 'diamonds'),
+    d(byName(CONC, 'TopShelf 1G crumbles'), 'crumble'),
+    d(byName(CONC, '5G cured sugar buckets'), 'sugar'),
+    d(byName(CONC, 'TopShelf 1G diamond sauce'), 'diamonds'),
+    d(byName(CONC, 'TopShelf 1G budders'), 'budder-1g'),
+    d(byName(CONC, 'Twisteez 2G live resin brush'), 'wax'),
+    d(byName(CONC, 'Diamond Donut 3.75G 3-packs'), 'crumbles'),
+  ]);
+  const [ED1, ED2, ED3, ED4, ED5, ED6, ED7, ED8] = EDIBLES;
+  const edibles = grid([d(ED1, 'gummy-jar'), d(ED2, 'chews'), d(ED4, 'gummies'), d(ED6, 'rope'), d(ED3, 'chews'), d(ED5, 'gummy-jar'), d(ED7, 'gummies'), d(ED8, 'syrup')]);
+  return `<section class="band band--black band--deals" aria-labelledby="cats-title">
   <div class="container">
     ${sectionHead({ kick: 'By category', id: 'cats-title', titleHtml: 'Every deal, <span class="accent">by the shelf</span>', lede: 'Bundles and multi-buys as they appear on the live menu.' })}
     ${tabs('deals', [
-      { id: 'flower', label: 'Flower', html: tags(FLOWER, flowerLead) },
-      { id: 'ounces', label: 'Ounces', html: ladder },
-      { id: 'prerolls', label: 'Pre-rolls', html: tags(PREROLLS, rollLead) },
-      { id: 'vapes', label: 'Vapes', html: tags(VAPES) },
-      { id: 'concentrates', label: 'Concentrates', html: tags(CONC, concLead) },
-      { id: 'edibles', label: 'Edibles', html: tags(EDIBLES) },
+      { id: 'flower', label: 'Flower', html: flower },
+      { id: 'ounces', label: 'Ounces', html: ounces },
+      { id: 'prerolls', label: 'Pre-rolls', html: rolls },
+      { id: 'vapes', label: 'Vapes', html: vapes },
+      { id: 'concentrates', label: 'Concentrates', html: conc },
+      { id: 'edibles', label: 'Edibles', html: edibles },
     ], { label: 'Deal categories' })}
     <div class="deals-preview__foot">${asof()}${orderBtn('btn btn--order', 'Shop the deals')}</div>
   </div>
@@ -132,21 +173,26 @@ function categories() {
 }
 
 function boxCallout() {
-  return `<section class="band band--black band--tight" aria-labelledby="box-callout">
+  // (owner, 2026-11-09: "this section too may get elements from what we did for the home page") the
+  // Owner's Box as on the home page: the road case opening in green smoke, the box's strains flying out
+  // on holographic cards, over the street in black and white, under the spectrum line
+  return `${spectrum()}
+<section class="band band--black band--ownbox" aria-labelledby="box-callout">
+  ${ownboxBackdrop(PATH)}
   <div class="container">
-    <div class="box">
+    <div class="box box--glass">
       <span class="box__bulbs" aria-hidden="true"><i class="t"></i><i class="r"></i><i class="b"></i><i class="l"></i></span>
-      <div class="split">
-        <div class="stack" style="--stack:14px">
-          ${kicker(OWNERS_BOX.intro)}
-          <h2 class="box__title" id="box-callout">The Owner's <span class="accent">Box</span></h2>
-          <p class="lede">${esc(OWNERS_BOX.body)}</p>
-        </div>
-        <div class="stack" style="--stack:14px">
-          <p class="muted">In the box on ${esc(OWNERS_BOX.asOf)}: ${esc(OWNERS_BOX.strains.map((s) => s.name).join(', '))}.</p>
-          <div class="cluster">${linkBtn(PATH, '/owners-box/', "Open the Owner's Box", 'btn btn--cream')}</div>
-        </div>
-      </div>
+      ${ownboxStage(PATH, OWNERS_BOX.strains, {
+        head: `<div class="box__head ownbox__head">
+        ${kicker(OWNERS_BOX.intro)}
+        <h2 class="box__title" id="box-callout">The Owner's <span class="accent">Box</span></h2>
+        <p class="lede">${esc(OWNERS_BOX.body)}</p>
+      </div>`,
+        foot: `<div class="deals-preview__foot ownbox__foot">
+        <p class="asof">${icon.info}<span>In the box on the live menu, ${esc(OWNERS_BOX.asOf)}. The lineup rotates.</span></p>
+        ${linkBtn(PATH, '/owners-box/', "Open the Owner's Box", 'btn btn--cream')}
+      </div>`,
+      })}
     </div>
   </div>
 </section>`;

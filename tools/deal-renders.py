@@ -45,6 +45,7 @@ ALT = {
     'crumbles': 'Illustration: three small glass jars with black lids, filled with golden crumble',
     'budders': 'Illustration: five small glass jars with black lids, filled with golden budder',
     'ounce': 'Illustration: a plain black stand-up pouch with a heap of green cannabis buds in front of it',
+    'eighth-pouch': 'Illustration: a small plain black stand-up pouch with a small heap of green cannabis buds in front of it',
     'shake': 'Illustration: a glass jar with a black lid, filled with small pieces of cannabis flower',
     # the Owner's Box holographic cards: a premium bud each, never a particular strain
     'bud-a': 'Illustration: a large cannabis bud with green leaves and orange hairs',
@@ -56,6 +57,20 @@ ALT = {
     'nug-3': 'Illustration: an elongated cannabis bud with a short stem',
     'nug-4': 'Illustration: a chunky, pale green, frosty cannabis bud',
     'nug-5': 'Illustration: a dark green cannabis bud with burgundy accents',
+    # /daily-deals/ (owner, 2026-11-09: "this should follow how we design from Home Page")
+    'infused-1': 'Illustration: a pre-roll coated in golden kief',
+    'infused-3': 'Illustration: three thick pre-rolls coated in golden kief',
+    'infused-5': 'Illustration: five slim pre-rolls dusted with golden kief',
+    'disp-3': 'Illustration: three slim disposable vape pens in black, white and silver',
+    'disp-5': 'Illustration: five slim black disposable vape pens',
+    'carts-2': 'Illustration: two vape cartridges of golden oil with black mouthpieces',
+    'sugar': 'Illustration: a wide glass jar of golden cured sugar concentrate with a black lid',
+    'diamonds': 'Illustration: a small glass jar of clear diamond crystals in golden sauce',
+    'gummies': 'Illustration: a small pile of sugar-coated fruit gummy cubes',
+    'chews': 'Illustration: a small pile of soft fruit chews in plain silver wrappers',
+    'rope': 'Illustration: a few coiled lengths of sugar-coated fruit rope',
+    'syrup': 'Illustration: a small amber glass bottle of syrup with a black cap',
+    'gummy-jar': 'Illustration: a small glass jar of sugar-coated fruit gummy cubes with a black lid',
 }
 # which objects get their glass walls rebuilt: the largest object, every object over 10% of the
 # product's area ('each'), or none (piles of buds, pre-rolls, pens: no straight walls to rebuild)
@@ -235,8 +250,13 @@ OWNER_ALT = {
     'preroll-flat': 'A pre-roll with a kraft paper tip, at a slant',
     'crumble': 'A piece of golden, crumbly cannabis concentrate',
     'budder-dish': 'Golden budder swirled in a small clear glass dish, seen from above',
+    'budder-dish-white': 'Golden budder swirled in a small clear glass dish, seen from above',
     'waxbucket': 'A clear jar of golden wax with a black lid and a black Flavors Detroit label',
     'budder-1g': 'An open jar of golden budder seen from above, its black lid beside it',
+    'party-jar': 'A clear glass jar packed with pre-rolls in RAW papers',
+    'tarantula': 'A Flavors Detroit Tarantula 4.5G tube with a white cap, and two Tarantula joints',
+    'infused-single': 'An infused pre-roll with a twisted tip and a white filter',
+    'rocket-stick': 'A Rocket Stick injected pre-roll tube in orange with a rocket on it, beside a pre-roll',
 }
 # On a coloured card the glass must show that card's colour (owner, 2026-11-09: "this glass from the deal
 # card still looks broken ... reflect the blue background, and NOT WHITE"). Guessing the glass back out of
@@ -245,7 +265,7 @@ OWNER_ALT = {
 # with Topaz and cut out with Bria RMBG 2.0 whole, and are used as they come: no keying, no wall repair
 OVERRIDE = {'eighths': ('deal-eighths-blue-up.png', 'deal-eighths-blue-cut.png'),
             'budder-dish': ('owner-budder-dish-blue-up.png', 'owner-budder-dish-blue-cut.png')}
-CLEAN = {'eighths', 'budder-dish', 'waxbucket', 'budder-1g'}
+CLEAN = {'eighths', 'budder-dish', 'waxbucket', 'budder-1g', 'party-jar', 'tarantula', 'infused-single', 'rocket-stick', 'infused-1', 'infused-3', 'infused-5', 'disp-3', 'disp-5', 'carts-2', 'sugar', 'diamonds', 'gummies', 'chews', 'rope', 'syrup', 'gummy-jar'}   # Bria cut-outs: whole, used as they come
 ROTATE = {'preroll-flat': -58}      # degrees counter-clockwise: the flat pre-roll stands at a slant, leaning left
 GLASS = {'eighths', 'premium', 'topshelf', 'budder', 'wax', 'crumbles', 'budders', 'shake', 'budder-dish'}
 
@@ -279,8 +299,8 @@ def main():
         outside = (1 - solid).copy()
         cv2.floodFill(outside, np.zeros((H + 2, W + 2), np.uint8), (0, 0), 2)
         holes = cv2.morphologyEx((outside == 1).astype(np.uint8), cv2.MORPH_DILATE, np.ones((3, 3), np.uint8)).astype(bool) & (rgba[..., 3] < 250)
-        if did.startswith(('bud-', 'nug-')):
-            holes[:] = False                             # a loose bud: its gaps are real gaps between leaves
+        if did.startswith(('bud-', 'nug-')) or did in {'infused-3', 'infused-5', 'disp-3', 'disp-5', 'carts-2', 'gummies', 'chews', 'rope', 'jumbo'}:
+            holes[:] = False                             # loose buds, piles and groups: their gaps are real gaps
         rgba[holes, :3] = photo[holes]
         rgba[holes, 3] = np.maximum(rgba[holes, 3], glass_alpha[holes])
         # rebuilt walls, per object
@@ -294,7 +314,7 @@ def main():
             for k in picks:
                 restored += repair_edges(rgba, photo, lbl == k)
         bg = np.median(ring, axis=0).astype(np.uint8)
-        dish = dish_outline(rgba, photo) if did == 'budder-dish' and did not in CLEAN else None
+        dish = dish_outline(rgba, photo) if did in ('budder-dish', 'budder-dish-white') and did not in CLEAN else None   # -white: the photo's own white glass, no keying
         trimmed = trim_backdrop(rgba, photo, bg) if did.startswith('preroll-') else 0
         keyed = (glass_key(rgba, photo, bg, core_mode='largest', d0=18, d1=46) if did == 'budder-dish'
                  else glass_key(rgba, photo, bg)) if did in GLASS and did not in CLEAN else 0
@@ -324,7 +344,7 @@ def main():
         items[did] = {'kind': kind, 'alt': alt, 'digitalSourceType': st, 'dataAi': 'generated' if kind == 'ai' else ('edited' if job.get('edited') else ''), 'aspect': round(cw / chh, 4), 'files': files, 'holesFilled': int(holes.sum()),
                       'wallPixelsRestored': restored, 'glassPixelsKeyed': keyed, 'rotated': ROTATE.get(did, 0), 'floorPixelsTrimmed': trimmed, 'dish': dish,
                       'requestId': job.get('requestId'), 'cutoutRequestId': job.get('cutoutRequestId'), 'upscaleRequestId': job.get('upscaleRequestId'),
-                      'source': (jobs['model'] if kind == 'ai' else job['source']), 'cutout': 'fal-ai/birefnet/v2 (General Use (Heavy), 2048)'}
+                      'source': (jobs['model'] if kind == 'ai' else job['source']), 'cutout': job.get('cutoutTool') or job.get('cutout') or 'fal-ai/birefnet/v2 (General Use (Heavy), 2048)'}
         print(f'{did:13s} {kind:5s} {cw}x{chh} (w/h {cw / chh:.2f}) holes {int(holes.sum()):6d}  walls {restored:6d}  glass keyed {keyed:7d}  -> ' + ', '.join(f["file"] for f in files))
     json.dump({'note': 'Home deals band product images: AI illustrations of the product type, and product photos the owner supplied (tools/deal-renders.py).', 'items': items}, open(MANIFEST, 'w'), indent=1)
     print('wrote', os.path.relpath(MANIFEST, ROOT))

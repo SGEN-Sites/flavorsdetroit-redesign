@@ -4,7 +4,7 @@
   "targetUrl": "https://www.flavorsdetroit.com/",
   "origin": "https://www.flavorsdetroit.com",
   "createdAt": "2026-11-08T22:39:27.434Z",
-  "updatedAt": "2026-11-09T10:13:54.832Z",
+  "updatedAt": "2026-11-09T13:59:35.440Z",
   "config": {
     "maxPages": 300,
     "concurrency": 2,
@@ -94,7 +94,7 @@
     },
     "responsive": {
       "status": "fail",
-      "at": "2026-11-09T10:11:01.993Z",
+      "at": "2026-11-09T13:59:33.538Z",
       "note": "56 sweeps at 1024/1440/390/768"
     },
     "seo": {
@@ -109,17 +109,17 @@
     },
     "decontaminate": {
       "status": "done",
-      "at": "2026-11-09T10:13:53.033Z",
+      "at": "2026-11-09T13:59:34.926Z",
       "note": "CLEAN (0 traces)"
     },
     "parity": {
       "status": "fail",
-      "at": "2026-11-09T10:13:52.569Z",
+      "at": "2026-11-09T13:59:33.876Z",
       "note": "DRIFT — 575 findings"
     },
     "fabrication": {
       "status": "done",
-      "at": "2026-11-09T10:11:02.967Z",
+      "at": "2026-11-09T13:59:34.557Z",
       "note": "SOURCED — 0 findings"
     },
     "pixeldiff": {
@@ -139,7 +139,7 @@
     },
     "gate": {
       "status": "fail",
-      "at": "2026-11-09T10:13:54.832Z",
+      "at": "2026-11-09T13:59:35.440Z",
       "note": "NOT-READY — 20/29 passing"
     },
     "package": {

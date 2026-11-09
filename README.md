@@ -21,7 +21,7 @@ AI fill, labelled as edited). Titles and larger text are Outfit, text is Work Sa
 choice); outlined words use Outfit's own static builds so their outlines have no seams. A cinematic layer sits on top: scene stills behind the inner page heroes and
 several bands (AI illustrations, labelled as such, never the store), crossing tapes, category cards on a pinned
 rail, the day's deals as a bento with product images on black, the Owner's Box (a road case opening in green smoke, holographic strain cards flying out), a kinetic type band with HD buds,
-a scroll-lit statement and a lit finale, all on one scroll-aware animation loop with a Pause motion
+a scroll-lit statement, the store's photos on a curved wall, a sticky order bar, all on one scroll-aware animation loop with a Pause motion
 button; each visit opens with the "Sign ignition" splash. The owner's design choices (fonts,
 splash) were made from the option pages in `design-options/`. See `BRAND-SYSTEM.md`.
 
@@ -68,7 +68,7 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
 | `node tools/fetch-list.mjs <list.json>` | download a list of generated files (fal links are temporary) to paths inside the project |
 | `python3 -I tools/store-photos.py masks\|composite\|touchup\|finish` | the owner's store photos: fill masks, composite (the photo kept outside each mask), grade, crops and WebP sizes with IPTC XMP (originals private) |
 | `node tools/scene-contrast.mjs` | WCAG contrast for text over scene stills, measured on the rendered pixels |
-| `node tools/motion-check.mjs` | the motion layer with motion ON: rail, scroll-speed marquees, progress, back-to-top, finale, Pause motion, overflow, console |
+| `node tools/motion-check.mjs` | the motion layer with motion ON: rail, scroll-speed marquees, progress, back-to-top, Pause motion, overflow, console |
 | `node tools/fetch-fonts.mjs` | self-host the fonts once (SIL OFL): Outfit, Work Sans and Tilt Neon from Google Fonts, and the designer's static Outfit 400/800 for outlined words (pinned commit, subset to Latin with fontTools) |
 | `node tools/menu-facts.mjs` | turn the live-menu capture into `src/content/menu.json` + facts |
 | `node tools/extract-posts.mjs` | turn the captured posts into `src/content/posts.json` (100% word recall) |

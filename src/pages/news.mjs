@@ -5,7 +5,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, postsData } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, pageHero, postCard, mailForm, storeCard } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, pageHero, postCard, mailForm, mailStrip, spectrum, storeCard } from '../lib/parts.mjs';
 import { breadcrumbJsonLd, articleJsonLd } from '../lib/seo.mjs';
 
 export const PATH = '/blog/';
@@ -192,29 +192,25 @@ function index() {
     scene: 'bulb-bokeh', pos: '30% 50%',
     aside: `<a class="btn btn--ghost btn--lg" href="${esc(SITE.instagram)}" target="_blank" rel="noopener">${icon.insta}<span>${esc(SITE.instagramHandle)}</span><span class="visually-hidden"> on Instagram (opens in a new tab)</span></a>`,
   })}
-<section class="band band--day" aria-labelledby="latest-title">
+${spectrum()}
+<section class="band band--black" aria-labelledby="latest-title">
   <div class="container">
     <h2 class="visually-hidden" id="latest-title">Latest post</h2>
     <div class="posts">${featured}</div>
   </div>
 </section>
-<section class="band band--white band--flush-top" aria-labelledby="all-title" style="padding-top: clamp(40px, 5vw, 64px)">
+<section class="band band--black band--flush-top news-all" aria-labelledby="all-title" style="padding-top: clamp(16px, 2vw, 32px)">
   <div class="container" data-news data-step="12">
     <div class="news-tools">
       <h2 class="h3" id="all-title">All posts</h2>
-      <div class="filter-chips band--white" role="group" aria-label="Filter posts by year">${chips}</div>
+      <div class="filter-chips" role="group" aria-label="Filter posts by year">${chips}</div>
     </div>
     <p class="news-count" data-count aria-live="polite">${rest.length} posts</p>
     <div class="posts" style="margin-top:16px">${rest.map((p, i) => postCard(PATH, p, { i })).join('\n')}</div>
-    <div class="news-more"><button class="btn btn--line btn--lg" type="button" data-more hidden>Show more posts</button></div>
+    <div class="news-more"><button class="btn btn--ghost btn--lg" type="button" data-more hidden>Show more posts</button></div>
   </div>
 </section>
-<section class="band band--navy band--tight" aria-labelledby="news-mail">
-  <div class="container split">
-    <div class="stack" style="--stack:12px">${kicker('New product alerts')}<h2 class="h2" id="news-mail">${esc(COPY.mailTitle)}</h2><p class="lede">${esc(COPY.mailSub)}.</p></div>
-    ${mailForm('news-mail-form', { night: true })}
-  </div>
-</section>`;
+${mailStrip(PATH, { id: 'news-mail', key: 'news-mail-form' })}`;
   return page({
     path: PATH,
     title: 'Flavors News | Drops, Deals & Events | Flavors Detroit',
