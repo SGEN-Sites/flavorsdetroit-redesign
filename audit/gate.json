@@ -1,6 +1,6 @@
 {
   "schema": "site-reforge/gate@1",
-  "generated": "2026-11-09T05:38:22.335Z",
+  "generated": "2026-11-09T08:41:37.493Z",
   "project": "flavorsdetroit-com",
   "target": "https://www.flavorsdetroit.com/",
   "verdict": "NOT-READY",
@@ -100,7 +100,7 @@
       "label": "Brand token layer emitted and actually referenced",
       "stage": "brand",
       "status": "PASS",
-      "evidence": "96 tokens declared, 81 referenced across 6 authored sheet(s), 0 off-token colour literal(s)"
+      "evidence": "101 tokens declared, 86 referenced across 6 authored sheet(s), 0 off-token colour literal(s)"
     },
     {
       "id": "C14",

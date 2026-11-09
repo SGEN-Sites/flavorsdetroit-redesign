@@ -24,7 +24,8 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
   client's facts and phrases.
 - The cinematic layer (2026-11-09): a living hero (first a night-road still with the drawn sign, now
   the store itself at golden hour, below); crossing tapes over the
-  seam; the category cards on a pinned rail; deal tickets hanging over neon; the Owner's Box in a
+  seam; the category cards on a pinned rail (solid colour cards with uniformly rendered products,
+  owner's choice 2026-11-09); the day's deals as a bento of cards with product illustrations on black (owner, 2026-11-09; first as deal tickets hanging over neon); the Owner's Box in a
   chasing bulb frame; a kinetic type band; a scroll-lit "who are we" statement with counting stats;
   glass panels over bokeh; a scene behind every inner page hero; a footer wordmark that lights up
   at the end. One scroll-aware loop makes the page answer every scroll (marquees speed up with the
@@ -33,13 +34,17 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
   the files, the markup and the footer, and none shows the store (`CHANGE-LOG.md`, Imagery).
 - The owner's choices, 2026-11-09: the palette reads black first, then the store's blue (measured
   from store photos), then whites; the striped awnings are gone (the six colours stay as thin
-  dividers); headlines in **Jockey One** with **Barlow** text (pairing A, measured as the closest
-  match to the sign's lettering); the **Sign ignition** splash (concept 1) opens the first page of
+  dividers); headlines first in Jockey One with Barlow text (pairing A, measured as the closest
+  match to the sign's lettering), then, at the owner's later word, **Outfit** for titles and larger
+  text with **Work Sans** text; the **Sign ignition** splash (concept 1) opens the first page of
   each visit, then hands over to the age gate. Later the same day: no number plate on the drawn
   sign's tower, and the tower wider (the real sign's proportion) and shorter; the category band
-  black with white only as accents (no faded "Flavors" word, no light lines behind the words).
+  black with white only as accents (no faded "Flavors" word, no light lines behind the words), its
+  four cards solid colour with one AI product render each (a jar of flower, a jar of budder, a jar
+  of gummies, a drink can), the top third of each product standing above its card.
 - **The store, in the owner's own photos** (2026-11-09): the home hero is the storefront at golden
-  hour (relit with AI at the owner's request, labelled); the main counter and the green letter wall
+  hour (relit with AI at the owner's request, labelled, its colour graded richer at the owner's
+  request); the main counter and the green letter wall
   (home), the storefront (home visit band), the sign, the front and the merch counter (`/visit/`),
   upscaled and colour graded. The storefront was shot through a car windshield: the dashboard and
   wiper were removed with AI fill. The counter photo showed customers and staff: they were removed
@@ -65,9 +70,11 @@ Built 2026-11-08/09 from the live site (captured), its 127 blog posts and the li
    messages go? The preview forms validate and show a notice; they do not send.
 6. **Email.** The Terms list flavorsdetroit@gmail.com. Is it current? (The rebuild does not show
    it anywhere else.)
-7. **AI scene stills.** The night road (behind the age gate and on Contact), two category cards and
-   four band backdrops (seven in all) are
-   AI illustrations (mood and product art, never the store, its staff or customers; labelled as AI).
+7. **AI images.** The night road (behind the age gate and on Contact), four band backdrops and the
+   four category cards' product renders (nine in all) are AI illustrations (mood and product art,
+   never the store, its staff or customers; labelled as AI). The product renders replaced your
+   flower and gummies photos on those cards (you asked for uniform renders); the flower photo is
+   still on the Learn page. Would you rather the cards showed real product photography?
    Keep them for launch, or replace any with your own photography?
 
 ## Defects found on the live site (fixed or flagged)

@@ -1,5 +1,5 @@
 {
-  "at": "2026-11-09T05:30:42.987Z",
+  "at": "2026-11-09T08:32:40.400Z",
   "dir": "dist",
   "pages": 16,
   "viewports": [
@@ -1331,31 +1331,31 @@
       "name": "hero fits",
       "vp": "1440x900",
       "ok": true,
-      "detail": "Order button bottom 674 of 900"
+      "detail": "Order button bottom 675 of 900"
     },
     {
       "name": "hero fits",
       "vp": "1280x720",
       "ok": true,
-      "detail": "Order button bottom 559 of 720"
+      "detail": "Order button bottom 560 of 720"
     },
     {
       "name": "hero fits",
       "vp": "1024x768",
       "ok": true,
-      "detail": "Order button bottom 581 of 768"
+      "detail": "Order button bottom 616 of 768"
     },
     {
       "name": "hero fits",
       "vp": "390x844",
       "ok": true,
-      "detail": "Order button bottom 657 of 771"
+      "detail": "Order button bottom 683 of 771"
     },
     {
       "name": "hero fits",
       "vp": "360x740",
       "ok": true,
-      "detail": "Order button bottom 609 of 667"
+      "detail": "Order button bottom 610 of 667"
     }
   ],
   "fails": [],

@@ -32,8 +32,8 @@ ${noindex ? '<meta name="robots" content="noindex, nofollow">\n' : ''}<meta prop
 <link rel="icon" href="${A(path, '/assets/img/favicon.ico')}" sizes="48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="${A(path, '/assets/img/favicon-32.png')}">
 <link rel="apple-touch-icon" href="${A(path, '/assets/img/apple-touch-icon.png')}">
-<link rel="preload" href="${A(path, '/assets/fonts/jockey-one.woff2')}" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="${A(path, '/assets/fonts/barlow-400.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${A(path, '/assets/fonts/outfit.woff2')}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="${A(path, '/assets/fonts/work-sans.woff2')}" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="${css}">
 <script>(function(d){var r=d.documentElement,ex=${o.gateExempt ? 'true' : 'false'};r.classList.add('js');try{var calm=matchMedia('(prefers-reduced-motion: reduce)').matches||localStorage.getItem('flavors-motion')==='off';if(!calm&&!ex&&!sessionStorage.getItem('flavors-splash')){r.classList.add('splash-on');sessionStorage.setItem('flavors-lit','1');}else if(!calm&&!sessionStorage.getItem('flavors-lit'))r.classList.add('pre-ignite');}catch(e){}setTimeout(function(){if(!window.__flavorsReady)r.classList.remove('gate-open','pre-ignite','splash-on');},4000);if(ex)return;try{var v=localStorage.getItem('flavors-age-ok')||'',t=parseInt(v.split('|')[1]||'0',10);if(v.charAt(0)!=='1'||(t&&Date.now()-t>2592e6))r.classList.add('gate-open');}catch(e){r.classList.add('gate-open');}})(document);</script>
 ${jsonld.map((j) => `<script type="application/ld+json">${JSON.stringify(j)}</script>`).join('\n')}

@@ -341,6 +341,7 @@
         if (!railOn) return;
         railSec.style.height = '';
         travel = Math.max(0, rTrack.scrollWidth - rView.clientWidth);
+        railSec.classList.toggle('rail-static', !travel);   // nothing to slide: hide the counter and progress
         railSec.style.height = (rPin.offsetHeight + travel) + 'px';
         var mh = $('.masthead'); headH = (mh ? mh.offsetHeight : 0) + 3;
       });
@@ -452,7 +453,8 @@
     var beamIO = new IntersectionObserver(function (es) {
       es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('beam-on'); beamIO.unobserve(en.target); } });
     }, { threshold: 0.35 });
-    $$('.bento__link, main .photo, .box--glass .strain, main .store-card, .post-card--feature, .learn-photo, .map-frame').forEach(function (el) {
+    // the category tiles: the sweep runs on the coloured card only, under the product (owner, 2026-11-09)
+    $$('.bento__card, main .photo, .box--glass .strain, main .store-card, .post-card--feature, .learn-photo, .map-frame').forEach(function (el) {
       el.classList.add('beam-host');
       var s = doc.createElement('span'); s.className = 'beam'; s.setAttribute('aria-hidden', 'true'); el.appendChild(s); beamIO.observe(el);
     });

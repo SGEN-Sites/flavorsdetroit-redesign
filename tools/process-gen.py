@@ -37,10 +37,8 @@ SPECS = {
                          alt='Illustration: an empty multi-lane road at night with red and white light trails, streetlights and power lines'),
     # 'jars-counter' (three jars on a navy counter with a blue LED strip) is no longer shipped: the store's
     # own counters are navy with LED underglow, so it read as the client's premises (review 2026-11-09).
-    'concentrates': dict(role='tile', widths=[640, 1100], q=74,
-                         alt='Illustration: amber cannabis concentrate shards and an open jar of budder on black glass'),
-    'vapes-more': dict(role='tile', widths=[640, 1100], q=74,
-                       alt='Illustration: a blank vape cartridge, a dropper bottle and a can on navy glass over a blue LED line'),
+    # 'concentrates' and 'vapes-more' (category card art) retired 2026-11-09: the owner asked for the
+    # category cards' product images to be rendered uniformly (tools/category-renders.py); raws kept.
     'box-spotlight': dict(role='backdrop', widths=[800, 1280, 1920], q=72,
                           alt='Illustration: two glass jars of top-shelf cannabis flower on black velvet under one spotlight'),
     # graded to the store's blue (owner 2026-11-09: black, then blue, then whites; spectrum colours

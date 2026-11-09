@@ -1,7 +1,7 @@
 {
   "schema": "site-reforge/change-control@1",
   "generated": "2026-11-08T23:54:54.808Z",
-  "updated": "2026-11-09T04:30:31.192Z",
+  "updated": "2026-11-09T08:02:37.032Z",
   "legend": {
     "PRESERVE": "kept as-is; content and function unchanged",
     "IMPROVE": "same content and meaning, better structure/hierarchy/design",
@@ -19679,7 +19679,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/.",
+      "why": "Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/; on a black band, each category a bento of deal cards with an AI illustration of each product type (owner, 2026-11-09).",
       "narrativeSlot": "benefits-solution",
       "rebuiltAs": "Home deals band",
       "decidedBy": "tools/plan-decisions.mjs"
@@ -19829,7 +19829,7 @@
       "sourceClass": "",
       "presetId": "",
       "decision": "ADD",
-      "why": "Age gate (21+ and medical) using the live gate's own question; remembered 30 days; focus-trapped.",
+      "why": "Age gate (21+ and medical) using the live gate's own question; remembered 30 days; focus-trapped; over the night road in black and white (owner, 2026-11-09).",
       "narrativeSlot": "",
       "rebuiltAs": "every page",
       "decidedBy": "tools/plan-decisions.mjs"

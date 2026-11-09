@@ -1,11 +1,11 @@
 {
-  "generated": "2026-11-09T05:15:41.540Z",
+  "generated": "2026-11-09T08:40:51.351Z",
   "results": [
     {
       "vp": "1440x900",
       "name": "hero Order button in the first screen (motion on)",
       "pass": true,
-      "detail": "bottom 674 of 900"
+      "detail": "bottom 675 of 900"
     },
     {
       "vp": "1440x900",
@@ -27,27 +27,21 @@
     },
     {
       "vp": "1440x900",
-      "name": "category rail pins and slides",
+      "name": "category band: the four cards fit, so it holds still with no counter",
       "pass": true,
-      "detail": "{\"on\":true,\"travel\":670,\"x0\":0,\"x1\":-335,\"x2\":-670,\"i0\":\"01\",\"i2\":\"04\",\"pinned\":true,\"lastRight\":1400,\"vw\":1440}"
+      "detail": "{\"on\":true,\"travel\":0,\"x0\":0,\"x1\":0,\"x2\":0,\"i0\":\"01\",\"i2\":\"01\",\"pinned\":true,\"lastRight\":1340,\"firstLeft\":100,\"vw\":1440,\"still\":true,\"metaHidden\":true}"
     },
     {
       "vp": "1440x900",
       "name": "rail ends with the last card fully in view",
       "pass": true,
-      "detail": "last card right 1400 of 1440"
-    },
-    {
-      "vp": "1440x900",
-      "name": "rail index counts 01 to 04",
-      "pass": true,
-      "detail": "01 → 04"
+      "detail": "last card right 1340 of 1440"
     },
     {
       "vp": "1440x900",
       "name": "kinetic band drifts, and runs faster while scrolling",
       "pass": true,
-      "detail": "{\"idle\":33.5,\"scrolling\":317.9}"
+      "detail": "{\"idle\":21.4,\"scrolling\":266.7}"
     },
     {
       "vp": "1440x900",
@@ -89,7 +83,7 @@
       "vp": "1024x768",
       "name": "hero Order button in the first screen (motion on)",
       "pass": true,
-      "detail": "bottom 581 of 768"
+      "detail": "bottom 616 of 768"
     },
     {
       "vp": "1024x768",
@@ -113,7 +107,13 @@
       "vp": "1024x768",
       "name": "category rail pins and slides",
       "pass": true,
-      "detail": "{\"on\":true,\"travel\":585,\"x0\":0,\"x1\":-292.6,\"x2\":-584.6,\"i0\":\"01\",\"i2\":\"04\",\"pinned\":true,\"lastRight\":985,\"vw\":1024}"
+      "detail": "{\"on\":true,\"travel\":225,\"x0\":0,\"x1\":-112.6,\"x2\":-224.6,\"i0\":\"01\",\"i2\":\"04\",\"pinned\":true,\"lastRight\":985,\"firstLeft\":-185,\"vw\":1024,\"still\":false,\"metaHidden\":false}"
+    },
+    {
+      "vp": "1024x768",
+      "name": "rail index counts 01 to 04",
+      "pass": true,
+      "detail": "01 → 04"
     },
     {
       "vp": "1024x768",
@@ -123,15 +123,9 @@
     },
     {
       "vp": "1024x768",
-      "name": "rail index counts 01 to 04",
-      "pass": true,
-      "detail": "01 → 04"
-    },
-    {
-      "vp": "1024x768",
       "name": "kinetic band drifts, and runs faster while scrolling",
       "pass": true,
-      "detail": "{\"idle\":30,\"scrolling\":265.6}"
+      "detail": "{\"idle\":27.2,\"scrolling\":277.4}"
     },
     {
       "vp": "1024x768",
@@ -173,7 +167,7 @@
       "vp": "390x844",
       "name": "hero Order button in the first screen (motion on)",
       "pass": true,
-      "detail": "bottom 657 of 771"
+      "detail": "bottom 683 of 771"
     },
     {
       "vp": "390x844",
@@ -191,7 +185,7 @@
       "vp": "390x844",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 16 stops"
+      "detail": "worst 0px over 18 stops"
     },
     {
       "vp": "390x844",
@@ -209,7 +203,7 @@
       "vp": "360x740",
       "name": "hero Order button in the first screen (motion on)",
       "pass": true,
-      "detail": "bottom 609 of 667"
+      "detail": "bottom 610 of 667"
     },
     {
       "vp": "360x740",
@@ -227,7 +221,7 @@
       "vp": "360x740",
       "name": "no sideways scroll while scrolling (motion on)",
       "pass": true,
-      "detail": "worst 0px over 18 stops"
+      "detail": "worst 0px over 20 stops"
     },
     {
       "vp": "360x740",
@@ -275,7 +269,7 @@
       "vp": "1440x900",
       "name": "a key press skips the splash",
       "pass": true,
-      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 285ms"
+      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 235ms"
     },
     {
       "vp": "1440x900",
@@ -317,7 +311,7 @@
       "vp": "390x844",
       "name": "a key press skips the splash",
       "pass": true,
-      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 245ms"
+      "detail": "{\"gone\":true,\"state\":\"skipped\"} in 256ms"
     },
     {
       "vp": "390x844",

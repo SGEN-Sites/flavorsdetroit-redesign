@@ -487,7 +487,7 @@
    "alt": "The Flavors Detroit store at golden hour at the right of a wide street view (the street to the left is an AI extension): the black cloud-shaped sign reading Flavors Detroit 5700 on its blue tower, the dark building with its black awning, a lit Open sign and a Cannabis feather flag.",
    "source": "owner's photo (storefront-19.png)",
    "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
-   "edit": "The golden-hour storefront (relit with AI, as for the hero) with the street to its left extended by AI (fal FLUX.1 [pro] Fill outpainting) so the photo can run behind the headline; the real frame is kept pixel for pixel on the right.",
+   "edit": "The golden-hour storefront (relit with AI, as for the hero) with the street to its left extended by AI (fal FLUX.1 [pro] Fill outpainting) so the photo can run behind the headline; the real frame is kept on the right, nothing in it moved, added or removed. Colour graded for richer colour (more saturated, warmer highlights, bluer shadows).",
    "crop": [
     0,
     0,
@@ -599,28 +599,28 @@
      "w": 1400,
      "h": 589,
      "variant": "landscape",
-     "bytes": 59808
+     "bytes": 64964
     },
     {
      "file": "store/hero-wide-2000.webp",
      "w": 2000,
      "h": 842,
      "variant": "landscape",
-     "bytes": 97758
+     "bytes": 106640
     },
     {
      "file": "store/hero-wide-2800.webp",
      "w": 2800,
      "h": 1179,
      "variant": "landscape",
-     "bytes": 156170
+     "bytes": 168450
     },
     {
      "file": "store/hero-wide-3600.webp",
      "w": 3600,
      "h": 1516,
      "variant": "landscape",
-     "bytes": 215348
+     "bytes": 235710
     }
    ]
   },
@@ -628,7 +628,7 @@
    "alt": "The Flavors Detroit store at golden hour: the black cloud-shaped sign reading Flavors Detroit 5700 on its blue corrugated tower, the dark building with its black awning reading Flavors Detroit and Recreational Cannabis, a lit Open sign and a Cannabis feather flag, under a warm evening sky.",
    "source": "owner's photo (storefront-19.png)",
    "digitalSourceType": "compositeWithTrainedAlgorithmicMedia",
-   "edit": "The storefront photo (car dashboard removed as above) relit to golden hour with AI (fal Nano Banana Pro). The hours poster in the second door was put back from the photo, faint lettering the relight left on a plain grey panel was smoothed out, and the far-left street signs it garbled are cropped out.",
+   "edit": "The storefront photo (car dashboard removed as above) relit to golden hour with AI (fal Nano Banana Pro). The hours poster in the second door was put back from the photo, faint lettering the relight left on a plain grey panel was smoothed out, and the far-left street signs it garbled are cropped out. Colour graded for richer colour (more saturated, warmer highlights, bluer shadows).",
    "crop": [
     0,
     0,
@@ -725,14 +725,14 @@
      "w": 800,
      "h": 679,
      "variant": "landscape",
-     "bytes": 47504
+     "bytes": 51706
     },
     {
      "file": "store/hero-1280.webp",
      "w": 1280,
      "h": 1086,
      "variant": "landscape",
-     "bytes": 89680
+     "bytes": 98020
     }
    ]
   },

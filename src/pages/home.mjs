@@ -5,7 +5,7 @@
 import { esc, rel, icon } from '../lib/html.mjs';
 import { page } from '../lib/layout.mjs';
 import { SITE, COPY, OWNERS_BOX, menu, postsData, ASOF } from '../content/site.mjs';
-import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, tag, hangRow, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, postCard, backdrop, kinetic } from '../lib/parts.mjs';
+import { kicker, orderBtn, linkBtn, sectionHead, ticker, tape, spectrum, bento, deal, dealGrid, tabs, storePhoto, heroPhoto, asof, storeCard, mailForm, postCard, backdrop, kinetic } from '../lib/parts.mjs';
 import { storeJsonLd, websiteJsonLd } from '../lib/seo.mjs';
 import { niceName, presentable } from '../content/case.mjs';
 
@@ -37,7 +37,7 @@ function hero() {
   <div class="container hero__in">
     <div class="hero__text">
       ${kicker('Flavors Detroit · 5700 E 8 Mile Rd')}
-      <h1 class="hero__title" id="hero-title">A traditional dispensary with a <span class="accent">modern twist</span>.</h1>
+      <h1 class="hero__title" id="hero-title">A traditional dispensary with a <span class="hero__end"><span class="accent">modern twist</span>.</span></h1>
       <p class="lede">Deli-style displays, top-shelf flower and Detroit prices. Open every day, 10AM to 10PM, on 8 Mile.</p>
       <div class="hero__ctas">
         ${orderBtn()}
@@ -87,10 +87,12 @@ function flavors() {
       ${sectionHead({ kick: 'Shop by category', id: 'flavors-title', titleHtml: 'Our <span class="accent">flavors</span>', lede: esc(COPY.deli),
         aside: `<a class="text-link" href="${esc(SITE.portal)}" target="_blank" rel="noopener">Shop the full menu ${icon.ext}<span class="visually-hidden"> (opens in a new tab)</span></a>` })}
       <div class="rail__view">${bento(PATH, COPY.categories)}</div>
-      <div class="rail__meta" aria-hidden="true"><span class="rail__index"><b data-rail-index>01</b> / 0${COPY.categories.length}</span><span class="rail__bar"><i></i></span></div>
-      <div class="flavors__note">
-        <p class="flavors__deli"><strong>${esc(COPY.portalLine)}</strong> Online orders any time, ready for pickup in store with a valid ID.</p>
-        ${orderBtn('btn btn--order', 'Order for pickup')}
+      <div class="rail__foot">
+        <div class="rail__meta" aria-hidden="true"><span class="rail__index"><b data-rail-index>01</b> / 0${COPY.categories.length}</span><span class="rail__bar"><i></i></span></div>
+        <div class="flavors__note">
+          <p class="flavors__deli"><strong>${esc(COPY.portalLine)}</strong> Online orders any time, ready for pickup in store with a valid ID.</p>
+          ${orderBtn('btn btn--order', 'Order for pickup')}
+        </div>
       </div>
     </div>
   </div>
@@ -106,36 +108,47 @@ function kineticBand() {
 }
 
 function deals() {
-  const t3 = tier('$3'), t15 = tier('$15');
+  // black, the deals of each category as a bento with product images (owner, 2026-11-09: "turn the
+  // background of this section into black and turn these deal cards into bento layout for all
+  // categories. Include product images."). The words and prices are the live menu's (November 8),
+  // as on the deli tickets they replace; the images are AI illustrations of the product type, and the
+  // owner's own pre-roll, budder and crumble photos ("you may use any of these", 2026-11-09)
+  const t3 = tier('$3');
   const eighths = menu.eighths;
-  const flower = hangRow([
-    tag({ kick: 'Flavors 3.5G prepacks', price: '$10', per: 'eighth', name: 'Eighths', detail: `${eighths.count} strains on the live menu, including ${esc(pickStrains(eighths.strains, ['Applelato', 'Kush Mints', 'Warheadz', 'Georgia Haze']).join(', '))}.`, feature: true, i: 0 }),
-    tag({ kick: 'Deli-style flower', price: '$3', per: 'a gram', name: 'By the gram', detail: `Sold by the gram, eighth, quarter, half and ounce in five tiers: $3, $5, $8, $10 and $15 a gram. An eighth on the $3 tier is ${esc(t3?.eighth || '$10')}.`, i: 1 }),
-    tag({ kick: 'Bundle', price: '$15', per: 'each', name: 'Premium eighths', detail: 'Or 2 for $25.', i: 2 }),
-    tag({ kick: 'Bundle', price: '$20', per: 'each', name: 'Top shelf eighths', detail: 'Or 2 for $35.', i: 3 }),
+  const flower = dealGrid([
+    deal(PATH, { img: 'eighths', kick: 'Flavors 3.5G prepacks', price: '$10', per: 'eighth', name: 'Eighths', detail: `${eighths.count} strains on the live menu, including ${esc(pickStrains(eighths.strains, ['Applelato', 'Kush Mints', 'Warheadz', 'Georgia Haze']).join(', '))}.`, size: 'feature', i: 0 }),
+    deal(PATH, { img: 'gram', kick: 'Deli-style flower', price: '$3', per: 'a gram', name: 'By the gram', detail: `Sold by the gram, eighth, quarter, half and ounce in five tiers: $3, $5, $8, $10 and $15 a gram. An eighth on the $3 tier is ${esc(t3?.eighth || '$10')}.`, i: 1 }),
+    deal(PATH, { img: 'premium', kick: 'Bundle', price: '$15', per: 'each', name: 'Premium eighths', detail: 'Or 2 for $25.', i: 2 }),
+    deal(PATH, { img: 'topshelf', kick: 'Bundle', price: '$20', per: 'each', name: 'Top shelf eighths', detail: 'Or 2 for $35.', size: 'wide', i: 3 }),
   ]);
-  const ladder = `<div class="ladder" role="list">${(menu.ounceTiers || []).map((t, i) => `<div class="ladder__step" role="listitem" style="--n:${i}"><span class="ladder__price">${esc(t.price)}</span><span class="ladder__meta">${esc(t.kind)} · 28G<br>${t.count} on the menu</span></div>`).join('')}</div>
-  <p class="small muted" style="margin-top:16px">Prepacked 28G ounces, from top shelf shake at $19 up to the $85 premium tier (${esc(pickStrains(oz('$85')?.strains || [], ['Animal Mints', 'Cherry Meltz', 'Ghost Mode', 'Peach Guava']).join(', '))}).</p>`;
-  const rolls = hangRow([
-    tag({ kick: 'Hello Farms 1G singles', price: '$1', per: 'pre-roll', name: 'Dollar pre-rolls', detail: `${menu.prerolls.dollar.strains.length} strains on the live menu.`, feature: true, i: 0 }),
-    tag({ kick: 'Bundle', price: '$17', per: 'for 7', name: 'Jumbo exotics pre-rolls', detail: '7 for $17, Flavors 1.3G jumbo pre-rolls.', i: 1 }),
-    tag({ kick: 'Vape bundle', price: '$35', per: 'for 10', name: 'Royal High 1G carts', detail: '$3.99 each or 10 for $35.', i: 2 }),
-    tag({ kick: 'Vape bundle', price: '$45', per: 'for 4', name: 'Flight 1G live resin disposables', detail: '4 for $45.', i: 3 }),
+  // the ounces: every tier of the live menu, the prepacked ones on the feature, the shake beside it
+  const tiers = menu.ounceTiers || [];
+  const pre = tiers.filter((t) => /prepacked/i.test(t.kind)), shake = tiers.filter((t) => /shake/i.test(t.kind));
+  const tierList = (list) => `<ul class="deal__tiers">${list.map((t) => `<li><b>${esc(t.price)}</b><span>${t.count} on the menu</span></li>`).join('')}</ul>`;
+  const ounces = dealGrid([
+    deal(PATH, { img: 'ounce', kick: 'Prepacked 28G ounces', price: pre[0]?.price || '$25', per: 'and up', name: 'Prepacked ounces', detail: tierList(pre), size: 'feature', i: 0 }),
+    deal(PATH, { img: 'shake', kick: 'Top shelf shake', price: shake[0]?.price || '$19', per: 'ounce', name: 'Top shelf shake', detail: shake.map((t) => `${esc(t.price)}: ${t.count} on the menu`).join(' · ') + '.', size: 'wide', i: 1 }),
+    deal(PATH, { img: 'topshelf', kick: 'Prepacked 28G ounce', price: '$85', per: 'ounce', name: 'The premium tier', detail: `${esc(pickStrains(oz('$85')?.strains || [], ['Animal Mints', 'Cherry Meltz', 'Ghost Mode', 'Peach Guava']).join(', '))}.`, size: 'wide', i: 2 }),
   ]);
-  const conc = hangRow([
-    tag({ kick: 'Flavors concentrates', price: '$20', per: '5G bucket', name: 'Budder buckets', detail: 'Flavors 5G budder buckets on the live menu.', feature: true, i: 0 }),
-    tag({ kick: 'Bundle', price: '$25', per: '5G', name: 'Premium wax bucket', detail: '5G for $25.', i: 1 }),
-    tag({ kick: 'Bundle', price: '$30', per: 'for 3', name: 'TopShelf 1G crumbles', detail: '3 for $30.', i: 2 }),
-    tag({ kick: 'Bundle', price: '$45', per: 'for 5', name: 'TopShelf 1G budders', detail: '5 for $45.', i: 3 }),
+  const rolls = dealGrid([
+    deal(PATH, { img: 'preroll-stand', kick: 'Hello Farms 1G singles', price: '$1', per: 'pre-roll', name: 'Dollar pre-rolls', detail: `${menu.prerolls.dollar.strains.length} strains on the live menu.`, size: 'feature', i: 0 }),
+    deal(PATH, { img: 'preroll-flat', kick: 'Bundle', price: '$17', per: 'for 7', name: 'Jumbo exotics pre-rolls', detail: '7 for $17, Flavors 1.3G jumbo pre-rolls.', i: 1 }),
+    deal(PATH, { img: 'cart', kick: 'Vape bundle', price: '$35', per: 'for 10', name: 'Royal High 1G carts', detail: '$3.99 each or 10 for $35.', i: 2 }),
+    deal(PATH, { img: 'disposable', kick: 'Vape bundle', price: '$45', per: 'for 4', name: 'Flight 1G live resin disposables', detail: '4 for $45.', size: 'wide', i: 3 }),
   ]);
-  return `<section class="band band--navy band--neon" aria-labelledby="deals-title">
-  ${backdrop(PATH, 'neon-abstract', { sizes: '100vw' })}
+  const conc = dealGrid([
+    deal(PATH, { img: 'budder-dish', kick: 'Flavors concentrates', price: '$20', per: '5G bucket', name: 'Budder buckets', detail: 'Flavors 5G budder buckets on the live menu.', size: 'feature', i: 0 }),
+    deal(PATH, { img: 'wax', kick: 'Bundle', price: '$25', per: '5G', name: 'Premium wax bucket', detail: '5G for $25.', i: 1 }),
+    deal(PATH, { img: 'crumble', kick: 'Bundle', price: '$30', per: 'for 3', name: 'TopShelf 1G crumbles', detail: '3 for $30.', i: 2 }),
+    deal(PATH, { img: 'budders', kick: 'Bundle', price: '$45', per: 'for 5', name: 'TopShelf 1G budders', detail: '5 for $45.', size: 'wide', i: 3 }),
+  ]);
+  return `<section class="band band--black band--deals" aria-labelledby="deals-title">
   <div class="container">
     ${sectionHead({ kick: 'Daily deals & more', id: 'deals-title', titleHtml: 'Detroit <span class="accent">prices</span>, every day', lede: 'A taste of what is on the live menu right now. Prices move with every drop, so the menu always has the latest.',
       aside: linkBtn(PATH, '/daily-deals/', 'All deals', 'btn btn--cream') })}
     ${tabs('home-deals', [
       { id: 'flower', label: 'Flower', html: flower },
-      { id: 'ounces', label: 'Ounces', html: ladder },
+      { id: 'ounces', label: 'Ounces', html: ounces },
       { id: 'rolls', label: 'Pre-rolls & vapes', html: rolls },
       { id: 'conc', label: 'Concentrates', html: conc },
     ], { label: 'Deal categories' })}

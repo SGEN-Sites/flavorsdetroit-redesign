@@ -14,10 +14,10 @@ const ledger = JSON.parse(fs.readFileSync(file, 'utf8'));
 const set = (r, decision, why, slot = '', as = '') => Object.assign(r, { decision, why, narrativeSlot: slot || r.narrativeSlot || '', rebuiltAs: as, decidedBy: 'tools/plan-decisions.mjs' });
 
 const HOME = {
-  's1': ['IMPROVE', 'Client copy kept word for word; moved from an H2 to the Flower jar label (an H2 was holding paragraph text).', 'benefits-solution', 'Home + Shop: Our flavors, Flower tile'],
-  's2': ['IMPROVE', 'The concentrates list kept, in sentence case, as the Concentrates jar label.', 'benefits-solution', 'Home + Shop: Our flavors, Concentrates tile; Learn: Concentrates shelf'],
-  's3': ['IMPROVE', 'Client copy kept word for word as the Edibles jar label.', 'benefits-solution', 'Home + Shop: Our flavors, Edibles tile'],
-  's4': ['IMPROVE', 'Client copy kept as the Much more jar label ("tinctures- a" punctuated as "tinctures: a").', 'benefits-solution', 'Home + Shop: Our flavors, Much more tile'],
+  's1': ['IMPROVE', 'Moved from an H2 to the Flower card (an H2 was holding paragraph text). The four category cards are solid colour cards with uniformly rendered products (owner, 2026-11-09). The card shows a shortened line cut from the client\'s own words, at the owner\'s request ("shorten the description just so they would not look cramped"): "The highest quality flower to suit any medical or recreational need."', 'benefits-solution', 'Home + Shop: Our flavors, Flower card'],
+  's2': ['IMPROVE', 'The concentrates list kept, in sentence case, in full on the Learn page; the Concentrates card shows four of its items (owner, 2026-11-09: shorten the descriptions).', 'benefits-solution', 'Home + Shop: Our flavors, Concentrates card; Learn: Concentrates shelf'],
+  's3': ['IMPROVE', 'The Edibles card shows a shortened line cut from the client\'s own words (owner, 2026-11-09: shorten the descriptions): "Gummies, chocolate, and other infused treats."', 'benefits-solution', 'Home + Shop: Our flavors, Edibles card'],
+  's4': ['IMPROVE', 'The Much more card shows a shortened line cut from the client\'s own words (owner, 2026-11-09: shorten the descriptions): "Cartridges, topicals, drinks and tinctures."', 'benefits-solution', 'Home + Shop: Our flavors, Much more card'],
   's5': ['IMPROVE', 'Who are we copy kept word for word in sentence case, with the store facts as stat cards and the owner\'s own photos of the main counter (customers and staff removed for privacy) and the green letter wall.', 'trust-positioning', 'Home: You\'ll feel right at home'],
   's6': ['IMPROVE', 'Mailing list kept with the client\'s words; repeated on Deals, Contact, News and every post. Preview build: the form validates and does not post.', 'strategic-cta', 'Home: Join our mailing list today! (+ Deals, Contact, News, posts)'],
   's7': ['IMPROVE', 'Get social copy kept word for word with a follow button to @flavorsdetroit_.', 'strategic-cta', 'Home: Instagram panel; Contact'],
@@ -48,7 +48,7 @@ for (const r of ledger.rows) {
 const ADD = [
   ['new:/#hero', 'Home hero: the store itself at golden hour (the owner\'s storefront photo relit with AI, labelled as edited; the drawn, lit sign plays in the splash); H1 "A traditional dispensary with a modern twist" (client words); Order now.', 'value-proposition', 'Home hero'],
   ['new:/#marquee', 'Marquee letter board of the client\'s own deal phrases and hours, then the rainbow awning.', 'value-proposition', 'Home ticker + awning'],
-  ['new:/#deals', 'Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/.', 'benefits-solution', 'Home deals band'],
+  ['new:/#deals', 'Deals preview in tabs, prices from the live menu (November 8, 2026), linking to /daily-deals/; on a black band, each category a bento of deal cards with an AI illustration of each product type (owner, 2026-11-09).', 'benefits-solution', 'Home deals band'],
   ['new:/#owners-box', 'The Owner\'s Box teaser: the live menu\'s Owners Box collection with the client\'s own tasting notes.', 'trust-positioning', 'Home Owner\'s Box band'],
   ['new:/#news', 'Latest three Flavors news posts.', '', 'Home news band'],
   ['new:/daily-deals/', 'Deals page restored at the live URL /daily-deals/ (it answered 404 on 2026-11-08; the live nav still says "Daily Deals & More").', 'benefits-solution', '/daily-deals/'],
@@ -58,7 +58,7 @@ const ADD = [
   ['new:/learn/', 'Learn page: menu codes and sizes, the shelves (client lists + neutral definitions for owner approval), first visit, FAQ.', 'objection-handling', '/learn/'],
   ['new:/contact/', 'Contact page: the live home page\'s contact form (name, email, phone, message) on its own page with the store card.', 'strategic-cta', '/contact/'],
   ['new:/404.html', 'Not-found page in the brand ("This page took a wrong turn off 8 Mile") with Order now, deals and home.', '', '/404.html'],
-  ['new:age-gate', 'Age gate (21+ and medical) using the live gate\'s own question; remembered 30 days; focus-trapped.', '', 'every page'],
+  ['new:age-gate', 'Age gate (21+ and medical) using the live gate\'s own question; remembered 30 days; focus-trapped; over the night road in black and white (owner, 2026-11-09).', '', 'every page'],
 ];
 for (const [id, why, slot, as] of ADD) {
   const row = ledger.rows.find((r) => r.id === id) || (ledger.rows.push({ id, url: 'new', pageType: 'new', index: 0, label: as, sourceTag: 'new', sourceClass: '', presetId: '' }), ledger.rows[ledger.rows.length - 1]);

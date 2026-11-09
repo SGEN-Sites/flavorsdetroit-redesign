@@ -1,0 +1,568 @@
+{
+ "note": "Home deals band product images: AI illustrations of the product type, and product photos the owner supplied (tools/deal-renders.py).",
+ "items": {
+  "eighths": {
+   "kind": "ai",
+   "alt": "Illustration: a small glass jar with a black lid, filled with green cannabis buds, two loose buds beside it",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 1.0,
+   "files": [
+    {
+     "file": "deal/eighths-360.webp",
+     "w": 360,
+     "h": 360,
+     "bytes": 52992
+    },
+    {
+     "file": "deal/eighths-720.webp",
+     "w": 720,
+     "h": 720,
+     "bytes": 181218
+    }
+   ],
+   "holesFilled": 690,
+   "wallPixelsRestored": 34915,
+   "glassPixelsKeyed": 94577,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-eb0a-7b80-94dd-995090552ccf",
+   "cutoutRequestId": "01a1bf44-b283-71a3-a2e8-3d176f1c3d50",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "gram": {
+   "kind": "ai",
+   "alt": "Illustration: a white dish heaped with loose green cannabis buds",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 1.3566,
+   "files": [
+    {
+     "file": "deal/gram-360.webp",
+     "w": 488,
+     "h": 360,
+     "bytes": 52162
+    },
+    {
+     "file": "deal/gram-720.webp",
+     "w": 977,
+     "h": 720,
+     "bytes": 172726
+    }
+   ],
+   "holesFilled": 12,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-ec72-7b62-a856-1cdaf7706852",
+   "cutoutRequestId": "01a1bf44-b42b-7990-a749-c6fa5f0139a5",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "premium": {
+   "kind": "ai",
+   "alt": "Illustration: two small glass jars with black lids, filled with green cannabis buds",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 1.1561,
+   "files": [
+    {
+     "file": "deal/premium-360.webp",
+     "w": 416,
+     "h": 360,
+     "bytes": 86262
+    },
+    {
+     "file": "deal/premium-720.webp",
+     "w": 832,
+     "h": 720,
+     "bytes": 310050
+    }
+   ],
+   "holesFilled": 11946,
+   "wallPixelsRestored": 57445,
+   "glassPixelsKeyed": 154349,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-edc9-7542-a5bc-dae87694b7d7",
+   "cutoutRequestId": "01a1bf44-b5a7-7b62-946a-afa177d750a3",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "topshelf": {
+   "kind": "ai",
+   "alt": "Illustration: a small glass jar with a black lid, filled with frosty cannabis buds",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.6485,
+   "files": [
+    {
+     "file": "deal/topshelf-360.webp",
+     "w": 233,
+     "h": 360,
+     "bytes": 49838
+    },
+    {
+     "file": "deal/topshelf-720.webp",
+     "w": 467,
+     "h": 720,
+     "bytes": 173284
+    }
+   ],
+   "holesFilled": 7816,
+   "wallPixelsRestored": 3137,
+   "glassPixelsKeyed": 106585,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-ef28-75f2-ade6-1223e22fc019",
+   "cutoutRequestId": "01a1bf44-b6fb-71c0-966c-3525fce2fa59",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "preroll": {
+   "kind": "ai",
+   "alt": "Illustration: a single white pre-roll",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.1141,
+   "files": [
+    {
+     "file": "deal/preroll-360.webp",
+     "w": 41,
+     "h": 360,
+     "bytes": 5092
+    },
+    {
+     "file": "deal/preroll-720.webp",
+     "w": 82,
+     "h": 720,
+     "bytes": 10342
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f088-7f73-b365-81695cb46c96",
+   "cutoutRequestId": "01a1bf44-b849-7d22-b73b-75e7e9b0305b",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "jumbo": {
+   "kind": "ai",
+   "alt": "Illustration: seven white pre-rolls standing together",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.9121,
+   "files": [
+    {
+     "file": "deal/jumbo-360.webp",
+     "w": 328,
+     "h": 360,
+     "bytes": 26122
+    },
+    {
+     "file": "deal/jumbo-720.webp",
+     "w": 657,
+     "h": 720,
+     "bytes": 56248
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f1de-7aa2-9f34-41945a7b4bfe",
+   "cutoutRequestId": "01a1bf44-b9ba-7923-a34e-d806be1acaff",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "cart": {
+   "kind": "ai",
+   "alt": "Illustration: a vape cartridge, golden oil in a clear tank under a black mouthpiece",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.1875,
+   "files": [
+    {
+     "file": "deal/cart-360.webp",
+     "w": 68,
+     "h": 360,
+     "bytes": 7362
+    },
+    {
+     "file": "deal/cart-720.webp",
+     "w": 135,
+     "h": 720,
+     "bytes": 15846
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 4023,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f344-79b1-a7a3-bfb46a1232f8",
+   "cutoutRequestId": "01a1bf44-bb4e-79a2-a4f9-e820650431af",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "disposable": {
+   "kind": "ai",
+   "alt": "Illustration: a slim black disposable vape pen",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.131,
+   "files": [
+    {
+     "file": "deal/disposable-360.webp",
+     "w": 47,
+     "h": 360,
+     "bytes": 4264
+    },
+    {
+     "file": "deal/disposable-720.webp",
+     "w": 94,
+     "h": 720,
+     "bytes": 7630
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f4b2-7d51-83b1-01ba446d4df7",
+   "cutoutRequestId": "01a1bf44-bc9d-7861-aff3-be769944edd3",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "budder": {
+   "kind": "ai",
+   "alt": "Illustration: a wide glass jar with a black lid, filled with golden whipped budder",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.6985,
+   "files": [
+    {
+     "file": "deal/budder-360.webp",
+     "w": 251,
+     "h": 360,
+     "bytes": 38396
+    },
+    {
+     "file": "deal/budder-720.webp",
+     "w": 503,
+     "h": 720,
+     "bytes": 124388
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 3663,
+   "glassPixelsKeyed": 82884,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f60d-7110-9dda-a9f80da14b21",
+   "cutoutRequestId": "01a1bf44-bdea-7193-b6c4-520c927fecd6",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "wax": {
+   "kind": "ai",
+   "alt": "Illustration: a wide glass jar with a white lid, filled with amber crumbly wax",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.7885,
+   "files": [
+    {
+     "file": "deal/wax-360.webp",
+     "w": 284,
+     "h": 360,
+     "bytes": 50132
+    },
+    {
+     "file": "deal/wax-720.webp",
+     "w": 568,
+     "h": 720,
+     "bytes": 149278
+    }
+   ],
+   "holesFilled": 630,
+   "wallPixelsRestored": 4392,
+   "glassPixelsKeyed": 71483,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f7b9-76a0-9c01-8c756fcf0569",
+   "cutoutRequestId": "01a1bf44-bf3f-71b3-8842-91b013f58731",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "crumbles": {
+   "kind": "ai",
+   "alt": "Illustration: three small glass jars with black lids, filled with golden crumble",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 1.9474,
+   "files": [
+    {
+     "file": "deal/crumbles-360.webp",
+     "w": 701,
+     "h": 360,
+     "bytes": 110460
+    },
+    {
+     "file": "deal/crumbles-720.webp",
+     "w": 1402,
+     "h": 720,
+     "bytes": 324292
+    }
+   ],
+   "holesFilled": 1447,
+   "wallPixelsRestored": 2384,
+   "glassPixelsKeyed": 29329,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-f92e-7870-81cc-5d4693d89267",
+   "cutoutRequestId": "01a1bf44-c08a-7ea1-87ed-eee11789a07b",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "budders": {
+   "kind": "ai",
+   "alt": "Illustration: five small glass jars with black lids, filled with golden budder",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 2.5642,
+   "files": [
+    {
+     "file": "deal/budders-360.webp",
+     "w": 923,
+     "h": 360,
+     "bytes": 84350
+    },
+    {
+     "file": "deal/budders-720.webp",
+     "w": 1846,
+     "h": 720,
+     "bytes": 224606
+    }
+   ],
+   "holesFilled": 4783,
+   "wallPixelsRestored": 17941,
+   "glassPixelsKeyed": 29812,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-fa8f-7b53-a1c3-49c856d9bcc2",
+   "cutoutRequestId": "01a1bf44-c1ec-7632-a8dd-727ee943468d",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "ounce": {
+   "kind": "ai",
+   "alt": "Illustration: a plain black stand-up pouch with a heap of green cannabis buds in front of it",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 1.1107,
+   "files": [
+    {
+     "file": "deal/ounce-360.webp",
+     "w": 400,
+     "h": 360,
+     "bytes": 27522
+    },
+    {
+     "file": "deal/ounce-720.webp",
+     "w": 800,
+     "h": 720,
+     "bytes": 83032
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-fbe5-7ed1-8e23-7d9e566985e4",
+   "cutoutRequestId": "01a1bf44-c3fc-7e82-bc94-db6f36d0748a",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "shake": {
+   "kind": "ai",
+   "alt": "Illustration: a glass jar with a black lid, filled with small pieces of cannabis flower",
+   "digitalSourceType": "trainedAlgorithmicMedia",
+   "aspect": 0.6079,
+   "files": [
+    {
+     "file": "deal/shake-360.webp",
+     "w": 219,
+     "h": 360,
+     "bytes": 48526
+    },
+    {
+     "file": "deal/shake-720.webp",
+     "w": 438,
+     "h": 720,
+     "bytes": 168782
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 2984,
+   "glassPixelsKeyed": 113220,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": "01a1bf41-fd48-7080-a632-3ba71165a07b",
+   "cutoutRequestId": "01a1bf44-c55d-7db3-af16-98bcad1776fd",
+   "upscaleRequestId": null,
+   "source": "fal-ai/flux-pro/v1.1-ultra",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "preroll-stand": {
+   "kind": "owner",
+   "alt": "A pre-roll with a kraft paper tip, standing at a slant",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "aspect": 0.347,
+   "files": [
+    {
+     "file": "deal/preroll-stand-360.webp",
+     "w": 125,
+     "h": 360,
+     "bytes": 10592
+    },
+    {
+     "file": "deal/preroll-stand-720.webp",
+     "w": 250,
+     "h": 720,
+     "bytes": 27506
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 8076,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1bf5d-55d7-70a2-9228-053f88753ce3",
+   "upscaleRequestId": null,
+   "source": "assets/source/owner-products/preroll-stand.png",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "preroll-flat": {
+   "kind": "owner",
+   "alt": "A pre-roll with a kraft paper tip, at a slant",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "aspect": 0.6702,
+   "files": [
+    {
+     "file": "deal/preroll-flat-360.webp",
+     "w": 241,
+     "h": 360,
+     "bytes": 9754
+    },
+    {
+     "file": "deal/preroll-flat-720.webp",
+     "w": 483,
+     "h": 720,
+     "bytes": 23104
+    }
+   ],
+   "holesFilled": 0,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": -58,
+   "floorPixelsTrimmed": 1155,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1bf5d-53da-7403-8ded-ce5a5eafcb9c",
+   "upscaleRequestId": null,
+   "source": "assets/source/owner-products/preroll-flat.png",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "crumble": {
+   "kind": "owner",
+   "alt": "A piece of golden, crumbly cannabis concentrate",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "aspect": 1.1032,
+   "files": [
+    {
+     "file": "deal/crumble-360.webp",
+     "w": 397,
+     "h": 360,
+     "bytes": 53982
+    },
+    {
+     "file": "deal/crumble-720.webp",
+     "w": 794,
+     "h": 720,
+     "bytes": 164370
+    }
+   ],
+   "holesFilled": 1245,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 0,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": null,
+   "requestId": null,
+   "cutoutRequestId": "01a1bf5d-5744-7f02-9489-aa32f10497c9",
+   "upscaleRequestId": null,
+   "source": "assets/source/owner-products/crumble.png",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  },
+  "budder-dish": {
+   "kind": "owner",
+   "alt": "Golden budder swirled in a small clear glass dish, seen from above",
+   "digitalSourceType": "algorithmicallyEnhanced",
+   "aspect": 1.0,
+   "files": [
+    {
+     "file": "deal/budder-dish-360.webp",
+     "w": 360,
+     "h": 360,
+     "bytes": 57656
+    },
+    {
+     "file": "deal/budder-dish-720.webp",
+     "w": 720,
+     "h": 720,
+     "bytes": 183934
+    }
+   ],
+   "holesFilled": 70,
+   "wallPixelsRestored": 0,
+   "glassPixelsKeyed": 835202,
+   "rotated": 0,
+   "floorPixelsTrimmed": 0,
+   "dish": {
+    "cx": 1190,
+    "cy": 862,
+    "rimR": 635,
+    "outerR": 650
+   },
+   "requestId": null,
+   "cutoutRequestId": "01a1bf5e-c734-7800-967a-023bb7e3982a",
+   "upscaleRequestId": "01a1bf5d-526c-77d2-b8b6-29cf601dbcc1",
+   "source": "assets/source/owner-products/budder-dish.png",
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048)"
+  }
+ }
+}

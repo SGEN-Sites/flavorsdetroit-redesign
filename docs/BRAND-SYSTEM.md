@@ -10,12 +10,15 @@ jars of flower like a premium deli counter.
 is the store's own navy, measured from interior photos the owner supplied, not a bright royal; the
 bright blue is only the LED underglow. The storefront's rainbow stripes were about six years old,
 so the striped awnings are gone; the six colours survive only as thin spectrum dividers, to show
-the variety of flavors. Headlines are set in Jockey One, the closest measured match to the sign's
-own lettering (owner's choice of the pairings in `design-options/fonts/`). Later the same day: the
-drawn sign's tower is wide and short with no number plate on it; the category band is black with
-white only as accents (no ghost word, no light lines behind words); the store slots show the
-owner's own photos; and the home hero is the store itself at golden hour (the owner's storefront
-photo, relit with AI and labelled), so the drawn, lit sign now plays in the splash and on the 404.
+the variety of flavors. Headlines were first set in Jockey One, the closest measured match to the
+sign's own lettering (owner's choice of the pairings in `design-options/fonts/`); later the same day
+the owner changed the pairing to **Outfit** for titles and larger text with **Work Sans** for text.
+Also later that day: the drawn sign's tower is wide and short with no number plate on it; the
+category band is black with white only as accents (no ghost word, no light lines behind words), its
+cards solid colour with one product render each, a third of it standing above the card; the store
+slots show the owner's own photos; and the home hero is the store itself at golden hour (the
+owner's storefront photo, relit with AI and labelled, its colour side graded more vivid at the
+owner's request), so the drawn, lit sign now plays in the splash and on the 404.
 
 The tokens live in `src/styles/tokens.css`. Change values there, never at a call site. The live
 Wix site's own measured baseline is kept for reference in `audit/baseline-styles/tokens.live.css`.
@@ -38,7 +41,7 @@ Brand values and where they come from:
 | Sign black `#0B0B0A`, bulb white `#FFFFFE` | MEASURED from the logo file |
 | The blacks and whites | DERIVED for the black-first palette |
 | The logo | the client's PNG, resized only (never redrawn or recoloured); 53 bulbs detected for the lit overlay |
-| Headline face | MEASURED: 14 logo letters against 72 open-licence fonts at equal cap height (`design-options/fonts/assets/logo-match-ranking.json`): Jockey One closest (overlap 0.834, same widths) |
+| Headline face | MEASURED: 14 logo letters against 72 open-licence fonts at equal cap height (`design-options/fonts/assets/logo-match-ranking.json`): Jockey One closest (overlap 0.834, same widths). Kept on record: the owner later chose Outfit + Work Sans instead |
 
 ## Colour
 
@@ -86,14 +89,16 @@ Text over scene stills is measured on the rendered pixels by `tools/scene-contra
 ## Type
 
 Three families, all SIL Open Font License, self-hosted as latin woff2 (`src/assets/fonts/`,
-`tools/fetch-fonts.mjs`, sources in `FONTS.json`). Owner's choice 2026-11-09: pairing A of
-`design-options/fonts/`.
+`tools/fetch-fonts.mjs`, sources in `FONTS.json`). Owner's choice 2026-11-09: Outfit + Work Sans,
+"where titles or larger sized texts uses outfit". It replaced pairing A of `design-options/fonts/`
+(Jockey One + Barlow), chosen earlier the same day.
 
 | family | role |
 |---|---|
-| Jockey One | headlines, prices, tag and card names, the wordmark: the closest measured match to the sign's heavy block lettering (same letter widths). One weight, declared across 400–900 so headings never get a synthesised bold |
-| Barlow 400 / 500 / 600 / 700 + italic | body and UI: drawn from highway and road signs, easy to read, at home next to a roadside marquee |
-| Tilt Neon | neon numerals only: step numbers and the news date board |
+| Outfit (variable, 100–900) | titles and larger text: headings, the hero, prices, tag and card names, the tapes, the kinetic band. Display weights 700–800 (one step lighter than in the Jockey One era); the card names scale with the card's width. Large headings at a .98 line height: at .92 Outfit's descenders met the next line's ascenders |
+| Outfit Outline (the designer's static Outfit 400 and 800) | outlined words only: the navy tape and the kinetic band. An outline traces every contour, and the variable file keeps each letter's parts as overlapping contours (F is three), which showed as seams inside outlined letters; these static builds have every letter merged into one outline (Google's single-weight files keep the overlaps) |
+| Work Sans (variable, 100–900, + italic) | body and UI text |
+| Tilt Neon | neon numerals only: step numbers and the news date board; the outlined footer word |
 
 One accent word per heading is set in the LED blue (on white bands, the site blue; in the home hero,
 over the photo, a pale neon-blue core with an LED glow, which keeps 3:1 there). The inline
@@ -137,9 +142,10 @@ a **scrim** (a token gradient sized so text clears WCAG AA on the rendered pixel
 | part | what it is |
 |---|---|
 | `.hero` | the store at golden hour (the owner's storefront photo, relit with AI), always the whole frame as a wide shot: the hero's height, anchored right, the street running on to the left (an AI extension) in black and white and darker the further left, behind the words (two copies of the photo: a black-and-white one underneath, the colour one masked from where the words end to where the sign starts, in container units) → shade behind the words → a warm, breathing light and one LED light pool; a glass fact plate; as the page scrolls the words drift down and the photo pushes in; on phones the whole frame runs across the top of the hero and fades out exactly where the words begin (`--hero-win`) |
-| `.tapes` | the marquee letter board crossed by a navy tape, laid over the seam under the hero, then a thin spectrum line |
-| `.band--flavors` + `.bento` + `[data-rail]` | a black band with a soft navy glow from the top, white only as accents (the words, the cards' hairline edges, the progress bar); dark image cards with an LED edge; on large screens the band pins and the cards slide past ("01 / 04") |
-| `.band--neon` + `.hang` | deli tickets on strings from a rail over blue neon; each ticket sways on its own string |
+| `.tapes` | the marquee letter board crossed by a navy tape, laid over the seam under the hero, then a thin spectrum line; up to 860 wide the two are stacked, tilted apart with a gap that stays open, a size smaller, so both read (owner, 2026-11-09) |
+| `.band--flavors` + `.bento` + `[data-rail]` | a black band with a soft navy glow from the top, white only as accents (the words, the progress bar); four equal solid colour cards (`--card-flower`, `--card-concentrates`, `--card-edibles`, `--card-more`: the logo's green, blue, pink and orange, each its product render's own backdrop colour) with one uniformly rendered product each, cut out of its backdrop, the same height on every card (container units, not what the text leaves), each card starting a third of the way down its product so the top third stands above it over the black band; the name large at the bottom left in ink (6.7:1 or more), sized from the card's width, and a dark square order button at the bottom right; the light sweep crosses the card only, under the product; the cards are sized to fit four across the content column, with breathing room above the heading and below the pickup row; where four fit (1280 wide and up) the band holds still at its own height, otherwise (1024 to about 1200 wide) it pins and the cards slide past ("01 / 04"); on hover the whole card bounces, product and all, then rests a little raised; on phones the row swipes, with room for the bounce and the glow |
+| `.band--neon` + `.hang` | deli tickets on strings from a rail over blue neon; each ticket sways on its own string (`/daily-deals/`; the home deals band became the bento below) |
+| `.band--deals` + `.deals` | the home deals on black (owner, 2026-11-09): each category tab a bento, a two-by-two feature in the store's blue and white cards beside it (two small, one wide), each with a product image standing on a soft floor shadow (the owner's own pre-roll, budder and crumble photos, AI illustrations of the other product types; clear glass always see-through, so it shows the card it stands on); prices large in Outfit; the Ounces tab lists every live-menu tier; the whole card bounces on hover, then rests a little raised |
 | `.band--spot` + `.box--glass` | the Owner's Box over a spotlight still, framed by chasing bulbs; glass cards with an orbiting edge light |
 | `.kinetic` | two rows of giant words sliding opposite ways with the scroll, the client's own bud floating over them |
 | `.statement` | the "who are we" sentence, set large; its words light up in reading order |
@@ -147,8 +153,8 @@ a **scrim** (a token gradient sized so text clears WCAG AA on the rendered pixel
 | `.page-hero--scene` | every inner page hero over its own still (Learn uses the client's own flower photo; Shop floats the client's own bud) |
 | `.footer__mark` | the finale: a giant cropped "Flavors" under a bulb row; it lights up, bulb by bulb, over the last stretch of the page |
 
-Rules: tokens only (tints through `color-mix`); scene images are decorative (`alt=""`) except on
-the category cards, where the alt describes the pixels; phones drop the pointer light, tilt,
+Rules: tokens only (tints through `color-mix`); scene images are decorative (`alt=""`); the category
+cards' product renders carry alt text describing the pixels; phones drop the pointer light, tilt,
 spotlights, orbits and the rail; `tools/scene-contrast.mjs` measures every line of text
 over a still and `tools/motion-check.mjs` tests the motion layer with motion on.
 

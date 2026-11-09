@@ -53,6 +53,13 @@
   --rb-pink: #ed397a;
   --rb-blue: #00a3dc;
   --rb-green: #338900;
+  /* the category cards (owner, 2026-11-09): each card is its product render's backdrop colour,
+     MEASURED by tools/category-renders.py (the spectrum's green, blue, pink and orange, brightened
+     for dark ink: 13.9, 7.2, 8.2 and 6.7 to 1 with --ink; round-2 renders, 2026-11-09) */
+  --card-flower: #c8eb36;
+  --card-concentrates: #01aed1;
+  --card-edibles: #fb87a2;
+  --card-more: #f67419;
   --cross: #1fae4b;               /* the storefront's green cross (chosen) */
   --street-green: #0b6b3a;        /* Detroit street-name sign green (chosen) */
 
@@ -77,9 +84,10 @@
   --rainbow-line: linear-gradient(90deg, var(--rb-red), var(--rb-orange), var(--rb-yellow), var(--rb-pink), var(--rb-blue), var(--rb-green));
 
   /* ---- type ---------------------------------------------------------------- */
-  --font-display: "Jockey One", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;   /* closest measured match to the sign's lettering */
+  --font-display: "Outfit", "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif;   /* titles and larger text (owner's choice 2026-11-09) */
+  --font-outline: "Outfit Outline", "Outfit", "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif;   /* outlined words: static, merged letters (400 and 800 only) */
   --font-neon: "Tilt Neon", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
-  --font-sans: "Barlow", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
   --fs-xs: 0.8125rem;                                   /* 13px floor for visible text */
   --fs-sm: 0.9375rem;                                   /* 15px */
@@ -91,7 +99,7 @@
   --fs-h1: clamp(2.75rem, 1.7rem + 3.9vw, 5rem);
   --fs-price: clamp(3rem, 2rem + 3.6vw, 5rem);
 
-  --lh-tight: 0.92;
+  --lh-tight: 0.98;   /* Outfit's ascenders + descenders: at .92 a descender met the next line's ascender (measured -1px, owner: "do not overlap") */
   --lh-head: 1.02;
   --lh-body: 1.62;
   --track-kicker: 0.035em;

@@ -1,0 +1,29 @@
+{
+  "note": "Category card product renders (owner, 2026-11-09: 'keep the current layout for the category section but make it look like this [solid colour cards, one product each]; I want product images to be rendered uniformly'; then: the top third of each product sticks out above its card, products bigger; then: 'check all products, some look unfinished or broken'; Much more becomes a cannabis drink can). ROUND 2 (current): one studio template for all four, the jars filled to the brim, no glare on the glass. fal list price $0.06 per flux-pro/v1.1-ultra render, $0.04 per Kontext edit, $0.01/MP Topaz, BiRefNet per compute second.",
+  "template": "Studio product photograph: <product>, standing perfectly upright in the centre of the frame, seen straight on at eye level, the whole <container> in frame with generous empty space all around it, on a solid seamless <colour> backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+  "items": {
+    "flower": {
+      "model": "fal-ai/flux-pro/v1.1-ultra", "requestId": "01a1bf00-16fd-70f2-84a4-b5f4822fcb2d", "seed": 424242, "variant": "a of 2",
+      "product": "a clear glass deli jar filled to the brim with dense green cannabis flower buds with orange hairs and white frost, closed with a black screw-top lid",
+      "colour": "bright lime green", "cutoutRequestId": "01a1bf02-7c55-79d1-a3a3-c21a63d0e7fb", "verdict": "used (variant b had a different green backdrop)"
+    },
+    "concentrates": {
+      "model": "fal-ai/flux-pro/v1.1-ultra + fal-ai/flux-pro/kontext + fal-ai/topaz/upscale/image", "requestId": "01a1bf00-186c-7532-a227-7dbc50b709f1", "seed": 424242, "variant": "a of 2",
+      "product": "a small round clear glass jar filled to the brim with golden-amber cannabis budder, closed with a black screw-top lid",
+      "colour": "blue: variant a came back on a beige backdrop (b was blue but the jar was tiny in frame), so its backdrop was recoloured with Kontext 01a1bf02-2c7a-7441-ab91-3fe30bdf20bd ('change only the background colour ... bold saturated cyan blue; keep the jar exactly the same') and upscaled 2x with Topaz High Fidelity V2 01a1bf02-fd0e-7712-9835-121b9305bd66",
+      "cutoutRequestId": "01a1bf05-6b1f-7522-9825-c06d9b624203", "verdict": "used (variant a + Kontext backdrop + Topaz)"
+    },
+    "edibles": {
+      "model": "fal-ai/flux-pro/v1.1-ultra", "requestId": "01a1bf00-19bd-7280-a579-33c5c585cef2", "seed": 424242, "variant": "a of 2",
+      "product": "a clear glass jar filled to the brim with sugar-coated fruit gummy cubes (plain cubes: no bear, worm or cartoon shapes), closed with a black screw-top lid",
+      "colour": "bright pink", "cutoutRequestId": "01a1bf02-7e08-7c63-b5cd-bfda6afaef12", "verdict": "used (variant b had paler gummies and glare at the top)"
+    },
+    "more": {
+      "model": "fal-ai/flux-pro/v1.1-ultra", "requestId": "01a1bf00-1b18-7f93-9485-4fa2b630fe93", "seed": 424242, "variant": "a of 2",
+      "product": "a slim aluminium drink can of a cannabis-infused sparkling beverage, matte cream-white with a simple abstract green leaf emblem and a brushed silver top; an original design (the owner's reference can was a style pointer only: 'DO NOT COPY this')",
+      "colour": "bright orange", "cutoutRequestId": "01a1bf02-7f96-7863-8928-c248bc8e3a42", "verdict": "used (variant b came back on grey)"
+    }
+  },
+  "round1": "retired 2026-11-09 (raws in assets/generated/raw/v1/): flower 01a1bede-b57a, concentrates 01a1bede-b6dd (+3 pale-backdrop retries, Kontext 01a1bee3-c2f1, Topaz 01a1bee6-bb9d), edibles 01a1bedf-4633 (first try blocked by the safety checker), tincture bottle 01a1bede-b9ad; cut-outs 01a1bef4-7ded/-7f43/-80bc/-8216. The jars carried a large softbox glare over their right third that read as faded, broken product once cut out.",
+  "spend": "round 1 about $0.51; round 2: 8 ultra renders x $0.06 + 1 Kontext x $0.04 + 1 Topaz (~$0.04) + 4 BiRefNet cut-outs (well under $0.01 each) = about $0.57; about $1.08 in all at list prices"
+}

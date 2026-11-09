@@ -1,6 +1,6 @@
 // parts.mjs — shared section components. Markup only; looks live in components.css and cinema.css.
 import { esc, rel, icon, moreArt } from './html.mjs';
-import { SITE, COPY, bulbs, menu, ASOF, gen, images, photos } from '../content/site.mjs';
+import { SITE, COPY, bulbs, menu, ASOF, gen, images, photos, catRenders, dealRenders } from '../content/site.mjs';
 
 const A = rel;
 
@@ -98,38 +98,29 @@ export function tape(items) {
   return `<div class="tape" aria-hidden="true"><div class="tape__track"><div class="tape__list">${seq}</div><div class="tape__list">${seq}</div></div></div>`;
 }
 
-/** Category bento (home + shop): dark image cards on the showroom band. Every card opens the live menu.
- *  Flower and Edibles use the client's own photos; Concentrates and Much more use scene stills.
- *  (The AI "jars on a navy counter" still was retired 2026-11-09: it read as the store's own deli
- *  counter, and AI imagery must never stand in for the premises.) */
-const BENTO = {
-  flower: { photo: 'learn-flower.webp', pos: '50% 46%', size: 'xl', sizes: '(max-width: 640px) 80vw, (max-width: 960px) 92vw, 560px' },
-  concentrates: { gen: 'concentrates', pos: '60% 42%', sizes: '(max-width: 640px) 80vw, (max-width: 960px) 46vw, 330px' },
-  edibles: { photo: true, pos: '50% 50%', sizes: '(max-width: 640px) 80vw, (max-width: 960px) 46vw, 330px' },
-  more: { gen: 'vapes-more', pos: '50% 52%', size: 'wide', sizes: '(max-width: 640px) 80vw, (max-width: 960px) 92vw, 680px' },
-};
+/** Category cards (home + shop). Owner, 2026-11-09: keep the section's layout, make the cards solid
+ *  colour cards, one uniformly rendered product on each (AI illustrations from one studio template,
+ *  framed identically by tools/category-renders.py), the name large at the bottom left and a dark
+ *  square order button at the bottom right. Each card's colour is its render's backdrop colour (a
+ *  token in tokens.css), so the photo melts into the card. Every card opens the live menu.
+ *  (Before: the client's flower and gummies photos and two scene stills, each framed differently.) */
 export function bento(from, cats) {
   const tiles = cats.map((c, i) => {
-    const m = BENTO[c.id] || {};
-    let media;
-    if (m.gen) media = scenePicture(from, m.gen, { sizes: m.sizes, alt: true, pos: m.pos });
-    else {
-      // a client photo: the category's own (photo: true) or a named file from images.json
-      const f = typeof m.photo === 'string' ? m.photo : c.img, f2 = f.replace('.webp', '@2x.webp');
-      const im = images[f] || { w: 560, h: 420 }, im2 = images[f2];
-      const alt = typeof m.photo === 'string' ? (im.alt || c.alt) : c.alt;
-      media = `<img src="${A(from, '/assets/img/' + f)}" srcset="${A(from, '/assets/img/' + f)} ${im.w}w${im2 ? `, ${A(from, '/assets/img/' + f2)} ${im2.w}w` : ''}" sizes="${m.sizes}" width="${im.w}" height="${im.h}" alt="${esc(alt)}" style="object-position:${m.pos}" loading="lazy" decoding="async">`;
-    }
-    const text = c.list ? c.list.map(esc).join(' · ') : esc(c.text);
-    return `<li class="bento__item${m.size ? ' bento__item--' + m.size : ''}" data-reveal style="--i:${i}">
+    const r = catRenders?.items?.[c.id];
+    if (!r) throw new Error('category render missing from category-renders.json: ' + c.id);
+    // the cut-out: drawn at most ~440px tall, so 1x/2x density candidates
+    const [f1, f2] = r.files;
+    const img = `<img src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} 1x, ${A(from, '/assets/img/' + f2.file)} 2x" width="${f1.w}" height="${f1.h}" alt="${esc(r.alt)}" data-ai="generated" loading="lazy" decoding="async">`;
+    const text = c.short ? esc(c.short) : c.list ? c.list.map(esc).join(' · ') : esc(c.text);   // the card's short line (site.mjs)
+    return `<li class="bento__item bento__item--${esc(c.id)}" data-reveal style="--i:${i}">
     <a class="bento__link" href="${esc(SITE.portal)}" target="_blank" rel="noopener" data-tilt>
-      <span class="bento__media">${media}</span>
-      <span class="bento__glint" aria-hidden="true"></span>
+      <span class="bento__card" aria-hidden="true"><span class="bento__glint"></span></span>
+      <span class="bento__media">${img}</span>
       <div class="bento__body">
         <h3 class="bento__name">${esc(c.name)}</h3>
         <p class="bento__text">${text}</p>
-        <span class="bento__cta">See menu ${icon.ext}</span>
       </div>
+      <span class="bento__cart">${icon.bag}<span class="visually-hidden">See menu</span></span>
       <span class="visually-hidden"> (opens the live menu in a new tab)</span>
     </a>
   </li>`;
@@ -228,6 +219,29 @@ export function tag({ kick, price, per = '', name, detail = '', foot = '', featu
   ${foot ? `<p class="tag__foot">${foot}</p>` : ''}
 </article>`;
 }
+
+/** A deal card for the home deals bento (owner, 2026-11-09: "turn these deal cards into bento
+ *  layout for all categories. Include product images."). img: an id in deal-renders.json (an AI
+ *  illustration of the product type, labelled); size: 'feature' (two by two, the store's blue),
+ *  'small' or 'wide' (the image beside the words). detail is trusted HTML (callers escape). */
+export function deal(from, { img, kick, price, per = '', name, detail = '', size = 'small', i = 0 }) {
+  const r = dealRenders?.items?.[img];
+  if (!r) throw new Error('deal render missing from deal-renders.json: ' + img);
+  const [f1, f2] = r.files;
+  const m = String(price).match(/^\$(.+)$/);
+  const p = m ? `<span class="deal__cur">$</span>${esc(m[1])}` : esc(price);
+  return `<article class="deal deal--${size}" data-reveal style="--i:${i}">
+  <div class="deal__media"><img src="${A(from, '/assets/img/' + f1.file)}" srcset="${A(from, '/assets/img/' + f1.file)} 1x, ${A(from, '/assets/img/' + f2.file)} 2x" width="${f1.w}" height="${f1.h}" alt="${esc(r.alt)}"${r.kind === 'owner' ? '' : ' data-ai="generated"'} loading="lazy" decoding="async"></div>
+  <div class="deal__body">
+    ${kick ? `<p class="deal__kicker">${esc(kick)}</p>` : ''}
+    <p class="deal__price">${p}${per ? `<span class="deal__per">${esc(per)}</span>` : ''}</p>
+    <h3 class="deal__name">${esc(name)}</h3>
+    ${detail ? `<div class="deal__detail">${detail}</div>` : ''}
+  </div>
+</article>`;
+}
+/** The bento: four cards (a feature, two small, one wide) or three (a feature, two wide). */
+export const dealGrid = (cards) => `<div class="deals deals--${cards.length}">${cards.join('\n')}</div>`;
 
 /** Accessible tabs. panels: [{id, label, html}] */
 export function tabs(id, panels, { label = 'Categories' } = {}) {

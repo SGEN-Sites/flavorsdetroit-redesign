@@ -1,15 +1,17 @@
 /* base.css — fonts, reset, type, layout primitives. Values come from tokens.css. */
 
-/* Headlines: Jockey One (one weight; declared across 400–900 so heavier heading weights use the real
-   glyphs instead of a synthesised bold). Text: Barlow 400/500/600/700 + italic. Neon numerals: Tilt Neon.
-   Owner's choice 2026-11-09 (design-options/fonts, pairing A); all SIL OFL, self-hosted. */
-@font-face { font-family: "Jockey One"; src: url("../fonts/jockey-one.woff2") format("woff2"); font-weight: 400 900; font-style: normal; font-display: swap; }
+/* Titles and larger text: Outfit. Text: Work Sans (+ italic). Both variable (one file, every weight
+   100–900). Neon numerals: Tilt Neon. Owner's choice 2026-11-09 (it replaced Jockey One + Barlow the
+   same day); all SIL OFL, self-hosted. */
+@font-face { font-family: "Outfit"; src: url("../fonts/outfit.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("../fonts/work-sans.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: "Work Sans"; src: url("../fonts/work-sans-italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
 @font-face { font-family: "Tilt Neon"; src: url("../fonts/tilt-neon.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Barlow"; src: url("../fonts/barlow-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: "Barlow"; src: url("../fonts/barlow-500.woff2") format("woff2"); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: "Barlow"; src: url("../fonts/barlow-600.woff2") format("woff2"); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: "Barlow"; src: url("../fonts/barlow-700.woff2") format("woff2"); font-weight: 700 900; font-style: normal; font-display: swap; }
-@font-face { font-family: "Barlow"; src: url("../fonts/barlow-400-italic.woff2") format("woff2"); font-weight: 400 700; font-style: italic; font-display: swap; }
+/* outlined words only: the designer's static Outfit builds, every letter merged into one outline, so
+   -webkit-text-stroke draws no seams inside the letters (the variable file keeps overlapping parts).
+   Decorative, so "block": a moment of nothing rather than a moment of seamed letters. */
+@font-face { font-family: "Outfit Outline"; src: url("../fonts/outfit-outline-400.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: "Outfit Outline"; src: url("../fonts/outfit-outline-800.woff2") format("woff2"); font-weight: 800; font-style: normal; font-display: block; }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
@@ -33,7 +35,7 @@ button { cursor: pointer; }
 a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 p, h1, h2, h3, h4, ul, ol, figure, blockquote, dl, dd { margin: 0; }
 ul[class], ol[class] { list-style: none; padding: 0; }
-:where(h1, h2, h3, h4) { font-family: var(--font-display); font-weight: 800; line-height: var(--lh-head); letter-spacing: 0.005em; text-wrap: balance; }
+:where(h1, h2, h3, h4) { font-family: var(--font-display); font-weight: 700; line-height: var(--lh-head); letter-spacing: -0.015em; text-wrap: balance; }
 p { text-wrap: pretty; }
 strong { font-weight: 650; }
 ::selection { background: var(--royal); color: var(--white); }
@@ -89,9 +91,9 @@ strong { font-weight: 650; }
 }
 .band--day .kicker__bulb, .band--white .kicker__bulb { background: var(--royal); box-shadow: 0 0 0 3px var(--royal-haze); }
 
-.h1 { font-size: var(--fs-h1); line-height: var(--lh-tight); font-weight: 800; }
-.h2 { font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 800; }
-.h3 { font-size: var(--fs-h3); line-height: 1; font-weight: 800; }
+.h1 { font-size: var(--fs-h1); line-height: var(--lh-tight); font-weight: 700; }
+.h2 { font-size: var(--fs-h2); line-height: var(--lh-tight); font-weight: 700; }
+.h3 { font-size: var(--fs-h3); line-height: 1.05; font-weight: 700; }
 .lede { font-size: var(--fs-md); line-height: 1.55; max-width: 60ch; }
 .band--night .lede, .band--navy .lede, .band--black .lede { color: var(--cream-2); }
 .band--day .lede, .band--white .lede { color: var(--ink-2); }

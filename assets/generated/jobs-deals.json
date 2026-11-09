@@ -1,0 +1,135 @@
+{
+ "note": "Home deals band product renders (owner, 2026-11-09: \"turn the background of this section into black and turn these deal cards into bento layout for all categories. Include product images.\"). AI illustrations, unbranded, nothing lit, containers closed; one studio template as the category cards (assets/generated/jobs-cat.json), on a light grey backdrop for the cut-out. The live menu capture holds no product photos, so these stand for the product type, never a particular brand's product (alt text says Illustration). fal list price $0.06 per flux-pro/v1.1-ultra render; BiRefNet per compute second.",
+ "model": "fal-ai/flux-pro/v1.1-ultra",
+ "params": {
+  "aspect_ratio": "1:1",
+  "seed": 424242,
+  "output_format": "png",
+  "safety_tolerance": "2",
+  "raw": false
+ },
+ "items": {
+  "eighths": {
+   "requestId": "01a1bf41-eb0a-7b80-94dd-995090552ccf",
+   "url": "https://v3b.fal.media/files/b/0ab1bf55/0kiG4HFabIS__95EElyZD_a631687be9154e338919f18943fbe3d4.png",
+   "prompt": "Studio product photograph: a small clear glass jar filled to the brim with dense green cannabis flower buds with orange hairs and white frost, closed with a black screw-top lid, with two loose buds resting on the floor beside it, standing upright in the centre of the frame, seen straight on at eye level, the whole jar in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b283-71a3-a2e8-3d176f1c3d50",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/wj-DqPoFFqHBIRdAvUA0z_2FPNs2yP.png"
+  },
+  "gram": {
+   "requestId": "01a1bf41-ec72-7b62-a856-1cdaf7706852",
+   "url": "https://v3b.fal.media/files/b/0ab1bf55/KAE2ru8WyHd3C431eas2m_fa5fa8cdc5224179ac0728da9eb35912.png",
+   "prompt": "Studio product photograph: a small round white porcelain dish heaped with loose dense green cannabis flower buds with orange hairs and white frost, resting level in the centre of the frame, seen straight on at eye level, the whole dish in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b42b-7990-a749-c6fa5f0139a5",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/aR3pwP5Z4VICsH2Qo8Hv4_8P1RrWH0.png"
+  },
+  "premium": {
+   "requestId": "01a1bf41-edc9-7542-a5bc-dae87694b7d7",
+   "url": "https://v3b.fal.media/files/b/0ab1bf55/Vg8JPGFhckHh-PzVJ2pOR_54b00831debc481cbed0fd10e42d7333.png",
+   "prompt": "Studio product photograph: two small clear glass jars side by side, each filled to the brim with dense green cannabis flower buds with orange hairs and white frost and closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, both jars whole in frame with generous empty space all around them, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b5a7-7b62-946a-afa177d750a3",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/7DV3xr0xRdihpNMgXfPzI_OseYVSIu.png"
+  },
+  "topshelf": {
+   "requestId": "01a1bf41-ef28-75f2-ade6-1223e22fc019",
+   "url": "https://v3b.fal.media/files/b/0ab1bf55/bNSGbdpSrv4Cfg3R9fJPY_c8f06a501d4841598ba82bfedfb8e932.png",
+   "prompt": "Studio product photograph: a small clear glass jar filled to the brim with very frosty purple and green top-shelf cannabis flower buds covered in white trichomes, closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, the whole jar in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b6fb-71c0-966c-3525fce2fa59",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/JVEJVYiRAjDpRnndRb1wT_KrX7w6XO.png"
+  },
+  "preroll": {
+   "requestId": "01a1bf41-f088-7f73-b365-81695cb46c96",
+   "url": "https://v3b.fal.media/files/b/0ab1bf55/GUPGH7oX9DE8WYSgCX9b2_e3990096f4a3402cb1fe3ce8b64429f1.png",
+   "prompt": "Studio product photograph: a single unlit cannabis pre-roll cone in plain white paper with a neatly twisted tip and a short white filter, standing upright on its filter end in the centre of the frame, seen straight on at eye level, the whole pre-roll in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare, crisp focus, clean, modern, minimal, photorealistic. No smoke, no fire, no text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b849-7d22-b73b-75e7e9b0305b",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/cnh4di6NH8CrrPRx4r8cF_Mz2Eeg4u.png"
+  },
+  "jumbo": {
+   "requestId": "01a1bf41-f1de-7aa2-9f34-41945a7b4bfe",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/bbZC2SuF8LIFT-UdhylH3_4aa12cbe20d548ad81f35f19520d7e81.png",
+   "prompt": "Studio product photograph: seven unlit cannabis pre-roll cones in plain white paper with neatly twisted tips, standing upright together in a loose cluster in the centre of the frame, seen straight on at eye level, the whole cluster in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare, crisp focus, clean, modern, minimal, photorealistic. No smoke, no fire, no text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-b9ba-7923-a34e-d806be1acaff",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/RW5qIzLTo_mX90L4sKsbI_CRdRdiWu.png"
+  },
+  "cart": {
+   "requestId": "01a1bf41-f344-79b1-a7a3-bfb46a1232f8",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/7BdnrTfA0vmDsKC4vLW8H_e4f5b87c2d2b4d62b91354fbeb342af8.png",
+   "prompt": "Studio product photograph: a single unbranded 510-thread vape cartridge, a clear glass tank filled with golden amber cannabis oil, a black ceramic mouthpiece on top and a short silver metal base, standing upright in the centre of the frame, seen straight on at eye level, the whole cartridge in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, crisp focus, clean, modern, minimal, photorealistic. No smoke, no vapour, no text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-bb4e-79a2-a4f9-e820650431af",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/uVrkHh9z4WzifDxNECaAY_opJzRxxd.png"
+  },
+  "disposable": {
+   "requestId": "01a1bf41-f4b2-7d51-83b1-01ba446d4df7",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/c-BeSBkMZFNqFnV-dRKd__8118e8ead53646b6b7d34bc9d1c118c8.png",
+   "prompt": "Studio product photograph: a single slim unbranded matte black disposable vape pen with a small clear window near its base showing golden oil, standing upright in the centre of the frame, seen straight on at eye level, the whole pen in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare, crisp focus, clean, modern, minimal, photorealistic. No smoke, no vapour, no text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-bc9d-7861-aff3-be769944edd3",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/rFaUfvJooB2wq_gw_FGQV_Wv4qfVnQ.png"
+  },
+  "budder": {
+   "requestId": "01a1bf41-f60d-7110-9dda-a9f80da14b21",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/8bAkRVREpMzYvuguGG0t1_fd6f2939a51b4fcb98a5c8e4d2c92e68.png",
+   "prompt": "Studio product photograph: a wide, short, round clear glass jar filled to the brim with golden whipped cannabis budder, closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, the whole jar in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-bdea-7193-b6c4-520c927fecd6",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/YOuc5qd7pSt_G8Om0pqVX_DmB4W5li.png"
+  },
+  "wax": {
+   "requestId": "01a1bf41-f7b9-76a0-9c01-8c756fcf0569",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/JsVmMHtsAtUF0qe4lc042_b6879cfbd13c4b1d97892ef216cd356f.png",
+   "prompt": "Studio product photograph: a wide, short, round clear glass jar filled to the brim with amber crumbly cannabis wax, closed with a white screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, the whole jar in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-bf3f-71b3-8842-91b013f58731",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/_2Mv9EmyoiKek6JTmParM_QacPjSgn.png"
+  },
+  "crumbles": {
+   "requestId": "01a1bf41-f92e-7870-81cc-5d4693d89267",
+   "url": "https://v3b.fal.media/files/b/0ab1bf57/DFrdTcYq4BEZumHdi9xmI_ade9f05154a34652831a1d6954e3dbdd.png",
+   "prompt": "Studio product photograph: three small round clear glass jars standing side by side, each filled to the brim with golden crumbly cannabis concentrate and closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, all three jars whole in frame with generous empty space all around them, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-c08a-7ea1-87ed-eee11789a07b",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/7gq8GkLtMjtjBaQZO4Bzr_a48zR81o.png"
+  },
+  "budders": {
+   "requestId": "01a1bf41-fa8f-7b53-a1c3-49c856d9bcc2",
+   "url": "https://v3b.fal.media/files/b/0ab1bf57/pfMtdbhCn7qsU42rrA-FY_9e57d2a09f894bea866688884ae13527.png",
+   "prompt": "Studio product photograph: five small round clear glass jars standing side by side in a gentle arc, each filled to the brim with smooth golden cannabis budder and closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, all five jars whole in frame with generous empty space all around them, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-c1ec-7632-a8dd-727ee943468d",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/kK3-bKs3o9QLapxQJzdLb_pttuSQZM.png"
+  },
+  "ounce": {
+   "requestId": "01a1bf41-fbe5-7ed1-8e23-7d9e566985e4",
+   "url": "https://v3b.fal.media/files/b/0ab1bf56/TA7cI68u36q_7y0ZuIaHQ_bdb0a5aad5d748e2bf3916ef01f6a868.png",
+   "prompt": "Studio product photograph: a large blank matte black resealable stand-up pouch with no print on it, standing upright, with a generous heap of dense green cannabis flower buds with orange hairs and white frost piled in front of it, in the centre of the frame, seen straight on at eye level, the whole pouch and the buds in frame with generous empty space all around them, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-c3fc-7e82-bc94-db6f36d0748a",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/gOr756L7IFLNwXCLKomtc_Ro7FZChL.png"
+  },
+  "shake": {
+   "requestId": "01a1bf41-fd48-7080-a632-3ba71165a07b",
+   "url": "https://v3b.fal.media/files/b/0ab1bf57/6idv2uTpuUNMD1VYfulvp_7e2ece8456c54822b5fa55771c24baa9.png",
+   "prompt": "Studio product photograph: a clear glass jar filled to the brim with loose small pieces of green cannabis flower and shake, closed with a black screw-top lid, standing upright in the centre of the frame, seen straight on at eye level, the whole jar in frame with generous empty space all around it, on a solid seamless light grey backdrop that is evenly lit and the same colour everywhere, soft diffused frontal studio light with no glare and no reflections on the glass, the contents fully and clearly visible through crystal clear glass, crisp focus, clean, modern, minimal, photorealistic. No text, no labels, no logos, no stickers, no hands, no people.",
+   "cutoutRequestId": "01a1bf44-c55d-7db3-af16-98bcad1776fd",
+   "cutoutUrl": "https://v3b.fal.media/files/b/0ab1bf67/rElJo9YlXNfrDnOCLseGY_rWcVVJle.png"
+  }
+ },
+ "cutout": "fal-ai/birefnet/v2, General Use (Heavy), 2048x2048, refine_foreground",
+ "owner": {
+  "note": "Product photos the owner supplied in chat on 2026-11-09 for the deals cards: \"you may use any of these for cannabis prerolls ... upscale if you need\" and \"for concentrates you may use these ... ensure the glass parts are complete and reflects the color of the background\". Originals private in assets/source/owner-products/ (their origin beyond the owner is not recorded). Background removed with fal BiRefNet v2; the budder dish upscaled 2x with fal Topaz High Fidelity V2 first. The originals are not published (no link to them, their upscale or their cut-outs is kept here: request ids only; the downloaded files stay in the private assets/generated/raw/).",
+  "items": {
+   "preroll-stand": {
+    "source": "assets/source/owner-products/preroll-stand.png",
+    "cutoutRequestId": "01a1bf5d-55d7-70a2-9228-053f88753ce3"
+   },
+   "preroll-flat": {
+    "source": "assets/source/owner-products/preroll-flat.png",
+    "cutoutRequestId": "01a1bf5d-53da-7403-8ded-ce5a5eafcb9c"
+   },
+   "crumble": {
+    "source": "assets/source/owner-products/crumble.png",
+    "cutoutRequestId": "01a1bf5d-5744-7f02-9489-aa32f10497c9"
+   },
+   "budder-dish": {
+    "source": "assets/source/owner-products/budder-dish.png",
+    "upscale": "fal-ai/topaz/upscale/image (High Fidelity V2, 2x, face enhancement off)",
+    "upscaleRequestId": "01a1bf5d-526c-77d2-b8b6-29cf601dbcc1",
+    "cutoutRequestId": "01a1bf5e-c734-7800-967a-023bb7e3982a"
+   }
+  }
+ }
+}

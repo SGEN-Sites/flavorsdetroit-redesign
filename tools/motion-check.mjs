@@ -81,11 +81,19 @@ for (const [w, h] of VPS) {
       const pinTop1 = sec.querySelector('.rail__pin').getBoundingClientRect().top;
       scrollTo(0, top - head + (tall - pin)); await new Promise((r) => setTimeout(r, 200)); const x2 = read(), i2 = sec.querySelector('[data-rail-index]').textContent;
       const last = [...sec.querySelectorAll('.bento__item')].pop().getBoundingClientRect();
-      return { on, travel: tall - pin, x0, x1, x2, i0, i2, pinned: Math.abs(pinTop1 - pinTop0) < 2, lastRight: Math.round(last.right), vw: innerWidth };
+      const first = sec.querySelector('.bento__item').getBoundingClientRect();
+      return { on, travel: tall - pin, x0, x1, x2, i0, i2, pinned: Math.abs(pinTop1 - pinTop0) < 2, lastRight: Math.round(last.right), firstLeft: Math.round(first.left), vw: innerWidth,
+        still: sec.classList.contains('rail-static'), metaHidden: getComputedStyle(sec.querySelector('.rail__meta')).display === 'none' };
     });
-    ok(vp, 'category rail pins and slides', rail.on && rail.pinned && rail.x0 > -2 && rail.x1 < rail.x0 && rail.x2 < rail.x1, JSON.stringify(rail));
+    // the cards are sized to fit the content column when four of them can (owner, 2026-11-09: smaller
+    // cards): then the band holds still and hides the counter; otherwise it pins and slides
+    if (rail.on && rail.travel === 0) {
+      ok(vp, 'category band: the four cards fit, so it holds still with no counter', rail.still && rail.metaHidden && rail.x0 === 0 && rail.x2 === 0 && rail.firstLeft >= 0, JSON.stringify(rail));
+    } else {
+      ok(vp, 'category rail pins and slides', rail.on && rail.pinned && rail.x0 > -2 && rail.x1 < rail.x0 && rail.x2 < rail.x1, JSON.stringify(rail));
+      ok(vp, 'rail index counts 01 to 04', !rail.on || (rail.i0 === '01' && rail.i2 === '04'), `${rail.i0} → ${rail.i2}`);
+    }
     ok(vp, 'rail ends with the last card fully in view', !rail.on || rail.lastRight <= rail.vw, `last card right ${rail.lastRight} of ${rail.vw}`);
-    ok(vp, 'rail index counts 01 to 04', !rail.on || (rail.i0 === '01' && rail.i2 === '04'), `${rail.i0} → ${rail.i2}`);
     await page.screenshot({ path: path.join(SHOTS, `motion-${vp}-rail-end.png`) });
 
     // marquees react to scroll speed: measure the ticker's travel over 400ms idle vs. while scrolling

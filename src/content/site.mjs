@@ -22,6 +22,10 @@ export const images = read('src/content/images.json', {});
 export const gen = read('src/content/generated-images.json', { items: {} });
 // The owner's store photos (tools/store-photos.py): alt text, crops and what was retouched.
 export const photos = read('src/content/store-photos.json', { items: {} });
+// The category cards' product renders (tools/category-renders.py): files, card colour, alt, provenance.
+export const catRenders = read('src/content/category-renders.json', { items: {} });
+// The home deals band's product images (tools/deal-renders.py): files, alt, aspect, provenance.
+export const dealRenders = read('src/content/deal-renders.json', { items: {} });
 export const bulbs = read('src/content/logo-bulbs.json');
 
 const addr = facts.addresses[0];
@@ -69,11 +73,14 @@ export const COPY = {
   quality: 'Our commitment to quality means that every item we carry meets the highest standards.',
   value: 'Despite the superior offering our pricing remains highly competitive, providing unparalleled value for those who seek both quality and affordability.',
   ourFlavors: 'Our flavors',
+  // text/list = the client's own copy, word for word (the record). short = what the category card
+  // shows (owner, 2026-11-09: "shorten the description just so they would not look cramped"), cut
+  // from the client's own words, nothing added; the full concentrates list stays on /learn/
   categories: [
-    { id: 'flower', name: 'Flower', text: "We've got the highest quality flower to suit any medical or recreational need. Look for a strain you love, or come in and have our budtenders help you decide!", img: 'cat-flower.webp', img2: 'cat-flower@2x.webp', mode: 'cutout', alt: 'A cannabis flower bud' },
-    { id: 'concentrates', name: 'Concentrates', list: ['Shatter', 'Batter and budder', 'Live rosin', 'Hash', 'Crumble and sugar', 'Infused prerolls'], img: 'cat-concentrates.webp', img2: 'cat-concentrates@2x.webp', mode: 'screen', alt: 'An amber cannabis concentrate' },
-    { id: 'edibles', name: 'Edibles', text: "We have the best selection of gummies, chocolate, and other infused treats. A variety of tastes for any flavor you're craving!", img: 'cat-edibles.webp', img2: 'cat-edibles@2x.webp', mode: 'screen', alt: 'A pile of sour gummies' },
-    { id: 'more', name: 'Much more', text: "We have cartridges, topicals, drinks and tinctures: a quality product for all occasions! You'll be sure to find what you need, let us know what you're looking for!", art: 'more' },
+    { id: 'flower', name: 'Flower', short: 'The highest quality flower to suit any medical or recreational need.', text: "We've got the highest quality flower to suit any medical or recreational need. Look for a strain you love, or come in and have our budtenders help you decide!", img: 'cat-flower.webp', img2: 'cat-flower@2x.webp', mode: 'cutout', alt: 'A cannabis flower bud' },
+    { id: 'concentrates', name: 'Concentrates', short: 'Shatter · Budder · Live rosin · Hash', list: ['Shatter', 'Batter and budder', 'Live rosin', 'Hash', 'Crumble and sugar', 'Infused prerolls'], img: 'cat-concentrates.webp', img2: 'cat-concentrates@2x.webp', mode: 'screen', alt: 'An amber cannabis concentrate' },
+    { id: 'edibles', name: 'Edibles', short: 'Gummies, chocolate, and other infused treats.', text: "We have the best selection of gummies, chocolate, and other infused treats. A variety of tastes for any flavor you're craving!", img: 'cat-edibles.webp', img2: 'cat-edibles@2x.webp', mode: 'screen', alt: 'A pile of sour gummies' },
+    { id: 'more', name: 'Much more', short: 'Cartridges, topicals, drinks and tinctures.', text: "We have cartridges, topicals, drinks and tinctures: a quality product for all occasions! You'll be sure to find what you need, let us know what you're looking for!", art: 'more' },
   ],
   whoTitle: 'Flavors Detroit: who are we?',
   who: [

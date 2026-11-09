@@ -17,10 +17,10 @@ Black bands carry the deals, the Owner's Box and the category cards. White bands
 (glossy white, deli price tags). The six stripe colours appear only as thin spectrum dividers. The
 store itself appears in the owner's own photos (upscaled and colour graded; the storefront shot had
 the car dashboard it was taken through removed, the counter shot its customers and staff, both with
-AI fill, labelled as edited). Headlines are Jockey One (the closest measured match to the sign's lettering),
-text is Barlow. A cinematic layer sits on top: scene stills behind the inner page heroes and
+AI fill, labelled as edited). Titles and larger text are Outfit, text is Work Sans (the owner's
+choice); outlined words use Outfit's own static builds so their outlines have no seams. A cinematic layer sits on top: scene stills behind the inner page heroes and
 several bands (AI illustrations, labelled as such, never the store), crossing tapes, category cards on a pinned
-rail, deli tickets hanging over neon, the Owner's Box in a chasing bulb frame, a kinetic type band,
+rail, the day's deals as a bento with product illustrations on black, the Owner's Box in a chasing bulb frame, a kinetic type band,
 a scroll-lit statement and a lit finale, all on one scroll-aware animation loop with a Pause motion
 button; each visit opens with the "Sign ignition" splash. The owner's design choices (fonts,
 splash) were made from the option pages in `design-options/`. See `BRAND-SYSTEM.md`.
@@ -61,10 +61,12 @@ No npm dependencies. Node 18+ for the build; Python 3 + Pillow only to re-derive
 | `python3 -I tools/process-images.py` | derive every picture from the client's own files (logo resized only) |
 | `python3 -I tools/detect-bulbs.py` | find the 53 marquee bulbs in the logo for the lit-sign overlay |
 | `python3 -I tools/process-gen.py` | derive the scene stills' WebP sizes from the AI renders, with IPTC "AI-generated" XMP |
+| `python3 -I tools/category-renders.py` | the category cards' product renders: measures each card's colour (the render's backdrop) and its ink contrast, takes the BiRefNet cut-out, fills gaps inside the glass, rebuilds jar walls the cut-out bit away, writes WebP sizes with IPTC "AI-generated" XMP |
+| `node tools/deal-download.mjs [--cutouts]` + `python3 -I tools/deal-renders.py` | the home deals bento's product images (AI illustrations and the owner's own photos; provenance `assets/generated/jobs-deals.json`): download renders and cut-outs, fill gaps in the glass, rebuild bitten walls object by object, make clear glass see-through (the dish found as a circle, its shadow a darkening), WebP sizes with IPTC XMP |
 | `python3 -I tools/store-photos.py masks\|composite\|touchup\|finish` | the owner's store photos: fill masks, composite (the photo kept outside each mask), grade, crops and WebP sizes with IPTC XMP (originals private) |
 | `node tools/scene-contrast.mjs` | WCAG contrast for text over scene stills, measured on the rendered pixels |
 | `node tools/motion-check.mjs` | the motion layer with motion ON: rail, scroll-speed marquees, progress, back-to-top, finale, Pause motion, overflow, console |
-| `node tools/fetch-fonts.mjs` | self-host the fonts (Jockey One, Barlow, Tilt Neon; SIL OFL) from Google Fonts once |
+| `node tools/fetch-fonts.mjs` | self-host the fonts once (SIL OFL): Outfit, Work Sans and Tilt Neon from Google Fonts, and the designer's static Outfit 400/800 for outlined words (pinned commit, subset to Latin with fontTools) |
 | `node tools/menu-facts.mjs` | turn the live-menu capture into `src/content/menu.json` + facts |
 | `node tools/extract-posts.mjs` | turn the captured posts into `src/content/posts.json` (100% word recall) |
 | `node tools/check.mjs` | rendered + functional checks (5 viewports, age gate, drawer, tabs, forms, map, no-JS) |

@@ -177,13 +177,27 @@ for (const [w, h] of VPS) {
       const parse = (s) => { const str = String(s); const k = str.match(/color\(srgb ([^)]+)\)/); const m = str.match(/rgba?\(([^)]+)\)/); const pick = k && (!m || str.indexOf(k[0]) < str.indexOf(m[0])) ? 'k' : (m ? 'm' : null); if (!pick) return null; if (pick === 'k') { const p = k[1].split(/[ ,/]+/).filter(Boolean).map(Number); return { r: p[0] * 255, g: p[1] * 255, b: p[2] * 255, a: p.length > 3 ? p[3] : 1 }; } const p = m[1].split(/[ ,/]+/).filter(Boolean).map(Number); return { r: p[0], g: p[1], b: p[2], a: p.length > 3 ? p[3] : 1 }; };
       const lum = (c) => { const f = (v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }; return 0.2126 * f(c.r) + 0.7152 * f(c.g) + 0.0722 * f(c.b); };
       const over = (top, under) => ({ r: top.r * top.a + under.r * (1 - top.a), g: top.g * top.a + under.g * (1 - top.a), b: top.b * top.a + under.b * (1 - top.a), a: 1 });
+      // the layers under the text: each ancestor's own background, and between an element and its
+      // parent, any EARLIER SIBLING that is absolutely positioned and covers the text (a backdrop
+      // layer: it paints under what follows it). The category cards carry their colour on such a
+      // layer (it starts a third of the way down the product), so an ancestors-only walk reached the
+      // black band behind it and reported ink on black.
       const bgOf = (el) => {
         const layers = [];
-        for (let n = el; n; n = n.parentElement) {
-          const cs = getComputedStyle(n);
-          if (cs.backgroundImage && cs.backgroundImage !== 'none' && /gradient/.test(cs.backgroundImage)) { const c = parse(cs.backgroundImage); if (c) { layers.push(c); if (c.a >= 0.99) break; } }
+        const er = el.getBoundingClientRect();
+        const covers = (s) => { const r = s.getBoundingClientRect(); return r.left <= er.left + 1 && r.right >= er.right - 1 && r.top <= er.top + 1 && r.bottom >= er.bottom - 1; };
+        const take = (cs) => {   // true when this layer is opaque, which ends the walk
+          if (cs.backgroundImage && cs.backgroundImage !== 'none' && /gradient/.test(cs.backgroundImage)) { const c = parse(cs.backgroundImage); if (c) { layers.push(c); if (c.a >= 0.99) return true; } }
           const c = parse(cs.backgroundColor);
-          if (c && c.a > 0) { layers.push(c); if (c.a >= 0.99) break; }
+          if (c && c.a > 0) { layers.push(c); if (c.a >= 0.99) return true; }
+          return false;
+        };
+        walk: for (let n = el; n; n = n.parentElement) {
+          if (take(getComputedStyle(n))) break;
+          for (let s = n.previousElementSibling; s; s = s.previousElementSibling) {
+            const scs = getComputedStyle(s);
+            if ((scs.position === 'absolute' || scs.position === 'fixed') && scs.display !== 'none' && scs.visibility !== 'hidden' && +scs.opacity > 0.5 && covers(s) && take(scs)) break walk;
+          }
         }
         let base = { r: 255, g: 255, b: 255, a: 1 };
         for (let i = layers.length - 1; i >= 0; i--) base = layers[i].a >= 0.99 ? layers[i] : over(layers[i], base);

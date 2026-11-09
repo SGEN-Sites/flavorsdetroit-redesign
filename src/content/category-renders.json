@@ -1,0 +1,153 @@
+{
+ "note": "Category card product renders (AI illustrations; tools/category-renders.py).",
+ "items": {
+  "flower": {
+   "bg": "#c8eb36",
+   "ink": "dark",
+   "inkContrast": 13.94,
+   "aspect": 0.6127,
+   "alt": "Illustration: a glass jar with a black lid, filled to the brim with green cannabis buds",
+   "files": [
+    {
+     "file": "cat/flower-cut-440.webp",
+     "w": 270,
+     "h": 440,
+     "bytes": 50110
+    },
+    {
+     "file": "cat/flower-cut-880.webp",
+     "w": 539,
+     "h": 880,
+     "bytes": 167636
+    }
+   ],
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048), used as it is",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bf00-16fd-70f2-84a4-b5f4822fcb2d",
+   "seed": 424242,
+   "variant": "a of 2",
+   "product": "a clear glass deli jar filled to the brim with dense green cannabis flower buds with orange hairs and white frost, closed with a black screw-top lid",
+   "colour": "bright lime green",
+   "cutoutRequestId": "01a1bf02-7c55-79d1-a3a3-c21a63d0e7fb",
+   "verdict": "used (variant b had a different green backdrop)",
+   "holesFilled": 2296,
+   "outlineRepaired": {
+    "restored": 56150,
+    "rows": 740,
+    "bodyFromRow": 777,
+    "of": 1308
+   }
+  },
+  "concentrates": {
+   "bg": "#01aed1",
+   "ink": "dark",
+   "inkContrast": 7.22,
+   "aspect": 0.6996,
+   "alt": "Illustration: a small glass jar with a black lid, filled with golden-amber cannabis budder",
+   "files": [
+    {
+     "file": "cat/concentrates-cut-440.webp",
+     "w": 308,
+     "h": 440,
+     "bytes": 49886
+    },
+    {
+     "file": "cat/concentrates-cut-880.webp",
+     "w": 616,
+     "h": 880,
+     "bytes": 159452
+    }
+   ],
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048), used as it is",
+   "model": "fal-ai/flux-pro/v1.1-ultra + fal-ai/flux-pro/kontext + fal-ai/topaz/upscale/image",
+   "requestId": "01a1bf00-186c-7532-a227-7dbc50b709f1",
+   "seed": 424242,
+   "variant": "a of 2",
+   "product": "a small round clear glass jar filled to the brim with golden-amber cannabis budder, closed with a black screw-top lid",
+   "colour": "blue: variant a came back on a beige backdrop (b was blue but the jar was tiny in frame), so its backdrop was recoloured with Kontext 01a1bf02-2c7a-7441-ab91-3fe30bdf20bd ('change only the background colour ... bold saturated cyan blue; keep the jar exactly the same') and upscaled 2x with Topaz High Fidelity V2 01a1bf02-fd0e-7712-9835-121b9305bd66",
+   "cutoutRequestId": "01a1bf05-6b1f-7522-9825-c06d9b624203",
+   "verdict": "used (variant a + Kontext backdrop + Topaz)",
+   "holesFilled": 18564,
+   "outlineRepaired": {
+    "restored": 1032,
+    "rows": 578,
+    "bodyFromRow": 786,
+    "of": 1201
+   }
+  },
+  "edibles": {
+   "bg": "#fb87a2",
+   "ink": "dark",
+   "inkContrast": 8.23,
+   "aspect": 0.5926,
+   "alt": "Illustration: a glass jar with a black lid, filled to the brim with sugar-coated fruit gummies",
+   "files": [
+    {
+     "file": "cat/edibles-cut-440.webp",
+     "w": 261,
+     "h": 440,
+     "bytes": 37256
+    },
+    {
+     "file": "cat/edibles-cut-880.webp",
+     "w": 521,
+     "h": 880,
+     "bytes": 129782
+    }
+   ],
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048), used as it is",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bf00-19bd-7280-a579-33c5c585cef2",
+   "seed": 424242,
+   "variant": "a of 2",
+   "product": "a clear glass jar filled to the brim with sugar-coated fruit gummy cubes (plain cubes: no bear, worm or cartoon shapes), closed with a black screw-top lid",
+   "colour": "bright pink",
+   "cutoutRequestId": "01a1bf02-7e08-7c63-b5cd-bfda6afaef12",
+   "verdict": "used (variant b had paler gummies and glare at the top)",
+   "holesFilled": 1929,
+   "outlineRepaired": {
+    "restored": 22596,
+    "rows": 596,
+    "bodyFromRow": 763,
+    "of": 1303
+   }
+  },
+  "more": {
+   "bg": "#f67419",
+   "ink": "dark",
+   "inkContrast": 6.73,
+   "aspect": 0.3945,
+   "alt": "Illustration: a cream-white drink can of a cannabis beverage, with a green leaf emblem",
+   "files": [
+    {
+     "file": "cat/more-cut-440.webp",
+     "w": 174,
+     "h": 440,
+     "bytes": 12782
+    },
+    {
+     "file": "cat/more-cut-880.webp",
+     "w": 347,
+     "h": 880,
+     "bytes": 49084
+    }
+   ],
+   "cutout": "fal-ai/birefnet/v2 (General Use (Heavy), 2048), used as it is",
+   "model": "fal-ai/flux-pro/v1.1-ultra",
+   "requestId": "01a1bf00-1b18-7f93-9485-4fa2b630fe93",
+   "seed": 424242,
+   "variant": "a of 2",
+   "product": "a slim aluminium drink can of a cannabis-infused sparkling beverage, matte cream-white with a simple abstract green leaf emblem and a brushed silver top; an original design (the owner's reference can was a style pointer only: 'DO NOT COPY this')",
+   "colour": "bright orange",
+   "cutoutRequestId": "01a1bf02-7f96-7863-8928-c248bc8e3a42",
+   "verdict": "used (variant b came back on grey)",
+   "holesFilled": 7086,
+   "outlineRepaired": {
+    "restored": 104,
+    "rows": 93,
+    "bodyFromRow": 515,
+    "of": 1484
+   }
+  }
+ }
+}

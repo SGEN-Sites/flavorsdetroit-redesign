@@ -537,6 +537,26 @@ def cinematic(im, seed, clarity=0.42, vignette=0.28, grain=0.0035):
     return Image.fromarray((np.clip(a, 0, 1) * 255 + 0.5).astype(np.uint8))
 
 
+def vivid(im, vib=0.7, sat=1.34, warm=0.05, cool=0.05, punch=0.14):
+    """The hero's colour grade (owner, 2026-11-09: "make colors of the background on the right side of
+    the hero more colorful and vivid"). Colour and tone only, no pixel moved, added or removed:
+    saturation up, most where colour is faint (vibrance: the grey walls and the evening sky gain colour,
+    the already-strong yellows and blue do not clip), warmer highlights and bluer shadows (the golden
+    light against the store's blue), and a gentle S-curve for depth. Brightness is kept per pixel, so the
+    black-and-white copy behind the words barely changes."""
+    W3 = np.array([0.2126, 0.7152, 0.0722], np.float32)
+    a = np.asarray(im, np.float32) / 255.0
+    lum = a @ W3
+    s = (a.max(-1) - a.min(-1)) / np.maximum(a.max(-1), 1e-4)
+    f = sat + vib * (1 - np.clip(s / 0.55, 0, 1)) ** 1.5
+    a = lum[..., None] + (a - lum[..., None]) * f[..., None]
+    a = a + (lum ** 2)[..., None] * np.array([warm, warm * 0.35, -warm], np.float32)
+    a = a + ((1 - lum) ** 2.5)[..., None] * np.array([-cool * 0.6, -cool * 0.1, cool], np.float32)
+    a = np.clip(a, 0, 1)
+    a = a + punch * (a * a * (3 - 2 * a) - a)
+    return Image.fromarray((np.clip(a, 0, 1) * 255 + 0.5).astype(np.uint8))
+
+
 # slot -> (master, crop box as fractions of the master, widths, quality, alt)
 SLOTS = {
     'storefront': dict(src='storefront', box=(0, 0, 1, 0.9167), widths=[800, 1200, 1600], q=78,
@@ -561,15 +581,16 @@ SLOTS = {
         alt='The merch corner at Flavors Detroit: a long dark counter edged with blue LED light, piled with '
             'folded T-shirts and hoodies, caps on mannequin heads and glass pieces on shelves, under hanging '
             'cage pendant lights and a blue wall with menu screens.'),
-    # the home hero (owner, 2026-11-09): the storefront relit to golden hour, see cmd_golden; no extra
-    # grade (the hero has its own shade). Always the whole frame, a wide shot (owner: "too zoomed in,
-    # should look like a wide shot"). 'hero' = the real frame, for phones (across the top of the hero);
+    # the home hero (owner, 2026-11-09): the storefront relit to golden hour, see cmd_golden, with the
+    # vivid() grade (the owner asked for more colourful, vivid colour on the hero's colour side).
+    # Always the whole frame, a wide shot (owner: "too zoomed in, should look like a wide shot").
+    # 'hero' = the real frame, for phones (across the top of the hero);
     # 'hero-wide' = the frame with the street extended to the left, for wider screens (behind the words)
-    'hero-wide': dict(src='golden-wide', box=(0, 0, 1, 1), widths=[1400, 2000, 2800, 3600], q=66,
+    'hero-wide': dict(src='golden-wide', grade='vivid', box=(0, 0, 1, 1), widths=[1400, 2000, 2800, 3600], q=66,
         alt='The Flavors Detroit store at golden hour at the right of a wide street view (the street to the left '
             'is an AI extension): the black cloud-shaped sign reading Flavors Detroit 5700 on its blue tower, the '
             'dark building with its black awning, a lit Open sign and a Cannabis feather flag.'),
-    'hero': dict(src='golden', box=(0, 0, 1, 1), widths=[800, 1280], q=70,
+    'hero': dict(src='golden', grade='vivid', box=(0, 0, 1, 1), widths=[800, 1280], q=70,
         alt='The Flavors Detroit store at golden hour: the black cloud-shaped sign reading Flavors Detroit 5700 '
             'on its blue corrugated tower, the dark building with its black awning reading Flavors Detroit and '
             'Recreational Cannabis, a lit Open sign and a Cannabis feather flag, under a warm evening sky.'),
@@ -589,10 +610,12 @@ EDITED = {'storefront': 'The car dashboard, phone mount and a wiper streak in th
           'golden': 'The storefront photo (car dashboard removed as above) relit to golden hour with AI (fal Nano '
                     'Banana Pro). The hours poster in the second door was put back from the photo, faint lettering '
                     'the relight left on a plain grey panel was smoothed out, and the far-left street signs it '
-                    'garbled are cropped out.',
+                    'garbled are cropped out. Colour graded for richer colour (more saturated, warmer highlights, '
+                    'bluer shadows).',
           'golden-wide': 'The golden-hour storefront (relit with AI, as for the hero) with the street to its left '
                          'extended by AI (fal FLUX.1 [pro] Fill outpainting) so the photo can run behind the '
-                         'headline; the real frame is kept pixel for pixel on the right.'}
+                         'headline; the real frame is kept on the right, nothing in it moved, added or removed. '
+                         'Colour graded for richer colour (more saturated, warmer highlights, bluer shadows).'}
 IPTC = {True: 'compositeWithTrainedAlgorithmicMedia', False: 'algorithmicallyEnhanced'}
 
 
@@ -619,8 +642,13 @@ def cmd_finish():
     masters['golden'] = Image.open(os.path.join(BASE, 'relight', 'golden-master.png')).convert('RGB')
     masters['golden-wide'] = Image.open(os.path.join(BASE, 'relight', 'golden-wide.png')).convert('RGB')
     items = {}
+    graded = {}
     for slot, spec in SLOTS.items():
         m = masters[spec['src']]
+        if spec.get('grade') == 'vivid':
+            if spec['src'] not in graded:
+                graded[spec['src']] = vivid(m)
+            m = graded[spec['src']]
         W, H = m.size
         x0, y0, x1, y1 = spec['box']
         crop = m.crop((round(x0 * W), round(y0 * H), round(x1 * W), round(y1 * H)))

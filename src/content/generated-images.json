@@ -53,66 +53,6 @@
     }
    ]
   },
-  "concentrates": {
-   "role": "tile",
-   "alt": "Illustration: amber cannabis concentrate shards and an open jar of budder on black glass",
-   "source": "assets/generated/raw/concentrates.jpg",
-   "model": "fal-ai/flux-pro/v1.1-ultra",
-   "requestId": "01a1bdc9-95c8-71e3-8701-cc61ae99aeb4",
-   "seed": 2776934909,
-   "prompt": "Macro still life: amber glass-like concentrate shards and an open glass jar of golden budder on black glass, blue rim light. Same style anchor.",
-   "grade": null,
-   "rawSize": [
-    2368,
-    1792
-   ],
-   "files": [
-    {
-     "file": "gen/concentrates-640.webp",
-     "w": 640,
-     "h": 484,
-     "bytes": 36696,
-     "variant": "landscape"
-    },
-    {
-     "file": "gen/concentrates-1100.webp",
-     "w": 1100,
-     "h": 832,
-     "bytes": 75874,
-     "variant": "landscape"
-    }
-   ]
-  },
-  "vapes-more": {
-   "role": "tile",
-   "alt": "Illustration: a blank vape cartridge, a dropper bottle and a can on navy glass over a blue LED line",
-   "source": "assets/generated/raw/vapes-more.jpg",
-   "model": "fal-ai/flux-pro/v1.1-ultra",
-   "requestId": "01a1bdc9-9765-7b60-a665-f96a3764d674",
-   "seed": 3918085174,
-   "prompt": "Blank vape cartridge, blank amber tincture dropper bottle and blank navy can on glossy navy glass with an LED line beneath. Same style anchor.",
-   "grade": null,
-   "rawSize": [
-    2368,
-    1792
-   ],
-   "files": [
-    {
-     "file": "gen/vapes-more-640.webp",
-     "w": 640,
-     "h": 484,
-     "bytes": 9236,
-     "variant": "landscape"
-    },
-    {
-     "file": "gen/vapes-more-1100.webp",
-     "w": 1100,
-     "h": 832,
-     "bytes": 17150,
-     "variant": "landscape"
-    }
-   ]
-  },
   "box-spotlight": {
    "role": "backdrop",
    "alt": "Illustration: two glass jars of top-shelf cannabis flower on black velvet under one spotlight",
