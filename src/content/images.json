@@ -1,0 +1,184 @@
+{
+ "logo-sign-240.webp": {
+  "w": 240,
+  "h": 194,
+  "bytes": 11456,
+  "source": "assets/brand/flavors-logo-original.png",
+  "alt": "Flavors Detroit"
+ },
+ "logo-sign-480.webp": {
+  "w": 480,
+  "h": 387,
+  "bytes": 21426,
+  "source": "assets/brand/flavors-logo-original.png",
+  "alt": "Flavors Detroit"
+ },
+ "logo-sign-960.webp": {
+  "w": 960,
+  "h": 774,
+  "bytes": 41384,
+  "source": "assets/brand/flavors-logo-original.png",
+  "alt": "Flavors Detroit"
+ },
+ "logo-sign-1400.webp": {
+  "w": 1400,
+  "h": 1129,
+  "bytes": 61148,
+  "source": "assets/brand/flavors-logo-original.png",
+  "alt": "Flavors Detroit"
+ },
+ "logo-sign-512.png": {
+  "w": 512,
+  "h": 413,
+  "bytes": 68506,
+  "source": "assets/brand/flavors-logo-original.png",
+  "alt": "Flavors Detroit"
+ },
+ "apple-touch-icon.png": {
+  "w": 180,
+  "h": 180,
+  "bytes": 23340,
+  "source": "assets/originals/db1c73_fc9e782e424145b1adf4303b88a77470_mv2.jpg",
+  "alt": ""
+ },
+ "favicon-192.png": {
+  "w": 192,
+  "h": 192,
+  "bytes": 25493,
+  "source": "assets/originals/db1c73_fc9e782e424145b1adf4303b88a77470_mv2.jpg",
+  "alt": ""
+ },
+ "favicon-32.png": {
+  "w": 32,
+  "h": 32,
+  "bytes": 2347,
+  "source": "assets/originals/db1c73_fc9e782e424145b1adf4303b88a77470_mv2.jpg",
+  "alt": ""
+ },
+ "favicon.ico": {
+  "w": 48,
+  "h": 48,
+  "bytes": 7435,
+  "source": "assets/originals/db1c73_fc9e782e424145b1adf4303b88a77470_mv2.jpg",
+  "alt": ""
+ },
+ "og-flavors-detroit.jpg": {
+  "w": 1200,
+  "h": 630,
+  "bytes": 50215,
+  "source": "assets/brand/flavors-logo-original.png + measured rainbow (facts/client-facts.json)",
+  "alt": "Flavors Detroit"
+ },
+ "cat-flower.webp": {
+  "w": 560,
+  "h": 365,
+  "bytes": 43290,
+  "source": "assets/originals/501c8b_5b00c7f3a6504c3e8a23d55e78e03cf0_mv2.png",
+  "alt": "A cannabis flower bud"
+ },
+ "cat-flower@2x.webp": {
+  "w": 896,
+  "h": 584,
+  "bytes": 77874,
+  "source": "assets/originals/501c8b_5b00c7f3a6504c3e8a23d55e78e03cf0_mv2.png",
+  "alt": "A cannabis flower bud"
+ },
+ "cat-concentrates.webp": {
+  "w": 560,
+  "h": 527,
+  "bytes": 21014,
+  "source": "assets/source/91fc54cf-db1c73_b8ceacfccc724bf39d34787165d0c5f4-mv2.png",
+  "alt": "An amber cannabis concentrate on black"
+ },
+ "cat-concentrates@2x.webp": {
+  "w": 896,
+  "h": 844,
+  "bytes": 40922,
+  "source": "assets/source/91fc54cf-db1c73_b8ceacfccc724bf39d34787165d0c5f4-mv2.png",
+  "alt": "An amber cannabis concentrate on black"
+ },
+ "cat-edibles.webp": {
+  "w": 560,
+  "h": 534,
+  "bytes": 49656,
+  "source": "assets/originals/501c8b_ff786b5c14554e21831ec01588ee994a_mv2.jpg",
+  "alt": "A pile of sour gummies"
+ },
+ "cat-edibles@2x.webp": {
+  "w": 896,
+  "h": 855,
+  "bytes": 91032,
+  "source": "assets/originals/501c8b_ff786b5c14554e21831ec01588ee994a_mv2.jpg",
+  "alt": "A pile of sour gummies"
+ },
+ "learn-flower.webp": {
+  "w": 640,
+  "h": 851,
+  "bytes": 197926,
+  "source": "assets/originals/501c8b_32c3f240dd1b4494a9710eefcab2a3fd_mv2.jpg",
+  "alt": "A purple and orange cannabis bud on black"
+ },
+ "learn-flower@2x.webp": {
+  "w": 1024,
+  "h": 1361,
+  "bytes": 377904,
+  "source": "assets/originals/501c8b_32c3f240dd1b4494a9710eefcab2a3fd_mv2.jpg",
+  "alt": "A purple and orange cannabis bud on black"
+ },
+ "learn-concentrate-glass.webp": {
+  "w": 640,
+  "h": 842,
+  "bytes": 44016,
+  "source": "assets/source/23d81c20-db1c73_7b9d6157a6014773acb51c17182242df-mv2.jpg",
+  "alt": "Glassy amber cannabis concentrate on white"
+ },
+ "learn-concentrate-glass@2x.webp": {
+  "w": 1024,
+  "h": 1347,
+  "bytes": 75376,
+  "source": "assets/source/23d81c20-db1c73_7b9d6157a6014773acb51c17182242df-mv2.jpg",
+  "alt": "Glassy amber cannabis concentrate on white"
+ },
+ "learn-concentrate-jar.webp": {
+  "w": 640,
+  "h": 654,
+  "bytes": 23708,
+  "source": "assets/source/c0184b76-db1c73_1e5dcb88a436450386bbc115e44f2d03-mv2.jpg",
+  "alt": "A golden cannabis concentrate in a glass jar"
+ },
+ "learn-concentrate-jar@2x.webp": {
+  "w": 1024,
+  "h": 1046,
+  "bytes": 40264,
+  "source": "assets/source/c0184b76-db1c73_1e5dcb88a436450386bbc115e44f2d03-mv2.jpg",
+  "alt": "A golden cannabis concentrate in a glass jar"
+ },
+ "learn-kief.webp": {
+  "w": 640,
+  "h": 426,
+  "bytes": 20390,
+  "source": "assets/originals/501c8b_87670f69e1ae4d5595b6d14df184deab_mv2.jpg",
+  "alt": "A pile of kief on a dark surface"
+ },
+ "learn-kief@2x.webp": {
+  "w": 1024,
+  "h": 682,
+  "bytes": 40906,
+  "source": "assets/originals/501c8b_87670f69e1ae4d5595b6d14df184deab_mv2.jpg",
+  "alt": "A pile of kief on a dark surface"
+ },
+ "learn-edible.webp": {
+  "w": 640,
+  "h": 811,
+  "bytes": 60754,
+  "source": "assets/source/adac940b-db1c73_5a89d2d8e77041cd97ba6a96c7441324-mv2.jpg",
+  "alt": "A candy-studded cookie"
+ },
+ "learn-edible@2x.webp": {
+  "w": 1024,
+  "h": 1297,
+  "bytes": 113004,
+  "source": "assets/source/adac940b-db1c73_5a89d2d8e77041cd97ba6a96c7441324-mv2.jpg",
+  "alt": "A candy-studded cookie"
+ }
+}

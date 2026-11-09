@@ -1,0 +1,1101 @@
+{
+  "schema": "site-reforge/failures@1",
+  "items": [
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-alert-autumn-edition",
+      "reason": "throttled: HTTP 429 after 2 backoff(s)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.420Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/bogo-diamond-donuts-live-resin-eclairs",
+      "reason": "throttled: HTTP 429 after 2 backoff(s)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/mac-is-back",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/4-20-is-here",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit-2",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/independence-day-2025",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/summer-time-moonrocks-and-more",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/memorial-day-2025",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/labor-day-2025",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-fire-1",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-fire-shakeathon",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/super-bowl-sunday-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/saturday-blowout",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/important-information-updated-5-8",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/the-first-of-june",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/the-new-and-improved-connoisseur-carts-have-arrived",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/hello-summer",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/tgif-gelato-weekend",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/ready-for-the-weekend",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/in-store-deals",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-alert-saturday-in-december",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/need-some-entertainment-the-royal-rumble-is-tonight",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/t-g-i-f-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.505Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/black-saturday-flame-sale",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/the-3rd-annual-4-20-spectacular-is-here",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-mothers-day-2025",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-cinco-de-mayo",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/we-re-back",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-4th-of-july",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-holidays-to-all-from-your-friends-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-fathers-day-from-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/labor-day-weekend-flower-drop",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/snow-day-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-cinco-de-mayo-5-5-2021",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-happy-hour-special-4pm-9pm",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/wrestlemania-weekend-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/the-last-day-of-march-2021",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/angels-night-specials-new-strains-and-extracts",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fall-to-frost-specials-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/summer-cannabis-deals-detroit-2026",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/t-g-i-f",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-weekend-edition",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/halloween-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-fire-weekend-edition",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/holiday-private-reserve-slabs",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/still-christmas-shopping-we-can-help",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/new-products-from-lit-labs-now-available-at-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/starling-1000mg-cbd-darts",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/valentine-s-day-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-the-13th-in-december-sale",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-thanksgiving-yes-we-re-open",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-alert-weekend-edition",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/2020-flavors-detroit-new-arrivals",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/lazy-sunday-at-flavors-detroit-new-products-available",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-bubble-gum",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/happy-halloween-from-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/new-strain-alert-new-concentrates-new-edibles",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/february-2020-extra-special-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit-massive-new-flower-drop",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/moonrock-madness",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/monday-morning-flower-drop",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/manage-your-blog-from-your-live-site",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/new-product-alert-flavors-extracts-thriller-4-crumble",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/fresh-drop-alert-sunday-morning-edition",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/new-strain-alert-christmas-edition",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/black-friday-specials",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/friday-the-13th-at-flavors-detroit",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/featured-flower-purple-alien",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/stocking-stuffers-treats-for-the-grown-ups-1",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/post/march-2020-extract-blowout",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/sinage",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/terms-of-service",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/profile/admin/profile?disableScrollToTop=true",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/profile/detroitdesignhouse81090/profile?disableScrollToTop=true",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/profile/ddhsocial147168/profile?disableScrollToTop=true",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.506Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/profile/flavorsdetroit56947/profile?disableScrollToTop=true",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.507Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/daily-deals",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.507Z",
+      "accepted": true,
+      "acceptedWhy": "Superseded: the resumed crawl reached this URL and the live site answered 404 (recorded in its own status 404 entry)."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/1",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.507Z",
+      "accepted": true,
+      "acceptedWhy": "Superseded: the resumed crawl reached this URL and the live site answered 404 (recorded in its own status 404 entry)."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/15",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.507Z",
+      "accepted": true,
+      "acceptedWhy": "Fetched with HTTP 200 on the resumed crawl (2026-11-08 23:00–23:41Z, 1 connection, 25 s apart); see audit/site-inventory.json",
+      "resolvedAt": "2026-11-09T00:04:21.421Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/4",
+      "reason": "stopped: www.flavorsdetroit.com refused this run (throttled)",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T22:40:51.507Z",
+      "accepted": true,
+      "acceptedWhy": "Superseded: the resumed crawl reached this URL and the live site answered 404 (recorded in its own status 404 entry)."
+    },
+    {
+      "stage": "extract:images",
+      "target": "audit/image-inventory.json",
+      "reason": "664 entries were srcset fragments (e.g. https://www.flavorsdetroit.com/h_282), not images; moved to audit/image-inventory.pruned.json",
+      "accepted": true,
+      "acceptedWhy": "parse artefact, nothing to fetch; fetching them would hit a host that returned HTTP 429",
+      "at": "2026-11-08T22:46:02.641Z"
+    },
+    {
+      "stage": "extract:images",
+      "target": "audit/image-inventory.json",
+      "reason": "236 entries were srcset fragments (e.g. https://www.flavorsdetroit.com/h_282), not images; moved to audit/image-inventory.pruned.json",
+      "accepted": true,
+      "acceptedWhy": "parse artefact, nothing to fetch; fetching them would hit a host that returned HTTP 429",
+      "at": "2026-11-08T22:46:24.903Z"
+    },
+    {
+      "stage": "extract:images",
+      "target": "audit/image-inventory.json",
+      "reason": "30 entries were srcset fragments (e.g. https://www.flavorsdetroit.com/h_282), not images; moved to audit/image-inventory.pruned.json",
+      "accepted": true,
+      "acceptedWhy": "parse artefact, nothing to fetch; fetching them would hit a host that returned HTTP 429",
+      "at": "2026-11-08T22:46:40.966Z"
+    },
+    {
+      "stage": "extract:images",
+      "target": "audit/image-inventory.json",
+      "reason": "1027 entries were srcset fragments, not images (transform URL truncated at its first comma (CDN answers 403)); moved to audit/image-inventory.pruned.json; 1027 assets:image failure(s) for them closed",
+      "accepted": true,
+      "acceptedWhy": "parse artefacts: nothing real to fetch; the complete URL for every media id is in the inventory",
+      "at": "2026-11-08T22:57:39.438Z"
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/daily-deals",
+      "reason": "status 404",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T23:37:53.190Z",
+      "accepted": true,
+      "acceptedWhy": "The live site itself answers 404 at this URL (a dead link in its own sitemap or navigation). /daily-deals is restored in the rebuild; the dead hashtag and /flower-menu URLs are listed in docs/PITCH-NOTES.md."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/1",
+      "reason": "status 404",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T23:38:18.399Z",
+      "accepted": true,
+      "acceptedWhy": "The live site itself answers 404 at this URL (a dead link in its own sitemap or navigation). /daily-deals is restored in the rebuild; the dead hashtag and /flower-menu URLs are listed in docs/PITCH-NOTES.md."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/4",
+      "reason": "status 404",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T23:39:10.692Z",
+      "accepted": true,
+      "acceptedWhy": "The live site itself answers 404 at this URL (a dead link in its own sitemap or navigation). /daily-deals is restored in the rebuild; the dead hashtag and /flower-menu URLs are listed in docs/PITCH-NOTES.md."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/blog/hashtags/5",
+      "reason": "status 404",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T23:39:35.127Z",
+      "accepted": true,
+      "acceptedWhy": "The live site itself answers 404 at this URL (a dead link in its own sitemap or navigation). /daily-deals is restored in the rebuild; the dead hashtag and /flower-menu URLs are listed in docs/PITCH-NOTES.md."
+    },
+    {
+      "stage": "crawl:page",
+      "target": "https://www.flavorsdetroit.com/flower-menu",
+      "reason": "status 404",
+      "extra": {
+        "chain": []
+      },
+      "at": "2026-11-08T23:39:58.461Z",
+      "accepted": true,
+      "acceptedWhy": "The live site itself answers 404 at this URL (a dead link in its own sitemap or navigation). /daily-deals is restored in the rebuild; the dead hashtag and /flower-menu URLs are listed in docs/PITCH-NOTES.md."
+    },
+    {
+      "stage": "extract:images",
+      "target": "audit/image-inventory.json",
+      "reason": "3287 entries were srcset fragments, not images (transform URL truncated at its first comma (CDN answers 403); transform token resolved against the page origin; same-origin path without an image extension; media id resolved against the page path); moved to audit/image-inventory.pruned.json",
+      "accepted": true,
+      "acceptedWhy": "parse artefacts: nothing real to fetch; the complete URL for every media id is in the inventory",
+      "at": "2026-11-08T23:42:51.431Z"
+    },
+    {
+      "stage": "extract:contact",
+      "target": "audit/content-inventory.json",
+      "reason": "12 Sentry error-reporting addresses from Wix scripts were captured as contact emails; moved to audit/contact-cleaned.json",
+      "accepted": true,
+      "acceptedWhy": "platform runtime, not client contact details",
+      "at": "2026-11-08T23:50:48.370Z"
+    }
+  ]
+}

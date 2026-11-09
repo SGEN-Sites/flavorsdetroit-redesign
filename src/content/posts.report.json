@@ -1,0 +1,1703 @@
+{
+  "schema": "flavors/posts-report@1",
+  "generated": "2026-11-08T23:53:04.399Z",
+  "script": "tools/extract-posts.mjs",
+  "container": "section[data-hook=\"post-description\"] > div[data-id=\"content-viewer\"]; one block per div[data-breakout] wrapper, typed by the following div[data-hook=\"rcv-blockN\"][type] marker (header, post-footer share/stats, Recent Posts and comments are outside it)",
+  "summary": {
+    "postFilesFound": 127,
+    "postsProcessed": 127,
+    "failed": 0,
+    "unmappedFiles": 0,
+    "missingDates": 0,
+    "correctionsByKind": {
+      "case": 86,
+      "address": 10,
+      "portal": 183
+    },
+    "postsWithCorrections": {
+      "case": 53,
+      "address": 10,
+      "portal": 95
+    },
+    "caseUnsureWords": 4,
+    "recall": {
+      "floor": 0.95,
+      "min": 1,
+      "median": 1,
+      "postsUnderFloor": 0,
+      "fromContentInventory": 127,
+      "fromRawTagStrip": 0
+    },
+    "residualOldValues": 0
+  },
+  "unmappedFiles": [],
+  "failed": [],
+  "missingDates": [],
+  "dateLabelNotes": [
+    {
+      "slug": "bogo-diamond-donuts-live-resin-eclairs",
+      "liveLabel": "May 28, 2025",
+      "datePublished": "2025-05-29T04:00:00.000Z",
+      "inDetroit": "May 29, 2025",
+      "used": "May 28, 2025"
+    }
+  ],
+  "caseUnsure": [
+    {
+      "word": "FLAVORS",
+      "reason": "ambiguous (lower x6, capitalised x144)",
+      "count": 5,
+      "posts": [
+        "detroit-labor-day-cannabis-dealsdetroit",
+        "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces"
+      ],
+      "example": "detroit-labor-day-cannabis-dealsdetroit blocks[16]: $1 PREROLLS. $8.50 SWISHER WOOD TIPS. 1.5G. 6 FLAVORS. BIG VIBES."
+    },
+    {
+      "word": "MAC",
+      "reason": "no-evidence",
+      "count": 2,
+      "posts": [
+        "mac-is-back"
+      ],
+      "example": "mac-is-back title: MAC IS BACK!"
+    },
+    {
+      "word": "SHAKEATHON",
+      "reason": "no-evidence",
+      "count": 2,
+      "posts": [
+        "friday-fire-shakeathon"
+      ],
+      "example": "friday-fire-shakeathon title: FRIDAY FIRE SHAKEATHON"
+    },
+    {
+      "word": "VIP",
+      "reason": "no-evidence",
+      "count": 1,
+      "posts": [
+        "2020-flavors-detroit-new-arrivals"
+      ],
+      "example": "2020-flavors-detroit-new-arrivals blocks[4]: FLAVORS DETROIT DAILY VIP SPECIALS"
+    }
+  ],
+  "underFloor": [],
+  "recall": [
+    {
+      "slug": "12-days-of-flavors-shatterday-edition",
+      "recall": 1,
+      "expectedWords": 100,
+      "matched": 100,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "2020-flavors-detroit-new-arrivals",
+      "recall": 1,
+      "expectedWords": 174,
+      "matched": 174,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "3-day-birthday-blowout",
+      "recall": 1,
+      "expectedWords": 106,
+      "matched": 106,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early",
+      "recall": 1,
+      "expectedWords": 20,
+      "matched": 20,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "4-20-is-here",
+      "recall": 1,
+      "expectedWords": 39,
+      "matched": 39,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "4-20-sneak-peek",
+      "recall": 1,
+      "expectedWords": 95,
+      "matched": 95,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "420-detroit-2026-flavors-detroit-event",
+      "recall": 1,
+      "expectedWords": 236,
+      "matched": 236,
+      "joinedFromSplits": 4,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "7-10-is-here",
+      "recall": 1,
+      "expectedWords": 132,
+      "matched": 132,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "all-day-happy-hour-monday",
+      "recall": 1,
+      "expectedWords": 58,
+      "matched": 58,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "angels-night-specials-new-strains-and-extracts",
+      "recall": 1,
+      "expectedWords": 6,
+      "matched": 6,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "april-1st-opening-day-specials",
+      "recall": 1,
+      "expectedWords": 57,
+      "matched": 57,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "april-1st-specials",
+      "recall": 1,
+      "expectedWords": 214,
+      "matched": 214,
+      "joinedFromSplits": 4,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "are-you-ready-for-the-weekend",
+      "recall": 1,
+      "expectedWords": 62,
+      "matched": 62,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "back-to-school",
+      "recall": 1,
+      "expectedWords": 36,
+      "matched": 36,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "black-friday-specials",
+      "recall": 1,
+      "expectedWords": 84,
+      "matched": 84,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "black-friday-specials-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 85,
+      "matched": 85,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "black-saturday-flame-sale",
+      "recall": 1,
+      "expectedWords": 0,
+      "matched": 0,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "bogo-diamond-donuts-live-resin-eclairs",
+      "recall": 1,
+      "expectedWords": 180,
+      "matched": 180,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "crumble-budder-hcfse-and-more",
+      "recall": 1,
+      "expectedWords": 68,
+      "matched": 68,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "cyber-monday-specials",
+      "recall": 1,
+      "expectedWords": 100,
+      "matched": 100,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "detroit-labor-day-cannabis-dealsdetroit",
+      "recall": 1,
+      "expectedWords": 685,
+      "matched": 685,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "easter-candy-for-the-grown-ups",
+      "recall": 1,
+      "expectedWords": 68,
+      "matched": 68,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "easter-candy-for-the-grown-ups-1",
+      "recall": 1,
+      "expectedWords": 26,
+      "matched": 26,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "extended-weekend-epic-deal",
+      "recall": 1,
+      "expectedWords": 28,
+      "matched": 28,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fall-to-frost-specials-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 75,
+      "matched": 75,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "featured-flower-purple-alien",
+      "recall": 1,
+      "expectedWords": 103,
+      "matched": 103,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "february-2020-extra-special-specials",
+      "recall": 1,
+      "expectedWords": 68,
+      "matched": 68,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "flavors-mid-week-flower-drop",
+      "recall": 1,
+      "expectedWords": 46,
+      "matched": 46,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-alert-autumn-edition",
+      "recall": 1,
+      "expectedWords": 41,
+      "matched": 41,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-alert-saturday-in-december",
+      "recall": 1,
+      "expectedWords": 82,
+      "matched": 82,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-alert-sunday-morning-edition",
+      "recall": 1,
+      "expectedWords": 74,
+      "matched": 74,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-alert-weekend-edition",
+      "recall": 1,
+      "expectedWords": 60,
+      "matched": 60,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-bubble-gum",
+      "recall": 1,
+      "expectedWords": 86,
+      "matched": 86,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-friday",
+      "recall": 1,
+      "expectedWords": 50,
+      "matched": 50,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-new-strains",
+      "recall": 1,
+      "expectedWords": 99,
+      "matched": 99,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-tuesday",
+      "recall": 1,
+      "expectedWords": 27,
+      "matched": 27,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "fresh-drop-weekend-edition",
+      "recall": 1,
+      "expectedWords": 72,
+      "matched": 72,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire",
+      "recall": 1,
+      "expectedWords": 20,
+      "matched": 20,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-1",
+      "recall": 1,
+      "expectedWords": 70,
+      "matched": 70,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-2",
+      "recall": 1,
+      "expectedWords": 23,
+      "matched": 23,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-2021",
+      "recall": 1,
+      "expectedWords": 67,
+      "matched": 67,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 85,
+      "matched": 85,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-major-drop",
+      "recall": 1,
+      "expectedWords": 82,
+      "matched": 82,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-shakeathon",
+      "recall": 1,
+      "expectedWords": 184,
+      "matched": 184,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-fire-weekend-edition",
+      "recall": 1,
+      "expectedWords": 58,
+      "matched": 58,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-happy-hour-special-4pm-9pm",
+      "recall": 1,
+      "expectedWords": 6,
+      "matched": 6,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-the-13th-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 31,
+      "matched": 31,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-the-13th-in-december-sale",
+      "recall": 1,
+      "expectedWords": 105,
+      "matched": 105,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "friday-the-13th-in-november",
+      "recall": 1,
+      "expectedWords": 80,
+      "matched": 80,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+      "recall": 1,
+      "expectedWords": 733,
+      "matched": 733,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "halloween-specials",
+      "recall": 1,
+      "expectedWords": 52,
+      "matched": 52,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-4th-of-july",
+      "recall": 1,
+      "expectedWords": 50,
+      "matched": 50,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-cinco-de-mayo",
+      "recall": 1,
+      "expectedWords": 79,
+      "matched": 79,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-cinco-de-mayo-5-5-2021",
+      "recall": 1,
+      "expectedWords": 6,
+      "matched": 6,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-fathers-day-from-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 25,
+      "matched": 25,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-halloween-from-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 84,
+      "matched": 84,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-halloween-from-your-friends-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 35,
+      "matched": 35,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-holidays-to-all-from-your-friends-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 14,
+      "matched": 14,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-hour-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 38,
+      "matched": 38,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-memorial-day-updated-hours",
+      "recall": 1,
+      "expectedWords": 39,
+      "matched": 39,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-mlk-day-monday-specials",
+      "recall": 1,
+      "expectedWords": 6,
+      "matched": 6,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-mother-s-day-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 13,
+      "matched": 13,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-mothers-day-2025",
+      "recall": 1,
+      "expectedWords": 76,
+      "matched": 76,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-thanksgiving-yes-we-re-open",
+      "recall": 1,
+      "expectedWords": 73,
+      "matched": 73,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "happy-valentine-s-day",
+      "recall": 1,
+      "expectedWords": 74,
+      "matched": 74,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "hello-summer",
+      "recall": 1,
+      "expectedWords": 79,
+      "matched": 79,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "hello-summer-1",
+      "recall": 1,
+      "expectedWords": 37,
+      "matched": 37,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "holiday-hours-and-last-minute-gift-ideas",
+      "recall": 1,
+      "expectedWords": 84,
+      "matched": 84,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "holiday-private-reserve-slabs",
+      "recall": 1,
+      "expectedWords": 64,
+      "matched": 64,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "important-information-updated-5-8",
+      "recall": 1,
+      "expectedWords": 39,
+      "matched": 39,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "in-store-deals",
+      "recall": 1,
+      "expectedWords": 48,
+      "matched": 48,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "independence-day-2025",
+      "recall": 1,
+      "expectedWords": 80,
+      "matched": 80,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "it-s-shatterday-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 123,
+      "matched": 123,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "it-s-tarantula-time",
+      "recall": 1,
+      "expectedWords": 105,
+      "matched": 105,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "it-s-the-1st-of-the-month",
+      "recall": 1,
+      "expectedWords": 96,
+      "matched": 96,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "keeping-safe-and-healthy",
+      "recall": 1,
+      "expectedWords": 93,
+      "matched": 93,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "labor-day-2025",
+      "recall": 1,
+      "expectedWords": 29,
+      "matched": 29,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "labor-day-weekend-flower-drop",
+      "recall": 1,
+      "expectedWords": 90,
+      "matched": 90,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "lazy-sunday-at-flavors-detroit-new-products-available",
+      "recall": 1,
+      "expectedWords": 78,
+      "matched": 78,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "mac-is-back",
+      "recall": 1,
+      "expectedWords": 66,
+      "matched": 66,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "manage-your-blog-from-your-live-site",
+      "recall": 1,
+      "expectedWords": 68,
+      "matched": 68,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "march-2020-extract-blowout",
+      "recall": 1,
+      "expectedWords": 55,
+      "matched": 55,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "massive-shake-a-thon-sale-and-more",
+      "recall": 1,
+      "expectedWords": 81,
+      "matched": 81,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "memorial-day-2025",
+      "recall": 1,
+      "expectedWords": 13,
+      "matched": 13,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "memorial-day-weekend-moonrock-drop",
+      "recall": 1,
+      "expectedWords": 39,
+      "matched": 39,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "monday-morning-flower-drop",
+      "recall": 1,
+      "expectedWords": 49,
+      "matched": 49,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "moonrock-madness",
+      "recall": 1,
+      "expectedWords": 57,
+      "matched": 57,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "need-some-entertainment-the-royal-rumble-is-tonight",
+      "recall": 1,
+      "expectedWords": 75,
+      "matched": 75,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "new-product-alert-flavors-extracts-thriller-4-crumble",
+      "recall": 1,
+      "expectedWords": 31,
+      "matched": 31,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "new-products-from-lit-labs-now-available-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 51,
+      "matched": 51,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "new-strain-alert-christmas-edition",
+      "recall": 1,
+      "expectedWords": 96,
+      "matched": 96,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "new-strain-alert-new-concentrates-new-edibles",
+      "recall": 1,
+      "expectedWords": 66,
+      "matched": 66,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "october-is-here",
+      "recall": 1,
+      "expectedWords": 98,
+      "matched": 98,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "october-specials-strain-of-the-month-honorable-mentions",
+      "recall": 1,
+      "expectedWords": 194,
+      "matched": 194,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "october-weekend-specials",
+      "recall": 1,
+      "expectedWords": 86,
+      "matched": 86,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "pick-8-20-1g-shatter-s-only-100-out-the-door",
+      "recall": 1,
+      "expectedWords": 15,
+      "matched": 15,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "prices-slashed-on-over-30-strains-new-fire",
+      "recall": 1,
+      "expectedWords": 13,
+      "matched": 13,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "ready-for-the-weekend",
+      "recall": 1,
+      "expectedWords": 102,
+      "matched": 102,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "saturday-blowout",
+      "recall": 1,
+      "expectedWords": 61,
+      "matched": 61,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "snow-day-specials",
+      "recall": 1,
+      "expectedWords": 99,
+      "matched": 99,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "starling-1000mg-cbd-darts",
+      "recall": 1,
+      "expectedWords": 44,
+      "matched": 44,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "still-christmas-shopping-we-can-help",
+      "recall": 1,
+      "expectedWords": 85,
+      "matched": 85,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "stocking-stuffers-treats-for-the-grown-ups-1",
+      "recall": 1,
+      "expectedWords": 58,
+      "matched": 58,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "summer-cannabis-deals-detroit-2026",
+      "recall": 1,
+      "expectedWords": 944,
+      "matched": 944,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "summer-time-moonrocks-and-more",
+      "recall": 1,
+      "expectedWords": 64,
+      "matched": 64,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "super-bowl-sunday-specials",
+      "recall": 1,
+      "expectedWords": 113,
+      "matched": 113,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "t-g-i-f",
+      "recall": 1,
+      "expectedWords": 82,
+      "matched": 82,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews",
+      "recall": 1,
+      "expectedWords": 8,
+      "matched": 8,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "t-g-i-f-specials",
+      "recall": 1,
+      "expectedWords": 102,
+      "matched": 102,
+      "joinedFromSplits": 2,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-at-flavors-detroit",
+      "recall": 1,
+      "expectedWords": 83,
+      "matched": 83,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-at-flavors-detroit-2",
+      "recall": 1,
+      "expectedWords": 72,
+      "matched": 72,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-at-flavors-detroit-massive-new-flower-drop",
+      "recall": 1,
+      "expectedWords": 60,
+      "matched": 60,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-end-of-the-month-specials",
+      "recall": 1,
+      "expectedWords": 90,
+      "matched": 90,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-february-snow",
+      "recall": 1,
+      "expectedWords": 102,
+      "matched": 102,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-gelato-weekend",
+      "recall": 1,
+      "expectedWords": 62,
+      "matched": 62,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-stock-up-and-save",
+      "recall": 1,
+      "expectedWords": 57,
+      "matched": 57,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "tgif-valentine-weekend",
+      "recall": 1,
+      "expectedWords": 98,
+      "matched": 98,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "thanksgiving-a-day-early",
+      "recall": 1,
+      "expectedWords": 57,
+      "matched": 57,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "the-3rd-annual-4-20-spectacular-is-here",
+      "recall": 1,
+      "expectedWords": 135,
+      "matched": 135,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "the-first-of-june",
+      "recall": 1,
+      "expectedWords": 45,
+      "matched": 45,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "the-last-day-of-march-2021",
+      "recall": 1,
+      "expectedWords": 97,
+      "matched": 97,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "the-new-and-improved-connoisseur-carts-have-arrived",
+      "recall": 1,
+      "expectedWords": 72,
+      "matched": 72,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "turn-up-the-weekend",
+      "recall": 1,
+      "expectedWords": 88,
+      "matched": 88,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "valentine-s-day-specials",
+      "recall": 1,
+      "expectedWords": 100,
+      "matched": 100,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "we-re-back",
+      "recall": 1,
+      "expectedWords": 58,
+      "matched": 58,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "wrestlemania-2-day-special",
+      "recall": 1,
+      "expectedWords": 24,
+      "matched": 24,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    },
+    {
+      "slug": "wrestlemania-weekend-specials",
+      "recall": 1,
+      "expectedWords": 249,
+      "matched": 249,
+      "joinedFromSplits": 0,
+      "missing": [],
+      "extraWords": 0,
+      "source": "content-inventory"
+    }
+  ],
+  "blogIndexCheck": {
+    "listed": 40,
+    "matched": 40,
+    "notCaptured": [],
+    "mismatches": []
+  },
+  "structure": {
+    "headingDemotions": {
+      "count": 13,
+      "posts": {
+        "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces": 3,
+        "summer-cannabis-deals-detroit-2026": 10
+      }
+    },
+    "markerMismatch": [
+      {
+        "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+        "marker": "empty-line",
+        "detected": "h",
+        "text": ""
+      },
+      {
+        "slug": "in-store-deals",
+        "marker": "layout",
+        "detected": "empty",
+        "text": ""
+      },
+      {
+        "slug": "october-specials-strain-of-the-month-honorable-mentions",
+        "marker": "empty-line",
+        "detected": "h",
+        "text": ""
+      }
+    ],
+    "otherBlocks": [],
+    "multiBlockWrappers": [],
+    "tablePosts": [
+      "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces"
+    ],
+    "buttons": [
+      {
+        "slug": "bogo-diamond-donuts-live-resin-eclairs",
+        "text": "SHOP FLAVORS"
+      },
+      {
+        "slug": "fall-to-frost-specials-flavors-detroit",
+        "text": "Visit our WEBSITE"
+      },
+      {
+        "slug": "happy-halloween-from-your-friends-flavors-detroit",
+        "text": "Order Online"
+      },
+      {
+        "slug": "happy-mothers-day-2025",
+        "text": "Browse or Order Here!"
+      },
+      {
+        "slug": "in-store-deals",
+        "text": "In Store Deals"
+      },
+      {
+        "slug": "independence-day-2025",
+        "text": "Fourth of July Deals"
+      },
+      {
+        "slug": "memorial-day-2025",
+        "text": "Memorial Day Dealz"
+      },
+      {
+        "slug": "october-specials-strain-of-the-month-honorable-mentions",
+        "text": "Live Menu"
+      }
+    ],
+    "videos": 21,
+    "hashtagLinks": 17,
+    "bodyImagesNotInImageInventory": {
+      "count": 317,
+      "posts": {
+        "2020-flavors-detroit-new-arrivals": 8,
+        "4-20-is-here": 2,
+        "angels-night-specials-new-strains-and-extracts": 1,
+        "black-friday-specials": 11,
+        "black-saturday-flame-sale": 1,
+        "bogo-diamond-donuts-live-resin-eclairs": 1,
+        "fall-to-frost-specials-flavors-detroit": 1,
+        "featured-flower-purple-alien": 1,
+        "february-2020-extra-special-specials": 10,
+        "fresh-drop-alert-autumn-edition": 3,
+        "fresh-drop-alert-saturday-in-december": 5,
+        "fresh-drop-alert-sunday-morning-edition": 2,
+        "fresh-drop-alert-weekend-edition": 7,
+        "fresh-drop-bubble-gum": 1,
+        "fresh-drop-weekend-edition": 6,
+        "friday-fire-1": 10,
+        "friday-fire-shakeathon": 1,
+        "friday-fire-weekend-edition": 9,
+        "friday-happy-hour-special-4pm-9pm": 1,
+        "friday-the-13th-at-flavors-detroit": 8,
+        "friday-the-13th-in-december-sale": 9,
+        "halloween-specials": 7,
+        "happy-4th-of-july": 7,
+        "happy-cinco-de-mayo-5-5-2021": 1,
+        "happy-fathers-day-from-flavors-detroit": 8,
+        "happy-halloween-from-flavors-detroit": 6,
+        "happy-holidays-to-all-from-your-friends-flavors-detroit": 1,
+        "happy-mothers-day-2025": 1,
+        "happy-thanksgiving-yes-we-re-open": 9,
+        "hello-summer": 1,
+        "holiday-private-reserve-slabs": 9,
+        "important-information-updated-5-8": 1,
+        "independence-day-2025": 1,
+        "labor-day-weekend-flower-drop": 10,
+        "lazy-sunday-at-flavors-detroit-new-products-available": 8,
+        "mac-is-back": 3,
+        "manage-your-blog-from-your-live-site": 4,
+        "march-2020-extract-blowout": 9,
+        "memorial-day-2025": 1,
+        "monday-morning-flower-drop": 7,
+        "moonrock-madness": 1,
+        "need-some-entertainment-the-royal-rumble-is-tonight": 1,
+        "new-product-alert-flavors-extracts-thriller-4-crumble": 3,
+        "new-products-from-lit-labs-now-available-at-flavors-detroit": 4,
+        "new-strain-alert-christmas-edition": 8,
+        "new-strain-alert-new-concentrates-new-edibles": 10,
+        "ready-for-the-weekend": 3,
+        "saturday-blowout": 5,
+        "snow-day-specials": 2,
+        "starling-1000mg-cbd-darts": 1,
+        "still-christmas-shopping-we-can-help": 1,
+        "stocking-stuffers-treats-for-the-grown-ups-1": 1,
+        "summer-cannabis-deals-detroit-2026": 13,
+        "summer-time-moonrocks-and-more": 7,
+        "super-bowl-sunday-specials": 3,
+        "t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews": 1,
+        "t-g-i-f-specials": 8,
+        "t-g-i-f": 3,
+        "tgif-at-flavors-detroit-2": 8,
+        "tgif-at-flavors-detroit-massive-new-flower-drop": 7,
+        "tgif-at-flavors-detroit": 10,
+        "tgif-gelato-weekend": 1,
+        "the-first-of-june": 3,
+        "the-last-day-of-march-2021": 5,
+        "the-new-and-improved-connoisseur-carts-have-arrived": 1,
+        "valentine-s-day-specials": 7,
+        "wrestlemania-weekend-specials": 8
+      }
+    },
+    "localFileIsLowResPlaceholder": [
+      {
+        "slug": "detroit-labor-day-cannabis-dealsdetroit",
+        "mediaId": "db1c73_a9b1ab948d3e4c9692b26da76bdf5c17~mv2.png",
+        "localFile": "assets/source/b2c316c6-db1c73_a9b1ab948d3e4c9692b26da76bdf5c17-mv2.png",
+        "local": "49x20",
+        "upload": "1983x793"
+      },
+      {
+        "slug": "detroit-labor-day-cannabis-dealsdetroit",
+        "mediaId": "db1c73_ccfde03f051f43519395927a3d9b27fe~mv2.png",
+        "localFile": "assets/source/15748bff-db1c73_ccfde03f051f43519395927a3d9b27fe-mv2.png",
+        "local": "49x20",
+        "upload": "1945x809"
+      },
+      {
+        "slug": "detroit-labor-day-cannabis-dealsdetroit",
+        "mediaId": "db1c73_4fecd9e3793e44d1b51685225639f0f0~mv2.png",
+        "localFile": "assets/source/8f8ac3ad-db1c73_4fecd9e3793e44d1b51685225639f0f0-mv2.png",
+        "local": "49x25",
+        "upload": "1774x887"
+      },
+      {
+        "slug": "detroit-labor-day-cannabis-dealsdetroit",
+        "mediaId": "db1c73_345118fe32724f94ba4e3f02cf8bfdaa~mv2.png",
+        "localFile": "assets/source/236a32ff-db1c73_345118fe32724f94ba4e3f02cf8bfdaa-mv2.png",
+        "local": "49x18",
+        "upload": "2048x768"
+      },
+      {
+        "slug": "detroit-labor-day-cannabis-dealsdetroit",
+        "mediaId": "db1c73_8a8f2e84326440c49b9727fa73c5990c~mv2.png",
+        "localFile": "assets/source/eeae2b2e-db1c73_8a8f2e84326440c49b9727fa73c5990c-mv2.png",
+        "local": "49x33",
+        "upload": "1536x1024"
+      },
+      {
+        "slug": "extended-weekend-epic-deal",
+        "mediaId": "db1c73_4dd1ad152e844695b5b97a505b6f37db~mv2.png",
+        "localFile": "assets/source/177afbca-db1c73_4dd1ad152e844695b5b97a505b6f37db-mv2.png",
+        "local": "111x172",
+        "upload": "1294x2000"
+      },
+      {
+        "slug": "friday-fire-2",
+        "mediaId": "db1c73_4dd1ad152e844695b5b97a505b6f37db~mv2.png",
+        "localFile": "assets/source/177afbca-db1c73_4dd1ad152e844695b5b97a505b6f37db-mv2.png",
+        "local": "111x172",
+        "upload": "1294x2000"
+      },
+      {
+        "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+        "mediaId": "db1c73_86fc34c6c69540c185a2a7ff54565527~mv2.png",
+        "localFile": "assets/source/e0d21871-db1c73_86fc34c6c69540c185a2a7ff54565527-mv2.png",
+        "local": "49x16",
+        "upload": "2172x724"
+      },
+      {
+        "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+        "mediaId": "db1c73_08483614a3f0416db15dc32541e13e77~mv2.png",
+        "localFile": "assets/source/03017727-db1c73_08483614a3f0416db15dc32541e13e77-mv2.png",
+        "local": "49x16",
+        "upload": "2172x724"
+      },
+      {
+        "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+        "mediaId": "db1c73_bf0d91d08b0d4c7e9c353e997c1fd28f~mv2.png",
+        "localFile": "assets/source/d7482299-db1c73_bf0d91d08b0d4c7e9c353e997c1fd28f-mv2.png",
+        "local": "49x16",
+        "upload": "2172x724"
+      },
+      {
+        "slug": "halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+        "mediaId": "db1c73_c60df03eb3f64427b6cab3ef5ec810fc~mv2.png",
+        "localFile": "assets/source/b31311cf-db1c73_c60df03eb3f64427b6cab3ef5ec810fc-mv2.png",
+        "local": "49x28",
+        "upload": "1672x941"
+      },
+      {
+        "slug": "happy-cinco-de-mayo-5-5-2021",
+        "mediaId": "db1c73_4dd1ad152e844695b5b97a505b6f37db~mv2.png",
+        "localFile": "assets/source/177afbca-db1c73_4dd1ad152e844695b5b97a505b6f37db-mv2.png",
+        "local": "111x172",
+        "upload": "1294x2000"
+      },
+      {
+        "slug": "hello-summer",
+        "mediaId": "db1c73_4dd1ad152e844695b5b97a505b6f37db~mv2.png",
+        "localFile": "assets/source/177afbca-db1c73_4dd1ad152e844695b5b97a505b6f37db-mv2.png",
+        "local": "111x172",
+        "upload": "1294x2000"
+      },
+      {
+        "slug": "pick-8-20-1g-shatter-s-only-100-out-the-door",
+        "mediaId": "db1c73_4dd1ad152e844695b5b97a505b6f37db~mv2.png",
+        "localFile": "assets/source/177afbca-db1c73_4dd1ad152e844695b5b97a505b6f37db-mv2.png",
+        "local": "111x172",
+        "upload": "1294x2000"
+      }
+    ]
+  },
+  "contentFlags": [
+    {
+      "slug": "black-saturday-flame-sale",
+      "what": "no text blocks (image/video-only post)",
+      "images": 1,
+      "videos": 0
+    },
+    {
+      "slug": "bogo-diamond-donuts-live-resin-eclairs",
+      "where": "blocks[2]",
+      "what": "editor placeholder text published on the live post",
+      "text": "Header Banner:\nInsert your image: “Flavors Fit for a Father – Shop Deals | Open 10AM–10PM”"
+    },
+    {
+      "slug": "manage-your-blog-from-your-live-site",
+      "what": "slug is left over from a Wix sample post; the title and body were rewritten",
+      "title": "New Product: Terp Management Crumbles"
+    },
+    {
+      "what": "links into the POS back office (pos.portal42.us/product_edit.php?strainID=...), kept verbatim and marked links[].posAdmin",
+      "count": 96,
+      "posts": {
+        "april-1st-opening-day-specials": 1,
+        "black-friday-specials-at-flavors-detroit": 1,
+        "crumble-budder-hcfse-and-more": 6,
+        "flavors-mid-week-flower-drop": 8,
+        "fresh-drop-alert-autumn-edition": 6,
+        "fresh-drop-alert-saturday-in-december": 4,
+        "fresh-drop-weekend-edition": 3,
+        "friday-fire-weekend-edition": 4,
+        "friday-the-13th-in-november": 7,
+        "happy-valentine-s-day": 3,
+        "it-s-the-1st-of-the-month": 1,
+        "labor-day-weekend-flower-drop": 6,
+        "new-products-from-lit-labs-now-available-at-flavors-detroit": 5,
+        "new-strain-alert-new-concentrates-new-edibles": 6,
+        "october-weekend-specials": 4,
+        "summer-time-moonrocks-and-more": 12,
+        "t-g-i-f": 2,
+        "tgif-at-flavors-detroit-2": 4,
+        "turn-up-the-weekend": 12,
+        "wrestlemania-weekend-specials": 1
+      }
+    }
+  ],
+  "schemaNotes": [
+    "blocks[].t also uses \"table\" ({t:\"table\", rows:[[{text,textOriginal,links}]]}) — one post has a Ricos table",
+    "blocks[] with button:true are Wix button CTAs (a paragraph whose whole text is one link)",
+    "body h1 headings are demoted to h2 (the page title owns h1); h5/h6 map to h4",
+    "list items carry level only when nested (level > 1)",
+    "links[].hashtag:true marks Wix auto-hashtag links (/blog/hashtags/N) — those pages were not captured",
+    "links[].posAdmin:true marks links into the POS back-office product editor (not a public page); href kept verbatim",
+    "images[].afterBlock = number of blocks before the image (document position); source = image|gallery; href = the link wrapping the image; uploadW/uploadH = the size the HTML declares when it differs from the downloaded file; crop = the Wix crop of the original shown on the live page (src is the uncropped original, localFile the downloaded crop); localFileLowRes = the only downloaded rendition is a tiny blurred placeholder",
+    "w/h = pixel size of localFile when one exists, else the size the HTML declares; kind is a hint from the declared aspect ratio (flyer: square-ish >= 1000px; photo: portrait h/w >= 1.2 and h >= 1800, or a camera-native 4:3 frame >= 3000px; else unknown)",
+    "videos[] = {src, afterBlock[, poster][, embed]} for Ricos video blocks",
+    "cover = the featured image from JSON-LD/og:image (not a body image unless cover.inBody)",
+    "seoTitle = the page <title> (differs from the visible title on some posts)",
+    "excerpt = body display text squashed to single spaces, <= 170 chars, cut at a word boundary, no ellipsis added",
+    "metaDescription = <meta name=\"description\"> only; null when the live post has none (og:description is a run-together auto excerpt and is not used)",
+    "dateLabel = the date the live post header shows (\"Aug 30, 2020\", or \"Oct 11\" for current-year posts, the year then taken from datePublished in America/Detroit); see dateLabelNotes for the post where the header date and datePublished-in-Detroit differ",
+    "recall = order-aware: expected words aligned to the extracted textOriginal by longest common subsequence; joinedFromSplits counts words the reference split at an element boundary (e.g. one <strong> per letter) that match one extracted word"
+  ],
+  "caseRules": {
+    "acronymsKeptUpper": [
+      "THC",
+      "CBD",
+      "CBG",
+      "CBN",
+      "OG",
+      "BOGO",
+      "LR",
+      "HCFSE",
+      "RSO",
+      "PB&J",
+      "TGIF",
+      "ID",
+      "MI",
+      "AM",
+      "PM",
+      "USA",
+      "DJ",
+      "G"
+    ],
+    "unitsKeptAsWritten": [
+      "G",
+      "OZ",
+      "MG",
+      "ML",
+      "LB",
+      "LBS",
+      "GR",
+      "KG",
+      "GS"
+    ],
+    "acceptedNames": 1140
+  },
+  "unknownEntities": [],
+  "inputProblems": []
+}

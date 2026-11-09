@@ -1,0 +1,5794 @@
+{
+  "schema": "site-reforge/parity-report@1",
+  "generated": "2026-11-09T00:31:19.074Z",
+  "sourcePages": 142,
+  "rebuiltFiles": 137,
+  "mappedPages": 142,
+  "missingPages": [],
+  "extraFiles": [
+    "404.html",
+    "contact/index.html",
+    "learn/index.html",
+    "owners-box/index.html",
+    "shop/index.html",
+    "visit/index.html"
+  ],
+  "recallFloor": 0.95,
+  "contentRunFloor": 12,
+  "meanRecall": 0.9496,
+  "counts": {
+    "minor": 272,
+    "major": 16,
+    "blocker": 146
+  },
+  "verdict": "DRIFT",
+  "rows": [
+    {
+      "url": "https://www.flavorsdetroit.com/",
+      "file": "index.html",
+      "pageType": "home",
+      "status": "DIFFERS",
+      "recall": 0.9521,
+      "missingWords": 14,
+      "longestMissingRun": 4,
+      "sourceWords": 290,
+      "rebuiltWords": 1272,
+      "sourceH1": [
+        "(313) 733-4464",
+        "OUR FLAVORS",
+        "Follow us on Instagram @ flavorsdetroit_",
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "A traditional dispensary with a modern twist ."
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 66,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "description-changed",
+          "title": "Meta description changed",
+          "detail": "index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"A traditional dispensary with a modern twist .\""
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "5 source H2 section(s) absent",
+          "detail": "-shatter -batter and budder -live rosin -hash -crumble and sugar -infused prerolls | we have the best selection of gummies, chocolate, and other infused treats. a variety of tastes for any flavor you're craving! | we have cartridges, topicals, drinks and tinctures- a quality product for all occasions! you'll be sure to find what you need, let us know what you're looking for! | contact & location | [photo of current building goes here, google has old picture]"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "alt-missing",
+          "title": "1 image(s) without alt",
+          "detail": "index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/blog",
+      "file": "blog/index.html",
+      "pageType": "blog-index",
+      "status": "DIFFERS",
+      "recall": 0.8741,
+      "missingWords": 52,
+      "longestMissingRun": 3,
+      "sourceWords": 413,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Flavors News | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 87.4% (floor 95%)",
+          "detail": "missing words: search loading options extending responded eighths staying beginning brings completely 85 tier expanded plenty reasons reload ounce prerolls chance finish head bag stack aug customers"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/blog/hashtags/15",
+      "file": "blog/index.html",
+      "pageType": "blog-index",
+      "status": "DIFFERS",
+      "recall": 0.87,
+      "missingWords": 13,
+      "longestMissingRun": 1,
+      "sourceWords": 98,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"#15\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 87.0% (floor 95%)",
+          "detail": "missing words: search loading options extending responded eighths staying beginning brings completely 85 tier expanded"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/blog/hashtags/flavorsdetroit",
+      "file": "blog/index.html",
+      "pageType": "blog-index",
+      "status": "DIFFERS",
+      "recall": 0.9737,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 38,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"#flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/blog/hashtags/terpmanagement",
+      "file": "blog/index.html",
+      "pageType": "blog-index",
+      "status": "DIFFERS",
+      "recall": 0.9737,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 38,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"#terpmanagement\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/12-days-of-flavors-shatterday-edition",
+      "file": "post/12-days-of-flavors-shatterday-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.982,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 169,
+      "rebuiltWords": 394,
+      "sourceH1": [
+        "(313) 733-4464",
+        "12 Days of Flavors: Shatterday Edition"
+      ],
+      "rebuiltH1": [
+        "12 Days of Flavors: Shatterday Edition"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"12 Days of Flavors: Shatterday Edition\" -> \"12 Days of Flavors: Shatterday Edition | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"12 Days of Flavors: Shatterday Edition\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/12-days-of-flavors-shatterday-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/2020-flavors-detroit-new-arrivals",
+      "file": "post/2020-flavors-detroit-new-arrivals/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9884,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 236,
+      "rebuiltWords": 465,
+      "sourceH1": [
+        "(313) 733-4464",
+        "2020 Flavors Detroit New Arrivals"
+      ],
+      "rebuiltH1": [
+        "2020 Flavors Detroit New Arrivals"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"2020 Flavors Detroit New Arrivals\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/2020-flavors-detroit-new-arrivals/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/3-day-birthday-blowout",
+      "file": "post/3-day-birthday-blowout/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.983,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 167,
+      "rebuiltWords": 390,
+      "sourceH1": [
+        "(313) 733-4464",
+        "3 Day Birthday Blowout!"
+      ],
+      "rebuiltH1": [
+        "3 Day Birthday Blowout!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"3 Day Birthday Blowout!\" -> \"3 Day Birthday Blowout! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"3 Day Birthday Blowout!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/3-day-birthday-blowout/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early",
+      "file": "post/4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9892,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 87,
+      "rebuiltWords": 306,
+      "sourceH1": [
+        "(313) 733-4464",
+        "4/19: Out of State Patients Qualify for 4/20 Specials a day early!"
+      ],
+      "rebuiltH1": [
+        "4/19: Out of State Patients Qualify for 4/20 Specials a day early!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"4/19: Out of State Patients Qualify for 4/20 Specials a day early!\" -> \"4/19: Out of State Patients Qualify for 4/20 Specials a day early! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"4/19: Out of State Patients Qualify for 4/20 Specials a day early!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/4-19-out-of-state-patients-qualify-for-4-20-specials-a-day-early/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/4-20-is-here",
+      "file": "post/4-20-is-here/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9703,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 97,
+      "rebuiltWords": 326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "4/20 is here!"
+      ],
+      "rebuiltH1": [
+        "4/20 is here!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"4/20 is here!\" -> \"4/20 is here! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"4/20 is here!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/4-20-is-here/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/4-20-sneak-peek",
+      "file": "post/4-20-sneak-peek/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9816,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 153,
+      "rebuiltWords": 377,
+      "sourceH1": [
+        "(313) 733-4464",
+        "4/20 SNEAK PEEK"
+      ],
+      "rebuiltH1": [
+        "4/20 sneak peek"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"4/20 SNEAK PEEK\" -> \"4/20 sneak peek | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"4/20 sneak peek\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/4-20-sneak-peek/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/420-detroit-2026-flavors-detroit-event",
+      "file": "post/420-detroit-2026-flavors-detroit-event/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9968,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 316,
+      "rebuiltWords": 546,
+      "sourceH1": [
+        "(313) 733-4464",
+        "420 Events in Detroit 2026 | Flavors Detroit 420 Weekend (April 17–20)"
+      ],
+      "rebuiltH1": [
+        "420 Events in Detroit 2026 | Flavors Detroit 420 Weekend (April 17–20)"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"420 Events in Detroit 2026 | Flavors Detroit 420 Weekend (April 17–20)\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/420-detroit-2026-flavors-detroit-event/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/7-10-is-here",
+      "file": "post/7-10-is-here/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9853,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 200,
+      "rebuiltWords": 410,
+      "sourceH1": [
+        "(313) 733-4464",
+        "7/10 is almost here!"
+      ],
+      "rebuiltH1": [
+        "7/10 is almost here!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"7/10 is almost here!\" -> \"7/10 is almost here! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"7/10 is almost here!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/7-10-is-here/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/all-day-happy-hour-monday",
+      "file": "post/all-day-happy-hour-monday/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9764,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 120,
+      "rebuiltWords": 347,
+      "sourceH1": [
+        "(313) 733-4464",
+        "All Day Happy Hour Monday!"
+      ],
+      "rebuiltH1": [
+        "All Day Happy Hour Monday!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"All Day Happy Hour Monday!\" -> \"All Day Happy Hour Monday! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"All Day Happy Hour Monday!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/all-day-happy-hour-monday/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/angels-night-specials-new-strains-and-extracts",
+      "file": "post/angels-night-specials-new-strains-and-extracts/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9577,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 68,
+      "rebuiltWords": 291,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Angels Night Specials (New Strains and Extracts)"
+      ],
+      "rebuiltH1": [
+        "Angels Night Specials (New Strains and Extracts)"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Angels Night Specials (New Strains and Extracts)\" -> \"Angels Night Specials (New Strains and Extracts) | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Angels Night Specials (New Strains and Extracts)\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/angels-night-specials-new-strains-and-extracts/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/april-1st-opening-day-specials",
+      "file": "post/april-1st-opening-day-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9758,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 120,
+      "rebuiltWords": 347,
+      "sourceH1": [
+        "(313) 733-4464",
+        "April 1st: Opening Day Specials"
+      ],
+      "rebuiltH1": [
+        "April 1st: Opening Day Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"April 1st: Opening Day Specials\" -> \"April 1st: Opening Day Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"April 1st: Opening Day Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/april-1st-opening-day-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/april-1st-specials",
+      "file": "post/april-1st-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9897,
+      "missingWords": 3,
+      "longestMissingRun": 1,
+      "sourceWords": 274,
+      "rebuiltWords": 500,
+      "sourceH1": [
+        "(313) 733-4464",
+        "April 1st Specials"
+      ],
+      "rebuiltH1": [
+        "April 1st Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"April 1st Specials\" -> \"April 1st Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"April 1st Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/april-1st-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/are-you-ready-for-the-weekend",
+      "file": "post/are-you-ready-for-the-weekend/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9779,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 124,
+      "rebuiltWords": 354,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Are you ready for the weekend?"
+      ],
+      "rebuiltH1": [
+        "Are you ready for the weekend?"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Are you ready for the weekend?\" -> \"Are you ready for the weekend? | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Are you ready for the weekend?\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/are-you-ready-for-the-weekend/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/back-to-school",
+      "file": "post/back-to-school/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9897,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 94,
+      "rebuiltWords": 308,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Back to school!"
+      ],
+      "rebuiltH1": [
+        "Back to school!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Back to school!\" -> \"Back to school! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Back to school!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/back-to-school/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/black-friday-specials",
+      "file": "post/black-friday-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9815,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 146,
+      "rebuiltWords": 369,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Black Friday Specials"
+      ],
+      "rebuiltH1": [
+        "Black Friday Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Black Friday Specials\" -> \"Black Friday Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Black Friday Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/black-friday-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/black-friday-specials-at-flavors-detroit",
+      "file": "post/black-friday-specials-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9816,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 152,
+      "rebuiltWords": 385,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Top Shelf Black Friday Specials at Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Top Shelf Black Friday Specials at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Top Shelf Black Friday Specials at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/black-friday-specials-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/black-saturday-flame-sale",
+      "file": "post/black-saturday-flame-sale/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9833,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 62,
+      "rebuiltWords": 305,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Black Saturday Flame Sale @ FLAVORS DETROIT"
+      ],
+      "rebuiltH1": [
+        "Black Saturday Flame Sale @ Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Black Saturday Flame Sale @ FLAVORS DETROIT\" -> \"Black Saturday Flame Sale @ Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Black Saturday Flame Sale @ Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/black-saturday-flame-sale/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/bogo-diamond-donuts-live-resin-eclairs",
+      "file": "post/bogo-diamond-donuts-live-resin-eclairs/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.922,
+      "missingWords": 16,
+      "longestMissingRun": 3,
+      "sourceWords": 220,
+      "rebuiltWords": 450,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Flavors Fit For A FatheR"
+      ],
+      "rebuiltH1": [
+        "Flavors Fit For A FatheR"
+      ],
+      "sourceLinks": 2,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"BOGO Diamond Donuts & Live Resin Eclairs\" -> \"BOGO Diamond Donuts & Live Resin Eclairs | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors Fit For A FatheR\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 92.2% (floor 95%)",
+          "detail": "missing words: search eclairs header banner insert image your bogo diamond donuts 5730 48234open 10am 10pm happy mothers"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/bogo-diamond-donuts-live-resin-eclairs/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/crumble-budder-hcfse-and-more",
+      "file": "post/crumble-budder-hcfse-and-more/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.979,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 131,
+      "rebuiltWords": 356,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Crumble, Budder, HCFSE and more!"
+      ],
+      "rebuiltH1": [
+        "Crumble, Budder, HCFSE and more!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Crumble, Budder, HCFSE and more!\" -> \"Crumble, Budder, HCFSE and more! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Crumble, Budder, HCFSE and more!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/crumble-budder-hcfse-and-more/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/cyber-monday-specials",
+      "file": "post/cyber-monday-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.982,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 160,
+      "rebuiltWords": 387,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Cyber Monday Specials"
+      ],
+      "rebuiltH1": [
+        "Cyber Monday Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Cyber Monday Specials\" -> \"Cyber Monday Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Cyber Monday Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/cyber-monday-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/detroit-labor-day-cannabis-dealsdetroit",
+      "file": "post/detroit-labor-day-cannabis-dealsdetroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9962,
+      "missingWords": 3,
+      "longestMissingRun": 1,
+      "sourceWords": 791,
+      "rebuiltWords": 1016,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials"
+      ],
+      "rebuiltH1": [
+        "Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials\" -> \"Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Detroit Labor Day Cannabis Deals 2026 | Back-to-School & End-of-Summer Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/detroit-labor-day-cannabis-dealsdetroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/easter-candy-for-the-grown-ups",
+      "file": "post/easter-candy-for-the-grown-ups/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9787,
+      "missingWords": 3,
+      "longestMissingRun": 1,
+      "sourceWords": 130,
+      "rebuiltWords": 349,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Easter Candy for the Grown Ups!"
+      ],
+      "rebuiltH1": [
+        "Easter Candy for the Grown Ups!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Easter Candy for the Grown Ups!\" -> \"Easter Candy for the Grown Ups! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Easter Candy for the Grown Ups!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/easter-candy-for-the-grown-ups/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/easter-candy-for-the-grown-ups-1",
+      "file": "post/easter-candy-for-the-grown-ups-1/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9565,
+      "missingWords": 4,
+      "longestMissingRun": 3,
+      "sourceWords": 89,
+      "rebuiltWords": 321,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Easter Candy for the grown-ups"
+      ],
+      "rebuiltH1": [
+        "Easter Candy for the grown-ups"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Easter Candy for the grown-ups\" -> \"Easter Candy for the grown-ups | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Easter Candy for the grown-ups\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/easter-candy-for-the-grown-ups-1/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/extended-weekend-epic-deal",
+      "file": "post/extended-weekend-epic-deal/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9885,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 90,
+      "rebuiltWords": 307,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Extended Weekend EPIC DEAL !"
+      ],
+      "rebuiltH1": [
+        "Extended Weekend Epic Deal !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Extended Weekend EPIC DEAL !\" -> \"Extended Weekend Epic Deal ! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Extended Weekend Epic Deal !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/extended-weekend-epic-deal/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fall-to-frost-specials-flavors-detroit",
+      "file": "post/fall-to-frost-specials-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9929,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 140,
+      "rebuiltWords": 405,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FAll To FrosT Specials @ FLAVORS DETROIT"
+      ],
+      "rebuiltH1": [
+        "Fall To Frost Specials @ Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 62,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FAll To FrosT Specials @ FLAVORS DETROIT\" -> \"Fall To Frost Specials @ Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fall To Frost Specials @ Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fall-to-frost-specials-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/featured-flower-purple-alien",
+      "file": "post/featured-flower-purple-alien/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9819,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 162,
+      "rebuiltWords": 389,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Featured Flower: Purple Alien"
+      ],
+      "rebuiltH1": [
+        "Featured Flower: Purple Alien"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Featured Flower: Purple Alien\" -> \"Featured Flower: Purple Alien | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Featured Flower: Purple Alien\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/featured-flower-purple-alien/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/february-2020-extra-special-specials",
+      "file": "post/february-2020-extra-special-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9783,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 129,
+      "rebuiltWords": 355,
+      "sourceH1": [
+        "(313) 733-4464",
+        "February 2020 Extra Special Specials!"
+      ],
+      "rebuiltH1": [
+        "February 2020 Extra Special Specials!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"February 2020 Extra Special Specials!\" -> \"February 2020 Extra Special Specials! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"February 2020 Extra Special Specials!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/february-2020-extra-special-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/flavors-mid-week-flower-drop",
+      "file": "post/flavors-mid-week-flower-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9746,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 106,
+      "rebuiltWords": 331,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Flavors Mid Week Flower Drop!"
+      ],
+      "rebuiltH1": [
+        "Flavors Mid Week Flower Drop!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Flavors Mid Week Flower Drop!\" -> \"Flavors Mid Week Flower Drop! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors Mid Week Flower Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/flavors-mid-week-flower-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-alert-autumn-edition",
+      "file": "post/fresh-drop-alert-autumn-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9727,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 101,
+      "rebuiltWords": 323,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop Alert: Autumn Edition!"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Alert: Autumn Edition!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop Alert: Autumn Edition!\" -> \"Fresh Drop Alert: Autumn Edition! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Alert: Autumn Edition!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-autumn-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-alert-saturday-in-december",
+      "file": "post/fresh-drop-alert-saturday-in-december/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9801,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 152,
+      "rebuiltWords": 379,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop Alert: Saturday in December"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Alert: Saturday in December"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop Alert: Saturday in December\" -> \"Fresh Drop Alert: Saturday in December | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Alert: Saturday in December\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-saturday-in-december/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-alert-sunday-morning-edition",
+      "file": "post/fresh-drop-alert-sunday-morning-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9793,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 137,
+      "rebuiltWords": 364,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRESH DROP ALERT! Sunday Morning Edition"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Alert! Sunday Morning Edition"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRESH DROP ALERT! Sunday Morning Edition\" -> \"Fresh Drop Alert! Sunday Morning Edition | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Alert! Sunday Morning Edition\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-sunday-morning-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-alert-weekend-edition",
+      "file": "post/fresh-drop-alert-weekend-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9776,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 121,
+      "rebuiltWords": 344,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop Alert: Weekend Edition"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Alert: Weekend Edition"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop Alert: Weekend Edition\" -> \"Fresh Drop Alert: Weekend Edition | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Alert: Weekend Edition\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-alert-weekend-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-bubble-gum",
+      "file": "post/fresh-drop-bubble-gum/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9931,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 145,
+      "rebuiltWords": 371,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop: Bubble Gum"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop: Bubble Gum"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop: Bubble Gum\" -> \"Fresh Drop: Bubble Gum | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop: Bubble Gum\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-bubble-gum/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-friday",
+      "file": "post/fresh-drop-friday/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9748,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 114,
+      "rebuiltWords": 335,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRESH DROP FRIDAY"
+      ],
+      "rebuiltH1": [
+        "Fresh drop Friday"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRESH DROP FRIDAY\" -> \"Fresh drop Friday | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh drop Friday\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-friday/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-new-strains",
+      "file": "post/fresh-drop-new-strains/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9815,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 158,
+      "rebuiltWords": 382,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop: New Strains!"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop: New Strains!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop: New Strains!\" -> \"Fresh Drop: New Strains! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop: New Strains!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-new-strains/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-tuesday",
+      "file": "post/fresh-drop-tuesday/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9674,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 86,
+      "rebuiltWords": 310,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop Tuesday"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Tuesday"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop Tuesday\" -> \"Fresh Drop Tuesday | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Tuesday\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-tuesday/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/fresh-drop-weekend-edition",
+      "file": "post/fresh-drop-weekend-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9789,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 131,
+      "rebuiltWords": 351,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Fresh Drop Weekend Edition"
+      ],
+      "rebuiltH1": [
+        "Fresh Drop Weekend Edition"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Fresh Drop Weekend Edition\" -> \"Fresh Drop Weekend Edition | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Fresh Drop Weekend Edition\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/fresh-drop-weekend-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire",
+      "file": "post/friday-fire/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9868,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 81,
+      "rebuiltWords": 299,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRIDAY FIRE 🔥"
+      ],
+      "rebuiltH1": [
+        "Friday fire 🔥"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRIDAY FIRE 🔥\" -> \"Friday fire 🔥 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday fire 🔥\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-1",
+      "file": "post/friday-fire-1/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9643,
+      "missingWords": 5,
+      "longestMissingRun": 2,
+      "sourceWords": 127,
+      "rebuiltWords": 363,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRIDAY FIRE!"
+      ],
+      "rebuiltH1": [
+        "Friday fire!"
+      ],
+      "sourceLinks": 2,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRIDAY FIRE!\" -> \"Friday fire! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday fire!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-1/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-2",
+      "file": "post/friday-fire-2/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9873,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 84,
+      "rebuiltWords": 308,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday FIRE !"
+      ],
+      "rebuiltH1": [
+        "Friday fire !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday FIRE !\" -> \"Friday fire ! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday fire !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-2/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-2021",
+      "file": "post/friday-fire-2021/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9769,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 129,
+      "rebuiltWords": 352,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday Fire 2021"
+      ],
+      "rebuiltH1": [
+        "Friday Fire 2021"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday Fire 2021\" -> \"Friday Fire 2021 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Fire 2021\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-2021/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-at-flavors-detroit",
+      "file": "post/friday-fire-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9819,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 150,
+      "rebuiltWords": 377,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRIDAY FIRE at FLAVORS DETROIT"
+      ],
+      "rebuiltH1": [
+        "Friday Fire at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRIDAY FIRE at FLAVORS DETROIT\" -> \"Friday Fire at Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Fire at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-major-drop",
+      "file": "post/friday-fire-major-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9799,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 149,
+      "rebuiltWords": 372,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday Fire: Major Drop!"
+      ],
+      "rebuiltH1": [
+        "Friday Fire: Major Drop!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday Fire: Major Drop!\" -> \"Friday Fire: Major Drop! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Fire: Major Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-major-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-shakeathon",
+      "file": "post/friday-fire-shakeathon/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.988,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 243,
+      "rebuiltWords": 466,
+      "sourceH1": [
+        "(313) 733-4464",
+        "FRIDAY FIRE SHAKEATHON"
+      ],
+      "rebuiltH1": [
+        "Friday Fire Shakeathon"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"FRIDAY FIRE SHAKEATHON\" -> \"Friday Fire Shakeathon | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Fire Shakeathon\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-shakeathon/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-fire-weekend-edition",
+      "file": "post/friday-fire-weekend-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9783,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 119,
+      "rebuiltWords": 341,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday Fire: Weekend Edition"
+      ],
+      "rebuiltH1": [
+        "Friday Fire: Weekend Edition"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday Fire: Weekend Edition\" -> \"Friday Fire: Weekend Edition | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Fire: Weekend Edition\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-fire-weekend-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-happy-hour-special-4pm-9pm",
+      "file": "post/friday-happy-hour-special-4pm-9pm/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9571,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 68,
+      "rebuiltWords": 296,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday Happy Hour Special 4pm - 9pm"
+      ],
+      "rebuiltH1": [
+        "Friday Happy Hour Special 4pm - 9pm"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday Happy Hour Special 4pm - 9pm\" -> \"Friday Happy Hour Special 4pm - 9pm | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday Happy Hour Special 4pm - 9pm\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-happy-hour-special-4pm-9pm/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-the-13th-at-flavors-detroit",
+      "file": "post/friday-the-13th-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9684,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 92,
+      "rebuiltWords": 319,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday the 13th at Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Friday the 13th at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday the 13th at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-the-13th-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-the-13th-in-december-sale",
+      "file": "post/friday-the-13th-in-december-sale/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9825,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 166,
+      "rebuiltWords": 394,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday the 13th in December sale"
+      ],
+      "rebuiltH1": [
+        "Friday the 13th in December sale"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday the 13th in December sale\" -> \"Friday the 13th in December sale | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday the 13th in December sale\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-the-13th-in-december-sale/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/friday-the-13th-in-november",
+      "file": "post/friday-the-13th-in-november/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9803,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 147,
+      "rebuiltWords": 372,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Friday the 13th in November!"
+      ],
+      "rebuiltH1": [
+        "Friday the 13th in November!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Friday the 13th in November!\" -> \"Friday the 13th in November! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Friday the 13th in November!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/friday-the-13th-in-november/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces",
+      "file": "post/halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9976,
+      "missingWords": 2,
+      "longestMissingRun": 1,
+      "sourceWords": 811,
+      "rebuiltWords": 1040,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Halloween at Flavors Detroit: New Flower, $10 Eighths, $5 Concentrates & $85 Ounces",
+        "👻 The $10 3.5G Promotion Lives On",
+        "🕷️ Introducing the New $85 Prepacked Ounce Tier",
+        "🧪 The $5 Concentrate Lab Just Got Bigger"
+      ],
+      "rebuiltH1": [
+        "Halloween at Flavors Detroit: New Flower, $10 Eighths, $5 Concentrates & $85 Ounces"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Halloween at Flavors Detroit: New Flower, $10 Eighths, $5 Concentrates & $85 Ounces\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/halloween-at-flavors-detroit-new-flower-10-eighths-5-concentrates-85-ounces/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/halloween-specials",
+      "file": "post/halloween-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9741,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 111,
+      "rebuiltWords": 333,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Halloween Specials"
+      ],
+      "rebuiltH1": [
+        "Halloween Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Halloween Specials\" -> \"Halloween Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Halloween Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/halloween-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-4th-of-july",
+      "file": "post/happy-4th-of-july/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9919,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 109,
+      "rebuiltWords": 328,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy 4th of JULY"
+      ],
+      "rebuiltH1": [
+        "Happy 4th of July"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy 4th of JULY\" -> \"Happy 4th of July | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy 4th of July\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-4th-of-july/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-cinco-de-mayo",
+      "file": "post/happy-cinco-de-mayo/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9795,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 139,
+      "rebuiltWords": 363,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Cinco De Mayo"
+      ],
+      "rebuiltH1": [
+        "Happy Cinco De Mayo"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Cinco De Mayo\" -> \"Happy Cinco De Mayo | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Cinco De Mayo\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-cinco-de-mayo/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-cinco-de-mayo-5-5-2021",
+      "file": "post/happy-cinco-de-mayo-5-5-2021/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9851,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 67,
+      "rebuiltWords": 287,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy CINCO DE MAYO 5/5/2021"
+      ],
+      "rebuiltH1": [
+        "Happy Cinco De Mayo 5/5/2021"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy CINCO DE MAYO 5/5/2021\" -> \"Happy Cinco De Mayo 5/5/2021 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Cinco De Mayo 5/5/2021\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-cinco-de-mayo-5-5-2021/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-fathers-day-from-flavors-detroit",
+      "file": "post/happy-fathers-day-from-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.956,
+      "missingWords": 4,
+      "longestMissingRun": 2,
+      "sourceWords": 86,
+      "rebuiltWords": 313,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Fathers Day from Flavors Detroit!"
+      ],
+      "rebuiltH1": [
+        "Happy Father's Day from Flavors Detroit!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Fathers Day from Flavors Detroit!\" -> \"Happy Father's Day from Flavors Detroit!\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Father's Day from Flavors Detroit!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-fathers-day-from-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-halloween-from-flavors-detroit",
+      "file": "post/happy-halloween-from-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9803,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 145,
+      "rebuiltWords": 373,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Halloween from Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Happy Halloween from Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Halloween from Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-halloween-from-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-halloween-from-your-friends-flavors-detroit",
+      "file": "post/happy-halloween-from-your-friends-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9897,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 101,
+      "rebuiltWords": 333,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Halloween, From your Friends @ FLAVORS DETROIT"
+      ],
+      "rebuiltH1": [
+        "Happy Halloween, From your Friends @ Flavors Detroit"
+      ],
+      "sourceLinks": 2,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Halloween, From your Friends @ FLAVORS DETROIT\" -> \"Happy Halloween, From your Friends @ Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Halloween, From your Friends @ Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-halloween-from-your-friends-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-holidays-to-all-from-your-friends-flavors-detroit",
+      "file": "post/happy-holidays-to-all-from-your-friends-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9877,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 85,
+      "rebuiltWords": 310,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Holidays to ALL from your friends @ FLAVORS DETROIT !"
+      ],
+      "rebuiltH1": [
+        "Happy Holidays to all from your friends @ Flavors Detroit !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Holidays to ALL from your friends @ FLAVORS DETROIT !\" -> \"Happy Holidays to all from your friends @ Flavors Detroit !\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Holidays to all from your friends @ Flavors Detroit !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-holidays-to-all-from-your-friends-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-hour-at-flavors-detroit",
+      "file": "post/happy-hour-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9706,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 99,
+      "rebuiltWords": 325,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Hour at Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Happy Hour at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Hour at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-hour-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-memorial-day-updated-hours",
+      "file": "post/happy-memorial-day-updated-hours/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9899,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 99,
+      "rebuiltWords": 320,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Memorial Day (Updated Hours!)"
+      ],
+      "rebuiltH1": [
+        "Happy Memorial Day (Updated Hours!)"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Memorial Day (Updated Hours!)\" -> \"Happy Memorial Day (Updated Hours!) | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Memorial Day (Updated Hours!)\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-memorial-day-updated-hours/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-mlk-day-monday-specials",
+      "file": "post/happy-mlk-day-monday-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9565,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 66,
+      "rebuiltWords": 287,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy MLK Day: Monday Specials"
+      ],
+      "rebuiltH1": [
+        "Happy MLK Day: Monday Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy MLK Day: Monday Specials\" -> \"Happy MLK Day: Monday Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy MLK Day: Monday Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-mlk-day-monday-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-mother-s-day-flavors-detroit",
+      "file": "post/happy-mother-s-day-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9863,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 75,
+      "rebuiltWords": 303,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Mother's Day @ FLAVORS DETROIT"
+      ],
+      "rebuiltH1": [
+        "Happy Mother's Day @ Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Mother's Day @ FLAVORS DETROIT\" -> \"Happy Mother's Day @ Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Mother's Day @ Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-mother-s-day-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-mothers-day-2025",
+      "file": "post/happy-mothers-day-2025/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9853,
+      "missingWords": 2,
+      "longestMissingRun": 1,
+      "sourceWords": 139,
+      "rebuiltWords": 366,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Mothers Day-2025!"
+      ],
+      "rebuiltH1": [
+        "Happy Mother's Day-2025!"
+      ],
+      "sourceLinks": 2,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Mothers Day-2025!\" -> \"Happy Mother's Day-2025! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Mother's Day-2025!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-mothers-day-2025/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-thanksgiving-yes-we-re-open",
+      "file": "post/happy-thanksgiving-yes-we-re-open/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.979,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 133,
+      "rebuiltWords": 361,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Thanksgiving! Yes, we're open."
+      ],
+      "rebuiltH1": [
+        "Happy Thanksgiving! Yes, we're open."
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Thanksgiving! Yes, we're open.\" -> \"Happy Thanksgiving! Yes, we're open. | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Thanksgiving! Yes, we're open.\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-thanksgiving-yes-we-re-open/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/happy-valentine-s-day",
+      "file": "post/happy-valentine-s-day/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9797,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 136,
+      "rebuiltWords": 355,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Happy Valentine's Day!"
+      ],
+      "rebuiltH1": [
+        "Happy Valentine's Day!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Happy Valentine's Day!\" -> \"Happy Valentine's Day! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Happy Valentine's Day!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/happy-valentine-s-day/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/hello-summer",
+      "file": "post/hello-summer/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9854,
+      "missingWords": 2,
+      "longestMissingRun": 1,
+      "sourceWords": 142,
+      "rebuiltWords": 364,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Hello Summer !"
+      ],
+      "rebuiltH1": [
+        "Hello Summer !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Hello Summer !\" -> \"Hello Summer ! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Hello Summer !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/hello-summer/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/hello-summer-1",
+      "file": "post/hello-summer-1/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9898,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 95,
+      "rebuiltWords": 311,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Hello Summer !"
+      ],
+      "rebuiltH1": [
+        "Hello Summer !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Hello Summer !\" -> \"Hello Summer ! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Hello Summer !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/hello-summer-1/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/holiday-hours-and-last-minute-gift-ideas",
+      "file": "post/holiday-hours-and-last-minute-gift-ideas/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9679,
+      "missingWords": 5,
+      "longestMissingRun": 2,
+      "sourceWords": 153,
+      "rebuiltWords": 381,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Holiday Hours and Last Minute Gift Ideas"
+      ],
+      "rebuiltH1": [
+        "Holiday Hours and Last Minute Gift Ideas"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Holiday Hours and Last Minute Gift Ideas\" -> \"Holiday Hours and Last Minute Gift Ideas | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Holiday Hours and Last Minute Gift Ideas\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/holiday-hours-and-last-minute-gift-ideas/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/holiday-private-reserve-slabs",
+      "file": "post/holiday-private-reserve-slabs/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9774,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 124,
+      "rebuiltWords": 347,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Holiday Private Reserve Slabs!"
+      ],
+      "rebuiltH1": [
+        "Holiday Private Reserve Slabs!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Holiday Private Reserve Slabs!\" -> \"Holiday Private Reserve Slabs! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Holiday Private Reserve Slabs!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/holiday-private-reserve-slabs/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/important-information-updated-5-8",
+      "file": "post/important-information-updated-5-8/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9902,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 105,
+      "rebuiltWords": 318,
+      "sourceH1": [
+        "(313) 733-4464",
+        "IMPORTANT INFORMATION: Updated 5/11"
+      ],
+      "rebuiltH1": [
+        "Important Information: Updated 5/11"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"IMPORTANT INFORMATION: Updated 5/11\" -> \"Important Information: Updated 5/11 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Important Information: Updated 5/11\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/important-information-updated-5-8/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/in-store-deals",
+      "file": "post/in-store-deals/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9912,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 109,
+      "rebuiltWords": 337,
+      "sourceH1": [
+        "(313) 733-4464",
+        "In Store deals"
+      ],
+      "rebuiltH1": [
+        "In Store deals"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"In Store deals\" -> \"In Store deals | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"In Store deals\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/in-store-deals/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/independence-day-2025",
+      "file": "post/independence-day-2025/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9658,
+      "missingWords": 5,
+      "longestMissingRun": 2,
+      "sourceWords": 156,
+      "rebuiltWords": 441,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Independence day-2025"
+      ],
+      "rebuiltH1": [
+        "Independence Day-2025"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 70,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Independence day-2025\" -> \"Independence Day-2025 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Independence Day-2025\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/independence-day-2025/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/it-s-shatterday-at-flavors-detroit",
+      "file": "post/it-s-shatterday-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9799,
+      "missingWords": 4,
+      "longestMissingRun": 3,
+      "sourceWords": 193,
+      "rebuiltWords": 426,
+      "sourceH1": [
+        "(313) 733-4464",
+        "It's Shatterday at Flavors Detroit!"
+      ],
+      "rebuiltH1": [
+        "It's Shatterday at Flavors Detroit!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"It's Shatterday at Flavors Detroit!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/it-s-shatterday-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/it-s-tarantula-time",
+      "file": "post/it-s-tarantula-time/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9826,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 163,
+      "rebuiltWords": 386,
+      "sourceH1": [
+        "(313) 733-4464",
+        "It's Tarantula Time!"
+      ],
+      "rebuiltH1": [
+        "It's Tarantula Time!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"It's Tarantula Time!\" -> \"It's Tarantula Time! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"It's Tarantula Time!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/it-s-tarantula-time/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/it-s-the-1st-of-the-month",
+      "file": "post/it-s-the-1st-of-the-month/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9819,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 167,
+      "rebuiltWords": 388,
+      "sourceH1": [
+        "(313) 733-4464",
+        "It's the 1st of the Month"
+      ],
+      "rebuiltH1": [
+        "It's the 1st of the Month"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"It's the 1st of the Month\" -> \"It's the 1st of the Month | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"It's the 1st of the Month\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/it-s-the-1st-of-the-month/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/keeping-safe-and-healthy",
+      "file": "post/keeping-safe-and-healthy/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9815,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 155,
+      "rebuiltWords": 379,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Keeping Safe and Healthy"
+      ],
+      "rebuiltH1": [
+        "Keeping Safe and Healthy"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Keeping Safe and Healthy\" -> \"Keeping Safe and Healthy | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Keeping Safe and Healthy\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/keeping-safe-and-healthy/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/labor-day-2025",
+      "file": "post/labor-day-2025/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9886,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 86,
+      "rebuiltWords": 301,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Labor day-2025"
+      ],
+      "rebuiltH1": [
+        "Labor Day-2025"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Labor day-2025\" -> \"Labor Day-2025 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Labor Day-2025\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/labor-day-2025/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/labor-day-weekend-flower-drop",
+      "file": "post/labor-day-weekend-flower-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9819,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 151,
+      "rebuiltWords": 374,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Labor Day Weekend Flower Drop!"
+      ],
+      "rebuiltH1": [
+        "Labor Day Weekend Flower Drop!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Labor Day Weekend Flower Drop!\" -> \"Labor Day Weekend Flower Drop! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Labor Day Weekend Flower Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/labor-day-weekend-flower-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/lazy-sunday-at-flavors-detroit-new-products-available",
+      "file": "post/lazy-sunday-at-flavors-detroit-new-products-available/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9808,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 141,
+      "rebuiltWords": 368,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Lazy Sunday at Flavors Detroit: New Products available!"
+      ],
+      "rebuiltH1": [
+        "Lazy Sunday at Flavors Detroit: New Products available!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Lazy Sunday at Flavors Detroit: New Products available!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/lazy-sunday-at-flavors-detroit-new-products-available/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/mac-is-back",
+      "file": "post/mac-is-back/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9779,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 126,
+      "rebuiltWords": 346,
+      "sourceH1": [
+        "(313) 733-4464",
+        "MAC IS BACK!"
+      ],
+      "rebuiltH1": [
+        "MAC is back!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"MAC IS BACK!\" -> \"MAC is back! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"MAC is back!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/mac-is-back/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/manage-your-blog-from-your-live-site",
+      "file": "post/manage-your-blog-from-your-live-site/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9924,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 132,
+      "rebuiltWords": 344,
+      "sourceH1": [
+        "(313) 733-4464",
+        "New Product: Terp Management Crumbles"
+      ],
+      "rebuiltH1": [
+        "New Product: Terp Management Crumbles"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 54,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"New Product: Terp Management Crumbles\" -> \"New Product: Terp Management Crumbles | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"New Product: Terp Management Crumbles\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/manage-your-blog-from-your-live-site/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/march-2020-extract-blowout",
+      "file": "post/march-2020-extract-blowout/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9769,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 120,
+      "rebuiltWords": 346,
+      "sourceH1": [
+        "(313) 733-4464",
+        "March 2020 Extract Blowout!"
+      ],
+      "rebuiltH1": [
+        "March 2020 Extract Blowout!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"March 2020 Extract Blowout!\" -> \"March 2020 Extract Blowout! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"March 2020 Extract Blowout!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/march-2020-extract-blowout/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/massive-shake-a-thon-sale-and-more",
+      "file": "post/massive-shake-a-thon-sale-and-more/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9801,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 143,
+      "rebuiltWords": 366,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Massive SHAKE-A-THON Sale and more!"
+      ],
+      "rebuiltH1": [
+        "Massive Shake-a-thon Sale and more!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Massive SHAKE-A-THON Sale and more!\" -> \"Massive Shake-a-thon Sale and more! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Massive Shake-a-thon Sale and more!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/massive-shake-a-thon-sale-and-more/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/memorial-day-2025",
+      "file": "post/memorial-day-2025/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9857,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 70,
+      "rebuiltWords": 291,
+      "sourceH1": [
+        "(313) 733-4464",
+        "MEMORIAL DAY-2025"
+      ],
+      "rebuiltH1": [
+        "Memorial Day-2025"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"MEMORIAL DAY-2025\" -> \"Memorial Day-2025 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Memorial Day-2025\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/memorial-day-2025/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/memorial-day-weekend-moonrock-drop",
+      "file": "post/memorial-day-weekend-moonrock-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9706,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 99,
+      "rebuiltWords": 323,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Memorial Day Weekend MOONROCK DROP!"
+      ],
+      "rebuiltH1": [
+        "Memorial Day Weekend Moonrock Drop!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Memorial Day Weekend MOONROCK DROP!\" -> \"Memorial Day Weekend Moonrock Drop! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Memorial Day Weekend Moonrock Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/memorial-day-weekend-moonrock-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/monday-morning-flower-drop",
+      "file": "post/monday-morning-flower-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9741,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 108,
+      "rebuiltWords": 333,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Monday Morning Flower Drop!"
+      ],
+      "rebuiltH1": [
+        "Monday Morning Flower Drop!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Monday Morning Flower Drop!\" -> \"Monday Morning Flower Drop! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Monday Morning Flower Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/monday-morning-flower-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/moonrock-madness",
+      "file": "post/moonrock-madness/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9915,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 118,
+      "rebuiltWords": 335,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Moonrock Madness"
+      ],
+      "rebuiltH1": [
+        "Moonrock Madness"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Moonrock Madness\" -> \"Moonrock Madness | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Moonrock Madness\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/moonrock-madness/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/need-some-entertainment-the-royal-rumble-is-tonight",
+      "file": "post/need-some-entertainment-the-royal-rumble-is-tonight/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.98,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 141,
+      "rebuiltWords": 367,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Need some Entertainment? The Royal Rumble is Tonight"
+      ],
+      "rebuiltH1": [
+        "Need some Entertainment? The Royal Rumble is Tonight"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Need some Entertainment? The Royal Rumble is Tonight\" -> \"Need some Entertainment? The Royal Rumble is Tonight | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Need some Entertainment? The Royal Rumble is Tonight\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/need-some-entertainment-the-royal-rumble-is-tonight/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/new-product-alert-flavors-extracts-thriller-4-crumble",
+      "file": "post/new-product-alert-flavors-extracts-thriller-4-crumble/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9892,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 94,
+      "rebuiltWords": 314,
+      "sourceH1": [
+        "(313) 733-4464",
+        "New Product Alert: Flavors Extracts Thriller #4 Crumble"
+      ],
+      "rebuiltH1": [
+        "New Product Alert: Flavors Extracts Thriller #4 Crumble"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"New Product Alert: Flavors Extracts Thriller #4 Crumble\" -> \"New Product Alert: Flavors Extracts Thriller #4 Crumble | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"New Product Alert: Flavors Extracts Thriller #4 Crumble\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/new-product-alert-flavors-extracts-thriller-4-crumble/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/new-products-from-lit-labs-now-available-at-flavors-detroit",
+      "file": "post/new-products-from-lit-labs-now-available-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.975,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 124,
+      "rebuiltWords": 355,
+      "sourceH1": [
+        "(313) 733-4464",
+        "New Products from Lit Labs now available at Flavors Detroit!"
+      ],
+      "rebuiltH1": [
+        "New Products from Lit Labs now available at Flavors Detroit!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"New Products from Lit Labs now available at Flavors Detroit!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/new-products-from-lit-labs-now-available-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/new-strain-alert-christmas-edition",
+      "file": "post/new-strain-alert-christmas-edition/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9765,
+      "missingWords": 4,
+      "longestMissingRun": 2,
+      "sourceWords": 156,
+      "rebuiltWords": 382,
+      "sourceH1": [
+        "(313) 733-4464",
+        "New Strain Alert: Christmas Edition!"
+      ],
+      "rebuiltH1": [
+        "New Strain Alert: Christmas Edition!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"New Strain Alert: Christmas Edition!\" -> \"New Strain Alert: Christmas Edition! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"New Strain Alert: Christmas Edition!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/new-strain-alert-christmas-edition/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/new-strain-alert-new-concentrates-new-edibles",
+      "file": "post/new-strain-alert-new-concentrates-new-edibles/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9796,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 137,
+      "rebuiltWords": 364,
+      "sourceH1": [
+        "(313) 733-4464",
+        "New Strain Alert! New Concentrates! New Edibles!"
+      ],
+      "rebuiltH1": [
+        "New Strain Alert! New Concentrates! New Edibles!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"New Strain Alert! New Concentrates! New Edibles!\" -> \"New Strain Alert! New Concentrates! New Edibles! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"New Strain Alert! New Concentrates! New Edibles!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/new-strain-alert-new-concentrates-new-edibles/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/october-is-here",
+      "file": "post/october-is-here/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9822,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 157,
+      "rebuiltWords": 380,
+      "sourceH1": [
+        "(313) 733-4464",
+        "October is here!"
+      ],
+      "rebuiltH1": [
+        "October is here!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"October is here!\" -> \"October is here! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"October is here!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/october-is-here/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/october-specials-strain-of-the-month-honorable-mentions",
+      "file": "post/october-specials-strain-of-the-month-honorable-mentions/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9924,
+      "missingWords": 2,
+      "longestMissingRun": 1,
+      "sourceWords": 265,
+      "rebuiltWords": 509,
+      "sourceH1": [
+        "(313) 733-4464",
+        "OCTOBER Specials + Strain of the Month & Honorable Mentions!"
+      ],
+      "rebuiltH1": [
+        "October Specials + Strain of the Month & Honorable Mentions!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 59,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"OCTOBER Specials + Strain of the Month & Honorable Mentions!\" -> \"October Specials + Strain of the Month & Honorable Mentions! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"October Specials + Strain of the Month & Honorable Mentions!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/october-specials-strain-of-the-month-honorable-mentions/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/october-weekend-specials",
+      "file": "post/october-weekend-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9806,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 146,
+      "rebuiltWords": 368,
+      "sourceH1": [
+        "(313) 733-4464",
+        "October Weekend Specials"
+      ],
+      "rebuiltH1": [
+        "October Weekend Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"October Weekend Specials\" -> \"October Weekend Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"October Weekend Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/october-weekend-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/pick-8-20-1g-shatter-s-only-100-out-the-door",
+      "file": "post/pick-8-20-1g-shatter-s-only-100-out-the-door/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9875,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 82,
+      "rebuiltWords": 310,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Pick 8 ($20) 1G Shatter's only $100 Out the Door"
+      ],
+      "rebuiltH1": [
+        "Pick 8 ($20) 1G Shatter's only $100 Out the Door"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Pick 8 ($20) 1G Shatter's only $100 Out the Door\" -> \"Pick 8 ($20) 1G Shatter's only $100 Out the Door | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Pick 8 ($20) 1G Shatter's only $100 Out the Door\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/pick-8-20-1g-shatter-s-only-100-out-the-door/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/prices-slashed-on-over-30-strains-new-fire",
+      "file": "post/prices-slashed-on-over-30-strains-new-fire/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9867,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 79,
+      "rebuiltWords": 311,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Prices SLASHED on Over 30 Strains ! & NEW FIRE !"
+      ],
+      "rebuiltH1": [
+        "Prices Slashed on Over 30 Strains ! & New Fire !"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Prices SLASHED on Over 30 Strains ! & NEW FIRE !\" -> \"Prices Slashed on Over 30 Strains ! & New Fire ! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Prices Slashed on Over 30 Strains ! & New Fire !\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/prices-slashed-on-over-30-strains-new-fire/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/ready-for-the-weekend",
+      "file": "post/ready-for-the-weekend/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9829,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 168,
+      "rebuiltWords": 394,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Ready for the Weekend?"
+      ],
+      "rebuiltH1": [
+        "Ready for the Weekend?"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Ready for the Weekend?\" -> \"Ready for the Weekend? | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Ready for the Weekend?\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/ready-for-the-weekend/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/saturday-blowout",
+      "file": "post/saturday-blowout/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.968,
+      "missingWords": 4,
+      "longestMissingRun": 2,
+      "sourceWords": 120,
+      "rebuiltWords": 341,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Saturday Blowout!"
+      ],
+      "rebuiltH1": [
+        "Saturday Blowout!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Saturday Blowout!\" -> \"Saturday Blowout! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Saturday Blowout!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/saturday-blowout/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/snow-day-specials",
+      "file": "post/snow-day-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9818,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 176,
+      "rebuiltWords": 380,
+      "sourceH1": [
+        "(313) 733-4464",
+        "SNOW DAY SPECIALS"
+      ],
+      "rebuiltH1": [
+        "Snow day specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"SNOW DAY SPECIALS\" -> \"Snow day specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Snow day specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/snow-day-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/starling-1000mg-cbd-darts",
+      "file": "post/starling-1000mg-cbd-darts/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9902,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 103,
+      "rebuiltWords": 319,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Starling 1000MG CBD Darts"
+      ],
+      "rebuiltH1": [
+        "Starling 1000MG CBD Darts"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Starling 1000MG CBD Darts\" -> \"Starling 1000MG CBD Darts | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Starling 1000MG CBD Darts\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/starling-1000mg-cbd-darts/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/still-christmas-shopping-we-can-help",
+      "file": "post/still-christmas-shopping-we-can-help/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9828,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 152,
+      "rebuiltWords": 379,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Still Christmas Shopping? We can help!"
+      ],
+      "rebuiltH1": [
+        "Still Christmas Shopping? We can help!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Still Christmas Shopping? We can help!\" -> \"Still Christmas Shopping? We can help! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Still Christmas Shopping? We can help!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/still-christmas-shopping-we-can-help/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/stocking-stuffers-treats-for-the-grown-ups-1",
+      "file": "post/stocking-stuffers-treats-for-the-grown-ups-1/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9776,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 122,
+      "rebuiltWords": 350,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Stocking Stuffers (Treats for the grown-ups)"
+      ],
+      "rebuiltH1": [
+        "Stocking Stuffers (Treats for the grown-ups)"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Stocking Stuffers (Treats for the grown-ups)\" -> \"Stocking Stuffers (Treats for the grown-ups) | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Stocking Stuffers (Treats for the grown-ups)\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/stocking-stuffers-treats-for-the-grown-ups-1/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/summer-cannabis-deals-detroit-2026",
+      "file": "post/summer-cannabis-deals-detroit-2026/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.999,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 1036,
+      "rebuiltWords": 1297,
+      "sourceH1": [
+        "(313) 733-4464",
+        "The Ultimate Summer Savings Event at Flavors Detroit - Front & Center in Detroit Cannabis Deals",
+        "🌿 Flavors Detroit Everyday Specials",
+        "🌼 Premium 3.5g Flower — Only $10",
+        "💎 Ounce Specials & Blowout Deals",
+        "🍯 Live Resin Sugar — Only $5 Per Gram",
+        "❄️ Premium Crumble, Only $5 Per Gram",
+        "💨 Vape Deals You'll Love",
+        "🍬 Stock Up & Save on Edibles",
+        "🚀 $1 Everyday Prerolls",
+        "Why Customers Choose Flavors Detroit",
+        "Visit Flavors Detroit Today"
+      ],
+      "rebuiltH1": [
+        "The Ultimate Summer Savings Event at Flavors Detroit - Front & Center in Detroit Cannabis Deals"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 63,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"The Ultimate Summer Savings Event at Flavors Detroit - Front & Center in Detroit Cannabis Deals\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/summer-cannabis-deals-detroit-2026/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/summer-time-moonrocks-and-more",
+      "file": "post/summer-time-moonrocks-and-more/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9766,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 124,
+      "rebuiltWords": 350,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Summer Time Moonrocks and More...."
+      ],
+      "rebuiltH1": [
+        "Summer Time Moonrocks and More...."
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Summer Time Moonrocks and More....\" -> \"Summer Time Moonrocks and More.... | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Summer Time Moonrocks and More....\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/summer-time-moonrocks-and-more/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/super-bowl-sunday-specials",
+      "file": "post/super-bowl-sunday-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9841,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 174,
+      "rebuiltWords": 395,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Super Bowl Sunday Specials"
+      ],
+      "rebuiltH1": [
+        "Super Bowl Sunday Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Super Bowl Sunday Specials\" -> \"Super Bowl Sunday Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Super Bowl Sunday Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/super-bowl-sunday-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/t-g-i-f",
+      "file": "post/t-g-i-f/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9735,
+      "missingWords": 4,
+      "longestMissingRun": 3,
+      "sourceWords": 144,
+      "rebuiltWords": 375,
+      "sourceH1": [
+        "(313) 733-4464",
+        "T.G.I.F."
+      ],
+      "rebuiltH1": [
+        "T.G.I.F."
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"T.G.I.F.\" -> \"T.G.I.F. | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"T.G.I.F.\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/t-g-i-f/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews",
+      "file": "post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9863,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 73,
+      "rebuiltWords": 309,
+      "sourceH1": [
+        "(313) 733-4464",
+        "T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews"
+      ],
+      "rebuiltH1": [
+        "T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 55,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews\" -> \"T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"T.G.I.F - 2 for $20 Motorcity 180mg Ribbon Chews\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/t-g-i-f-2-for-20-motorcity-180mg-ribbon-chews/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/t-g-i-f-specials",
+      "file": "post/t-g-i-f-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9769,
+      "missingWords": 4,
+      "longestMissingRun": 2,
+      "sourceWords": 168,
+      "rebuiltWords": 385,
+      "sourceH1": [
+        "(313) 733-4464",
+        "T.G.I.F. SPECIALS!"
+      ],
+      "rebuiltH1": [
+        "T.G.I.F. Specials!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"T.G.I.F. SPECIALS!\" -> \"T.G.I.F. Specials! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"T.G.I.F. Specials!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/t-g-i-f-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit",
+      "file": "post/tgif-at-flavors-detroit/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9805,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 142,
+      "rebuiltWords": 375,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF at Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "TGIF at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit-2",
+      "file": "post/tgif-at-flavors-detroit-2/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9787,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 132,
+      "rebuiltWords": 356,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF at Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "TGIF at Flavors Detroit"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF at Flavors Detroit\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit-2/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-at-flavors-detroit-massive-new-flower-drop",
+      "file": "post/tgif-at-flavors-detroit-massive-new-flower-drop/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9921,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 123,
+      "rebuiltWords": 355,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF at Flavors Detroit: Massive New Flower Drop!"
+      ],
+      "rebuiltH1": [
+        "TGIF at Flavors Detroit: Massive New Flower Drop!"
+      ],
+      "sourceLinks": 2,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF at Flavors Detroit: Massive New Flower Drop!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-at-flavors-detroit-massive-new-flower-drop/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-end-of-the-month-specials",
+      "file": "post/tgif-end-of-the-month-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9763,
+      "missingWords": 4,
+      "longestMissingRun": 3,
+      "sourceWords": 157,
+      "rebuiltWords": 393,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF: End of the Month Specials"
+      ],
+      "rebuiltH1": [
+        "TGIF: End of the Month Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"TGIF: End of the Month Specials\" -> \"TGIF: End of the Month Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF: End of the Month Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-end-of-the-month-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-february-snow",
+      "file": "post/tgif-february-snow/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9822,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 165,
+      "rebuiltWords": 390,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF: February Snow"
+      ],
+      "rebuiltH1": [
+        "TGIF: February Snow"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"TGIF: February Snow\" -> \"TGIF: February Snow | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF: February Snow\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-february-snow/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-gelato-weekend",
+      "file": "post/tgif-gelato-weekend/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9767,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 123,
+      "rebuiltWords": 345,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF: Gelato Weekend!"
+      ],
+      "rebuiltH1": [
+        "TGIF: Gelato Weekend!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"TGIF: Gelato Weekend!\" -> \"TGIF: Gelato Weekend! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF: Gelato Weekend!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-gelato-weekend/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-stock-up-and-save",
+      "file": "post/tgif-stock-up-and-save/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9756,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 120,
+      "rebuiltWords": 345,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF: Stock up and Save!"
+      ],
+      "rebuiltH1": [
+        "TGIF: Stock up and Save!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"TGIF: Stock up and Save!\" -> \"TGIF: Stock up and Save! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF: Stock up and Save!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-stock-up-and-save/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/tgif-valentine-weekend",
+      "file": "post/tgif-valentine-weekend/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9822,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 164,
+      "rebuiltWords": 382,
+      "sourceH1": [
+        "(313) 733-4464",
+        "TGIF: Valentine Weekend"
+      ],
+      "rebuiltH1": [
+        "TGIF: Valentine Weekend"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"TGIF: Valentine Weekend\" -> \"TGIF: Valentine Weekend | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"TGIF: Valentine Weekend\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/tgif-valentine-weekend/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/thanksgiving-a-day-early",
+      "file": "post/thanksgiving-a-day-early/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9758,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 116,
+      "rebuiltWords": 344,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Thanksgiving a day early!"
+      ],
+      "rebuiltH1": [
+        "Thanksgiving a day early!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Thanksgiving a day early!\" -> \"Thanksgiving a day early! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Thanksgiving a day early!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/thanksgiving-a-day-early/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/the-3rd-annual-4-20-spectacular-is-here",
+      "file": "post/the-3rd-annual-4-20-spectacular-is-here/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9859,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 198,
+      "rebuiltWords": 423,
+      "sourceH1": [
+        "(313) 733-4464",
+        "The 3rd Annual 4/20 Spectacular is Here!"
+      ],
+      "rebuiltH1": [
+        "The 3rd Annual 4/20 Spectacular is Here!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"The 3rd Annual 4/20 Spectacular is Here!\" -> \"The 3rd Annual 4/20 Spectacular is Here! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"The 3rd Annual 4/20 Spectacular is Here!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/the-3rd-annual-4-20-spectacular-is-here/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/the-first-of-june",
+      "file": "post/the-first-of-june/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.973,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 109,
+      "rebuiltWords": 330,
+      "sourceH1": [
+        "(313) 733-4464",
+        "The First of June!"
+      ],
+      "rebuiltH1": [
+        "The First of June!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"The First of June!\" -> \"The First of June! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"The First of June!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/the-first-of-june/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/the-last-day-of-march-2021",
+      "file": "post/the-last-day-of-march-2021/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9824,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 162,
+      "rebuiltWords": 386,
+      "sourceH1": [
+        "(313) 733-4464",
+        "The last day of March 2021"
+      ],
+      "rebuiltH1": [
+        "The last day of March 2021"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"The last day of March 2021\" -> \"The last day of March 2021 | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"The last day of March 2021\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/the-last-day-of-march-2021/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/the-new-and-improved-connoisseur-carts-have-arrived",
+      "file": "post/the-new-and-improved-connoisseur-carts-have-arrived/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9787,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 135,
+      "rebuiltWords": 365,
+      "sourceH1": [
+        "(313) 733-4464",
+        "The New and Improved Connoisseur Carts have arrived!"
+      ],
+      "rebuiltH1": [
+        "The New and Improved Connoisseur Carts have arrived!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"The New and Improved Connoisseur Carts have arrived!\" -> \"The New and Improved Connoisseur Carts have arrived! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"The New and Improved Connoisseur Carts have arrived!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/the-new-and-improved-connoisseur-carts-have-arrived/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/turn-up-the-weekend",
+      "file": "post/turn-up-the-weekend/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9819,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 157,
+      "rebuiltWords": 377,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Turn up the Weekend!"
+      ],
+      "rebuiltH1": [
+        "Turn up the Weekend!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 57,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Turn up the Weekend!\" -> \"Turn up the Weekend! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Turn up the Weekend!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/turn-up-the-weekend/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/valentine-s-day-specials",
+      "file": "post/valentine-s-day-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9821,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 159,
+      "rebuiltWords": 383,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Valentine's Day Specials"
+      ],
+      "rebuiltH1": [
+        "Valentine's Day Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Valentine's Day Specials\" -> \"Valentine's Day Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Valentine's Day Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/valentine-s-day-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/we-re-back",
+      "file": "post/we-re-back/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9756,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 116,
+      "rebuiltWords": 336,
+      "sourceH1": [
+        "(313) 733-4464",
+        "We're Back!"
+      ],
+      "rebuiltH1": [
+        "We're Back!"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"We're Back!\" -> \"We're Back! | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"We're Back!\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/we-re-back/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/wrestlemania-2-day-special",
+      "file": "post/wrestlemania-2-day-special/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.9651,
+      "missingWords": 3,
+      "longestMissingRun": 2,
+      "sourceWords": 83,
+      "rebuiltWords": 301,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Wrestlemania 2 Day Special"
+      ],
+      "rebuiltH1": [
+        "Wrestlemania 2 Day Special"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 56,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Wrestlemania 2 Day Special\" -> \"Wrestlemania 2 Day Special | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Wrestlemania 2 Day Special\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/wrestlemania-2-day-special/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/post/wrestlemania-weekend-specials",
+      "file": "post/wrestlemania-weekend-specials/index.html",
+      "pageType": "article",
+      "status": "DIFFERS",
+      "recall": 0.997,
+      "missingWords": 1,
+      "longestMissingRun": 1,
+      "sourceWords": 309,
+      "rebuiltWords": 536,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Wrestlemania Weekend Specials"
+      ],
+      "rebuiltH1": [
+        "Wrestlemania Weekend Specials"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 58,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Wrestlemania Weekend Specials\" -> \"Wrestlemania Weekend Specials | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Wrestlemania Weekend Specials\""
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "post/wrestlemania-weekend-specials/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/admin/profile",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.8012,
+      "missingWords": 67,
+      "longestMissingRun": 7,
+      "sourceWords": 342,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 80.1% (floor 95%)",
+          "detail": "missing words: admin followers 0 following follow actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/admin/profile?disableScrollToTop=true",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.8012,
+      "missingWords": 67,
+      "longestMissingRun": 7,
+      "sourceWords": 342,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Flavors Detroit"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 80.1% (floor 95%)",
+          "detail": "missing words: admin followers 0 following follow actions profile date apr 2018 likes received comments answers 121 loading options extending responded eighths staying beginning brings completely 85"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/ddhsocial147168/profile",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.8012,
+      "missingWords": 32,
+      "longestMissingRun": 7,
+      "sourceWords": 154,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Emily Gilbert"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 80.1% (floor 95%)",
+          "detail": "missing words: emily gilbert admin followers 0 following follow actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/ddhsocial147168/profile?disableScrollToTop=true",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.8012,
+      "missingWords": 32,
+      "longestMissingRun": 7,
+      "sourceWords": 154,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Emily Gilbert"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "major",
+          "code": "content-loss",
+          "title": "Body content recall 80.1% (floor 95%)",
+          "detail": "missing words: emily gilbert admin followers 0 following follow actions profile date jun likes received comments answers aug cap gimmicks kind shopper 151 load"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/detroitdesignhouse81090/profile",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.2593,
+      "missingWords": 20,
+      "longestMissingRun": 7,
+      "sourceWords": 27,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Miki Bielik"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 25.9% (floor 95%)",
+          "detail": "missing words: miki bielik admin followers 0 following follow actions profile date apr likes received comments answers"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/detroitdesignhouse81090/profile?disableScrollToTop=true",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.2593,
+      "missingWords": 20,
+      "longestMissingRun": 7,
+      "sourceWords": 27,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "Miki Bielik"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 25.9% (floor 95%)",
+          "detail": "missing words: miki bielik admin followers 0 following follow actions profile date apr likes received comments answers"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/flavorsdetroit56947/profile",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.2593,
+      "missingWords": 20,
+      "longestMissingRun": 7,
+      "sourceWords": 27,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "flavorsdetroit3"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 25.9% (floor 95%)",
+          "detail": "missing words: flavorsdetroit3 admin followers 0 following follow actions profile date feb likes received comments answers"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/profile/flavorsdetroit56947/profile?disableScrollToTop=true",
+      "file": "blog/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.2593,
+      "missingWords": 20,
+      "longestMissingRun": 7,
+      "sourceWords": 27,
+      "rebuiltWords": 5326,
+      "sourceH1": [
+        "(313) 733-4464",
+        "flavorsdetroit3"
+      ],
+      "rebuiltH1": [
+        "Flavors news"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 173,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Profile | flavorsdetroit\" -> \"Flavors News | Drops, Deals & Events | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Flavors news\""
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 25.9% (floor 95%)",
+          "detail": "missing words: flavorsdetroit3 admin followers 0 following follow actions profile date feb likes received comments answers"
+        },
+        {
+          "severity": "major",
+          "code": "section-lost",
+          "title": "1 source H2 section(s) absent",
+          "detail": "profile"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "blog/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/sinage",
+      "file": "daily-deals/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.4615,
+      "missingWords": 35,
+      "longestMissingRun": 5,
+      "sourceWords": 33,
+      "rebuiltWords": 949,
+      "sourceH1": [
+        "(313) 733-4464",
+        "$6/G",
+        "$50/Eighth",
+        "$90/Quater",
+        "$175/Half",
+        "$340/OUnce",
+        "$12/G",
+        "$50/Eighth",
+        "$90/Quater",
+        "$175/Half",
+        "$340/OUnce",
+        "$8/G",
+        "$50/Eighth",
+        "$90/Quater",
+        "$175/Half",
+        "$340/OUnce",
+        "$15/G",
+        "$50/Eighth",
+        "$90/Quater",
+        "$175/Half",
+        "$340/OUnce",
+        "$10/G",
+        "$50/Eighth",
+        "$90/Quater",
+        "$175/Half",
+        "$340/OUnce",
+        "$20/G",
+        "$60/Eighth",
+        "$110/Quater",
+        "$200/Half",
+        "$380/OUnce"
+      ],
+      "rebuiltH1": [
+        "Daily deals & more"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 51,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Sinage | flavorsdetroit\" -> \"Daily Deals & More | Flavors Detroit, 5700 E 8 Mile Rd\""
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Daily deals & more\""
+        },
+        {
+          "severity": "blocker",
+          "code": "content-loss",
+          "title": "Body content recall 46.2% (floor 95%)",
+          "detail": "missing words: specials quater 175 340 12 90 half g 60 110 200 380 www flavorsdetroit com"
+        },
+        {
+          "severity": "blocker",
+          "code": "form-no-action",
+          "title": "Form has no action",
+          "detail": "daily-deals/index.html"
+        }
+      ]
+    },
+    {
+      "url": "https://www.flavorsdetroit.com/terms-of-service",
+      "file": "terms-of-service/index.html",
+      "pageType": "page",
+      "status": "DIFFERS",
+      "recall": 0.9995,
+      "missingWords": 3,
+      "longestMissingRun": 1,
+      "sourceWords": 5774,
+      "rebuiltWords": 5770,
+      "sourceH1": [
+        "(313) 733-4464"
+      ],
+      "rebuiltH1": [
+        "Terms of service"
+      ],
+      "sourceLinks": 1,
+      "rebuiltLinks": 43,
+      "findings": [
+        {
+          "severity": "minor",
+          "code": "title-changed",
+          "title": "Title changed",
+          "detail": "\"Flavors Deroit | Michigan Medial Marijuana Dispensary Terms Of Sevice\" -> \"Terms of Service | Flavors Detroit\""
+        },
+        {
+          "severity": "minor",
+          "code": "description-changed",
+          "title": "Meta description changed",
+          "detail": "terms-of-service/index.html"
+        },
+        {
+          "severity": "minor",
+          "code": "h1-changed",
+          "title": "H1 changed",
+          "detail": "\"(313) 733-4464\" -> \"Terms of service\""
+        }
+      ]
+    }
+  ]
+}

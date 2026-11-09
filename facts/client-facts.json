@@ -1,0 +1,437 @@
+{
+  "schema": "site-reforge/client-facts@1",
+  "note": "Declared facts. ONLY facts recorded here or present in audit/content-inventory.json may appear as claims on the rebuild. Everything else is a fabrication and sr-fabrication.mjs fails the gate. Every entry names its source: LIVE = the captured live site (audit/raw, audit/pages), PORTAL = the live ordering portal (audit/portal-probe.json), BRIEF = the operator's redesign brief of 2026-11-09.",
+  "legalName": "Flavors Detroit",
+  "brand": "Flavors Detroit",
+  "phone": [
+    {
+      "value": "(313) 733-4464",
+      "tel": "+13137334464",
+      "source": "LIVE home header, contact section, every post"
+    }
+  ],
+  "email": [],
+  "addresses": [
+    {
+      "value": "5700 E 8 Mile Rd, Detroit, MI 48234",
+      "source": "LIVE home contact section ('5700 E 8 MILE RD DETROIT, MI 48234'); BRIEF: 5700 is correct, the 5730 shown elsewhere on the live site is wrong",
+      "mapsLink": "https://goo.gl/maps/usLEyaF1tRV9tFTy9",
+      "mapsLinkSource": "LIVE home contact section (the client's own Google Maps short link)",
+      "mapsSearch": "https://www.google.com/maps/search/?api=1&query=Flavors%20Detroit%2C%205700%20E%208%20Mile%20Rd%2C%20Detroit%2C%20MI%2048234",
+      "directions": "https://www.google.com/maps/dir/?api=1&destination=Flavors%20Detroit%2C%205700%20E%208%20Mile%20Rd%2C%20Detroit%2C%20MI%2048234",
+      "mapsNote": "The live site links https://goo.gl/maps/usLEyaF1tRV9tFTy9, which resolved on 2026-11-08 to a Google Maps pin labelled \"5730 East 8 Mile Road\" (42.4474097,-83.0457868). The rebuild searches the business name at the corrected 5700 address instead. Owner to confirm the Google Business Profile address."
+    }
+  ],
+  "hours": {
+    "value": "Open every day, 10AM to 10PM",
+    "schema": "Mo-Su 10:00-22:00",
+    "timeZone": "America/Detroit",
+    "source": "LIVE header 'OPEN EVERYDAY 10AM - 10PM!'; posts 2026-08-30 'Monday – Sunday: 10:00 AM – 10:00 PM, Open 7 Days a Week'; BRIEF"
+  },
+  "store": {
+    "size": {
+      "value": "10,000 sq ft",
+      "source": "LIVE home 'our beautiful 10,000 sq ft location'; BRIEF"
+    },
+    "concept": {
+      "value": "deli style displays",
+      "source": "LIVE meta description 'deli style displays that showcase our premium products with sophistication and clarity'; PORTAL brand 'Flavors Deli-Style Flower'; BRIEF"
+    },
+    "tagline": {
+      "value": "A traditional dispensary with a modern twist",
+      "source": "LIVE home 'a traditional dispensaRY WITH A MODERN TWIST'; PORTAL header 'A Traditional Dispensary with a Modern Twist'"
+    },
+    "serves": {
+      "value": "medical and recreational (adult-use 21+) customers",
+      "source": "LIVE home 'any medical or recreational need'; LIVE age gate '21 years old or a valid medical marijuana patient'; PORTAL 'Adult-use, 21+'"
+    },
+    "ordering": {
+      "value": "Order cannabis online for pickup",
+      "url": "https://flavors-detroit.portal42.com/",
+      "source": "PORTAL home 'Order cannabis online for pickup', 'Pickup in store'; LIVE nav 'Live Menu / Order Online'"
+    },
+    "instagram": {
+      "value": "@flavorsdetroit_",
+      "url": "https://www.instagram.com/flavorsdetroit_/",
+      "source": "LIVE home 'Follow us on Instagram @ flavorsdetroit_'"
+    },
+    "id": {
+      "value": "For adults 21+ only. Valid government-issued photo ID required.",
+      "source": "LIVE post 2026-08-30"
+    }
+  },
+  "building": {
+    "source": "BRIEF (operator's description of the real store; no photos supplied yet)",
+    "sign": "a black, cloud-shaped sign outlined in marquee bulbs, bold cream 'FLAVORS DETROIT' lettering, a glowing neon '5700', on a royal-blue corrugated tower",
+    "storefront": "a dark building with rainbow-striped awnings and a green cross",
+    "interior": "bright white, glossy and modern, navy counters glowing with blue LED underglow, glass jars of flower displayed like a premium deli counter"
+  },
+  "licences": [],
+  "certifications": [],
+  "awards": [],
+  "statistics": [
+    {
+      "value": "10,000 sq ft",
+      "source": "LIVE home"
+    },
+    {
+      "value": "over one million customers served",
+      "source": "LIVE blog index excerpt of the 2026-08-04 post 'The Ultimate Summer Savings Event at Flavors Detroit' (audit/pages/blog/text.txt): 'Over 1 Million Customers Served'"
+    },
+    {
+      "value": "24 new strains at $10 for 3.5G",
+      "source": "LIVE post 2026-08-30"
+    }
+  ],
+  "testimonials": [],
+  "clients": [],
+  "guarantees": [],
+  "pricing": [
+    {
+      "deal": "$10 eighths (3.5G)",
+      "detail": "The $10 3.5G flower promotion has been extended; new strains include Blue Starburst, Kush Mints, Frog Poison, Warheadz and Nor-Cal Runtz",
+      "asOf": "2026-10-11",
+      "source": "LIVE post 2026-10-11 'Halloween at Flavors Detroit'; BRIEF '$10 eighths'"
+    },
+    {
+      "deal": "$85 prepacked ounces (28G)",
+      "detail": "New premium prepacked ounce tier: Cherry Meltz, Ghost Mode, Peach Guava, Animal Mints",
+      "asOf": "2026-10-11",
+      "source": "LIVE post 2026-10-11"
+    },
+    {
+      "deal": "$25 to $75 ounces",
+      "detail": "Rotating 28G ounce deals",
+      "asOf": "2026-08-30",
+      "source": "LIVE post 2026-08-30 meta description '$25–$75 ounces'; BRIEF 'ounce tiers'"
+    },
+    {
+      "deal": "$5 concentrates",
+      "detail": "$5 grams; 5G buckets for $20; 14G buckets as low as $39; expanded lineup of budders, cured sugars and sugar waxes",
+      "asOf": "2026-10-11",
+      "source": "LIVE posts 2026-08-30 and 2026-10-11"
+    },
+    {
+      "deal": "$1 pre-rolls",
+      "detail": "$1 prerolls on select strains; Swisher Wood Tip 1.5G blunts $8.50 each in 6 flavors",
+      "asOf": "2026-08-30",
+      "source": "LIVE post 2026-08-30; PORTAL '($1) Hello Farms 1G Preroll'; BRIEF '$1 pre-rolls with vape bundles'"
+    },
+    {
+      "deal": "Vape bundles",
+      "detail": "Royal High 510 thread carts 10 for $35; Platinum Vape 2G disposables 5 for $50",
+      "asOf": "2026-08-30",
+      "source": "LIVE post 2026-08-30; BRIEF"
+    }
+  ],
+  "ownersBox": {
+    "name": "The Owner's Box",
+    "nameSource": "BRIEF ('The Owner's Box' of exclusive top-shelf strains). The live site does not use this name; its 2026-10-11 post calls the same tier 'Top Shelf Spotlight: Our Most Exclusive Flower'. Confirm the name with the owner.",
+    "description": "a small group of high-end, extremely exclusive premium strains for customers who want something more rare, more flavorful, and more elevated from the average menu pick",
+    "descriptionSource": "LIVE post 2026-10-11",
+    "strains": [
+      {
+        "name": "La Rosa #15",
+        "notes": "A seductive, flavor-forward balanced hybrid with a floral, candy-sweet character and creamy depth.",
+        "asOf": "2026-10-11"
+      },
+      {
+        "name": "Demon Drop",
+        "notes": "Dark, loud, and dripping with attitude, Demon Drop delivers rich candy sweetness, berry notes, and a gassy finish.",
+        "asOf": "2026-10-11"
+      },
+      {
+        "name": "Crunch Berries",
+        "notes": "Fun, flavorful, and wildly unique, Crunch Berries brings a sweet berry-forward profile with a smooth, delicious finish.",
+        "asOf": "2026-10-11"
+      }
+    ]
+  },
+  "services": [
+    {
+      "value": "Live menu and online ordering for in-store pickup",
+      "source": "PORTAL"
+    },
+    {
+      "value": "Mailing list: receive new product alerts before everyone else",
+      "source": "LIVE home"
+    },
+    {
+      "value": "Budtenders help you decide",
+      "source": "LIVE home 'come in and have our budtenders help you decide!'"
+    }
+  ],
+  "brandColours": {
+    "rainbow": {
+      "values": {
+        "red": "#AF0303",
+        "orange": "#FA8900",
+        "yellow": "#F6FC1E",
+        "pink": "#ED397A",
+        "blue": "#00A3DC",
+        "green": "#338900"
+      },
+      "source": "MEASURED 2026-11-08 from the client's own social image (assets/originals/db1c73_cc22dca1b1874066b0a08b08c61048be_mv2.jpg), stripe centres"
+    },
+    "signBlack": {
+      "value": "#0B0B0A",
+      "source": "MEASURED from the logo (assets/brand/flavors-logo-original.png)"
+    },
+    "signLettering": {
+      "value": "#FFFFFE in the logo file; cream on the real sign",
+      "source": "MEASURED logo file; BRIEF 'bold cream lettering'"
+    },
+    "royalBlue": {
+      "value": "chosen, not measured",
+      "source": "BRIEF 'royal-blue corrugated tower'. No photo of the tower was supplied; confirm the exact blue from a store photo."
+    }
+  },
+  "corrections": [
+    {
+      "what": "Address 5730 E 8 Mile Rd shown in the live header, terms and several posts",
+      "fix": "5700 E 8 Mile Rd",
+      "source": "BRIEF"
+    },
+    {
+      "what": "Placeholder text '[PHOTO OF CURRENT BUILDING GOES HERE, GOOGLE HAS OLD PICTURE]' on the live home page",
+      "fix": "removed; a labelled photo placeholder holds the slot until a store photo is supplied",
+      "source": "BRIEF"
+    },
+    {
+      "what": "Copyright '© 2018 by Flavors Detroit'",
+      "fix": "© 2026 Flavors Detroit",
+      "source": "BRIEF"
+    },
+    {
+      "what": "All-caps copy",
+      "fix": "rewritten in sentence case, words unchanged",
+      "source": "BRIEF"
+    },
+    {
+      "what": "Old ordering links to flavors-detroit.kushcart.us in posts and one home button",
+      "fix": "pointed at the live portal https://flavors-detroit.portal42.com/",
+      "source": "BRIEF (the live ordering portal must keep working)"
+    },
+    {
+      "what": "Category 'See Menu' links to flavors-detroit.portal42.com/menu/Flower (and /Concentrates, /Edibles) answer 'Page not found' on the portal",
+      "fix": "pointed at the portal home, which works",
+      "source": "MEASURED 2026-11-08 (audit/portal-probe--menu-Flower.json)"
+    }
+  ],
+  "liveMenu": {
+    "source": "PORTAL https://flavors-detroit.portal42.com/ captured 2026-11-08T23:06:40.384Z (audit/portal-probe.json) and the Owners Box collection (audit/portal-collection-owners-box-exclusive-flower.json)",
+    "asOf": "November 8, 2026",
+    "collections": [
+      "$15 each or 2 / $25 Premium Eights",
+      "$20 each or 2 / $35 Top Shelf Eights",
+      "$20 Each or 5/$87.50 Muha Meds 2g disposable",
+      "$25 each or 2/$45 Exotics",
+      "$3.99 Each or 10/$35 Royal High - 1G Vape Cart",
+      "$35 each or 3/$90 5G Cured Sugar Buckets",
+      "$4 each or 10/$25 Dope Rope 200mg",
+      "$5 each or 5/$20 Rocket Stick 1.2g Injected P.R",
+      "$5.98 Each or 5/$25 - Fire Styxx 1G Infused Pre Rolls",
+      "10/$20 Platinum 200mg Gummies",
+      "17.50 Each or 2/$30 Twisteez 2G L.R Brush",
+      "2/$10 Chill Medicated - Syrup To-Go 100mg",
+      "2/$10 Lit Labs Rosin Resin Gummies",
+      "2/$18 Muha Meds 510 Thread",
+      "2/$30 Krack Rockz 2G Prepack",
+      "2/$50 Flavors 14G Preroll Party Pack's",
+      "3/$10 - Choice Chews 200mg",
+      "3/$110 Bossy 4000mg Pain Lotion",
+      "3/$110 Flavors Snowcapped 4.95g (3-pack)",
+      "3/$155 Chill Medicated Majestic Mint - 2000mg",
+      "3/$240 Chill Medicated Extreme X- 4000mg Pain Rub",
+      "3/$30 Flavors TopShelf 1G Crumbles",
+      "3/$30 Flavors TopShelf 1G Cured Sugar Diamonds",
+      "3/$35 Flavors TopShelf 1G Diamond Sauce",
+      "3/$45 2g Drip & Crude Boys Disposables",
+      "3/$55 Bossy 2000mg Pain Lotion",
+      "3/$85 Flavors Tarantula 4.5G (3-Pack)",
+      "33% off RSO - Everyday",
+      "3g/$18 Bossy 510 Thread Carts",
+      "4/$32 Chill to Go MAXX",
+      "4/$40 Chill Medicated Syrup",
+      "4/$40 Chill to Go - Extreme X",
+      "4/$45 Flight 1G Disposable Live Resin",
+      "4/$60 Bossy Sublingual Tincture Drops",
+      "4/$70 Flavors Diamond Donut 3.75G (3-Pack)",
+      "4/$80 - Flavors L.R. Èclair 3.75g (3-Pack)",
+      "5/$40 Made by a Farmer - Gummies",
+      "5/$45 Flavors TopShelf 1G Budders",
+      "5/$45 Motorcity Cannacarts 1G - Disposable",
+      "5G/$25 Premium Wax Bucket Blowout",
+      "6/$20 Choice 200mg Mega Chew",
+      "6/$20 Shattered Thoughts 200mg Gummies",
+      "7/$17 1.3G Flavors Jumbo Exotics Prerolls",
+      "7/$25 Infused thirteen / 1g Singles Infused",
+      "Moonbud $25",
+      "Owners Box - Exclusive Flower"
+    ],
+    "productLines": [
+      "($1) Hello Farms 1G Preroll - Candy Rain ( I ) · Hello Farms Natural 1g Singles / Non-Infused · Indica · $1 / unit",
+      "($1) Hello Farms 1G Preroll - Purple Haze ( S ) · Hello Farms Natural 1g Singles / Non-Infused · Indica · $1 / unit",
+      "($1) Hello Farms 1G Preroll - Sherb Cream Pie ( I ) · Hello Farms Natural 1g Singles / Non-Infused · Indica · $1 / unit",
+      "($1) Hello Farms 1G Preroll - Super Boof (H) · Hello Farms Natural 1g Singles / Non-Infused · Indica · $1 / unit",
+      "($1) Hello Farms 1G Preroll - Super Gremlin (I) · Hello Farms Natural 1g Singles / Non-Infused · Indica · $1 / unit",
+      "($10) Flavors 3.5G Prepack - Applelato (H) · Flavors 3.5G Packaged · Hybrid · THC 32% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Apples and Bananas (H/I) · Flavors 3.5G Packaged · Hybrid · THC 26.8% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - AZ KUSH (I) · Flavors 3.5G Packaged · Hybrid · THC 31.7% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Black Rainbow ( H ) · Flavors 3.5G Packaged · Hybrid · THC 32.9% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Chem Runtz (H/S) · Flavors 3.5G Packaged · Hybrid · THC 28.9% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Cuban Linx (S) · Flavors 3.5G Packaged · Hybrid · THC 39% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - First Class Funk (H/I) · Flavors 3.5G Packaged · Hybrid · THC 33.6% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Frog Posion (H/I) · Flavors 3.5G Packaged · Hybrid · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Frosted Truffle Pie (H/I) · Flavors 3.5G Packaged · Hybrid · THC 37.7% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Frozay Rozay ( I ) · Flavors 3.5G Packaged · Hybrid · THC 33.7% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Fuglue (H/I) · Flavors 3.5G Packaged · Hybrid · THC 31.5% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Fujiwhara (H/S) · Flavors 3.5G Packaged · Hybrid · THC 33.2% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Georgia Haze (H/S) · Flavors 3.5G Packaged · Hybrid · THC 32.5% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Glitter Bomb (H/I) · Flavors 3.5G Packaged · Hybrid · THC 32.2% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Grape Cake ( I ) · Flavors 3.5G Packaged · Hybrid · THC 33.7% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Hash Berry Banger ( I ) · Flavors 3.5G Packaged · Hybrid · THC 33.2% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Hotlanta (H) · Flavors 3.5G Packaged · Hybrid · THC 31.1% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Kush Mints (H) · Flavors 3.5G Packaged · Hybrid · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Pad Thai (S) · Flavors 3.5G Packaged · Hybrid · THC 30.3% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Strawberry Guava (H) · / 1 g · Hybrid · THC 32.2% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Terpee Slurpee (H/I) · Flavors 3.5G Packaged · Hybrid · THC 31.7% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Tropical Runtz (H/I) · Flavors 3.5G Packaged · Hybrid · THC 32.4% · $10 / 1 g",
+      "($10) Flavors 3.5G Prepack - Warheadz (H/I) · Flavors 3.5G Packaged · Hybrid · $10 / 1 g",
+      "($10g) Black Runtz (H/I) · Flavors Deli-Style Flower · Hybrid · THC 36.2% · $25 / ⅛ oz",
+      "($10g) Blue Zushi (H/I) · Flavors Deli-Style Flower · Hybrid · THC 35.6% · $25 / ⅛ oz",
+      "($10G) Candy Bezel (H/S) · Flavors Deli-Style Flower · Hybrid · THC 36.7% · $25 / ⅛ oz",
+      "($10G) Candy Bluez (H) · Flavors Deli-Style Flower · Hybrid · THC 33% · $25 / ⅛ oz",
+      "($10G) CandyTrap (H/S) · Flavors Deli-Style Flower · Hybrid · THC 37% · $25 / ⅛ oz",
+      "($10G) Dantes Inferno (H) · Flavors Deli-Style Flower · Hybrid · THC 37% · $25 / ⅛ oz",
+      "($10G) Georgia Pie (H) · Flavors Deli-Style Flower · Hybrid · THC 33.8% · $25 / ⅛ oz",
+      "($10G) Hallelujah (C) · Flavors Deli-Style Flower · Hybrid · $25 / ⅛ oz",
+      "($10G) Lemon Cherry Gelato (I) · Flavors Deli-Style Flower · Hybrid · THC 33.8% · $25 / ⅛ oz",
+      "($10G) Purple Tangie (S) · Flavors Deli-Style Flower · Hybrid · THC 35.9% · $25 / ⅛ oz",
+      "($15G) Crunch Berries (H) · Flavors Deli-Style Flower · Hybrid · THC 36.7% · $34 / ⅛ oz",
+      "($15G) Demon Drop (H/I) · Flavors Deli-Style Flower · Hybrid · THC 35.3% · $34 / ⅛ oz",
+      "($15G) LA ROSA #15 ( C ) · Flavors Deli-Style Flower · Hybrid · THC 36.1% · $34 / ⅛ oz",
+      "($19oz) Top Shelf Shake - Berry Pie ( H ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 26% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Black Runtz (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.8% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - CandyTrap ( S ) · Flavors Prepacked Ounces (28g) · Hybrid · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Dante‘s Inferno (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 28% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Lemon Cherry Gelato (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 27% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Permanent Marker (H/I) · / 1 g · Hybrid · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Purple Tangie ( S ) · Flavors Prepacked Ounces (28g) · Hybrid · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Red Bullz ( H/S ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.8% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Runty Runtz (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 25.7% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - ShockTartz ( H ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 30.1% · $19 / 1 g",
+      "($19oz) Top Shelf Shake - Zoap (H/S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 27% · $19 / 1 g",
+      "($25oz) Flavors 28G Prepack - Bling Blaow · Flavors Prepacked Ounces (28g) · Hybrid · THC 28.7% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Blue Cookie (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 32% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Candy Rain · Flavors Prepacked Ounces (28g) · Hybrid · THC 30.3% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Dream Cream · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.4% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Purple Haze (S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 34.2% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Sharpiez (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 30% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Sherbacio (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.4% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Super Boof (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.9% · $25 / 1 g",
+      "($25oz) Flavors 28G Prepack - Zero Gravity ( I ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 30% · $25 / 1 g",
+      "($3) Flavors 1.3G Jumbo Preroll - Candy Trap (H/S) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 25.7% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Black Runtz (H/i) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 29% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Blue Zushi (I) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 35.6% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - ClusterF#%K ( H ) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 32.7% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Crunch Berries (H) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 35.3% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Demon Drop (H/I) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 35.3% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Galactic Warheadz (H/S) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 31.4% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - GEORGIA PIE (H) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 28.1% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - La Rosa #15 (H) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 36.1% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - LEMON CHERRY GELATO (H/I) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 28% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Purple Tangie (S) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 32.7% · $3 / unit",
+      "($3) Flavors 1.3G Jumbo Preroll - Zerealz (H) · FLAVORS Pre Rolled Joints & Cigars · Indica · THC 32.7% · $3 / unit",
+      "($35oz) Top Shelf Shake - Blue Zushi (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 35.7% · $35 / 1 g",
+      "($35oz) Top Shelf Shake - Candy Paint ( H ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 36.7% · $35 / 1 g",
+      "($35oz) Top Shelf Shake - Crunch Berries ( I ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 35.3% · $35 / 1 g",
+      "($35oz) Top Shelf Shake - Galactic Warheadz ( H/S ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 31.4% · $35 / 1 g",
+      "($35oz) Top Shelf Shake - La Rosa #15 · Flavors Prepacked Ounces (28g) · Hybrid · THC 36.1% · $35 / 1 g",
+      "($3G) LA Querkle (S) · Flavors Deli-Style Flower · Hybrid · THC 27.7% · $10 / ⅛ oz",
+      "($3G) Gorilla Glue #4 (H) · Flavors Deli-Style Flower · Hybrid · THC 27.7% · $10 / ⅛ oz",
+      "($3G) KOOL WHIP (H/I) · Flavors Deli-Style Flower · Hybrid · THC 26% · $10 / ⅛ oz",
+      "($3G) Peanut Butter Cookies (I) · Flavors Deli-Style Flower · Hybrid · THC 34.5% · $10 / ⅛ oz",
+      "($3G) Strawberry Diesel (S) · Flavors Deli-Style Flower · Hybrid · THC 32.6% · $10 / ⅛ oz",
+      "($3G) Sugar Cane (H) · Flavors Deli-Style Flower · Hybrid · THC 22.3% · $10 / ⅛ oz",
+      "($50oz) Flavors 28G Prepack - Booberries (H/S) · Flavors Prepacked Ounces (28g) · Hybrid · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Chem Cascade (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 32.2% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Iced Indulgence (H) · Flavors Prepacked Ounces (28g) · Hybrid · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - LA Chem #4 (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 27.8% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - LA Querkle (S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 25.3% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Soap (S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 28.4% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Tangie (S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 23.5% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Tropicanna Triangle (S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 29.3% · $50 / 1 g",
+      "($50oz) Flavors 28G Prepack - Zweet Inzanity (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 26.3% · $50 / 1 g",
+      "($55oz) Flavors 28G Prepack - Gary Satan ( I ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 25.1% · $55 / 1 g",
+      "($55oz) Flavors 28G Prepack - Scotts OG · Flavors Prepacked Ounces (28g) · Hybrid · THC 28.9% · $55 / 1 g",
+      "($55oz) Flavors 28G Prepack - Zkittlez Cake · Flavors Prepacked Ounces (28g) · Hybrid · THC 26.3% · $55 / 1 g",
+      "($5G) Ape SHIT! (H/S) · Flavors Deli-Style Flower · Hybrid · THC 36% · $15 / ⅛ oz",
+      "($5G) Candy Cartel (H) · Flavors Deli-Style Flower · Hybrid · $15 / ⅛ oz",
+      "($5G) Cherry Pie (H/I) · Flavors Deli-Style Flower · Hybrid · $15 / ⅛ oz",
+      "($5G) London Marker (H) · Flavors Deli-Style Flower · Hybrid · THC 33% · $15 / ⅛ oz",
+      "($5G) Peanut Butter Pie (H/I) · Flavors Deli-Style Flower · Hybrid · $15 / ⅛ oz",
+      "($5G) Purple Panties (H/I) · Flavors Deli-Style Flower · Hybrid · $15 / ⅛ oz",
+      "($65oz) Flavors 28G Prepack - Apples & Bananas (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · $65 / 1 g",
+      "($65oz) Flavors 28G Prepack - Neon Runtz (H/S) · Flavors Prepacked Ounces (28g) · Hybrid · $65 / 1 g",
+      "($65oz) Flavors 28G Prepack - Tropical Truffles ( H/S ) · Flavors Prepacked Ounces (28g) · Hybrid · THC 37% · $65 / 1 g",
+      "($75oz) Flavors 28G Prepack - Gorilla Glue (H/S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 25.9% · $75 / 1 g",
+      "($75oz) Flavors 28G Prepack - Peanut Butter Cookie (I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 27% · $75 / 1 g",
+      "($75oz) Flavors 28G Prepack - Royal Fire (I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 32.9% · $75 / 1 g",
+      "($8) Grandpas RPG (I) · Flavors Deli-Style Flower · Hybrid · THC 35.9% · $20 / ⅛ oz",
+      "($8) Wonkaz ( H ) · Flavors Deli-Style Flower · Hybrid · THC 32% · $8 / 1 g",
+      "($85oz) Flavors 28G Prepack - Animal Mints (H/S) · Flavors Prepacked Ounces (28g) · Hybrid · THC 33.4% · $85 / 1 g",
+      "($85oz) Flavors 28G Prepack - Cherry Meltz (H) · Flavors Prepacked Ounces (28g) · Hybrid · THC 36.5% · $85 / 1 g",
+      "($85oz) Flavors 28G Prepack - Ghost Mode (H/II) · Flavors Prepacked Ounces (28g) · Hybrid · THC 34.3% · $85 / 1 g",
+      "($85oz) Flavors 28G Prepack - Peach Guava (H/I) · Flavors Prepacked Ounces (28g) · Hybrid · THC 39% · $85 / 1 g",
+      "($8G) Zerealz (H) · Flavors Deli-Style Flower · Hybrid · THC 32.7% · $20 / ⅛ oz"
+    ],
+    "ownersBox": [
+      "($15G) Crunch Berries (H) · Hybrid · THC 36.7% · Buy 3.5 g for $34",
+      "($15G) Demon Drop (H/I) · Hybrid · THC 35.3% · Buy 3.5 g for $34",
+      "($15G) LA ROSA #15 ( C ) · Hybrid · THC 36.1% · Buy 3.5 g for $34"
+    ],
+    "pickupNote": "Bring a valid ID at pickup or delivery."
+  },
+  "displayedPrices": {
+    "note": "Single-digit prices exactly as the rebuild text reads once tags are stripped (the price tag sets \"$\" apart from the number). Each traces to a captured live-menu line (liveMenu.productLines / collections, PORTAL 2026-11-08).",
+    "items": [
+      {
+        "shown": "$3 /g",
+        "source": "($3G) Flavors Deli-Style Flower tier, e.g. \"($3G) LA Querkle (S) · $10 / ⅛ oz\""
+      },
+      {
+        "shown": "$5 /g",
+        "source": "($5G) Flavors Deli-Style Flower tier, e.g. \"($5G) Ape SHIT! (H/S) · $15 / ⅛ oz\""
+      },
+      {
+        "shown": "$8 /g",
+        "source": "($8G) Flavors Deli-Style Flower tier, e.g. \"($8G) Zerealz (H) · $20 / ⅛ oz\""
+      },
+      {
+        "shown": "$ 1",
+        "source": "\"($1) Hello Farms 1G Preroll\" · $1 / unit"
+      },
+      {
+        "shown": "$ 3",
+        "source": "($3G) deli tier and \"($3) Flavors 1.3G Jumbo Preroll\" · $3 / unit"
+      },
+      {
+        "shown": "$ 5",
+        "source": "($5G) deli tier"
+      },
+      {
+        "shown": "$3,",
+        "source": "deli tier list \"$3, $5, $8, $10 and $15 a gram\" (($3G) ($5G) ($8G) ($10G) ($15G) on the live menu)"
+      },
+      {
+        "shown": "$5,",
+        "source": "deli tier list (($5G) on the live menu)"
+      },
+      {
+        "shown": "$8,",
+        "source": "deli tier list (($8G) on the live menu)"
+      }
+    ]
+  }
+}

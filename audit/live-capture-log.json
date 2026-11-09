@@ -1,0 +1,46 @@
+{
+  "runs": [
+    {
+      "at": "2026-11-08T22:53:16.044Z",
+      "gapMs": 25000,
+      "visits": [
+        {
+          "url": "https://www.flavorsdetroit.com/",
+          "status": 200,
+          "at": "2026-11-08T22:53:17.655Z"
+        },
+        {
+          "url": "https://www.flavorsdetroit.com/daily-deals",
+          "status": 404,
+          "at": "2026-11-08T22:53:57.918Z"
+        },
+        {
+          "url": "https://www.flavorsdetroit.com/terms-of-service",
+          "status": 200,
+          "at": "2026-11-08T22:54:31.818Z"
+        },
+        {
+          "url": "https://www.flavorsdetroit.com/sinage",
+          "status": 200,
+          "at": "2026-11-08T22:55:09.209Z"
+        },
+        {
+          "url": "https://www.flavorsdetroit.com/blog",
+          "status": 200,
+          "at": "2026-11-08T22:55:42.028Z"
+        }
+      ]
+    },
+    {
+      "at": "2026-11-09T00:05:17.990Z",
+      "gapMs": 25000,
+      "visits": [
+        {
+          "url": "https://www.flavorsdetroit.com/",
+          "status": 200,
+          "at": "2026-11-09T00:05:19.120Z"
+        }
+      ]
+    }
+  ]
+}

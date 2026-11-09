@@ -1,0 +1,177 @@
+[
+  {
+    "fg": "--cream #f4ead5",
+    "bg": "--night #060a17",
+    "ratio": 16.53,
+    "use": "headings and body on night bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--cream-2 #d9ccb0",
+    "bg": "--night #060a17",
+    "ratio": 12.43,
+    "use": "ledes on night bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--mist #aeb8d6",
+    "bg": "--night #060a17",
+    "ratio": 9.99,
+    "use": "muted text on night bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--led-soft #9fd3ff",
+    "bg": "--night #060a17",
+    "ratio": 12.45,
+    "use": "kickers and accent words on night",
+    "aa": "AA"
+  },
+  {
+    "fg": "--led #3fa9ff",
+    "bg": "--night #060a17",
+    "ratio": 7.83,
+    "use": "LED accents (large text and UI only)",
+    "aa": "AA"
+  },
+  {
+    "fg": "--open #43e58f",
+    "bg": "--night #060a17",
+    "ratio": 12.08,
+    "use": "Open now status",
+    "aa": "AA"
+  },
+  {
+    "fg": "--closed #ff8a80",
+    "bg": "--night #060a17",
+    "ratio": 8.65,
+    "use": "Closed status",
+    "aa": "AA"
+  },
+  {
+    "fg": "--cream #f4ead5",
+    "bg": "--navy #0c1a3d",
+    "ratio": 14.28,
+    "use": "text on navy bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--mist #aeb8d6",
+    "bg": "--navy #0c1a3d",
+    "ratio": 8.63,
+    "use": "muted text on navy",
+    "aa": "AA"
+  },
+  {
+    "fg": "--cream #f4ead5",
+    "bg": "--sign-black #0b0b0a",
+    "ratio": 16.48,
+    "use": "text on the black bands and footer",
+    "aa": "AA"
+  },
+  {
+    "fg": "--mist #aeb8d6",
+    "bg": "--sign-black #0b0b0a",
+    "ratio": 9.96,
+    "use": "muted text on black",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink #0b1330",
+    "bg": "--showroom #f4f6fb",
+    "ratio": 16.89,
+    "use": "body on day bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink-2 #3a4566",
+    "bg": "--showroom #f4f6fb",
+    "ratio": 8.74,
+    "use": "secondary text on day bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink-3 #5b6788",
+    "bg": "--showroom #f4f6fb",
+    "ratio": 5.19,
+    "use": "captions on day bands",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink #0b1330",
+    "bg": "--white #ffffff",
+    "ratio": 18.26,
+    "use": "body on white",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink-2 #3a4566",
+    "bg": "--white #ffffff",
+    "ratio": 9.45,
+    "use": "secondary on white",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink-3 #5b6788",
+    "bg": "--white #ffffff",
+    "ratio": 5.61,
+    "use": "captions on white",
+    "aa": "AA"
+  },
+  {
+    "fg": "--royal #1f4fe0",
+    "bg": "--white #ffffff",
+    "ratio": 6.46,
+    "use": "links and accents on white",
+    "aa": "AA"
+  },
+  {
+    "fg": "--royal-deep #1638a8",
+    "bg": "--white #ffffff",
+    "ratio": 9.7,
+    "use": "kickers on white",
+    "aa": "AA"
+  },
+  {
+    "fg": "--white #ffffff",
+    "bg": "--royal #1f4fe0",
+    "ratio": 6.46,
+    "use": "button text on royal blue",
+    "aa": "AA"
+  },
+  {
+    "fg": "--white #ffffff",
+    "bg": "--royal-deep #1638a8",
+    "ratio": 9.7,
+    "use": "button text on the darker edge",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink #0b1330",
+    "bg": "--cream #f4ead5",
+    "ratio": 15.28,
+    "use": "price tags and Owner's Box labels",
+    "aa": "AA"
+  },
+  {
+    "fg": "--ink-2 #3a4566",
+    "bg": "--cream #f4ead5",
+    "ratio": 7.91,
+    "use": "tag details",
+    "aa": "AA"
+  },
+  {
+    "fg": "--royal-deep #1638a8",
+    "bg": "--cream #f4ead5",
+    "ratio": 8.12,
+    "use": "tag kickers",
+    "aa": "AA"
+  },
+  {
+    "fg": "--white #ffffff",
+    "bg": "--street-green #0b6b3a",
+    "ratio": 6.61,
+    "use": "street sign",
+    "aa": "AA"
+  }
+]

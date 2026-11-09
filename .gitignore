@@ -1,0 +1,14 @@
+node_modules/
+.DS_Store
+dist/
+dist-preview/
+publish/
+audit/raw/
+audit/capture/
+audit/pages/
+audit/screens/
+audit/shots/
+audit/references/
+audit/sweeps/
+assets/source/
+assets/originals/

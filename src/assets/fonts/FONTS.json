@@ -1,0 +1,46 @@
+{
+  "fetched": "2026-11-08T23:04:35.463Z",
+  "licence": "SIL Open Font License 1.1 (all families)",
+  "fonts": [
+    {
+      "file": "big-shoulders-display.woff2",
+      "source": "https://fonts.gstatic.com/s/bigshouldersdisplay/v24/fC1_PZJEZG-e9gHhdI4-NBbfd2ys3SjJCx1czNDuDJAM2w.woff2",
+      "family": "Big Shoulders Display",
+      "style": "normal",
+      "bytes": 35520,
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    },
+    {
+      "file": "big-shoulders-inline-display.woff2",
+      "source": "https://fonts.gstatic.com/s/bigshouldersinlinedisplay/v29/_LObmyfF4eSU_SCrJc9OI24U7siGvBGcZqmqV9-ZZ85CMt-tiShuEoQ.woff2",
+      "family": "Big Shoulders Inline Display",
+      "style": "normal",
+      "bytes": 95040,
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    },
+    {
+      "file": "tilt-neon.woff2",
+      "source": "https://fonts.gstatic.com/s/tiltneon/v12/E21L_d7gguXdwD9LEFY2WCeElCNtd-eBqpHp1TzrkJSmwpj5ndxquUK6UOeHIsDTJGc.woff2",
+      "family": "Tilt Neon",
+      "style": "normal",
+      "bytes": 19788,
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    },
+    {
+      "file": "instrument-sans.woff2",
+      "source": "https://fonts.gstatic.com/s/instrumentsans/v4/pxicypc9vsFDm051Uf6KVwgkfoSbT2lBgGygpg.woff2",
+      "family": "Instrument Sans",
+      "style": "normal",
+      "bytes": 57100,
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    },
+    {
+      "file": "instrument-sans-italic.woff2",
+      "source": "https://fonts.gstatic.com/s/instrumentsans/v4/pxieypc9vsFDm051Uf6KVwgkfoSbSllDimuCpPpP.woff2",
+      "family": "Instrument Sans",
+      "style": "italic",
+      "bytes": 62048,
+      "unicodeRange": "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD"
+    }
+  ]
+}

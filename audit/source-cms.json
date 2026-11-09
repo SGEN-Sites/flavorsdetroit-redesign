@@ -1,0 +1,27 @@
+{
+  "schema": "site-reforge/source-cms@1",
+  "generated": "2026-11-08T23:42:51.251Z",
+  "detected": [
+    {
+      "id": "wix",
+      "label": "Wix",
+      "matchedPatterns": 3,
+      "evidence": [
+        "/static\\.wixstatic\\.com/i",
+        "/wix-?code/i",
+        "/name=[\"']generator[\"'][^>]*Wix/i"
+      ],
+      "pages": 142
+    },
+    {
+      "id": "duda",
+      "label": "Duda",
+      "matchedPatterns": 1,
+      "evidence": [
+        "/dudamobile|dmAlbum|d-page/i"
+      ],
+      "pages": 142
+    }
+  ],
+  "note": "Every id listed here MUST be absent from dist/ before packaging. sr-decontaminate.mjs enforces it."
+}

@@ -1,0 +1,81 @@
+/* tokens.css — derived by sr-tokens.mjs from computed (browser capture).
+   Every value below traces to audit/design-baseline.json. Change values HERE,
+   never at a call site: one source, or the system is not a system. */
+:root {
+  /* --- colour ------------------------------------------------------ */
+  --c-1: #000000;
+  --c-2: #ffffff;
+  --c-3: #282626;
+  --c-4: #ffffff00;
+  --c-5: #d4d4d4;
+  --c-6: #0000ee;
+  --c-7: #ececec;
+  --c-8: #68b04d;
+
+  /* --- type -------------------------------------------------------- */
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: lulo-clean-w01-one-bold, sans-serif;
+  --fs-1: 10px;
+  --fs-2: 11px;
+  --fs-3: 12px;
+  --fs-4: 13.3333px;
+  --fs-5: 14px;
+  --fs-6: 15px;
+  --fs-7: 16px;
+  --fs-8: 18px;
+  --fs-9: 19px;
+  --fs-10: 20px;
+  --fs-11: 23px;
+  --fs-12: 24px;
+  --fs-13: 27px;
+  --fs-14: 32px;
+  --fs-15: 34px;
+  --fs-16: 40px;
+  --fs-17: 47px;
+  --fs-18: 57.7699px;
+
+  /* --- space ------------------------------------------------------- */
+  --sp-1: 3px;
+  --sp-2: 5px;
+  --sp-3: 6px;
+  --sp-4: 7px;
+  --sp-5: 8px;
+  --sp-6: 10px;
+  --sp-7: 11.25px;
+  --sp-8: 24px;
+  --sp-9: 50px;
+  --sp-10: 100px;
+
+  /* --- shape ------------------------------------------------------- */
+  --radius-1: 5px;
+  --radius-2: 15px;
+  --radius-3: 80px;
+  --radius-4: 24px;
+  --shadow-1: rgba(212, 212, 212, 0.61) 0px 2px 19px 0px;
+  --shadow-2: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+  --shadow-3: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+
+  /* --- layout ------------------------------------------------------ */
+  --container: 100%;
+  --bp-1: 300px;
+  --bp-2: 440px;
+  --bp-3: 480px;
+  --bp-4: 500px;
+  --bp-5: 640px;
+  --bp-6: 659px;
+  --bp-7: 660px;
+  --bp-8: 685px;
+  --bp-9: 686px;
+  --bp-10: 740px;
+  --bp-11: 746px;
+  --bp-12: 750px;
+  --bp-13: 886px;
+  --bp-14: 900px;
+  --bp-15: 940px;
+  --bp-16: 979px;
+  --bp-17: 980px;
+  --bp-18: 1181px;
+  --bp-19: 1364px;
+  --bp-20: 1425px;
+  --bp-21: 1564px;
+}

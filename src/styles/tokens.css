@@ -1,0 +1,140 @@
+/* ==========================================================================
+   Flavors Detroit — brand tokens
+   Art direction: "Lit up on 8 Mile" — retro roadside marquee meets modern showroom.
+     NIGHT  = the roadside sign: sign black, night navy, royal-blue tower, cream letters,
+              marquee bulbs, a neon 5700.
+     DAY    = the showroom: bright glossy white, navy counters with blue LED underglow,
+              glass jars on a deli counter.
+     FLAG   = the rainbow awning stripe, used with restraint.
+   Sources (facts/client-facts.json → brandColours):
+     MEASURED  rainbow stripes (client's social image), sign black + bulb white (logo file)
+     CHOSEN    royal / navy / LED blue / cream, from the owner's description of the store,
+               pending a store photo. Change values HERE, never at a call site.
+   The live Wix baseline is kept for reference in audit/baseline-styles/tokens.live.css.
+   Contrast ratios in comments are measured by tools/contrast.mjs (docs/BRAND-SYSTEM.md).
+   ========================================================================== */
+:root {
+  /* ---- night: the sign ---------------------------------------------------- */
+  --sign-black: #0b0b0a;          /* MEASURED logo body */
+  --night: #060a17;               /* page ground at night */
+  --night-2: #0a1128;             /* raised night surface */
+  --navy: #0c1a3d;                /* counter navy */
+  --navy-2: #142a60;              /* lifted navy, cards on night */
+  --royal: #1f4fe0;               /* the tower. white on royal ≈ 6.4:1 */
+  --royal-deep: #1638a8;          /* tower shadow ribs */
+  --royal-bright: #4a74ff;        /* hover glow, decoration only (white on it 4.0:1) */
+  --royal-top: #3a64e6;           /* lit top edge of buttons: white on it ≈ 5.1:1 */
+  --led: #3fa9ff;                 /* LED underglow. on night ≈ 7.6:1 */
+  --led-soft: #9fd3ff;            /* LED text on night ≈ 12:1 */
+  --cream: #f4ead5;               /* sign lettering. on night ≈ 17:1 */
+  --cream-2: #d9ccb0;             /* quiet cream on night ≈ 12:1 */
+  --bulb: #fffef6;                /* MEASURED bulb white (#FFFFFE) warmed for glow */
+  --bulb-glow: #ffe7a8;           /* the warm halo of a lit bulb */
+  --mist: #aeb8d6;                /* muted text on night ≈ 10:1 */
+
+  /* ---- day: the showroom -------------------------------------------------- */
+  --white: #ffffff;
+  --showroom: #f4f6fb;            /* glossy white ground */
+  --showroom-2: #e8edf7;          /* recessed panel */
+  --ink: #0b1330;                 /* text on day ≈ 17:1 */
+  --ink-2: #3a4566;               /* secondary text on day ≈ 9:1 */
+  --ink-3: #5b6788;               /* captions on day ≈ 5.6:1 (no smaller than 13px) */
+  --line-day: #d3dae9;
+
+  /* ---- flag: the rainbow awning (MEASURED, client social image) --------- */
+  --rb-red: #af0303;
+  --rb-orange: #fa8900;
+  --rb-yellow: #f6fc1e;
+  --rb-pink: #ed397a;
+  --rb-blue: #00a3dc;
+  --rb-green: #338900;
+  --cross: #1fae4b;               /* the storefront's green cross (chosen) */
+  --street-green: #0b6b3a;        /* Detroit street-name sign green (chosen) */
+
+  /* ---- status ------------------------------------------------------------ */
+  --open: #43e58f;                /* on night ≈ 11:1 */
+  --closed: #ff8a80;              /* on night ≈ 8:1 */
+
+  /* ---- derived (color-mix keeps every tint on-token) --------------------- */
+  --line-night: color-mix(in srgb, var(--cream) 14%, transparent);
+  --line-night-strong: color-mix(in srgb, var(--cream) 26%, transparent);
+  --glass-night: color-mix(in srgb, var(--night-2) 72%, transparent);
+  --glass-day: color-mix(in srgb, var(--white) 78%, transparent);
+  --led-glow: color-mix(in srgb, var(--led) 55%, transparent);
+  --led-haze: color-mix(in srgb, var(--led) 18%, transparent);
+  --royal-haze: color-mix(in srgb, var(--royal) 30%, transparent);
+  --shade: color-mix(in srgb, var(--night) 55%, transparent);
+  --shade-strong: color-mix(in srgb, var(--night) 82%, transparent);
+  --ink-shadow: color-mix(in srgb, var(--ink) 16%, transparent);
+  --ink-shadow-strong: color-mix(in srgb, var(--ink) 28%, transparent);
+
+  /* the awning: six measured stripes, each with a folded-edge shade */
+  --awning: linear-gradient(90deg,
+      color-mix(in srgb, var(--rb-red) 70%, var(--sign-black)) 0, var(--rb-red) 6%, var(--rb-red) 16.66%,
+      color-mix(in srgb, var(--rb-orange) 82%, var(--sign-black)) 16.66%, var(--rb-orange) 22%, var(--rb-orange) 33.33%,
+      var(--rb-yellow) 33.33%, var(--rb-yellow) 50%,
+      var(--rb-pink) 50%, var(--rb-pink) 66.66%,
+      var(--rb-blue) 66.66%, var(--rb-blue) 83.33%,
+      var(--rb-green) 83.33%, var(--rb-green) 94%, color-mix(in srgb, var(--rb-green) 70%, var(--sign-black)) 100%);
+  --rainbow-line: linear-gradient(90deg, var(--rb-red), var(--rb-orange), var(--rb-yellow), var(--rb-pink), var(--rb-blue), var(--rb-green));
+
+  /* ---- type ---------------------------------------------------------------- */
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-inline: "Big Shoulders Inline Display", var(--font-display);
+  --font-neon: "Tilt Neon", "Arial Rounded MT Bold", "Trebuchet MS", sans-serif;
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --fs-xs: 0.8125rem;                                   /* 13px floor for visible text */
+  --fs-sm: 0.9375rem;                                   /* 15px */
+  --fs-base: 1.0625rem;                                 /* 17px body */
+  --fs-md: 1.1875rem;                                   /* 19px lede */
+  --fs-lg: clamp(1.375rem, 1.15rem + 0.8vw, 1.75rem);
+  --fs-h3: clamp(1.625rem, 1.3rem + 1.2vw, 2.25rem);
+  --fs-h2: clamp(2.375rem, 1.6rem + 2.9vw, 4rem);
+  --fs-h1: clamp(2.75rem, 1.7rem + 3.9vw, 5rem);
+  --fs-price: clamp(3rem, 2rem + 3.6vw, 5rem);
+
+  --lh-tight: 0.92;
+  --lh-head: 1.02;
+  --lh-body: 1.62;
+  --track-kicker: 0.035em;
+
+  /* ---- space, shape, layout ----------------------------------------------- */
+  --s-1: 4px; --s-2: 8px; --s-3: 12px; --s-4: 16px; --s-5: 24px;
+  --s-6: 32px; --s-7: 48px; --s-8: 64px; --s-9: 96px; --s-10: 128px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --container: 1240px;
+  --container-narrow: 820px;
+  --band-pad: clamp(56px, 7vw, 104px);
+
+  --r-sm: 8px; --r-md: 14px; --r-lg: 22px; --r-xl: 32px; --r-pill: 999px;
+
+  --shadow-card: 0 1px 0 color-mix(in srgb, var(--white) 70%, transparent) inset, 0 18px 40px -22px var(--ink-shadow-strong), 0 2px 6px -2px var(--ink-shadow);
+  --shadow-lift: 0 28px 60px -26px var(--ink-shadow-strong), 0 4px 10px -4px var(--ink-shadow);
+  --shadow-night: 0 30px 70px -30px color-mix(in srgb, var(--night) 90%, transparent);
+  --underglow: 0 22px 40px -14px var(--led-glow);
+
+  /* chrome */
+  --utility-h: 36px;
+  --header-h: 74px;
+  --dock-h: 0px;                       /* set to the dock height on phones */
+  --z-header: 50; --z-dock: 60; --z-drawer: 80; --z-gate: 100;
+
+  /* motion */
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+  --dur-1: .2s; --dur-2: .45s; --dur-3: .9s;
+}
+
+@media (max-width: 1080px) {
+  :root { --header-h: 64px; --utility-h: 44px; }   /* touch sizes: utility links are 44px targets */
+}
+@media (max-width: 760px) {
+  :root {
+    --utility-h: 44px;
+    --header-h: 60px;
+    --dock-h: 72px;
+    --fs-base: 1rem;
+    --fs-md: 1.0625rem;
+  }
+}

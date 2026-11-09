@@ -1,0 +1,354 @@
+{
+  "source": "https://flavors-detroit.portal42.com/",
+  "capturedAt": "2026-11-08T23:06:40.384Z",
+  "asOfLabel": "November 8, 2026",
+  "note": "Parsed by tools/menu-facts.mjs from audit/portal-probe.json. Prices change; the live menu is the final word.",
+  "deliTiers": [
+    {
+      "perGram": "$3",
+      "eighth": "$10",
+      "count": 6,
+      "strains": [
+        "LA Querkle (S)",
+        "Gorilla Glue #4 (H)",
+        "KOOL WHIP (H/I)",
+        "Peanut Butter Cookies (I)",
+        "Strawberry Diesel (S)",
+        "Sugar Cane (H)"
+      ]
+    },
+    {
+      "perGram": "$5",
+      "eighth": "$15",
+      "count": 6,
+      "strains": [
+        "Ape SHIT! (H/S)",
+        "Candy Cartel (H)",
+        "Cherry Pie (H/I)",
+        "London Marker (H)",
+        "Peanut Butter Pie (H/I)",
+        "Purple Panties (H/I)"
+      ]
+    },
+    {
+      "perGram": "$8",
+      "eighth": "$20",
+      "count": 3,
+      "strains": [
+        "Zerealz (H)",
+        "Grandpas RPG (I)",
+        "Wonkaz (H)"
+      ]
+    },
+    {
+      "perGram": "$10",
+      "eighth": "$25",
+      "count": 10,
+      "strains": [
+        "Black Runtz (H/I)",
+        "Blue Zushi (H/I)",
+        "Candy Bezel (H/S)",
+        "Candy Bluez (H)",
+        "CandyTrap (H/S)",
+        "Dantes Inferno (H)",
+        "Georgia Pie (H)",
+        "Hallelujah (C)",
+        "Lemon Cherry Gelato (I)",
+        "Purple Tangie (S)"
+      ]
+    },
+    {
+      "perGram": "$15",
+      "eighth": "$34",
+      "count": 3,
+      "strains": [
+        "Crunch Berries (H)",
+        "Demon Drop (H/I)",
+        "LA ROSA #15 (C)"
+      ]
+    }
+  ],
+  "eighths": {
+    "price": "$10",
+    "size": "3.5G",
+    "count": 23,
+    "strains": [
+      "Applelato (H)",
+      "Apples and Bananas (H/I)",
+      "AZ KUSH (I)",
+      "Black Rainbow (H)",
+      "Chem Runtz (H/S)",
+      "Cuban Linx (S)",
+      "First Class Funk (H/I)",
+      "Frog Posion (H/I)",
+      "Frosted Truffle Pie (H/I)",
+      "Frozay Rozay (I)",
+      "Fuglue (H/I)",
+      "Fujiwhara (H/S)",
+      "Georgia Haze (H/S)",
+      "Glitter Bomb (H/I)",
+      "Grape Cake (I)",
+      "Hash Berry Banger (I)",
+      "Hotlanta (H)",
+      "Kush Mints (H)",
+      "Pad Thai (S)",
+      "Strawberry Guava (H)",
+      "Terpee Slurpee (H/I)",
+      "Tropical Runtz (H/I)",
+      "Warheadz (H/I)"
+    ]
+  },
+  "ounceTiers": [
+    {
+      "price": "$19",
+      "count": 11,
+      "kind": "Top shelf shake",
+      "strains": [
+        "Berry Pie (H)",
+        "Black Runtz (H/I)",
+        "CandyTrap (S)",
+        "Dante‘s Inferno (H)",
+        "Lemon Cherry Gelato (H/I)",
+        "Permanent Marker (H/I)",
+        "Purple Tangie (S)",
+        "Red Bullz (H/S)",
+        "Runty Runtz (H)",
+        "ShockTartz (H)",
+        "Zoap (H/S)"
+      ]
+    },
+    {
+      "price": "$25",
+      "count": 9,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Bling Blaow",
+        "Blue Cookie (H)",
+        "Candy Rain",
+        "Dream Cream",
+        "Purple Haze (S)",
+        "Sharpiez (H/I)",
+        "Sherbacio (H/I)",
+        "Super Boof (H)",
+        "Zero Gravity (I)"
+      ]
+    },
+    {
+      "price": "$35",
+      "count": 5,
+      "kind": "Top shelf shake",
+      "strains": [
+        "Blue Zushi (H/I)",
+        "Candy Paint (H)",
+        "Crunch Berries (I)",
+        "Galactic Warheadz (H/S)",
+        "La Rosa #15"
+      ]
+    },
+    {
+      "price": "$50",
+      "count": 9,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Booberries (H/S)",
+        "Chem Cascade (H)",
+        "Iced Indulgence (H)",
+        "LA Chem #4 (H)",
+        "LA Querkle (S)",
+        "Soap (S)",
+        "Tangie (S)",
+        "Tropicanna Triangle (S)",
+        "Zweet Inzanity (H)"
+      ]
+    },
+    {
+      "price": "$55",
+      "count": 3,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Gary Satan (I)",
+        "Scotts OG",
+        "Zkittlez Cake"
+      ]
+    },
+    {
+      "price": "$65",
+      "count": 3,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Apples & Bananas (H/I)",
+        "Neon Runtz (H/S)",
+        "Tropical Truffles (H/S)"
+      ]
+    },
+    {
+      "price": "$75",
+      "count": 3,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Gorilla Glue (H/S)",
+        "Peanut Butter Cookie (I)",
+        "Royal Fire (I)"
+      ]
+    },
+    {
+      "price": "$85",
+      "count": 4,
+      "kind": "Prepacked ounce",
+      "strains": [
+        "Animal Mints (H/S)",
+        "Cherry Meltz (H)",
+        "Ghost Mode (H/II)",
+        "Peach Guava (H/I)"
+      ]
+    }
+  ],
+  "prerolls": {
+    "dollar": {
+      "price": "$1",
+      "size": "1G",
+      "brand": "Hello Farms",
+      "strains": [
+        "Candy Rain (I)",
+        "Purple Haze (S)",
+        "Sherb Cream Pie (I)",
+        "Super Boof (H)",
+        "Super Gremlin (I)"
+      ]
+    },
+    "jumbo": {
+      "price": "$3",
+      "size": "1.3G",
+      "count": 12,
+      "bundle": "7/$17 1.3G Flavors Jumbo Exotics Prerolls"
+    },
+    "bundles": [
+      "$5 each or 5/$20 Rocket Stick 1.2g Injected P.R",
+      "$5.98 Each or 5/$25 - Fire Styxx 1G Infused Pre Rolls",
+      "2/$50 Flavors 14G Preroll Party Pack's",
+      "3/$85 Flavors Tarantula 4.5G (3-Pack)",
+      "7/$17 1.3G Flavors Jumbo Exotics Prerolls",
+      "7/$25 Infused thirteen / 1g Singles Infused"
+    ]
+  },
+  "vapes": [
+    "$20 Each or 5/$87.50 Muha Meds 2g disposable",
+    "$3.99 Each or 10/$35 Royal High - 1G Vape Cart",
+    "2/$18 Muha Meds 510 Thread",
+    "3/$45 2g Drip & Crude Boys Disposables",
+    "3g/$18 Bossy 510 Thread Carts",
+    "4/$45 Flight 1G Disposable Live Resin",
+    "5/$45 Motorcity Cannacarts 1G - Disposable"
+  ],
+  "concentrates": [
+    "$35 each or 3/$90 5G Cured Sugar Buckets",
+    "17.50 Each or 2/$30 Twisteez 2G L.R Brush",
+    "2/$30 Krack Rockz 2G Prepack",
+    "3/$110 Flavors Snowcapped 4.95g (3-pack)",
+    "3/$30 Flavors TopShelf 1G Crumbles",
+    "3/$30 Flavors TopShelf 1G Cured Sugar Diamonds",
+    "3/$35 Flavors TopShelf 1G Diamond Sauce",
+    "33% off RSO - Everyday",
+    "4/$70 Flavors Diamond Donut 3.75G (3-Pack)",
+    "4/$80 - Flavors L.R. Èclair 3.75g (3-Pack)",
+    "5/$45 Flavors TopShelf 1G Budders",
+    "5G/$25 Premium Wax Bucket Blowout"
+  ],
+  "edibles": [
+    "$4 each or 10/$25 Dope Rope 200mg",
+    "10/$20 Platinum 200mg Gummies",
+    "2/$10 Chill Medicated - Syrup To-Go 100mg",
+    "2/$10 Lit Labs Rosin Resin Gummies",
+    "3/$10 - Choice Chews 200mg",
+    "4/$32 Chill to Go MAXX",
+    "4/$40 Chill Medicated Syrup",
+    "4/$40 Chill to Go - Extreme X",
+    "5/$40 Made by a Farmer - Gummies",
+    "6/$20 Choice 200mg Mega Chew",
+    "6/$20 Shattered Thoughts 200mg Gummies"
+  ],
+  "premiumEighths": [
+    "$15 each or 2 / $25 Premium Eights",
+    "$20 each or 2 / $35 Top Shelf Eights",
+    "$25 each or 2/$45 Exotics"
+  ],
+  "collections": [
+    "$15 each or 2 / $25 Premium Eights",
+    "$20 each or 2 / $35 Top Shelf Eights",
+    "$20 Each or 5/$87.50 Muha Meds 2g disposable",
+    "$25 each or 2/$45 Exotics",
+    "$3.99 Each or 10/$35 Royal High - 1G Vape Cart",
+    "$35 each or 3/$90 5G Cured Sugar Buckets",
+    "$4 each or 10/$25 Dope Rope 200mg",
+    "$5 each or 5/$20 Rocket Stick 1.2g Injected P.R",
+    "$5.98 Each or 5/$25 - Fire Styxx 1G Infused Pre Rolls",
+    "10/$20 Platinum 200mg Gummies",
+    "17.50 Each or 2/$30 Twisteez 2G L.R Brush",
+    "2/$10 Chill Medicated - Syrup To-Go 100mg",
+    "2/$10 Lit Labs Rosin Resin Gummies",
+    "2/$18 Muha Meds 510 Thread",
+    "2/$30 Krack Rockz 2G Prepack",
+    "2/$50 Flavors 14G Preroll Party Pack's",
+    "3/$10 - Choice Chews 200mg",
+    "3/$110 Bossy 4000mg Pain Lotion",
+    "3/$110 Flavors Snowcapped 4.95g (3-pack)",
+    "3/$155 Chill Medicated Majestic Mint - 2000mg",
+    "3/$240 Chill Medicated Extreme X- 4000mg Pain Rub",
+    "3/$30 Flavors TopShelf 1G Crumbles",
+    "3/$30 Flavors TopShelf 1G Cured Sugar Diamonds",
+    "3/$35 Flavors TopShelf 1G Diamond Sauce",
+    "3/$45 2g Drip & Crude Boys Disposables",
+    "3/$55 Bossy 2000mg Pain Lotion",
+    "3/$85 Flavors Tarantula 4.5G (3-Pack)",
+    "33% off RSO - Everyday",
+    "3g/$18 Bossy 510 Thread Carts",
+    "4/$32 Chill to Go MAXX",
+    "4/$40 Chill Medicated Syrup",
+    "4/$40 Chill to Go - Extreme X",
+    "4/$45 Flight 1G Disposable Live Resin",
+    "4/$60 Bossy Sublingual Tincture Drops",
+    "4/$70 Flavors Diamond Donut 3.75G (3-Pack)",
+    "4/$80 - Flavors L.R. Èclair 3.75g (3-Pack)",
+    "5/$40 Made by a Farmer - Gummies",
+    "5/$45 Flavors TopShelf 1G Budders",
+    "5/$45 Motorcity Cannacarts 1G - Disposable",
+    "5G/$25 Premium Wax Bucket Blowout",
+    "6/$20 Choice 200mg Mega Chew",
+    "6/$20 Shattered Thoughts 200mg Gummies",
+    "7/$17 1.3G Flavors Jumbo Exotics Prerolls",
+    "7/$25 Infused thirteen / 1g Singles Infused",
+    "Moonbud $25",
+    "Owners Box - Exclusive Flower"
+  ],
+  "ownersBox": {
+    "collection": "Owners Box - Exclusive Flower",
+    "count": "3 products",
+    "capturedAt": "2026-11-08T23:10:49.937Z",
+    "items": [
+      {
+        "name": "Crunch Berries (H)",
+        "line": "($15G) Crunch Berries (H)",
+        "perGram": "$15",
+        "type": "Hybrid",
+        "thc": "36.7%",
+        "eighth": "$34"
+      },
+      {
+        "name": "Demon Drop (H/I)",
+        "line": "($15G) Demon Drop (H/I)",
+        "perGram": "$15",
+        "type": "Hybrid",
+        "thc": "35.3%",
+        "eighth": "$34"
+      },
+      {
+        "name": "LA ROSA #15 (C)",
+        "line": "($15G) LA ROSA #15 ( C )",
+        "perGram": "$15",
+        "type": "Hybrid",
+        "thc": "36.1%",
+        "eighth": "$34"
+      }
+    ]
+  }
+}
