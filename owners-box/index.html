@@ -56,7 +56,7 @@
 </div>
 <div class="masthead">
   <div class="container masthead__in">
-    <a class="brand" href="../" aria-label="Flavors Detroit, home"><span class="brand__tower"><img src="../assets/img/logo-sign-240.webp" srcset="../assets/img/logo-sign-240.webp 240w, ../assets/img/logo-sign-480.webp 480w" sizes="118px" width="240" height="194" alt="Flavors Detroit"></span></a>
+    <a class="brand" href="../" aria-label="Flavors Detroit, home"><span class="brand__tower logo-glow"><img src="../assets/img/logo-sign-240.webp" srcset="../assets/img/logo-sign-240.webp 240w, ../assets/img/logo-sign-480.webp 480w" sizes="118px" width="240" height="194" alt="Flavors Detroit"></span></a>
     <nav class="nav" aria-label="Main"><ul><li><a href="../shop/">Shop</a></li><li><a href="../daily-deals/">Deals</a></li><li><a href="./" aria-current="page">The Owner&#39;s Box</a></li><li><a href="../visit/">Visit</a></li><li><a href="../learn/">Learn</a></li><li><a href="../blog/">News</a></li><li><a href="../contact/">Contact</a></li></ul></nav>
     <div class="masthead__actions">
       <a class="btn btn--order" href="https://flavors-detroit.portal42.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span>Order now</span><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
@@ -80,41 +80,70 @@
   </div>
 </section>
 <div class="bulb-rail" aria-hidden="true"></div>
-<section class="band band--black band--beam" aria-labelledby="in-box">
+<div class="spectrum" aria-hidden="true"></div>
+<section class="band band--black band--ownbox" aria-labelledby="in-box">
+  <div class="ownbox__bg" aria-hidden="true"><img src="../assets/img/ownbox/street-bw-1920.webp" srcset="../assets/img/ownbox/street-bw-1280.webp 1280w, ../assets/img/ownbox/street-bw-1920.webp 1920w, ../assets/img/ownbox/street-bw-2560.webp 2560w, ../assets/img/ownbox/street-bw-3200.webp 3200w" sizes="100vw" width="1920" height="939" alt="" loading="lazy" decoding="async"></div>
   <div class="container">
     <div class="box box--glass">
       <span class="box__bulbs" aria-hidden="true"><i class="t"></i><i class="r"></i><i class="b"></i><i class="l"></i></span>
-      <div class="box__head">
+      <div class="ownbox" data-ownbox>
+  <div class="box__head ownbox__head">
         <p class="kicker"><span class="kicker__bulb" aria-hidden="true"></span>Top shelf spotlight</p>
         <h2 class="box__title" id="in-box">In the box <span class="accent">now</span></h2>
       </div>
-      <ul class="box__grid swipe" role="list"><li class="strain" data-reveal data-tilt style="--i:0">
-    <p class="strain__top"><span>Flavors deli-style flower</span><span>$15 a gram</span></p>
-    <h3 class="strain__name">La Rosa #15</h3>
-    <p class="strain__meta"><span class="chip">Hybrid</span><span class="chip">THC 36.1%</span><span class="chip">Special</span></p>
-    <p class="strain__notes">A seductive, flavor-forward balanced hybrid with a floral, candy-sweet character and creamy depth.</p>
-    <p class="strain__price"><b>$34</b><span>an eighth on the live menu</span></p>
-  </li><li class="strain" data-reveal data-tilt style="--i:1">
-    <p class="strain__top"><span>Flavors deli-style flower</span><span>$15 a gram</span></p>
-    <h3 class="strain__name">Demon Drop</h3>
-    <p class="strain__meta"><span class="chip">Hybrid</span><span class="chip">THC 35.3%</span><span class="chip">Special</span></p>
-    <p class="strain__notes">Dark, loud, and dripping with attitude, Demon Drop delivers rich candy sweetness, berry notes, and a gassy finish.</p>
-    <p class="strain__price"><b>$34</b><span>an eighth on the live menu</span></p>
-  </li><li class="strain" data-reveal data-tilt style="--i:2">
-    <p class="strain__top"><span>Flavors deli-style flower</span><span>$15 a gram</span></p>
-    <h3 class="strain__name">Crunch Berries</h3>
-    <p class="strain__meta"><span class="chip">Hybrid</span><span class="chip">THC 36.7%</span><span class="chip">Special</span></p>
-    <p class="strain__notes">Fun, flavorful, and wildly unique, Crunch Berries brings a sweet berry-forward profile with a smooth, delicious finish.</p>
-    <p class="strain__price"><b>$34</b><span>an eighth on the live menu</span></p>
-  </li></ul>
-      <p class="swipe-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16M15 7l5 5-5 5M9 7 4 12l5 5"/></svg><span>Swipe for more</span></p>
-      <div class="deals-preview__foot">
+  <div class="ownbox__reveal"><ul class="ownbox__cards" role="list"><li class="holo-slot" style="--i:0">
+    <div class="holo" data-tilt>
+      <img class="holo__bud" src="../assets/img/deal/bud-a-360.webp" srcset="../assets/img/deal/bud-a-360.webp 1x, ../assets/img/deal/bud-a-720.webp 2x" width="209" height="360" alt="Illustration: a large cannabis bud with green leaves and orange hairs" data-ai="generated" loading="lazy" decoding="async">
+      <div class="holo__in">
+        <p class="holo__top">Deli-style flower</p>
+        <h3 class="holo__name">La Rosa #15</h3>
+        <p class="holo__meta"><span class="chip">Hybrid</span><span class="chip">THC 36.1%</span></p>
+        <p class="holo__notes">A seductive, flavor-forward balanced hybrid with a floral, candy-sweet character and creamy depth.</p>
+        <p class="holo__price"><b>$34</b><span>an eighth</span><span class="holo__gram">$15 a gram</span></p>
+      </div>
+    </div>
+  </li>
+<li class="holo-slot" style="--i:1">
+    <div class="holo" data-tilt>
+      <img class="holo__bud" src="../assets/img/deal/bud-b-360.webp" srcset="../assets/img/deal/bud-b-360.webp 1x, ../assets/img/deal/bud-b-720.webp 2x" width="202" height="360" alt="Illustration: a large cannabis bud with dark purple and green leaves" data-ai="generated" loading="lazy" decoding="async">
+      <div class="holo__in">
+        <p class="holo__top">Deli-style flower</p>
+        <h3 class="holo__name">Demon Drop</h3>
+        <p class="holo__meta"><span class="chip">Hybrid</span><span class="chip">THC 35.3%</span></p>
+        <p class="holo__notes">Dark, loud, and dripping with attitude, Demon Drop delivers rich candy sweetness, berry notes, and a gassy finish.</p>
+        <p class="holo__price"><b>$34</b><span>an eighth</span><span class="holo__gram">$15 a gram</span></p>
+      </div>
+    </div>
+  </li>
+<li class="holo-slot" style="--i:2">
+    <div class="holo" data-tilt>
+      <img class="holo__bud" src="../assets/img/deal/bud-c-360.webp" srcset="../assets/img/deal/bud-c-360.webp 1x, ../assets/img/deal/bud-c-720.webp 2x" width="205" height="360" alt="Illustration: a large cannabis bud with green and burgundy tones and orange hairs" data-ai="generated" loading="lazy" decoding="async">
+      <div class="holo__in">
+        <p class="holo__top">Deli-style flower</p>
+        <h3 class="holo__name">Crunch Berries</h3>
+        <p class="holo__meta"><span class="chip">Hybrid</span><span class="chip">THC 36.7%</span></p>
+        <p class="holo__notes">Fun, flavorful, and wildly unique, Crunch Berries brings a sweet berry-forward profile with a smooth, delicious finish.</p>
+        <p class="holo__price"><b>$34</b><span>an eighth</span><span class="holo__gram">$15 a gram</span></p>
+      </div>
+    </div>
+  </li></ul></div>
+  <div class="ownbox__case" aria-hidden="true">
+    <span class="ownbox__shadow"></span>
+    <span class="ownbox__glow"></span>
+    <img class="ownbox__smoke ownbox__smoke--a" src="../assets/img/ownbox/smoke-a-400.webp" srcset="../assets/img/ownbox/smoke-a-400.webp 400w, ../assets/img/ownbox/smoke-a-800.webp 800w" sizes="(max-width: 1099px) 46vw, 280px" width="800" height="1200" alt="" loading="lazy" decoding="async" data-ai="generated">
+    <img class="ownbox__smoke ownbox__smoke--b" src="../assets/img/ownbox/smoke-b-400.webp" srcset="../assets/img/ownbox/smoke-b-400.webp 400w, ../assets/img/ownbox/smoke-b-800.webp 800w" sizes="(max-width: 1099px) 40vw, 240px" width="800" height="1200" alt="" loading="lazy" decoding="async" data-ai="generated">
+    <img class="ownbox__shut" src="../assets/img/ownbox/case-closed-480.webp" srcset="../assets/img/ownbox/case-closed-480.webp 480w, ../assets/img/ownbox/case-closed-720.webp 720w, ../assets/img/ownbox/case-closed-960.webp 960w" sizes="(max-width: 1099px) min(280px, 64vw), 320px" width="960" height="910" alt="" loading="lazy" decoding="async">
+    <img class="ownbox__open" src="../assets/img/ownbox/case-open-480.webp" srcset="../assets/img/ownbox/case-open-480.webp 480w, ../assets/img/ownbox/case-open-720.webp 720w, ../assets/img/ownbox/case-open-960.webp 960w" sizes="(max-width: 1099px) min(280px, 64vw), 320px" width="960" height="910" alt="" loading="lazy" decoding="async" data-ai="edited">
+  </div>
+  <div class="deals-preview__foot ownbox__foot">
         <p class="asof"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>On the live menu's Owners Box collection, November 8, 2026. Tasting notes from Flavors news, October 11, 2026. The lineup rotates.</span></p>
         <a class="btn btn--cream" href="https://flavors-detroit.portal42.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span>Shop the box</span><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
       </div>
+</div>
     </div>
   </div>
 </section>
+<div class="spectrum" aria-hidden="true"></div>
 <section class="band band--night band--lit" aria-labelledby="chase-title" style="--lx: 20%; --ly: 10%">
   <div class="container split">
     <div class="stack" style="--stack:18px">
@@ -133,7 +162,8 @@
     </div>
   </div>
 </section>
-<section class="band band--day band--tight" aria-labelledby="more-title">
+<div class="spectrum" aria-hidden="true"></div>
+<section class="band band--black band--tight" aria-labelledby="more-title">
   <div class="container">
     <div class="section-head">
   <div class="section-head__text">
@@ -143,20 +173,19 @@
   </div>
   
 </div>
-    <div class="steps swipe">
-      <div class="step"><p class="step__n">$10</p><h3>Eighths</h3><p>Flavors 3.5G prepacks, 23 strains on the live menu.</p><a class="text-link" href="../daily-deals/">Daily deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="step"><p class="step__n">$19</p><h3>Ounces</h3><p>Prepacked 28G ounces from $19 up to the $85 premium tier.</p><a class="text-link" href="../daily-deals/">Ounce tiers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-      <div class="step"><p class="step__n">5700</p><h3>Visit us</h3><p>Open every day, 10AM to 10PM, at 5700 E 8 Mile Rd.</p><a class="text-link" href="../visit/">Plan a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+    <div class="cbento">
+      <a class="cbento__card cbento__card--feature" href="../daily-deals/"><span class="cbento__price">$10</span><h3>Eighths</h3><p>Flavors 3.5G prepacks, 23 strains on the live menu.</p><span class="cbento__go">Daily deals <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><img class="cbento__jar" src="../assets/img/deal/eighths-720.webp" srcset="../assets/img/deal/eighths-360.webp 360w, ../assets/img/deal/eighths-720.webp 720w" sizes="(max-width: 900px) 80vw, 480px" width="724" height="720" alt="Illustration: a small glass jar with a black lid, filled with green cannabis buds, two loose buds beside it" data-ai="generated" loading="lazy" decoding="async"></a>
+      <a class="cbento__card cbento__card--white" href="../daily-deals/"><span class="cbento__price">$19</span><h3>Ounces</h3><p>Prepacked 28G ounces from $19 up to the $85 premium tier.</p><span class="cbento__go">Ounce tiers <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span><img class="cbento__pouch" src="../assets/img/deal/ounce-720.webp" srcset="../assets/img/deal/ounce-360.webp 360w, ../assets/img/deal/ounce-720.webp 720w" sizes="(max-width: 900px) 80vw, 480px" width="800" height="720" alt="Illustration: a plain black stand-up pouch with a heap of green cannabis buds in front of it" data-ai="generated" loading="lazy" decoding="async"></a>
+      <a class="cbento__card cbento__card--photo" href="../visit/"><img class="cbento__bg" src="../assets/img/store/store-golden-800.webp" srcset="../assets/img/store/store-golden-800.webp 800w, ../assets/img/store/store-golden-1200.webp 1200w" sizes="(max-width: 900px) 92vw, 560px" width="800" height="679" alt="The Flavors Detroit store at golden hour" data-photo="store" data-ai="edited" loading="lazy" decoding="async"><span class="cbento__price">5700</span><h3>Visit us</h3><p>Open every day, 10AM to 10PM, at 5700 E 8 Mile Rd.</p><span class="cbento__go">Plan a visit <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
     </div>
   </div>
 </section>
 </main>
 <footer class="site-footer">
-  <div class="footer__neon" aria-hidden="true">5700</div>
   <div class="container">
     <div class="footer__main">
       <div class="footer__brand">
-        <a href="../" aria-label="Flavors Detroit, home"><img src="../assets/img/logo-sign-480.webp" width="480" height="387" alt="Flavors Detroit" loading="lazy" decoding="async"></a>
+        <a class="logo-glow" href="../" aria-label="Flavors Detroit, home"><img src="../assets/img/logo-sign-480.webp" width="480" height="387" alt="Flavors Detroit" loading="lazy" decoding="async"></a>
         <p class="footer__tag">A traditional dispensary with a modern twist.</p>
       </div>
       <div><h2 class="footer__h">Shop</h2><ul class="footer__list"><li><a href="https://flavors-detroit.portal42.com/" target="_blank" rel="noopener">Live menu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="visually-hidden"> (opens in a new tab)</span></a></li><li><a href="../shop/">Shop</a></li><li><a href="../daily-deals/">Daily deals</a></li><li><a href="./">The Owner&#39;s Box</a></li></ul></div>
@@ -177,8 +206,19 @@
       </div>
     </div>
   </div>
-  <div class="footer__mark" aria-hidden="true" data-finale><span class="pool pool--a"></span><span class="sparks" aria-hidden="true"><i style="--x:49.1%;--d:-6.73s;--t:9.04s;--s:2.6px;--sx:-7px"></i><i style="--x:50.6%;--d:-0.94s;--t:15.91s;--s:3.5px;--sx:-11px"></i><i style="--x:30.2%;--d:-9.38s;--t:13.92s;--s:2.2px;--sx:-0px"></i><i style="--x:25.6%;--d:-8.06s;--t:9.42s;--s:3.5px;--sx:-2px"></i><i style="--x:20.2%;--d:-0.60s;--t:16.45s;--s:4.5px;--sx:-46px"></i><i style="--x:44.9%;--d:-11.47s;--t:9.70s;--s:3.1px;--sx:6px"></i><i style="--x:65.8%;--d:-3.37s;--t:9.53s;--s:4.6px;--sx:-7px"></i><i style="--x:25.4%;--d:-6.56s;--t:10.97s;--s:2.4px;--sx:33px"></i><i style="--x:36.4%;--d:-4.20s;--t:8.72s;--s:4.4px;--sx:-31px"></i><i style="--x:85.3%;--d:-5.65s;--t:10.12s;--s:3.6px;--sx:-12px"></i><i style="--x:73.8%;--d:-7.83s;--t:9.22s;--s:2.6px;--sx:-6px"></i><i style="--x:12.3%;--d:-0.57s;--t:11.71s;--s:3.8px;--sx:18px"></i></span><span class="footer__bulbs"></span><span class="footer__word">Flavors</span></div>
 </footer>
+<aside class="orderbar" aria-label="Order for pickup" data-orderbar hidden>
+  <span class="orderbar__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+  <div class="orderbar__text">
+    <p class="orderbar__title">Order cannabis online for <span class="accent">pickup</span></p>
+    <p class="orderbar__line"><span class="status status-line" data-status data-state="unknown"><span class="status__dot" aria-hidden="true"></span><span class="status__word">Open daily</span><span class="status__detail" data-status-text>10AM–10PM</span></span><span class="orderbar__id"><span class="orderbar__sep" aria-hidden="true">·</span>Bring a valid ID</span></p>
+  </div>
+  <div class="orderbar__actions">
+    <a class="btn btn--order" href="https://flavors-detroit.portal42.com/" target="_blank" rel="noopener"><span>Order online</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
+    <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Flavors%20Detroit%2C%205700%20E%208%20Mile%20Rd%2C%20Detroit%2C%20MI%2048234" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 2 22 12 12 22 2 12z"/><path d="M9 13v-2h5V8.5L17 11.5 14 14.5V12"/></svg><span>Get directions</span><span class="visually-hidden"> (opens Google Maps in a new tab)</span></a>
+  </div>
+  <button class="orderbar__close" type="button" data-orderbar-close aria-label="Hide this bar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+</aside>
 <nav class="dock" aria-label="Quick actions">
   <a class="btn btn--order" href="https://flavors-detroit.portal42.com/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span>Order now</span><span class="visually-hidden"> on the live menu (opens in a new tab)</span></a>
   <a class="dock__icon" href="tel:+13137334464" aria-label="Call Flavors Detroit, (313) 733-4464"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
@@ -219,5 +259,6 @@
   </div>
 </div>
 <script src="../assets/js/site.js" defer></script>
+
 </body>
 </html>
